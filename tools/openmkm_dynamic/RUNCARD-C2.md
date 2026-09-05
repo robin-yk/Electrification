@@ -90,6 +90,15 @@ Cache: a finished case file is not recomputed.
 
 Nothing. Writes only to `data/c2pulse/`.
 
+## Invalidated by, 2026-09-05
+
+The closure fix in `run_cstr_case.step_temperature` (README, Formulation).
+All twelve case files here were marched before it and overstate conversion
+by about a fifth (anchor 22.0 against 17.4 corrected). The rounds are not
+re-run; the round tables above stand as the record of what was run, not as
+current numbers. Re-running is four cases per round, about one wall hour
+per round, and needs approval.
+
 ## Screen
 
 `series_pulse.py` on the lumped constants of `data/lump/aramco-ch4-he.json`

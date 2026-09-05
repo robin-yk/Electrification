@@ -13,6 +13,21 @@ steady element that reaches the same conversion? Every number below is a
 uniform-temperature CSTR on the S1f-calibrated element trajectory, and is
 quoted as the mechanism's ranking of drives, not as the device's output.
 
+## Closure correction, 2026-09-05: read before the tables
+
+Every pulse conversion in this document below this section was computed
+with a march that swapped methane for products at each temperature step
+(`run_cstr_case.step_temperature`, and the README's Formulation list, say
+what it did and how it was found). The anchor's conversion is 17.4 percent
+on the corrected march, not 22.0; the CH4/CO2 tau 0.2 s case 16.5, not
+20.3. The flux section was re-run and is correct. The matched-comparison
+table, the round tables and the run card were not, and their pulse columns
+overstate conversion by about a fifth and acetylene by about a quarter.
+The ranking claims (peak decides, shape does not) rest on differences
+between pulses that all carry the same artifact and are expected to
+survive, but that is an expectation, not a re-run: `미확인`. The re-run is
+four cases per round at about 45 minutes each and needs the author's go.
+
 ## Matched comparison: the fair test
 
 Selectivity to an intermediate falls with conversion in any series network,
@@ -145,25 +160,27 @@ supply; it is a model point, not an operable one.
 edges and integrates them over one cycle of the anchor case and over unit
 time for the steady CSTR at the same conversion; `draw_pathway.py` draws
 both as `docs/figures/pathway-anchor.svg`. Numbers below are percent of the
-carbon fed and come from `data/c2pulse/pathway-anchor.json`.
+carbon fed and come from `data/c2pulse/pathway-anchor.json`; the steady
+element is matched to the conversion the corrected march gives, 17.4
+percent, at 1197 C.
 
 The route to benzene is the same in both: acetylene and methyl make C3
 (propargyl, C3H3), and C3 pairs into the ring. What differs is what happens
 to the ring afterwards.
 
-| carbon flow | steady 1209 C | pulse, peak 1800 C |
+| carbon flow | steady 1197 C | pulse, peak 1800 C |
 |---|---|---|
-| into benzene (C3 and C6 to C6H6) | 12.5 | 14.5 |
-| out of benzene (to C4H2, C2H2, other C6) | under 0.3 | 10.3 |
-| benzene leaving the reactor | 12.1 | 4.1 |
-| C4H2 back to C2H2 | under 0.3 | 6.7 |
-| acetylene leaving the reactor | 4.2 | 14.6 |
+| into benzene (C3 and C6 to C6H6) | 9.5 | 15.1 |
+| out of benzene (to C4H2, C2H2, other C6) | 0.3 | 11.5 |
+| benzene leaving the reactor | 9.2 | 3.6 |
+| C4H2 back to C2H2 | 0.1 | 7.3 |
+| acetylene leaving the reactor | 3.3 | 10.7 |
 
-The pulse makes more benzene than the steady element, not less: 14.5
-against 12.5 percent of the fed carbon enters the ring, most of it on the
+The pulse makes more benzene than the steady element, not less: 15.1
+against 9.5 percent of the fed carbon enters the ring, most of it on the
 way up and down through 1200 to 1400 C. At the 1800 C peak the ring cracks,
-5.9 to diacetylene and 3.1 straight back to acetylene, and the diacetylene
-cracks too, 6.7 back to acetylene. So the low benzene of the pulse is not
+6.4 to diacetylene and 3.4 straight back to acetylene, and the diacetylene
+cracks too, 7.3 back to acetylene. So the low benzene of the pulse is not
 the ring failing to form, it is the ring being taken apart at the peak and
 the fragments frozen as acetylene in the quench. This is why the peak, and
 nothing about the shape, sets the split (round 3), and it is also why the
@@ -174,30 +191,33 @@ is the carbon that would deposit in the device.
 
 `docs/figures/pathway-ch4co2-tau0.2.svg` repeats the analysis for the feed the
 device actually runs, 5 % CH4, 5 % CO2 in helium at tau 0.2 s
-(`data/c2pulse/pathway-ch4co2-tau0.2.json`, steady matched at 1202 C to the
-pulse's 20.3 % conversion). Numbers are percent of the carbon fed as methane;
-the CO2 carbon, another 100 %, enters and leaves the CO2/CO box and only the
-net gain of that box is quoted.
+(`data/c2pulse/pathway-ch4co2-tau0.2.json`; pulse 16.5 % conversion on the
+corrected march, steady matched at 1192 C). Numbers are percent of the
+carbon fed as methane. CO2 and CO are separate boxes: the CO2 box is fed
+another 100 and shows what is left of it, the CO box shows what arrived.
 
-| carbon flow | steady 1202 C | pulse, peak 1800 C |
+| carbon flow | steady 1192 C | pulse, peak 1800 C |
 |---|---|---|
-| into benzene | 11.2 | 8.6 |
-| out of benzene | 0.6 | 7.0 |
-| benzene leaving the reactor | 10.8 | 1.2 |
-| C4H2 back to C2H2 | 0.2 | 5.3 |
-| acetylene leaving the reactor | 3.7 | 5.1 |
-| methane carbon leaving as CO | 0.1 | 13.1 |
+| into benzene | 8.7 | 8.7 |
+| out of benzene | 0.3 | 7.2 |
+| benzene leaving the reactor | 8.5 | 1.5 |
+| C4H2 back to C2H2 | 0.1 | 5.2 |
+| acetylene leaving the reactor | 3.0 | 4.7 |
+| CO2 to CO | 2.2 | 13.6 |
+| methane carbon to CO | 0.1 | 8.6 |
+| CO leaving the reactor | 2.3 | 22.0 |
 
 The ring picture is the one above: benzene forms both ways and the pulse
-cracks it at the peak. CO2 changes one thing, and only in the pulse. Steady at
-1202 C the CO2 is a spectator, 0.1 % of the methane carbon reaches CO. At the
-1800 C peak the CO2 oxidises the intermediates, 5.5 from acetylene, 2.0 from
-methyl, 1.7 from C3, and 13.1 % of the methane carbon leaves as CO. That is
-the largest single sink in the pulse, larger than benzene and acetylene
-together, and it is where the pulse's carbon selectivity to hydrocarbons goes.
-The CO2 conversion this implies is about 19 % in the pulse (from the CO2 and CO
-mass fractions in the case file); the steady CO2 conversion at the matched
-temperature was not computed separately.
+cracks it at the peak. CO2 changes one thing, and only in the pulse. Steady
+at 1192 C the CO2 is nearly a spectator: 2.2 percent of it goes to CO by
+the reverse water-gas shift and no methane carbon follows. At the 1800 C
+peak the CO2 both reduces, 13.6 of its own carbon to CO, and oxidises the
+intermediates, 4.9 from acetylene, 1.9 from methyl, 1.7 from C3, so 8.6
+percent of the methane carbon leaves as CO. That is the largest single
+sink of methane carbon in the pulse, larger than benzene and acetylene
+together, and it is where the pulse's hydrocarbon selectivity goes on this
+feed. The CO the device would measure is 22 percent of the methane carbon
+fed, of which 13.6 came from CO2 and 8.6 from methane.
 
 ## Standing caveats
 
