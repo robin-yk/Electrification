@@ -41,7 +41,7 @@ sys.path.insert(0, str(HERE))
 import run_cstr_case as rc                                    # noqa: E402
 
 PRESSURE_PA = 101325.0
-LUMP_ORDER = ["CH4", "CHx", "COx", "C2H6", "C2H4", "C2H2", "C3", "C4H2", "C4",
+LUMP_ORDER = ["CH4", "CHx", "CO2", "CO", "C2H6", "C2H4", "C2H2", "C3", "C4H2", "C4",
               "C5", "C6H6", "polyyne", "C6", "C7+"]
 
 
@@ -51,9 +51,12 @@ def lump_of(name, n_c):
     if name == "CH4":
         return "CH4"
     if n_c == 1:
-        # CO2 and CO carry one carbon each; on the CH4/CO2 feed they are
-        # the feed and its reforming product, not methane fragments.
-        return "COx" if "O" in name else "CHx"
+        # CO2 is the co-feed and CO its reduction product; keep them apart
+        # so the CO2 -> CO edge is visible. The other one-carbon oxygenates
+        # (HCO, CH2O, ...) are short-lived on the way to CO and ride with it.
+        if name == "CO2":
+            return "CO2"
+        return "CO" if "O" in name else "CHx"
     if n_c == 2:
         if name in ("C2H6", "C2H5"):
             return "C2H6"

@@ -24,21 +24,23 @@ from pathlib import Path
 FONT = "Arial, Helvetica, 'Liberation Sans', sans-serif"
 
 # Display names; digits after an element letter become subscripts.
-NAME = {"CH4": "CH4", "CHx": "CH3", "COx": "CO2, CO", "C2H6": "C2H6", "C2H4": "C2H4", "C2H2": "C2H2",
+NAME = {"CH4": "CH4", "CHx": "CH3", "CO2": "CO2", "CO": "CO", "C2H6": "C2H6", "C2H4": "C2H4", "C2H2": "C2H2",
         "C3": "C3", "C4H2": "C4H2", "C4": "C4", "C5": "C5", "C6H6": "C6H6",
         "polyyne": "C6H2", "C6": "C6", "C7+": "C7+"}
-NOTE = {"CHx": "methyl", "COx": "CO2 in, CO out", "C3": "C3H3, C3H4", "C4": "C4H4, C4H6", "C4H2": "diacetylene",
+NOTE = {"CHx": "methyl", "CO2": "co-feed", "CO": "carbon monoxide", "C3": "C3H3, C3H4", "C4": "C4H4, C4H6", "C4H2": "diacetylene",
         "C6H6": "benzene", "polyyne": "triacetylene", "C6": "fulvene, C6H4", "C5": "C5H6",
         "C7+": "larger"}
-KIND = {"CH4": "ladder", "CHx": "ladder", "COx": "ladder", "C2H6": "ladder", "C2H4": "ladder", "C2H2": "ladder",
+KIND = {"CH4": "ladder", "CHx": "ladder", "CO2": "oxide", "CO": "oxide", "C2H6": "ladder", "C2H4": "ladder", "C2H2": "ladder",
         "C3": "grow", "C4": "grow", "C5": "grow", "C6H6": "ring", "C6": "ring", "C7+": "ring",
         "C4H2": "polyyne", "polyyne": "polyyne"}
-FILL = {"ladder": "#f4f4f4", "grow": "#fbf6ea", "ring": "#fbeeec", "polyyne": "#eaf1f7"}
-EDGE = {"ladder": "#555555", "ring": "#c0392b", "crack": "#e67e22", "polyyne": "#2471a3"}
+FILL = {"ladder": "#f4f4f4", "grow": "#fbf6ea", "ring": "#fbeeec", "polyyne": "#eaf1f7",
+        "oxide": "#f1ebf5"}
+EDGE = {"ladder": "#555555", "ring": "#c0392b", "crack": "#e67e22", "polyyne": "#2471a3",
+        "oxide": "#7d3c98"}
 
 # (column, row): the dehydrogenation ladder runs down the left, growth to
 # the right, rings top right, polyynes bottom.
-POS = {"CH4": (0, 0), "CHx": (0, 1), "COx": (1.05, 0), "C2H6": (0, 2), "C2H4": (0, 3), "C2H2": (0, 4.2),
+POS = {"CH4": (0, 0), "CHx": (0, 1), "CO": (1.05, 0), "CO2": (2.05, 0), "C2H6": (0, 2), "C2H4": (0, 3), "C2H2": (0, 4.2),
        "C3": (1.05, 3.3), "C4": (2.05, 2.6), "C6H6": (2.0, 0.9), "C6": (3.05, 1.6),
        "C5": (3.05, 3.2), "C7+": (3.05, 4.2), "C4H2": (1.2, 5.3), "polyyne": (2.4, 5.3)}
 W, H = 600, 640
@@ -118,6 +120,8 @@ def edge_kind(a, b):
         return "ring"
     if KIND[b] == "polyyne":
         return "polyyne"
+    if KIND[b] == "oxide":
+        return "oxide"
     return "ladder"
 
 
@@ -129,9 +133,7 @@ def co2_carbon_pct(feed):
 
 def panel(r, title, threshold, ox, oy, co2_pct):
     edges = r["edges_pct_fed"]
-    # The COx lump leaves with the CO2 carbon it was fed; show only what it
-    # gained from methane carbon, so the box reads the same way as the others.
-    out = {l: (v - co2_pct if l == "COx" else v) for l, v in r["outflow_pct_fed"].items()}
+    out = r["outflow_pct_fed"]
     drawn, dropped = [], 0.0
     for k, v in edges.items():
         if v >= threshold:
@@ -176,7 +178,8 @@ def panel(r, title, threshold, ox, oy, co2_pct):
             parts.append(f'<text x="{x}" y="{y + 6}" text-anchor="middle" font-size="9.5" '
                          f'fill="#666">{sub(note)}</text>')
         if share >= 0.05:
-            word = "net +" if l == "COx" else "out "
+            # The CO2 box is fed too; say so, in the same methane-carbon units.
+            word = f"in {co2_pct:.0f}, out " if l == "CO2" else "out "
             parts.append(f'<text x="{x}" y="{y + 19}" text-anchor="middle" font-size="10" '
                          f'fill="#222">{word}{share:.1f} %</text>')
     parts.append(f'<text x="{W/2}" y="{H - 10}" text-anchor="middle" font-size="10" fill="#777">'
@@ -196,10 +199,11 @@ def markers():
 
 def legend(x, y):
     items = [("ladder", "dehydrogenation and growth"), ("ring", "into rings"),
-             ("crack", "rings breaking up"), ("polyyne", "into polyynes")]
+             ("crack", "rings breaking up"), ("polyyne", "into polyynes"),
+             ("oxide", "oxidation to CO")]
     parts = []
     for i, (kind, text) in enumerate(items):
-        lx = x + i * 190
+        lx = x + i * 185
         parts.append(f'<line x1="{lx}" y1="{y}" x2="{lx + 28}" y2="{y}" stroke="{EDGE[kind]}" '
                      f'stroke-width="3" marker-end="url(#arr-{kind})"/>')
         parts.append(f'<text x="{lx + 38}" y="{y + 4}" font-size="11" fill="#333">{text}</text>')
@@ -232,7 +236,7 @@ def main():
            f'<line x1="{W + 12}" y1="16" x2="{W + 12}" y2="{H - 4}" stroke="#d0d0d0" stroke-dasharray="4 4"/>',
            panel(p, right, args.threshold, W + 24, 0, co2_pct),
            f'<text x="{total_w/2}" y="{H + 22}" text-anchor="middle" font-size="11" fill="#444">{sub_title}</text>',
-           legend(total_w / 2 - 380, H + 48),
+           legend(total_w / 2 - 470, H + 48),
            "</svg>"]
     args.output.write_text("\n".join(svg))
     print("wrote", args.output)
