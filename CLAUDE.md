@@ -64,6 +64,16 @@ unrelated artifacts. Read the target, its callers, its tests, and the data
 products it invalidates before editing. State the exact files and outputs that
 should change.
 
+**Propose the smallest version first.** This rule governs answers, not only
+edits. When asked to scope a study, a paper, a campaign or a feature, lead with
+the smallest version that would settle the question, give its cost, and then say
+in one line what a larger version would add. Do not present the full version as
+the plan with the small one as a fallback; the default is the small one. Before
+proposing any new run, check whether data already in the repository answers the
+question, and say so if it does. If the smallest version genuinely cannot settle
+the question, name the gate it fails instead of enlarging the plan until it
+does.
+
 Do not launch a bulk simulation, retraining run, sweep, active-learning batch,
 or optimization campaign until all of these gates pass:
 
