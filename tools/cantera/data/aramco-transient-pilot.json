@@ -1,0 +1,138 @@
+{
+ "generated": "2026-09-05",
+ "cantera": "3.2.0",
+ "note": "single-threaded cost pilot; ratios are the result, absolute seconds are machine-specific; not ground truth (trapezoid waveform, fixed cycle budget)",
+ "cases": {
+  "rph027": {
+   "inputs": {
+    "waveform": "trapezoid",
+    "ramp_up_fraction": 0.05,
+    "ramp_down_fraction": 0.05,
+    "pressure_Pa": 101325.0,
+    "feed": "CH4:1, CO2:1",
+    "points_per_cycle": 100,
+    "closure": "const-pressure",
+    "cycles": 6,
+    "design_index": 27,
+    "t_min_K": 1609.7028678006163,
+    "t_peak_K": 1631.6969407991537,
+    "duty": 0.17504,
+    "period_s": 0.010890229622637306,
+    "tau_s": 0.6866488450043006
+   },
+   "gri-dense": {
+    "cycle_s": [
+     0.121,
+     0.115,
+     0.12,
+     0.118,
+     0.127,
+     0.114
+    ],
+    "per_cycle_s": 0.11873565759995017,
+    "last_cycle_conversion": 0.5403695927166388
+   },
+   "gri-sparse": {
+    "cycle_s": [
+     0.215,
+     0.199,
+     0.201,
+     0.18,
+     0.185,
+     0.177
+    ],
+    "per_cycle_s": 0.18835215260005497,
+    "last_cycle_conversion": 0.5403695660195567,
+    "x_vs_gri_dense": 1.59
+   },
+   "aramco-sparse": {
+    "cycle_s": [
+     2.97,
+     2.924,
+     2.808,
+     2.775,
+     2.692,
+     2.679
+    ],
+    "per_cycle_s": 2.7756167814000263,
+    "last_cycle_conversion": 0.7420385110316394,
+    "x_vs_gri_dense": 23.38
+   },
+   "aramco-dense": {
+    "cycle_s": [
+     9.046,
+     9.231,
+     8.941,
+     8.88,
+     8.758,
+     8.85
+    ],
+    "per_cycle_s": 8.932003283600011,
+    "last_cycle_conversion": 0.7420386622151112,
+    "x_vs_gri_dense": 75.23
+   }
+  },
+  "cjh188": {
+   "inputs": {
+    "waveform": "trapezoid",
+    "ramp_up_fraction": 0.05,
+    "ramp_down_fraction": 0.05,
+    "pressure_Pa": 101325.0,
+    "feed": "CH4:1, CO2:1",
+    "points_per_cycle": 100,
+    "closure": "const-pressure",
+    "cycles": 4,
+    "design_index": 188,
+    "t_min_K": 474.6673810909334,
+    "t_peak_K": 2056.8158889844926,
+    "duty": 0.28508800000000006,
+    "period_s": 8.195590434970992,
+    "tau_s": 0.8627005170132352
+   },
+   "gri-dense": {
+    "cycle_s": [
+     0.231,
+     0.224,
+     0.213,
+     0.228
+    ],
+    "per_cycle_s": 0.2216610906666574,
+    "last_cycle_conversion": 0.210484623566755
+   },
+   "gri-sparse": {
+    "cycle_s": [
+     0.289,
+     0.3,
+     0.291,
+     0.297
+    ],
+    "per_cycle_s": 0.295998653999997,
+    "last_cycle_conversion": 0.2104846217234364,
+    "x_vs_gri_dense": 1.34
+   },
+   "aramco-sparse": {
+    "cycle_s": [
+     4.178,
+     4.14,
+     4.175,
+     4.332
+    ],
+    "per_cycle_s": 4.215623978666675,
+    "last_cycle_conversion": 0.21159659331119218,
+    "x_vs_gri_dense": 19.02
+   },
+   "aramco-dense": {
+    "cycle_s": [
+     14.059,
+     14.329,
+     14.425,
+     14.178
+    ],
+    "per_cycle_s": 14.31037042566667,
+    "last_cycle_conversion": 0.21159659333324954,
+    "x_vs_gri_dense": 64.56
+   }
+  }
+ },
+ "aramco_load_s": 3.28
+}

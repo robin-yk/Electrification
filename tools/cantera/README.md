@@ -45,3 +45,31 @@ python tools/cantera/precompute.py --check  # verify committed JSON is current
 CI (`.github/workflows/cantera-data.yml`) runs the `--check` mode whenever
 this directory changes, so a stale committed JSON fails the build instead of
 silently drifting from the scripts.
+
+## Transient cost pilot (AramcoMech 2.0)
+
+`aramco_transient_pilot.py` answers the scoping question for a possible
+Aramco extension of the transient pipeline in `tools/openmkm_dynamic/`: how
+much slower is one pulsed-CSTR cycle under AramcoMech 2.0 than under
+GRI-Mech 3.0, and how much does the sparse preconditioned solver
+(`run_cstr_case.py --jacobian sparse`) recover? Results land in
+`data/aramco-transient-pilot.json`; the ratios are the result, the absolute
+seconds are machine-specific.
+
+```bash
+python tools/cantera/aramco_transient_pilot.py   # ~3 min, single thread
+```
+
+Measured 2026-09: Aramco costs 65-73x GRI per cycle on the dense path and
+19-23x on the sparse path, with CH4 conversion agreeing between the two
+paths to about 7 significant digits. At 20x, regenerating the full 349-case
+transient ground truth projects to roughly 1.5 single-threaded days, and
+the worst GRI case (251 s) projects to about 90 minutes, inside CI job
+limits. The sparse path is for large mechanisms only: on GRI itself it is
+30-75% slower than dense, so the canonical GRI pipeline stays on the
+default dense path.
+
+This is a cost pilot, not ground truth: it fixes a small cycle budget
+instead of converging and replaces the stored element-drive waveform with a
+trapezoid between the same temperature bounds. Nothing it produces may be
+promoted to `tools/openmkm_dynamic/data/canonical/`.

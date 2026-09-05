@@ -151,6 +151,14 @@ CLOSURES = {
     "const-volume": "IdealGasReactor",
 }
 
+# The dense path is the production path for GRI-Mech 3.0: on the 53-species
+# system the mole-fraction reactor plus preconditioner is 30-75% slower than
+# the plain dense solve, so nothing canonical should switch. The sparse path
+# exists for large mechanisms, where tools/cantera/aramco_transient_pilot.py
+# measured 3.2-3.5x recovery on AramcoMech 2.0 (493 species) with the
+# conversion unchanged to 7 significant digits.
+JACOBIANS = ("dense", "sparse")
+
 
 def make_reactor(ct, mech, p):
     gas = ct.Solution(mech)
@@ -160,12 +168,22 @@ def make_reactor(ct, mech, p):
     closure = p.get("closure", "const-pressure")
     if closure not in CLOSURES:
         raise SystemExit(f"unknown closure {closure!r}; choose from {sorted(CLOSURES)}")
-    reactor = getattr(ct, CLOSURES[closure])(gas, energy="off", clone=False)
+    jacobian = p.get("jacobian", "dense")
+    if jacobian not in JACOBIANS:
+        raise SystemExit(f"unknown jacobian {jacobian!r}; choose from {JACOBIANS}")
+    cls = CLOSURES[closure]
+    if jacobian == "sparse":
+        # AdaptivePreconditioner requires the mole-fraction state vector.
+        cls = cls.replace("Reactor", "MoleReactor")
+    reactor = getattr(ct, cls)(gas, energy="off", clone=False)
     inlet = ct.Reservoir(feed)
     outlet = ct.Reservoir(feed)
     mfc_in = ct.MassFlowController(inlet, reactor, mdot=reactor.mass / p["tau_s"])
     mfc_out = ct.MassFlowController(reactor, outlet, mdot=reactor.mass / p["tau_s"])
     net = ct.ReactorNet([reactor])
+    if jacobian == "sparse":
+        net.preconditioner = ct.AdaptivePreconditioner()
+        net.derivative_settings = {"skip-third-bodies": True, "skip-falloff": True}
     return gas, reactor, mfc_in, mfc_out, net
 
 
@@ -370,7 +388,8 @@ def run_case(mech, p):
                           for sp in ("CH3", "H", "OH")}
         return {
             "engine": f"cantera-{ct.__version__} transient CSTR "
-                      f"({p['closure']}, prescribed T(t), mass-based tau)",
+                      f"({p['closure']}, {p.get('jacobian', 'dense')} jacobian, "
+                      f"prescribed T(t), mass-based tau)",
             # Was hardcoded to GRI-Mech 3.0, which silently mislabelled every
             # run made with --mechanism pointing anywhere else.
             "mechanism": str(mech),
@@ -380,7 +399,7 @@ def run_case(mech, p):
             # voltage_V and drive_cycles exist only under --waveform physical,
             # so the comprehension takes what the case actually has.
             "inputs": {k: p[k] for k in
-                       ("closure", "voltage_V", "drive_cycles",
+                       ("closure", "jacobian", "voltage_V", "drive_cycles",
                         "t_min_K", "t_peak_K", "period_s", "duty", "waveform",
                         "mean_temperature_K", "ramp_up_fraction",
                         "ramp_down_fraction", "pressure_Pa", "tau_s", "feed",
@@ -504,6 +523,7 @@ def build_params(args):
         "cycle_tolerance": args.cycle_tolerance,
         "record_cycles": args.record_cycles,
         "closure": getattr(args, "closure", "const-pressure"),
+        "jacobian": getattr(args, "jacobian", "dense"),
     }
     if p["waveform"] == "physical":
         # T_peak and T_min stop being inputs here: the element decides them from
@@ -549,6 +569,10 @@ def add_common_args(parser):
     parser.add_argument("--closure", default="const-pressure", choices=sorted(CLOSURES),
                         help="const-pressure: gas expands, residence time falls when hot. "
                              "const-volume: pressure swings, residence time held.")
+    parser.add_argument("--jacobian", default="dense", choices=list(JACOBIANS),
+                        help="dense: production path, fastest for GRI-scale mechanisms. "
+                             "sparse: mole reactor + AdaptivePreconditioner, for "
+                             "Aramco-scale mechanisms (hundreds of species).")
 
 
 def main():
