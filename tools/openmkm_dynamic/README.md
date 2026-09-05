@@ -42,6 +42,15 @@ and OpenMKM (`type: cstr`, isothermal, matched volume/flow).
   floor; fractions must sum below 1.
 - Instantaneous mass residence time: inlet/outlet mass flows track
   m(t)/tau every substep.
+- Fixed vessel, open ends (`step_temperature`, 2026-09-05): when a
+  substep raises T the gas that no longer fits leaves through the outlet
+  at the reactor composition; when it lowers T the vessel refills from
+  the inlet with feed. Before this the march discarded and conjured gas
+  with the composition of the moment, which swapped CH4 for products at
+  no cost in reactions: a fifth of every reported pulse conversion (anchor
+  22.0 to 17.4 percent). Element audits closed because the swap conserves
+  elements; `test_step_closure.py` fills the vessel with argon so it does
+  not. Pulse numbers in files dated before this line carry the artifact.
 - Cycle map convergence: the run marches cycles until the cycle-boundary
   composition moves less than `--cycle-tolerance` (max-abs mass fraction),
   then keeps the last `--record-cycles` cycles of trajectory.

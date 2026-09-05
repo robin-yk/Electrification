@@ -154,7 +154,9 @@ CLOSURES = {
 
 def make_reactor(ct, mech, p):
     gas = ct.Solution(mech)
-    gas.TPX = p["t_min_K"], p["pressure_Pa"], p["feed"]
+    # "initial" fills the vessel with something other than feed at t = 0;
+    # the closure test uses it to make a species swap visible.
+    gas.TPX = p["t_min_K"], p["pressure_Pa"], p.get("initial") or p["feed"]
     feed = ct.Solution(mech)
     feed.TPX = p["t_min_K"], p["pressure_Pa"], p["feed"]
     closure = p.get("closure", "const-pressure")
@@ -175,20 +177,57 @@ def make_reactor(ct, mech, p):
     return gas, reactor, mfc_in, mfc_out, net
 
 
+def step_temperature(reactor, gas, T_K, pressure_Pa, y_feed):
+    """Move the reactor to the next step's temperature as an open vessel.
+
+    syncState() keeps the reactor volume and rescales its mass to the new
+    density, so a bare gas.TP + syncState() threw gas away on every heating
+    step and conjured gas on every cooling step, each with the composition
+    of the moment. Over a cycle the mass nets to zero but the composition
+    does not: the anchor pulse lost 4.1 percent of its fed carbon as CH4 on
+    the way up and gained 4.2 percent as C2H2 on the way down (GRI, 3
+    cycles), a fifth of its reported conversion. Element audits could not
+    see it because the swap conserves elements.
+
+    Here the vessel stays fixed in volume and pressure, which is what the
+    device is: on heating the expanded gas leaves through the outlet at the
+    reactor composition, on cooling the deficit is drawn in from the inlet
+    as feed. Returns (expelled mass by species, feed mass drawn in).
+    """
+    import numpy as np
+    m0 = reactor.mass
+    y0 = np.asarray(gas.Y, dtype=float).copy()
+    gas.TP = T_K, pressure_Pa
+    reactor.syncState()
+    m1 = reactor.mass
+    if m1 < m0:
+        return (m0 - m1) * y0, 0.0
+    if m1 > m0:
+        # The vessel holds PV/RT moles at T whatever the composition, so the
+        # feed drawn in is the missing moles times the feed molar mass.
+        mw = np.asarray(gas.molecular_weights, dtype=float)
+        mw_feed = 1.0 / float((y_feed / mw).sum())
+        dm = (m1 - m0) * mw_feed / gas.mean_molecular_weight
+        gas.TPY = T_K, pressure_Pa, (m0 * y0 + dm * y_feed) / (m0 + dm)
+        reactor.syncState()
+        return np.zeros_like(y0), dm
+    return np.zeros_like(y0), 0.0
+
+
 def carbon_audit(gas, mw_all, n_atom, n_c_species, y_feed,
-                 w_all, w_total, inv_start, inv_end, top_n=6):
+                 w_all, w_in, inv_start, inv_end, top_n=6):
     """Where every carbon atom went over one cycle, for the whole mechanism.
 
-    w_all[i] is the integral of mdot Y_i dt over the cycle, so moles out are
-    w_all/W. Moles in use the same integrated mass with the fixed feed
-    composition. Element closure is stated against the reactor inventory
+    w_all[i] is the mass of species i that left over the cycle, so moles out
+    are w_all/W. Moles in are the mass that entered, w_in, at the fixed feed
+    composition; the two differ within a cycle by the inventory change. Element closure is stated against the reactor inventory
     change rather than against zero, because only at periodic steady state is
     the inventory term itself negligible, and how negligible is the thing
     worth reporting.
     """
     import numpy as np
     n_out = w_all / mw_all                      # kmol of each species, per cycle
-    n_in = w_total * y_feed / mw_all
+    n_in = w_in * y_feed / mw_all
     d_inv = (inv_end - inv_start) / mw_all
 
     elements = {}
@@ -265,16 +304,19 @@ def integrate(ct, mech, p, on_sample=None):
     """March cycles until the cycle-boundary state stops moving."""
     import numpy as np
     gas, reactor, mfc_in, mfc_out, net = make_reactor(ct, mech, p)
-    y_feed_ch4 = gas.Y[gas.species_index("CH4")]
+    feed = ct.Solution(mech)
+    feed.TPX = p["t_min_K"], p["pressure_Pa"], p["feed"]
     i_ch4 = gas.species_index("CH4")
+    y_feed_ch4 = feed.Y[i_ch4]
     i_rec = {sp: gas.species_index(sp) for sp in RECORD_SPECIES}
-    # Whole-mechanism audit arrays, built once. y_feed has to be copied here:
-    # gas is the reactor's own phase and stops being the feed on the first step.
+    # Whole-mechanism audit arrays, built once. The feed composition comes
+    # from its own Solution: gas is the reactor's phase, and with "initial"
+    # set it never held the feed at all.
     mw_all = np.asarray(gas.molecular_weights, dtype=float)     # kg/kmol
     elements = [e for e in ("C", "H", "O") if e in gas.element_names]
     n_atom = {e: np.array([gas.n_atoms(i, e) for i in range(gas.n_species)],
                           dtype=float) for e in elements}
-    y_feed = np.asarray(gas.Y, dtype=float).copy()
+    y_feed = np.asarray(feed.Y, dtype=float).copy()
     n_c_species = (n_atom["C"] if "C" in n_atom
                    else np.zeros(gas.n_species)).astype(int)
     audit = None
@@ -292,11 +334,14 @@ def integrate(ct, mech, p, on_sample=None):
         # against the inventory change rather than assumed to be zero.
         w_all = np.zeros(gas.n_species)
         inv_start = reactor.mass * np.asarray(reactor.phase.Y, dtype=float)
+        w_in = 0.0
         for phase, dphase in grid:
             dt = dphase * p["period_s"]
             T = waveform_temperature(phase, p)
-            gas.TP = T, p["pressure_Pa"]
-            reactor.syncState()
+            # Gas pushed out by the temperature step is outflow at the
+            # reactor composition; gas drawn in on cooling is feed. Both
+            # are counted with the flow through the controllers below.
+            expelled, drawn = step_temperature(reactor, gas, T, p["pressure_Pa"], y_feed)
             mdot = reactor.mass / p["tau_s"]
             mfc_in.mass_flow_rate = mdot
             mfc_out.mass_flow_rate = mdot
@@ -304,20 +349,21 @@ def integrate(ct, mech, p, on_sample=None):
             t += dt
             net.advance(t)
             y = reactor.phase.Y
-            w_ch4 += mdot * y[i_ch4] * dt
-            w_feed += mdot * y_feed_ch4 * dt
-            w_total += mdot * dt
+            m_out = mdot * y * dt + expelled
+            w_ch4 += m_out[i_ch4]
+            w_feed += (mdot * dt + drawn) * y_feed_ch4
+            w_in += mdot * dt + drawn
+            w_total += mdot * dt + expelled.sum()
             for sp in RECORD_SPECIES:
-                w_out[sp] += mdot * y[i_rec[sp]] * dt
-            w_all += mdot * y * dt
-            conv_carbon += mdot * (y_feed_ch4 - y[i_ch4]) / MW["CH4"] * dt
-            c2_carbon += mdot * sum(
-                2 * y[gas.species_index(sp)] / MW[sp] for sp in C2_SPECIES) * dt
+                w_out[sp] += m_out[i_rec[sp]]
+            w_all += m_out
+            conv_carbon += ((mdot * dt + drawn) * y_feed_ch4 - m_out[i_ch4]) / MW["CH4"]
+            c2_carbon += sum(2 * m_out[gas.species_index(sp)] / MW[sp] for sp in C2_SPECIES)
             if on_sample:
                 on_sample(cycle, t, T, reactor)
         inv_end = reactor.mass * np.asarray(reactor.phase.Y, dtype=float)
         audit = carbon_audit(gas, mw_all, n_atom, n_c_species, y_feed,
-                             w_all, w_total, inv_start, inv_end)
+                             w_all, w_in, inv_start, inv_end)
         boundary = reactor.phase.Y.copy()
         residual = (float(abs(boundary - prev_boundary).max())
                     if prev_boundary is not None else float("inf"))
