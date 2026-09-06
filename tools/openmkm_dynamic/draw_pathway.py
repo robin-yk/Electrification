@@ -86,26 +86,18 @@ def edge_path(a, b, offset):
             ((sx, sy), (mx, my), (ex, ey)), (px, py))
 
 
-def arrowhead(d, ctrl, width):
-    """Cut the curve where the head begins and return the head polygon.
+def cut_curve(ctrl, dist):
+    """Split the quadratic where its chord to the end is dist.
 
-    The head grows with the line: 9 px long on the thinnest edge, about
-    2.3 times the stroke width on the thickest, so the shaft never shows
-    past the head's sides. The curve is cut at the parameter whose chord to
-    the old end is one head length (de Casteljau, so the cut piece is again
-    a quadratic) and the head points along the curve's tangent there; the
-    two therefore meet in a straight seam. Pulling the end point back along
-    the end tangent instead sent short edges past their control point and
-    drew a hook (the CO2 to CO edge is 26 px long against an 18 px head).
+    De Casteljau at that parameter, so the near piece is again a quadratic:
+    returns its control point, its end and the unit tangent there.
     """
     (sx, sy), (mx, my), (ex, ey) = ctrl
-    length = max(9.0, 1.6 * width + 6.0)
-    half = 0.5 * length
     lo, hi = 0.0, 1.0
     for _ in range(40):
         t = (lo + hi) / 2
         px, py = bezier_point(ctrl, t)
-        if math.hypot(ex - px, ey - py) > length:
+        if math.hypot(ex - px, ey - py) > dist:
             lo = t
         else:
             hi = t
@@ -117,12 +109,31 @@ def arrowhead(d, ctrl, width):
     if n < 1e-9:
         tx, ty = ex - sx, ey - sy
         n = math.hypot(tx, ty) or 1.0
-    tx, ty = tx / n, ty / n
+    return (cx, cy), (bx, by), (tx / n, ty / n)
+
+
+def arrowhead(d, ctrl, width):
+    """Cut the curve where the head begins and return the head polygon.
+
+    The head grows with the line: 9 px long on the thinnest edge, about
+    2.3 times the stroke width on the thickest, so the shaft never shows
+    past the head's sides. The head points along the curve's tangent at
+    its base, and the shaft runs 2 px into the head so the seam does not
+    print as a hairline (the two share one group opacity, so the overlap
+    does not darken). Pulling the end point back along the end tangent
+    instead sent short edges past their control point and drew a hook (the
+    CO2 to CO edge is 26 px long against an 18 px head).
+    """
+    (sx, sy), _, _ = ctrl
+    length = max(9.0, 1.6 * width + 6.0)
+    half = 0.5 * length
+    (cx, cy), (bx, by), _ = cut_curve(ctrl, length - 2.0)
+    _, (hx, hy), (tx, ty) = cut_curve(ctrl, length)
     nx, ny = -ty, tx
     short = f"M{sx:.1f},{sy:.1f} Q{cx:.1f},{cy:.1f} {bx:.1f},{by:.1f}"
-    head = (f"{bx + tx * length:.1f},{by + ty * length:.1f} "
-            f"{bx + nx * half:.1f},{by + ny * half:.1f} "
-            f"{bx - nx * half:.1f},{by - ny * half:.1f}")
+    head = (f"{hx + tx * length:.1f},{hy + ty * length:.1f} "
+            f"{hx + nx * half:.1f},{hy + ny * half:.1f} "
+            f"{hx - nx * half:.1f},{hy - ny * half:.1f}")
     return short, head
 
 
