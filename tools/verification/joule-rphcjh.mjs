@@ -37,7 +37,7 @@ export const cfpMaterial = (k) => ({
 });
 export const cfpEnclosure = (extra = {}) => ({
   wallMaterial: "quartz", wallK: 1.4, wallThickness: 0.001, wallEmissivity: 0.93,
-  gap: (17e-3 - CFP_D) / 2, gapK: 0.15, endMode: "ambient", endK: kelvin(20), endH: 200,
+  gap: (17e-3 - CFP_D) / 2, gapGas: "helium", gapK: 0.152, endMode: "ambient", endK: kelvin(20), endH: 200,
   contactRho: 0, maxIter: 160, tolerance: 1e-4, nr: 16, nz: 32, ...extra,
 });
 export const cfpInputs = (vset, material, enc) => ({

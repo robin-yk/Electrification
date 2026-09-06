@@ -1309,8 +1309,9 @@
               <div class="field"><label for="t2dWallThickness">Wall thickness</label><div class="control-row"><input id="t2dWallThickness" type="number" min="0.01" step="any" value="1"><span class="unit">mm</span></div></div>
               <div class="field"><label for="t2dWallEps">Outer-wall emissivity</label><input id="t2dWallEps" type="number" min="0" max="1" step="0.01" value="0.93"></div>
               <div class="field"><label for="t2dGap">Element–wall gap</label><div class="control-row"><input id="t2dGap" type="number" min="0" step="any" value="0.5"><span class="unit">mm</span></div></div>
-              <div class="field"><label for="t2dGapK">Gap conductivity</label><div class="control-row"><input id="t2dGapK" type="number" min="0.001" step="any" value="0.03"><span class="unit">W/m·K</span></div></div>
-              <div class="field full"><span class="context-note">The gap is a static effective-conduction layer. Its k is also used for the He cells above and below the element. Enter a measured effective k if internal gas convection or radiation is folded into this value.</span></div>
+              <div class="field"><label for="t2dGapGas">Gap gas</label><select id="t2dGapGas"><option value="helium" selected>Helium, k(T)</option><option value="air">Air, k(T)</option><option value="argon">Argon, k(T)</option><option value="custom">Custom constant k</option></select></div>
+              <div class="field"><label for="t2dGapK">Gap conductivity</label><div class="control-row"><input id="t2dGapK" type="number" min="0.001" step="any" value="0.152" disabled><span class="unit">W/m·K</span></div></div>
+              <div class="field full"><span class="context-note">The gap is a static effective-conduction layer filled with the named gas; its conductivity follows k(T) = k₃₀₀·(T/300)^n at the local gas temperature (helium 0.15 W/m·K at 300 K, 0.36 at 1000 K). The same gas fills the pores of a porous element and the He cells above and below the element. Choose Custom to enter one measured effective k instead, for example when internal gas convection or radiation is folded into it.</span></div>
             </div>
           </article>
 
@@ -1683,10 +1684,10 @@
           <a href="https://github.com/robin-yk/Electrification-Suite/blob/main/docs/LIMITS.md" target="_blank" rel="noopener">docs/LIMITS.md</a>.
         </p>
         <div class="limit-list">
-          <p><b>The material data is a bigger error than the mesh.</b> The default case sits 0.60 K from a grid four times finer, 0.07% of the temperature rise, but its resistivity is labelled in the source as a constant grade proxy and commercial grades vary by far more. <b>Do not</b> quote an absolute temperature against a measurement without substituting a datasheet property. These tools compare designs, where a shared property error largely cancels.</p>
+          <p><b>The material data is a bigger error than the mesh.</b> The default case sits 1.45 K from a grid four times finer, 0.23% of the temperature rise, but its resistivity is labelled in the source as a constant grade proxy and commercial grades vary by far more. <b>Do not</b> quote an absolute temperature against a measurement without substituting a datasheet property. These tools compare designs, where a shared property error largely cancels.</p>
           <p><b>Grid convergence is bounded, not eliminated.</b> Observed order 1.45, stable across two overlapping grid triplets. Between first and second order because conduction and radiation are second order while the purge enthalpy balance is first-order upwind. <b>Do not</b> separate two cases by less than about 0.6 K on the default grid without refining both.</p>
           <p><b>The purge stream is a mixing cup, not a flow field.</b> A one-dimensional upwind enthalpy balance at fixed capacity rate: no velocity profile, no boundary layer, no buoyancy. <b>Do not</b> ask it about local gas temperature, residence time, or a convective coefficient. It exists so the element has somewhere to lose heat.</p>
-          <p><b>Porosity is a mean, not a structure.</b> The mean solid fraction is deliberately not treated as a porosity, and no shipped material opts in: feeding it to a dispersed-pore model moved the Wismann peak from 818 to 852 °C against an 800 °C measurement. <b>Do not</b> expect pore-scale current or heat concentration; the radial contrast is a reactor-scale caricature.</p>
+          <p><b>Porosity is a mean, not a structure.</b> The mean solid fraction is deliberately not treated as a porosity, and no shipped material opts in: feeding it to a dispersed-pore model moved the Wismann peak from 818 to 852 °C against an 800 °C measurement (with the former constant 0.03 W/m·K gap; the gap gas now conducts as the named gas at its own temperature). <b>Do not</b> expect pore-scale current or heat concentration; the radial contrast is a reactor-scale caricature.</p>
           <p><b>A rectangular element is solved as an equivalent cylinder.</b> Surface area, mass, length and resistance are preserved, so the operating point and the steady mean survive. The conduction path to the surface is not: a slab loses heat across its half-thickness, the cylinder across a radius. <b>Do not</b> read internal spread or a foil's through-thickness gradient from a box case.</p>
           <p><b>The transient is first order in time.</b> Backward Euler, observed order 0.97 and 0.99, approaching first order from below. Unconditional stability is what makes a browser-affordable step possible against a stiff radiation boundary. <b>Do not</b> read a pulse peak or shape from fewer than about twenty steps per cycle; the cycle average is still right.</p>
           <p><b>A pulse train needs a period the element can follow.</b> The relaxation time depends on the material as much as the envelope: the shipped default relaxes in about 41 s as dense SiC and in 7.6 s as CFP in the same envelope. A period well under it is integrated, and the element responds to the mean whatever the time step. <b>Do not</b> expect rapid pulsed heating on a thin foil here. The companion paper's element is a 0.21 mm strip relaxing in 0.135 s, and the RPH vs CJH tool is the right instrument for it.</p>
@@ -1716,7 +1717,7 @@
 
   <script type="module">
     import {
-      SIGMA_SB, HE_FLOW_SCCM, HE_CP_MOLAR, MOLAR_VOLUME_STP, HE_CAPACITY_RATE, OUTSIDE_AIR_K,
+      SIGMA_SB, HE_FLOW_SCCM, HE_CP_MOLAR, MOLAR_VOLUME_STP, HE_CAPACITY_RATE, OUTSIDE_AIR_K, GAP_GASES,
       T2D_WALLS, MATERIALS, kelvin, celsius, clamp, finite, interpolate, propertiesAt,
       validate2DConfig, validateInput, geometry, directSurfaceHeatLoss, radiationCoefficient,
       gapRadiationCoefficient, enclosureHeatLoss, heatLoss, operatingAt, solveSteadyTemperature,
@@ -1833,6 +1834,7 @@
         wallThickness: num("t2dWallThickness") * 1e-3,
         wallEmissivity: num("t2dWallEps"),
         gap: num("t2dGap") * 1e-3,
+        gapGas: $("t2dGapGas").value,
         gapK: num("t2dGapK"),
         endMode: $("t2dEndMode").value,
         endK: kelvin(num("t2dEndC")),
@@ -3374,6 +3376,12 @@
           $("t2dWallK").value=wall.k;
           $("t2dWallEps").value=wall.emissivity;
         }
+        updateAll();
+      });
+      $("t2dGapGas").addEventListener("change", () => {
+        const gas=$("t2dGapGas").value, model=GAP_GASES[gas];
+        $("t2dGapK").disabled=Boolean(model);
+        if (model) $("t2dGapK").value=model.k300;
         updateAll();
       });
       ["t2dWallK","t2dWallThickness","t2dWallEps","t2dGap","t2dGapK","t2dEndMode","t2dEndC","t2dEndH","t2dContactRho","t2dPorosityContrast","t2dMaxIter","t2dTolerance"]

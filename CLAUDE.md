@@ -33,11 +33,13 @@ the build rather than emit a plate containing `NaN`. Apply the same standard to
 documentation: quote a value only where you can also say which command
 reproduces it.
 
-**Regenerate what a change invalidates.** `docs/VERIFICATION.md` is currently
-wrong in studies 1 to 3 because `build2DMesh` changed how it states its domain
-reach and nobody re-ran the report. That mistake reached a manuscript. If you
-touch `build2DMesh`, `gridLevels`, or anything either one feeds, re-run
-`npm run verify:joule` and update the document in the same commit.
+**Regenerate what a change invalidates.** `docs/VERIFICATION.md` studies 1 to
+3 were once left stale after `build2DMesh` changed how it states its domain
+reach, and that mistake reached a manuscript; they were regenerated on
+2026-09-06 together with everything the gap-gas model moved. If you touch
+`build2DMesh`, `gridLevels`, the enclosure defaults, or anything any of them
+feeds, re-run `npm run verify:joule` and the other `verify:*` scripts, rebuild
+`docs/figures`, and update the documents in the same commit.
 
 **Solver modules stay pure.** No DOM, no globals, no I/O. Inputs are plain
 objects, outputs are plain objects. This is what lets the tests and the browser

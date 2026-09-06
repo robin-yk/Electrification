@@ -34,7 +34,7 @@ export function defaultInput(overrides = {}, enclosureOverrides = {}) {
     ambientK: kelvin(20), gasK: kelvin(20), targetK: kelvin(1000), biLimit: 0.01,
     enclosure: {
       wallMaterial: "quartz", wallK: 1.4, wallThickness: 1e-3, wallEmissivity: 0.93,
-      gap: 0.5e-3, gapK: 0.03, endMode: "ambient", endK: kelvin(20), endH: 250,
+      gap: 0.5e-3, gapGas: "helium", gapK: 0.152, endMode: "ambient", endK: kelvin(20), endH: 250,
       contactRho: 0, maxIter: 160, tolerance: 1e-4,
       ...enclosureOverrides,
     },
@@ -142,7 +142,9 @@ export function mmsStudy(levels = 3) {
       material: { name: "MMS medium", rhoOhmCm: 1, density: 1000, cp: 500, k: OUTSIDE_AIR_K, jmax: 1e9 },
       emissivity: 0, convection: false,
     },
-    { gap: 0, gapK: OUTSIDE_AIR_K, wallK: OUTSIDE_AIR_K, wallEmissivity: 0, tolerance: 1e-7, maxIter: 400 },
+    // The manufactured solution needs one uniform constant k everywhere, so the
+    // gas is pinned to a constant rather than the shipped helium k(T).
+    { gap: 0, gapGas: "custom", gapK: OUTSIDE_AIR_K, wallK: OUTSIDE_AIR_K, wallEmissivity: 0, tolerance: 1e-7, maxIter: 400 },
   );
   const rows = [];
   for (const grid of gridLevels(levels)) {

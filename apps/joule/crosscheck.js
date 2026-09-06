@@ -26,7 +26,7 @@ export function sig4(x) {
 // their numbers match what a reader sees on an untouched page.
 export const DEFAULT_ENCLOSURE = {
   wallMaterial: "quartz", wallK: 1.4, wallThickness: 0.001, wallEmissivity: 0.93,
-  gap: 0.0005, gapK: 0.03, endMode: "ambient", endK: kelvin(20), endH: 250,
+  gap: 0.0005, gapGas: "helium", gapK: 0.152, endMode: "ambient", endK: kelvin(20), endH: 250,
   contactRho: 0, maxIter: 160, tolerance: 1e-4,
 };
 
@@ -46,7 +46,7 @@ const CFP = {
 // its own enclosure rather than the page's.
 const CFP_ENCLOSURE = {
   wallMaterial: "quartz", wallK: 1.4, wallThickness: 0.001, wallEmissivity: 0.93,
-  gap: (17e-3 - CFP_D) / 2, gapK: 0.15, endMode: "ambient", endK: kelvin(20), endH: 200,
+  gap: (17e-3 - CFP_D) / 2, gapGas: "helium", gapK: 0.152, endMode: "ambient", endK: kelvin(20), endH: 200,
   contactRho: 0, maxIter: 160, tolerance: 1e-4,
 };
 // The paper's measured fit, T[°C] = 202.24 * P^0.3525 (SI Fig. S11b, R² = 0.997).
@@ -58,6 +58,13 @@ const cfpFitC = (P) => 202.24 * Math.pow(P, 0.3525);
 //   rows(results)      -> [label, tool value, reference] triples for the tables
 //   thermal            -> which input carries the temperature comparison, plus
 //                         the measured value to put beside 0D and 2D
+// Wismann's tube and Zheng's foam were not helium-purged: the tube sat in air
+// inside its insulation and the foam ran in a reformer gas of air-like
+// conductivity. The page's enclosure (wall, gap width, end condition) still
+// applies to them so the live 0D column follows the 2D tab, but the gap gas is
+// pinned to air. Kwak's strip is the one case that really sat in helium.
+const inAir = (enclosure) => ({ ...enclosure, gapGas: "air", gapK: 0.026 });
+
 export function crossCheckCases(enclosure = DEFAULT_ENCLOSURE) {
   const wismannMaterial = MATERIALS.find((m) => /Kanthal|FeCrAl/i.test(m.name));
 
@@ -75,7 +82,7 @@ export function crossCheckCases(enclosure = DEFAULT_ENCLOSURE) {
           imax: 65, vmax: 100, pmax: 2000, supplyMode: "auto", iset: 65, vset: 100,
           ambientK: kelvin(20), targetK: kelvin(800),
           emissivity: wismannMaterial?.emissivity ?? 0.8, convection: false, h: 0,
-          gasK: kelvin(20), biLimit: 0.01, enclosure,
+          gasK: kelvin(20), biLimit: 0.01, enclosure: inAir(enclosure),
         },
       }),
       rows: ({ main: r }) => [
@@ -97,7 +104,7 @@ export function crossCheckCases(enclosure = DEFAULT_ENCLOSURE) {
           imax: 50, vmax: 30, pmax: 2000, supplyMode: "cv", iset: 50, vset: 13.04,
           ambientK: kelvin(20), targetK: kelvin(750),
           emissivity: 0.9, convection: false, h: 0,
-          gasK: kelvin(20), biLimit: 0.01, enclosure,
+          gasK: kelvin(20), biLimit: 0.01, enclosure: inAir(enclosure),
         };
         return { v1304: base, v1410: { ...base, vset: 14.10 } };
       },

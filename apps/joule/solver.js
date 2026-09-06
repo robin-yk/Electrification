@@ -11,6 +11,41 @@ export const MOLAR_VOLUME_STP = 0.022414;
 export const HE_CAPACITY_RATE = HE_FLOW_SCCM * 1e-6 / 60 / MOLAR_VOLUME_STP * HE_CP_MOLAR;
 export const OUTSIDE_AIR_K = 0.026;
 
+// Conductivity of the gas in the element-wall gap, the pore gas, and the He
+// cells above and below the element. Until 2026-09-06 this was one constant,
+// cfg.gapK, shipped at 0.03 W/m·K: air near room temperature, in a gap the
+// page labels as helium. Helium conducts 0.15 W/m·K at 300 K and 0.36 at
+// 1000 K, so the gap was under-conducting by five to twelve times and the
+// element ran hot: the Mittal (2025) CFP strip at 29.1 V settled at 1783 C
+// against the paper's 1517 to 1532 C, and switching the gas alone brings it
+// to 1579 C (tests/joule-gap-gas.test.js). The paper's "21.8 percent of the
+// heat leaves with the gas" is conduction through helium, not forced
+// convection: at 90 mL/min the strip sees Re ~ 0.3 and a film coefficient of
+// ~3 W/m²K, under 3 W.
+//
+// k(T) = k300 * (T / 300)^n fits the NIST / Petersen (1970) tabulations to
+// within 4 percent from 300 to 2000 K for all three gases. cfg.gapGas selects
+// the gas; "custom" (or an absent field) keeps the constant cfg.gapK, which
+// is what every existing test and every saved configuration relies on.
+export const GAP_GASES = {
+  helium: { name:"Helium", k300:0.152, exponent:0.7, source:"Petersen (1970) He property tables; NIST" },
+  air:    { name:"Air",    k300:0.026, exponent:0.8, source:"NIST air thermal conductivity" },
+  argon:  { name:"Argon",  k300:0.0177, exponent:0.7, source:"NIST argon thermal conductivity" },
+  custom: null,
+};
+
+export function gasConductivityAt(gas, tempK) {
+  const model = GAP_GASES[gas];
+  if (!model) return NaN;
+  return model.k300 * Math.pow(Math.max(tempK, 1) / 300, model.exponent);
+}
+
+export function gapConductivity(cfg, tempK) {
+  const gas = cfg && cfg.gapGas;
+  if (gas && GAP_GASES[gas]) return Math.max(1e-9, gasConductivityAt(gas, tempK));
+  return Math.max(1e-9, finite(cfg && cfg.gapK) ? cfg.gapK : OUTSIDE_AIR_K);
+}
+
 // density and cp are unused by the steady solve and exist only for the
 // transient one, where the wall's thermal mass is comparable to the
 // element's and therefore sets much of the warm-up time.
@@ -137,7 +172,7 @@ export function elementK(material, tempK, x, cfg) {
   if (!material || !material.kIsSkeleton) return kSolid;
   const solidFraction = finite(x && x.solidFraction) ? clamp(x.solidFraction, 1e-6, 1) : 1;
   if (solidFraction >= 1) return kSolid;
-  const kGas = Math.max(1e-9, finite(cfg && cfg.gapK) ? cfg.gapK : OUTSIDE_AIR_K);
+  const kGas = gapConductivity(cfg, tempK);
   return Math.max(1e-6, maxwellEucken(kSolid, kGas, 1 - solidFraction));
 }
 
@@ -195,9 +230,12 @@ export function porosityFactor2D(mesh, cfg) {
 
 export function validate2DConfig(cfg) {
   const errors = [];
-  [["Wall conductivity",cfg.wallK],["Wall thickness",cfg.wallThickness],["Gap conductivity",cfg.gapK],["Maximum iterations",cfg.maxIter],["Temperature tolerance",cfg.tolerance]].forEach(([label,value]) => {
+  const customGas = !(cfg.gapGas && GAP_GASES[cfg.gapGas]);
+  if (cfg.gapGas && !(cfg.gapGas in GAP_GASES)) errors.push(`Unknown gap gas "${cfg.gapGas}".`);
+  [["Wall conductivity",cfg.wallK],["Wall thickness",cfg.wallThickness],["Maximum iterations",cfg.maxIter],["Temperature tolerance",cfg.tolerance]].forEach(([label,value]) => {
     if (!finite(value) || value <= 0) errors.push(`${label} must be greater than zero.`);
   });
+  if (customGas && (!finite(cfg.gapK) || cfg.gapK <= 0)) errors.push("Gap conductivity must be greater than zero.");
   if (!finite(cfg.gap) || cfg.gap < 0) errors.push("Element–wall gap must be zero or greater.");
   if (!finite(cfg.wallEmissivity) || cfg.wallEmissivity < 0 || cfg.wallEmissivity > 1) errors.push("Outer-wall emissivity must be between zero and one.");
   if (!finite(cfg.contactRho) || cfg.contactRho < 0) errors.push("Electrical contact resistivity must be zero or greater.");
@@ -338,7 +376,10 @@ export function enclosureHeatLoss(T, x, g, cfg=x.enclosure) {
   const elementSideArea=2*Math.PI*elementRadius*g.L,elementEndArea=Math.PI*elementRadius*elementRadius,wallOutsideArea=2*Math.PI*wallOuterRadius*domainHeight;
   const wallAnnulusArea=Math.PI*(wallOuterRadius*wallOuterRadius-wallInnerRadius*wallInnerRadius);
   const wallRadialResistance=Math.log(wallOuterRadius/Math.max(wallInnerRadius,1e-30))/(2*Math.PI*Math.max(cfg.wallK,1e-30)*g.L);
-  const gapResistance=cfg.gap>1e-12?Math.log(wallInnerRadius/elementRadius)/(2*Math.PI*Math.max(cfg.gapK,1e-30)*g.L):0;
+  // The gap gas conducts at its film temperature. The wall temperature is what
+  // the bisection below solves for, so the resistance is a function of it and
+  // is re-evaluated at every step rather than fixed up front.
+  const gapResistanceAt=(filmK)=>cfg.gap>1e-12?Math.log(wallInnerRadius/elementRadius)/(2*Math.PI*gapConductivity(cfg,filmK)*g.L):0;
   const airResistance=Math.log(domainRadius/wallOuterRadius)/(2*Math.PI*OUTSIDE_AIR_K*domainHeight);
   const filmResistance=x.convection&&x.h>0?1/(x.h*wallOutsideArea):0;
   const outsideConduction=1/Math.max(airResistance+filmResistance,1e-30);
@@ -348,7 +389,7 @@ export function enclosureHeatLoss(T, x, g, cfg=x.enclosure) {
   const gapConductance=(wallK)=>{
     if(cfg.gap<=1e-12)return 1/Math.max(wallRadialResistance,1e-30);
     const radiation=SIGMA_SB*elementSideArea*(T+wallK)*(T*T+wallK*wallK)/Math.max(gapRadiationDenominator,1e-30);
-    const conduction=1/Math.max(gapResistance+wallRadialResistance,1e-30);
+    const conduction=1/Math.max(gapResistanceAt((T+wallK)/2)+wallRadialResistance,1e-30);
     const radiationThroughWall=1/(1/Math.max(radiation,1e-30)+wallRadialResistance);
     return conduction+radiationThroughWall;
   };
@@ -382,14 +423,14 @@ export function enclosureHeatLoss(T, x, g, cfg=x.enclosure) {
   const wallK=(lo+hi)/2,side=gapConductance(wallK)*(T-wallK);
   let end=0;
   if(cfg.endMode==="ambient") {
-    const gasEndConductance=2*cfg.gapK*elementEndArea/axialMargin;
+    const gasEndConductance=2*gapConductivity(cfg,(T+x.ambientK)/2)*elementEndArea/axialMargin;
     end=gasEndConductance*(T-x.ambientK)+2*x.emissivity*SIGMA_SB*elementEndArea*(Math.pow(T,4)-Math.pow(x.ambientK,4));
   } else if(cfg.endMode==="electrode") end=2*cfg.endH*elementEndArea*(T-cfg.endK);
   let heOutletK=x.gasK,heAdvective=0;
   if(cfg.gap>1e-12&&HE_CAPACITY_RATE>0) {
-    const activeUa=1/Math.max(gapResistance,1e-30),activeEffectiveness=1-Math.exp(-activeUa/HE_CAPACITY_RATE);
+    const activeUa=1/Math.max(gapResistanceAt((T+wallK)/2),1e-30),activeEffectiveness=1-Math.exp(-activeUa/HE_CAPACITY_RATE);
     const afterActive=x.gasK+activeEffectiveness*(T-x.gasK);
-    const downstreamUa=cfg.gapK*elementEndArea/axialMargin;
+    const downstreamUa=gapConductivity(cfg,(afterActive+x.ambientK)/2)*elementEndArea/axialMargin;
     heOutletK=x.ambientK+(afterActive-x.ambientK)*Math.exp(-downstreamUa/HE_CAPACITY_RATE);
     heAdvective=HE_CAPACITY_RATE*(heOutletK-x.gasK);
   }
@@ -603,7 +644,7 @@ export function build2DMesh(g, cfg) {
 
 export function material2DName(code, result) {
   if (code === 0) return result.material.name;
-  if (code === 1) return "Gas gap";
+  if (code === 1) return GAP_GASES[result.cfg.gapGas] ? `Gas gap · ${GAP_GASES[result.cfg.gapGas].name}` : "Gas gap";
   if (code === 2) return T2D_WALLS[result.cfg.wallMaterial]?.name || "Wall";
   if (code === 4) return "He process gas · 50 sccm";
   return "Surrounding air";
@@ -611,7 +652,7 @@ export function material2DName(code, result) {
 
 export function cellK2D(code, tempK, material, cfg, x) {
   if (code === 0) return elementK(material, tempK, x, cfg);
-  if (code === 1 || code === 4) return Math.max(1e-6, cfg.gapK);
+  if (code === 1 || code === 4) return Math.max(1e-6, gapConductivity(cfg, tempK));
   if (code === 2) return Math.max(1e-6, cfg.wallK);
   return OUTSIDE_AIR_K;
 }
@@ -936,8 +977,10 @@ export function assemble2DSystem(T, x, g, cfg, material, mesh, op, transient = n
     // Same half-cell correction as seriesRadiationConductance, applied to the
     // element→wall gap exchange: the radiating surfaces sit on the cell faces,
     // not at the two cell centers this face couples. On the shipped enclosure
-    // this is the element's dominant loss path (gapK = 0.03 W/m·K conducts
-    // almost nothing), so it carries most of the grid sensitivity. The half-cell
+    // this was the element's dominant loss path while the gap conducted as
+    // air (0.03 W/m·K); with helium the conduction branch carries a comparable
+    // share, and the radiation branch still carries most of the grid
+    // sensitivity. The half-cell
     // resistances also appear on the parallel conduction branch through the gap
     // cells; treating each branch as its own series chain slightly overcounts
     // them, which is far smaller than dropping them from the radiation branch.

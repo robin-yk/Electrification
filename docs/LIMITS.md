@@ -16,11 +16,11 @@ convergence study or a published measurement, it says so.
 For every tool here, the material data dominates the discretization error, and
 usually by more than an order of magnitude.
 
-The Joule 2D field, on its shipped default case, sits **0.60 K** from a grid
-four times finer in each direction, which is 0.07% of the temperature rise
+The Joule 2D field, on its shipped default case, sits **1.45 K** from a grid
+four times finer in each direction, which is 0.23% of the temperature rise
 (`VERIFICATION.md` §4). The resistivity that case is computed from is labelled
 in the source as a **"constant grade proxy"**. Commercial SiC elements vary
-between grades by far more than 0.07%.
+between grades by far more than 0.23%.
 
 Several presets say the same thing about themselves:
 
@@ -39,17 +39,37 @@ cancels, not to predict one design in isolation.
 
 ### Grid convergence is bounded, not eliminated
 
-Observed order 1.45 on the shipped grid sequence, stable across two overlapping
-grid triplets, extrapolating to 846.12 °C. The shipped 30×60 grid is 0.60 K
-from a 240×480 solve.
+Observed order 1.62 and 1.71 on the two overlapping grid triplets of the
+shipped sequence, extrapolating to 642.71 °C. The shipped 30×60 grid is 1.45 K
+from a 240×480 solve (2026-09-06, helium in the gap; it was 0.60 K from
+846.12 °C with the constant 0.03 W/m·K gap).
 
 The order is between first and second because the case mixes both: conduction
 and surface radiation are second order, the He purge enthalpy balance is
 first-order upwind.
 
-**Do not** read more than about 0.6 K of significance into a Joule 2D
+**Do not** read more than about 1.5 K of significance into a Joule 2D
 temperature on the default grid, or compare two cases whose difference is
 smaller than that without refining both.
+
+### The gap gas conducts, and the 0D network has not caught up
+
+Until 2026-09-06 the element-to-wall gap, the pore gas and the He purge
+cells conducted at a constant 0.03 W/m·K, air near room temperature, under
+a helium label. Helium conducts five to twelve times that between 300 and
+1500 K. The gas is now selectable (`cfg.gapGas`) and its conductivity
+follows k(T) at the local film temperature; the shipped default is helium.
+On the Mittal et al. (2025) carbon-paper strip at the paper's 303 W the 2D
+mean fell from 1785 to 1616 °C against a CFD range of 1517 to 1532 °C
+(`VERIFICATION.md`, gap gas section).
+
+The 0D screening network was tuned while the gap barely conducted. With
+helium it over-predicts the wall loss by 12.9 percent at the isothermal
+limit and reads the element **84 K cold** (`npm run verify:zerod-limit`).
+
+**Do not** quote a 0D temperature from a helium case without that offset
+beside it, and **do not** read the 0D-to-2D agreement recorded before
+2026-09-06 as evidence about the 0D network: it was air's.
 
 ### The purge stream is a mixing cup, not a flow field
 
@@ -70,7 +90,8 @@ conductivity closure. That gate is `material.kIsSkeleton`, and no shipped
 material sets it. The reason is recorded at `elementK()`: `solidFraction` is
 overloaded across the shipped cases, and feeding it to a dispersed-pore model
 moved the Wismann tube's 2D peak from 818 to 852 °C against an **800 °C
-measurement**, away from the experiment.
+measurement**, away from the experiment (measured with the constant 0.03
+W/m·K gap; the peak reads 760 °C on the 2026-09-06 air k(T) model).
 
 `cfg.porosityContrast` adds a radial variation about that mean, normalized so
 the volume-averaged solid fraction is unchanged. It defaults to zero.

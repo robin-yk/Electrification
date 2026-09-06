@@ -52,13 +52,13 @@ against the exact parabola:
 
 | case | analytic center→surface rise | worst relative mismatch |
 | --- | --- | --- |
-| L/D = 20 | 10.54 K | 6.4e-3 |
-| L/D = 40 | 5.86 K | 3.7e-4 |
-| L/D = 80 | 1.46 K | 2.7e-5 |
+| L/D = 20 | 10.54 K | 7.4e-3 |
+| L/D = 40 | 5.86 K | 4.3e-4 |
+| L/D = 80 | 1.46 K | 3.0e-5 |
 
 The mismatch collapses by more than an order of magnitude per doubling of L/D. It is the physical axial
 curvature of a finite rod, not discretization error. At L/D = 80 the discrete
-radial operator reproduces the exact solution to 2.7e-5.
+radial operator reproduces the exact solution to 3.0e-5.
 
 ### 2. Multi-layer annulus vs ln-resistance theory
 
@@ -68,9 +68,9 @@ against the piecewise analytic solution:
 
 | L/D | worst layer error |
 | --- | --- |
-| 20 | 17.0% |
-| 50 | 5.1% |
-| 100 | 1.95% |
+| 20 | 17.5% |
+| 50 | 5.2% |
+| 100 | 1.9% |
 
 The error is a uniform flux deficit across all layers (axial leakage carrying
 part of the power to the ends), shrinking toward zero as the cylinder
@@ -100,25 +100,32 @@ radiation on, 20 A current-limited drive):
 
 | grid | avg T (°C) | max T (°C) | energy closure | linear residual |
 | --- | --- | --- | --- | --- |
-| 30×60 (default) | 846.75 | 848.41 | 8.7e-8 | 9.0e-12 |
-| 60×120 | 846.35 | 848.02 | 8.3e-8 | 8.0e-12 |
-| 120×240 | 846.20 | 847.88 | 8.8e-8 | 7.0e-12 |
-| 240×480 | 846.15 | 847.82 | 6.5e-9 | 9.9e-12 |
+| 30×60 (default) | 644.21 | 646.10 | 5.2e-8 | 7.4e-12 |
+| 60×120 | 643.20 | 645.09 | 5.2e-8 | 7.9e-12 |
+| 120×240 | 642.86 | 644.77 | 5.3e-8 | 7.2e-12 |
+| 240×480 | 642.76 | 644.67 | 5.2e-8 | 6.2e-12 |
 
-Richardson on the first three grids gives an observed order of **1.45** for
-average temperature (1.46 for peak), an extrapolated 846.12 °C, and a
-finest-grid relative error of 9.9e-5. Repeating it on grids 2–4 gives 1.46 and
-846.12 °C: the two overlapping triplets agree on both the order and the
-extrapolated value, which is the check that the sequence is genuinely in the
-asymptotic range rather than accidentally well-behaved on one triplet.
+Regenerated 2026-09-06 with helium k(T) in the gap
+(`node docs/figures/make-verification-data.mjs --levels 4`, which records
+these rows in `verification-data.json`). The default case is 200 K cooler
+than it was with the constant 0.03 W/m·K gap (846.75 °C on the same grid),
+because the gas now carries heat to the wall.
+
+Richardson on the first three grids gives an observed order of **1.62** for
+average temperature (1.62 for peak), an extrapolated 642.71 °C, and a
+finest-grid relative error of 2.5e-4. Repeating it on grids 2–4 gives 1.71 and
+642.72 °C: the two overlapping triplets agree on the extrapolated value to
+0.01 K and on the order to 0.1, which is the check that the sequence is
+genuinely in the asymptotic range rather than accidentally well-behaved on
+one triplet. With air in the gap the same study read 1.45 and 1.46.
 
 The order sits between first and second because the case mixes both. Conduction
 and surface radiation are second-order (studies 1–3); the He purge enthalpy
-balance is first-order upwind. A mixture converging at 1.45 is the expected
-result, not a defect.
+balance is first-order upwind. A mixture converging between 1.6 and 1.7 is the
+expected result, not a defect.
 
 **Sensitivity bound: the default 30×60 grid differs from the 240×480 grid by
-0.60 K in average temperature and 0.59 K in peak, i.e. 0.07% of the ~827 K
+1.45 K in average temperature and 1.44 K in peak, i.e. 0.23% of the ~624 K
 temperature rise.**
 
 #### Why this section used to report a negative order
@@ -231,9 +238,73 @@ independent support for it:
 | Kwak | 1270.7 °C | 1276.5 °C | 1094 °C |
 
 **Consequence for the earlier cross-check claim.** The 0D-to-2D gap on Wismann
-was 49.8 K and is now 24.3 K. Roughly half of what had been reported as the 2D
+was 49.8 K and became 24.3 K (29.2 K on the 2026-09-06 gas model, below). Roughly half of what had been reported as the 2D
 resolving something the lumped model could not was this network's own
 over-prediction of wall radiating area.
+
+### The gap gas, 2026-09-06: the agreement above was air's
+
+Everything in this section up to here was measured with the gap conducting
+at a constant 0.03 W/m·K, which is air near room temperature, in a gap the
+page labels as helium. `cfg.gapGas` now selects the gas and the
+conductivity follows k(T) = k₃₀₀·(T/300)^n at the local film temperature
+(helium 0.152 W/m·K at 300 K, 0.36 at 1000 K; `GAP_GASES` in
+`solver.js`). The shipped default is helium. Rerunning the isothermal limit
+(`npm run verify:zerod-limit`) with helium:
+
+| | air, constant 0.03 | helium, k(T) |
+| --- | --- | --- |
+| offset at Bi_R = 3.7e-6 | −8.3 K | **+83.6 K** |
+| 0D loss at the 2D mean temperature | 526.1 W | 600.9 W |
+| 2D loss at the same temperature | 532.2 W | 532.2 W |
+| loss agreement | −1.2% | **+12.9%** |
+
+The resolved loss did not move: helium conducts 15 W more through the gap
+in 2D and the wall re-radiates it, so the 2D total stays at 532 W and the
+2D mean temperature falls by 164 K. The 0D network moved by 75 W. Channel
+by channel, both at the 2D mean:
+
+| path | 0D | 2D |
+| --- | --- | --- |
+| side (gap, wall, outside) | 562.30 W | 497.1 W (wall radiation 449.7 + outer radial 40.8 + axial 6.6) |
+| element end | 38.19 W | 35.02 W |
+| He advective | 0.42 W | 0.12 W |
+
+The side path carries 65 of the 69 W. The 0D wall temperature it solves
+for, 1319 °C, now sits at the 2D outer-wall mid-plane value, 1313 °C, and
+at that temperature the fin network above radiates 13 percent more than
+the resolved wall does. With air the same network sat 66 K below the 2D
+mid-plane wall (1248 against 1314 °C) and came out 8 W low, so the −1.2
+percent agreement recorded above was two errors cancelling: a gap that
+barely conducted, and a radiating-area model that overshoots once the wall
+is as hot as it should be. **The 0D network under-predicts the element
+temperature by 84 K at the isothermal limit with helium in the gap**, and
+that offset is the number to quote beside any 0D screening result until
+the fin network is re-derived against the resolved wall profile. It is not
+fixed here.
+
+The cross-check column moved with it. Wismann's tube and Zheng's foam were
+never helium-purged, so those two cases now carry air at k(T) (0.026 W/m·K
+at 300 K, 0.068 at 1000 K) rather than the constant 0.03; Kwak's strip sat
+in helium in its 17 mm quartz tube and takes the helium model:
+
+| case | 0D, constant 0.03 | 0D now | 2D avg now | measured |
+| --- | --- | --- | --- | --- |
+| Wismann | 787.4 °C | 724.5 °C | 753.7 °C | 800 °C |
+| Zheng | 757.3 °C | 727.5 °C | 749.0 °C | not tabulated |
+| Kwak | 1276.5 °C | 1172.8 °C | 1200.1 °C | 1086 °C from the T–P fit at 117.6 W |
+
+Kwak moved toward its measurement by 104 K on the strength of the gas
+alone; Wismann moved away by 63 K, because air at 700 °C conducts 0.06
+W/m·K rather than 0.03 and the page enclosure was never that reactor's. The
+Mittal et al. (2025) strip that exposed the problem, 38 × 8 × 0.21 mm at
+the paper's effective 29.1 V and 303 W, reads 1783 °C in 0D and 1785 °C in
+2D with the constant 0.03, and 1543 °C (0D) and 1616 °C (2D) with helium,
+against the paper's CFD range of 1517 to 1532 °C. The gas closed 170 of the
+260 K gap in the resolved model; the remaining 85 to 100 K is `미확인`
+(the paper's tube diameter and the strip's emissivity are not stated in
+the inputs used here). Reproduce with `tests/joule-gap-gas.test.js` and
+`node tools/verification/crosscheck.mjs`.
 
 ### Control: the closed form is reproduced exactly
 
@@ -276,10 +347,13 @@ construction and sweeping L/D:
 
 | L/D | 1.5 | 4 | 10 | 30 | 60 |
 | --- | --- | --- | --- | --- | --- |
-| f(L/D) | 0.649 | 0.799 | 0.939 | 1.000 | 0.9995 |
+| f(L/D), air 0.03 in the gap (2026-08) | 0.649 | 0.799 | 0.939 | 1.000 | 0.9995 |
+| f(L/D), helium k(T) in the gap (2026-09-06) | 0.454 | 0.751 | 0.932 | 1.000 | 0.9999 |
 
-f rises monotonically and saturates near L/D ≈ 20 — a factor of 1.54 across the
-range. Short elements shed heat axially, which relieves the radial gradient the
+f rises monotonically and saturates near L/D ≈ 20, a factor of 1.54 across the
+range with air in the gap and 2.2 with helium: a conducting gas lets a short
+element shed even more of its heat axially, so the correction the lumped model
+needs at L/D 1.5 is larger, not smaller, on the shipped default gas. Short elements shed heat axially, which relieves the radial gradient the
 lumped model cannot see. So the law carries a correction:
 
     spread / rise  =  (Bi_R / 2) · f(L/D)
@@ -302,10 +376,13 @@ Bi_R = 3.9e-4) and changed sign at low emissivity with a high drive. The
 correction cuts the isothermal-limit offset by 3.2x, so the offset is no longer
 the dominant term in most of the sweep — but it does not reach zero, and it still
 does not scale with Bi_R. **A Biot criterion remains necessary and not
-sufficient**, and must be quoted with the residual offset. The spread-side
-results above are unaffected: the fix touches only the 0D network, so every 2D
-quantity, and therefore every slope, R² and f(L/D) in this section, is
-unchanged.
+sufficient**, and must be quoted with the residual offset. The fin fix touched
+only the 0D network, so it left every 2D quantity alone. The gap-gas model of
+2026-09-06 did not: it is a 2D change, and on rerunning the sweep with helium
+the slopes held (0.9374 in 3a and 3b, R² 1.000, n 48 and 12) while f(L/D) at
+short aspect ratio fell, as tabulated above. The offsets in the sweep rows
+are now 33 to 200 K, all positive, consistent with the isothermal-limit
+finding recorded in the gap gas section.
 
 Two reporting defects were found and fixed inside this study, both of the same
 shape — a summary statistic agreeing with the hypothesis while the rows
@@ -324,10 +401,17 @@ results true as the solvers evolve, using the cheap grid levels only:
 - Joule annulus worst-layer error < 8% at L/D = 50, < 3% at L/D = 100;
 - Joule MMS observed order > 1.7 (L2) / > 1.6 (L∞) on the 30×60→60×120 pair.
 
-Studies 1 to 3 were regenerated on 2026-08-25 against the current
-`build2DMesh`. Commit `319e5a2` changed how the mesh states its outer domain
-reach, which moves every study that compares against an infinite-length or
-unbounded analytic solution: the parabola mismatch at L/D = 20 went 5.8e-3 to
-6.4e-3, the annulus worst-layer error at L/D = 100 went 0.8% to 1.95%, and the
+Studies 1 to 3 were regenerated on 2026-08-25 against the then-current
+`build2DMesh`, and again on 2026-09-06 (`npm run verify:joule`) after the
+gap-gas model landed. Commit `319e5a2` changed how the mesh states its outer
+domain reach, which moves every study that compares against an
+infinite-length or unbounded analytic solution: the parabola mismatch at
+L/D = 20 went 5.8e-3 to 6.4e-3 and then 7.4e-3, the annulus worst-layer
+error at L/D = 100 went 0.8% to 1.95% and then 1.9%, and the
 manufactured-solution orders went 2.00/2.01 to 2.05/2.06 in L2 and 1.96/1.98
-to 1.77/1.90 in L∞. The conclusions are unchanged; the numbers are not.
+to 1.77/1.90 in L∞, where they stay: the manufactured solution pins the gas
+to a constant, so the gap-gas model does not touch it. The conclusions are
+unchanged; the numbers are not. Every other study in this document (4, the
+0D-trust section, the transient and electrical guards) was rerun the same
+day; the transient orders (0.973, 0.986) and every electrical identity are
+unchanged because their cases carry constant gap conductivities.
