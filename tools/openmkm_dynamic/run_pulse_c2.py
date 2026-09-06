@@ -39,15 +39,24 @@ TAU_S = 0.2                     # the residence time the S9 card settled on
 # at which anything converts in 0.2 s, and 20 percent duty peaks at 3063 C,
 # past anything carbon paper survives. The useful window is narrow and
 # round 2 steps inside it: peaks between about 1400 and 1800 C.
+# "siop" in a round 1 or 2 key means the SI operating voltage held fixed
+# while the period or duty moves. When round 3 taught "si-op" to solve the
+# voltage for the case's own period and duty (dcf0e68), these four cases
+# silently became round 3 cases on a rerun: the 0.2 s period went from a
+# 1131 C peak at 78 V to 1800 C at 122 V and 74 percent conversion. The
+# voltage is therefore written out, to the precision the original files
+# carry, and only the anchor still says "si-op".
+SI_VOLTAGE = "78.11344859393759"
+
 CASES = [
     {"key": "anchor-siop-1s-d0.05", "voltage": "si-op", "period_s": 1.0, "duty": 0.05},
     {"key": "peak-60V-1s-d0.05", "voltage": "60", "period_s": 1.0, "duty": 0.05},
-    {"key": "period-siop-0.2s-d0.05", "voltage": "si-op", "period_s": 0.2, "duty": 0.05},
-    {"key": "duty-siop-1s-d0.2", "voltage": "si-op", "period_s": 1.0, "duty": 0.2},
+    {"key": "period-siop-0.2s-d0.05", "voltage": SI_VOLTAGE, "period_s": 0.2, "duty": 0.05},
+    {"key": "duty-siop-1s-d0.2", "voltage": SI_VOLTAGE, "period_s": 1.0, "duty": 0.2},
     # round 2
     {"key": "peak-70V-1s-d0.05", "voltage": "70", "period_s": 1.0, "duty": 0.05},
-    {"key": "period-siop-2s-d0.05", "voltage": "si-op", "period_s": 2.0, "duty": 0.05},
-    {"key": "duty-siop-1s-d0.1", "voltage": "si-op", "period_s": 1.0, "duty": 0.1},
+    {"key": "period-siop-2s-d0.05", "voltage": SI_VOLTAGE, "period_s": 2.0, "duty": 0.05},
+    {"key": "duty-siop-1s-d0.1", "voltage": SI_VOLTAGE, "period_s": 1.0, "duty": 0.1},
     {"key": "duty-70V-1s-d0.1", "voltage": "70", "period_s": 1.0, "duty": 0.1},
     # Round 3: waveform shape at a fixed 1800 C peak. "si-op" now solves the
     # voltage for the case's own period and duty, so only the shape differs:
@@ -56,6 +65,10 @@ CASES = [
     {"key": "peak1800-1s-d0.2", "voltage": "si-op", "period_s": 1.0, "duty": 0.2},
     {"key": "peak1800-0.5s-d0.05", "voltage": "si-op", "period_s": 0.5, "duty": 0.05},
     {"key": "peak1800-2s-d0.05", "voltage": "si-op", "period_s": 2.0, "duty": 0.05},
+    # Produced by accident on 2026-09-06 (the rerun above) and kept: the
+    # shortest period at the fixed peak, 122 V against the SI's 75 V supply,
+    # a floor of 1135 C and 74 percent conversion. A model point.
+    {"key": "peak1800-0.2s-d0.05", "voltage": "si-op", "period_s": 0.2, "duty": 0.05},
 ]
 
 
