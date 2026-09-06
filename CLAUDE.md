@@ -52,6 +52,10 @@ and a `model` field saying what kind of fit they are. Keep filling them in.
 **No em dashes in prose.** Anywhere: comments, commit messages, documentation,
 page copy. Use a comma, a colon, a semicolon, or two sentences.
 
+**Publication figures use the 5 in style.** Any matplotlib figure for a
+manuscript or SI follows `.claude/skills/fig-style-5in/SKILL.md`; apply it
+with `figstyle.apply()` from that directory. Invoke with "fig style 5in".
+
 **Do not hand-edit generated files.** `docs/figures/*.svg`, `index.html`,
 `figure-data.json` and `verification-data.json` are outputs. Edit
 `docs/figures/draw.mjs` or the templates and re-run the build.
