@@ -124,30 +124,30 @@ from `run_pulse_c2.py compare`:
 
 | case | peak, C | X, % | old X, % | S_C6H6 p / s | ratio (old) |
 |---|---|---|---|---|---|
-| anchor 78 V, 1 s, 5 % | 1800 | 17.3 | 22.0 | 21.3 / 46.2 | 0.46 (0.36) |
+| anchor 78 V, 1 s, 5 % | 1800 | 17.3 | 22.0 | 21.3 / 52.6 | 0.41 (0.36) |
 | 60 V, 1 s, 5 % | 1233 | 0.20 | 0.29 | 1.2 / 1.0 | out of window |
 | 78 V, 0.2 s, 5 % | 1131 | 0.10 | 0.13 | 0.0 / 0.4 | out of window |
-| 78 V, 1 s, 20 % | 3063 | 34.5 | 38.7 | 13.2 / 56.0 | 0.24 (0.25) |
-| 70 V, 1 s, 5 % | 1534 | 13.0 | 17.9 | 28.4 / 40.9 | 0.69 (0.51) |
-| 78 V, 2 s, 5 % | 2595 | 9.7 | 10.4 | 15.5 / 36.9 | 0.42 (0.41) |
-| 78 V, 1 s, 10 % | 2707 | 26.8 | 30.3 | 15.0 / 57.9 | 0.26 (0.25) |
-| 70 V, 1 s, 10 % | 2340 | 24.8 | 28.7 | 16.1 / 55.4 | 0.29 (0.26) |
-| 57.7 V, 1 s, 10 % | 1800 | 19.1 | 23.8 | 20.3 / 48.5 | 0.42 (0.33) |
-| 44.8 V, 1 s, 20 % | 1800 | 23.6 | 28.7 | 18.4 / 54.0 | 0.34 (0.27) |
-| 97.1 V, 0.5 s, 5 % | 1800 | 37.6 | 47.2 | 21.1 / 53.7 | 0.39 (0.38) |
-| 61.4 V, 2 s, 5 % | 1800 | 7.1 | 8.5 | 20.6 / 33.7 | 0.61 (0.52) |
-| 122.5 V, 0.2 s, 5 % | 1800 | 74.0 | new | 15.9 / 25.6 | 0.62 |
+| 78 V, 1 s, 20 % | 3063 | 34.5 | 38.7 | 13.2 / 61.6 | 0.21 (0.25) |
+| 70 V, 1 s, 5 % | 1534 | 13.0 | 17.9 | 28.4 / 47.3 | 0.60 (0.51) |
+| 78 V, 2 s, 5 % | 2595 | 9.7 | 10.4 | 15.5 / 42.0 | 0.37 (0.41) |
+| 78 V, 1 s, 10 % | 2707 | 26.8 | 30.3 | 15.0 / 59.5 | 0.25 (0.25) |
+| 70 V, 1 s, 10 % | 2340 | 24.8 | 28.7 | 16.1 / 58.4 | 0.28 (0.26) |
+| 57.7 V, 1 s, 10 % | 1800 | 19.1 | 23.8 | 20.3 / 54.3 | 0.37 (0.33) |
+| 44.8 V, 1 s, 20 % | 1800 | 23.6 | 28.7 | 18.4 / 57.7 | 0.32 (0.27) |
+| 97.1 V, 0.5 s, 5 % | 1800 | 37.6 | 47.2 | 21.1 / 62.1 | 0.34 (0.38) |
+| 61.4 V, 2 s, 5 % | 1800 | 7.1 | 8.5 | 20.6 / 36.4 | 0.57 (0.52) |
+| 122.5 V, 0.2 s, 5 % | 1800 | 74.0 | new | 15.9 / 37.0 | 0.43 |
 
 Which claims survive:
 
 1. Anchor against steady at matched conversion: survives. 21.3 against
-   46.2 percent benzene at 17.3 percent conversion (ratio 0.46; was 0.36).
+   52.6 percent benzene at 17.3 percent conversion (ratio 0.41; was 0.36).
    The correction moved the ratio toward the steady element by a quarter,
    which is the size of the acetylene overstatement the old march carried.
-2. Peak decides, higher peak less benzene: survives. Ratio 0.69 at 1534 C,
-   0.46 at 1800, 0.42 at 2595, 0.29 at 2340, 0.26 at 2707, 0.24 at 3063.
+2. Peak decides, higher peak less benzene: survives. Ratio 0.60 at 1534 C,
+   0.41 at 1800, 0.37 at 2595, 0.28 at 2340, 0.25 at 2707, 0.21 at 3063.
    The one out-of-order pair, 2 s at 2595 C above 1 s at 2340 C, was out
-   of order on the old march too (0.41 against 0.26); the 2 s case has a
+   of order on the old march too (0.41 against 0.26 then, 0.37 against 0.28 now); the 2 s case has a
    235 C floor and spends most of its cycle below reaction, so it is the
    least peak-like of the family.
 3. At fixed peak the shape sets conversion, not selectivity: survives for
