@@ -86,6 +86,46 @@ def edge_path(a, b, offset):
             ((sx, sy), (mx, my), (ex, ey)), (px, py))
 
 
+def arrowhead(d, ctrl, width):
+    """Cut the curve where the head begins and return the head polygon.
+
+    The head grows with the line: 9 px long on the thinnest edge, about
+    2.3 times the stroke width on the thickest, so the shaft never shows
+    past the head's sides. The curve is cut at the parameter whose chord to
+    the old end is one head length (de Casteljau, so the cut piece is again
+    a quadratic) and the head points along the curve's tangent there; the
+    two therefore meet in a straight seam. Pulling the end point back along
+    the end tangent instead sent short edges past their control point and
+    drew a hook (the CO2 to CO edge is 26 px long against an 18 px head).
+    """
+    (sx, sy), (mx, my), (ex, ey) = ctrl
+    length = max(9.0, 1.6 * width + 6.0)
+    half = 0.5 * length
+    lo, hi = 0.0, 1.0
+    for _ in range(40):
+        t = (lo + hi) / 2
+        px, py = bezier_point(ctrl, t)
+        if math.hypot(ex - px, ey - py) > length:
+            lo = t
+        else:
+            hi = t
+    t = lo
+    cx, cy = sx + t * (mx - sx), sy + t * (my - sy)
+    bx, by = bezier_point(ctrl, t)
+    tx, ty = bx - cx, by - cy
+    n = math.hypot(tx, ty)
+    if n < 1e-9:
+        tx, ty = ex - sx, ey - sy
+        n = math.hypot(tx, ty) or 1.0
+    tx, ty = tx / n, ty / n
+    nx, ny = -ty, tx
+    short = f"M{sx:.1f},{sy:.1f} Q{cx:.1f},{cy:.1f} {bx:.1f},{by:.1f}"
+    head = (f"{bx + tx * length:.1f},{by + ty * length:.1f} "
+            f"{bx + nx * half:.1f},{by + ny * half:.1f} "
+            f"{bx - nx * half:.1f},{by - ny * half:.1f}")
+    return short, head
+
+
 def bezier_point(ctrl, t):
     (sx, sy), (mx, my), (ex, ey) = ctrl
     u = 1 - t
@@ -156,8 +196,16 @@ def panel(r, title, threshold, ox, oy, co2_pct):
         kind = edge_kind(a, b)
         color = EDGE[kind]
         width = 1.2 + 1.7 * math.sqrt(v)
-        parts.append(f'<path d="{d}" fill="none" stroke="{color}" stroke-width="{width:.1f}" '
-                     f'stroke-opacity="0.8" stroke-linecap="round" marker-end="url(#arr-{kind})"/>')
+        # The head is a polygon sized to the line, and the line stops at the
+        # head's base with a butt cap. A fixed 9 px marker on a line up to
+        # 8 px wide, with a round cap reaching past the tip and the head
+        # showing the line through it, was not a picture anyone should print.
+        d, head = arrowhead(d, ctrl, width)
+        # One group opacity, so the seam between shaft and head does not
+        # show as a hairline where two translucent shapes abut.
+        parts.append(f'<g opacity="0.85"><path d="{d}" fill="none" stroke="{color}" '
+                     f'stroke-width="{width:.1f}" stroke-linecap="butt"/>'
+                     f'<polygon points="{head}" fill="{color}"/></g>')
         lx, ly = place_label(ctrl, normal, 7 * len(f"{v:.1f}"), taken)
         labels.append((lx, ly, v, color))
     for lx, ly, v, color in labels:
