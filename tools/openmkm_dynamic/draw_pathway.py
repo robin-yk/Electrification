@@ -21,7 +21,7 @@ import math
 import re
 from pathlib import Path
 
-FONT = "Arial, Helvetica, 'Liberation Sans', sans-serif"
+FONT = "Helvetica, Arial, 'Nimbus Sans', 'Liberation Sans', sans-serif"
 
 # Display names; digits after an element letter become subscripts.
 NAME = {"CH4": "CH4", "CHx": "CH3", "CO2": "CO2", "CO": "CO", "C2H6": "C2H6", "C2H4": "C2H4", "C2H2": "C2H2",
