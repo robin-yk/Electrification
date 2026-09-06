@@ -80,6 +80,15 @@ def command(rec, mechanism=ARAMCO):
             "--residence-time-s", str(TAU_S),
             "--pressure-atm", "1.0",
             "--feed", FEED,
+            # The march stops when the cycle boundary moves less than the
+            # tolerance, but only after min-cycles, and the default floor is
+            # 20. Every round 1 to 3 case had a residual below 1e-7 by cycle
+            # 2 or 3 (the 0.2 s period by cycle 9) and ran 20 anyway: tau is
+            # 0.2 s against a 1 s period, so the vessel is flushed five times
+            # a cycle and remembers nothing. Four keeps one transient cycle
+            # ahead of the three recorded ones; a case that is still moving
+            # runs on until the tolerance is met.
+            "--min-cycles", "4",
             "--output", rec["output"]]
 
 

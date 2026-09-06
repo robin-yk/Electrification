@@ -86,6 +86,14 @@ the element cannot raise. Numbers: `run_pulse_c2.py compare`.
 locally, four in parallel on four cores: about one wall hour per round.
 Cache: a finished case file is not recomputed.
 
+Rerun of 2026-09-06: the generator now passes `--min-cycles 4`. The
+original runs marched 20 cycles each because that is `run_cstr_case.py`'s
+floor, while their convergence histories show the boundary residual under
+the 1e-7 tolerance by cycle 2 or 3 (cycle 9 for the 0.2 s period). At tau
+0.2 s and a 1 s period the vessel turns over five times a cycle, so there is
+no cycle-to-cycle memory to wait for. Expected cost of the twelve-case rerun:
+about 10 min per case, four in parallel, under one wall hour.
+
 ## What this invalidates
 
 Nothing. Writes only to `data/c2pulse/`.
@@ -94,10 +102,11 @@ Nothing. Writes only to `data/c2pulse/`.
 
 The closure fix in `run_cstr_case.step_temperature` (README, Formulation).
 All twelve case files here were marched before it and overstate conversion
-by about a fifth (anchor 22.0 against 17.4 corrected). The rounds are not
-re-run; the round tables above stand as the record of what was run, not as
-current numbers. Re-running is four cases per round, about one wall hour
-per round, and needs approval.
+by about a fifth (anchor 22.0 against 17.4 corrected). The round tables
+above are the record of what was run on the old march, not current numbers.
+Rerun of all twelve cases on the corrected march approved by the author on
+2026-09-06 (`run_pulse_c2.py run --force`); results in the section that
+follows once they exist.
 
 ## Screen
 
