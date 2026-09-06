@@ -101,12 +101,62 @@ Nothing. Writes only to `data/c2pulse/`.
 ## Invalidated by, 2026-09-05
 
 The closure fix in `run_cstr_case.step_temperature` (README, Formulation).
-All twelve case files here were marched before it and overstate conversion
-by about a fifth (anchor 22.0 against 17.4 corrected). The round tables
-above are the record of what was run on the old march, not current numbers.
-Rerun of all twelve cases on the corrected march approved by the author on
-2026-09-06 (`run_pulse_c2.py run --force`); results in the section that
-follows once they exist.
+All twelve case files here were marched before it and overstated
+conversion by about a fifth. The three round sections above are the
+record of what was run on the old march; the corrected numbers are in the
+next section and in `docs/C2-PULSE.md`.
+
+## Rerun result, 2026-09-06
+
+Author approved the rerun of all twelve cases on the corrected march on
+2026-09-06. Run as `run_pulse_c2.py run --force --jobs 4` with
+`--min-cycles 4`; the four round-2 fixed-voltage cases were rerun by hand
+at the literal SI voltage 78.11344859393759 V because "si-op" in the
+generator now re-solves the voltage per shape (see the comment above
+`CASES`). One of those si-op runs, 0.2 s at 5 percent duty, solved to
+122.5 V and is kept as `peak1800-0.2s-d0.05`, the thirteenth case. All
+thirteen converged, twelve at cycle 4 and the 0.2 s period at cycle 8;
+wall time 3 to 10 minutes per case against the 45 minutes of the
+20-cycle originals.
+
+Corrected numbers, pulse benzene / matched steady benzene in percent,
+from `run_pulse_c2.py compare`:
+
+| case | peak, C | X, % | old X, % | S_C6H6 p / s | ratio (old) |
+|---|---|---|---|---|---|
+| anchor 78 V, 1 s, 5 % | 1800 | 17.3 | 22.0 | 21.3 / 46.2 | 0.46 (0.36) |
+| 60 V, 1 s, 5 % | 1233 | 0.20 | 0.29 | 1.2 / 1.0 | out of window |
+| 78 V, 0.2 s, 5 % | 1131 | 0.10 | 0.13 | 0.0 / 0.4 | out of window |
+| 78 V, 1 s, 20 % | 3063 | 34.5 | 38.7 | 13.2 / 56.0 | 0.24 (0.25) |
+| 70 V, 1 s, 5 % | 1534 | 13.0 | 17.9 | 28.4 / 40.9 | 0.69 (0.51) |
+| 78 V, 2 s, 5 % | 2595 | 9.7 | 10.4 | 15.5 / 36.9 | 0.42 (0.41) |
+| 78 V, 1 s, 10 % | 2707 | 26.8 | 30.3 | 15.0 / 57.9 | 0.26 (0.25) |
+| 70 V, 1 s, 10 % | 2340 | 24.8 | 28.7 | 16.1 / 55.4 | 0.29 (0.26) |
+| 57.7 V, 1 s, 10 % | 1800 | 19.1 | 23.8 | 20.3 / 48.5 | 0.42 (0.33) |
+| 44.8 V, 1 s, 20 % | 1800 | 23.6 | 28.7 | 18.4 / 54.0 | 0.34 (0.27) |
+| 97.1 V, 0.5 s, 5 % | 1800 | 37.6 | 47.2 | 21.1 / 53.7 | 0.39 (0.38) |
+| 61.4 V, 2 s, 5 % | 1800 | 7.1 | 8.5 | 20.6 / 33.7 | 0.61 (0.52) |
+| 122.5 V, 0.2 s, 5 % | 1800 | 74.0 | new | 15.9 / 25.6 | 0.62 |
+
+Which claims survive:
+
+1. Anchor against steady at matched conversion: survives. 21.3 against
+   46.2 percent benzene at 17.3 percent conversion (ratio 0.46; was 0.36).
+   The correction moved the ratio toward the steady element by a quarter,
+   which is the size of the acetylene overstatement the old march carried.
+2. Peak decides, higher peak less benzene: survives. Ratio 0.69 at 1534 C,
+   0.46 at 1800, 0.42 at 2595, 0.29 at 2340, 0.26 at 2707, 0.24 at 3063.
+   The one out-of-order pair, 2 s at 2595 C above 1 s at 2340 C, was out
+   of order on the old march too (0.41 against 0.26); the 2 s case has a
+   235 C floor and spends most of its cycle below reaction, so it is the
+   least peak-like of the family.
+3. At fixed peak the shape sets conversion, not selectivity: survives for
+   the four approved shapes. Pulse benzene 18.4 to 21.3 percent, acetylene
+   63 to 66, across conversion 7.1 to 37.6 percent. The unapproved 0.2 s
+   case breaks the pattern (benzene 15.9 at 74 percent conversion), and it
+   does so because its floor is 1135 C: the vessel never cools, so it is a
+   near-steady 1400 C reactor, not a pulse. That is a boundary of the claim
+   rather than a counterexample, and it is stated as such in the document.
 
 ## Screen
 
