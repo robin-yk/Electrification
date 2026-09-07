@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "completed": [
+    "cold",
+    "gri-co2-T1750-tau0.001",
+    "gri-co2-T1200-tau1",
+    "gri-h2o-T1800-tau0.001",
+    "gri-h2o-T1200-tau1",
+    "gate-sampling-gri-co2-T1750-tau0.001",
+    "gate-sampling-gri-h2o-T1200-tau1"
+  ],
+  "conditions": 4,
+  "gates_passed": 2,
+  "wall_s": 3.7514823469999783
+}

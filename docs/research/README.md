@@ -22,7 +22,7 @@ mechanism, which makes it a different model again.
 | **A. Constant-temperature map** | constant pressure, prescribed constant T, mass flow reset to reactor mass over τ each step, τ is an input | how yield depends on temperature and residence time |
 | **B. Fixed-volume composition sweep** | fixed geometric volume, fixed 50 sccm standard feed, pressure controller near 1 atm, τ is an output | how yield depends on feed composition at one temperature |
 | **C. Pulsed (RPH)** | prescribed periodic T(t), integrated to a periodic state | what a temperature waveform does that a steady state does not |
-| **D. Paired mechanism comparison** | family A's closure with the mechanism changed to CRECK 2003 HT+soot | where the carbon goes above benzene, which Aramco cannot represent |
+| **D. Paired mechanism comparison** | family A's closure with the mechanism changed, to CRECK 2003 HT+soot or to GRI-Mech 3.0 | how much of a map is the chemistry and how much is the mechanism's ceiling |
 
 Family A carries residence time as a controlled variable and cannot say anything
 about a fixed-flow device. Family B holds one temperature and one flow and
@@ -117,15 +117,25 @@ ranking of 6300012 against 6000015 reverses between GRI and Aramco. This is the
 direct evidence that no optimum, ranking or validation status transfers across a
 mechanism change.
 
-## D. Paired mechanism comparison, PAH
+## D. Paired mechanism comparison
 
-One archive, `pah-pairs-2026-09-07`. Family A's closure, solver and convergence
-settings exactly, with the mechanism changed to CRECK 2003 high temperature with
-soot and NOx, which carries naphthalene, acenaphthylene, anthracene or
-phenanthrene, pyrene and lumped soot-precursor particles named BIN. Four
-conditions, two per feed: each map's acetylene maximum and the benzene-rich
-corner at 1200 C and 1 s. The Aramco side of every pair is read from the family A
-archives and is not recomputed.
+Two archives, one per mechanism under test. Family A's closure, solver and
+convergence settings exactly, with only the mechanism changed. Four conditions,
+two per feed: each map's acetylene maximum and the benzene-rich corner at 1200 C
+and 1 s. The Aramco side of every pair is read from the family A archives and is
+not recomputed.
+
+| Archive | Mechanism under test | Ceiling | Cost |
+|---|---|---|---|
+| `pah-pairs-2026-09-07` | CRECK 2003 HT with soot and NOx, 497 species, 24501 reactions | lumped soot precursors, BIN1 at C20 to BIN25 at 3.2e8 carbons | 362.0 s |
+| `pah-pairs-gri-2026-09-07` | GRI-Mech 3.0, 53 species, 325 reactions | C3, and its only C3 species are C3H7 and C3H8 | 3.8 s |
+
+**The ladder.** Each mechanism parks the carbon it cannot grow. GRI has no
+aromatic chemistry and no propargyl route, so its carbon stops at acetylene:
+32.86 % against Aramco's 21.55 % at 1750 C and 1 ms with CO2, and 64.45 against
+42.12 % at 1800 C and 1 ms with steam. Aramco stops at benzene. CRECK carries
+both past the ring. Reading any one of the three as a yield reads the
+mechanism's ceiling as chemistry.
 
 **What it establishes.** The acetylene maximum survives the mechanism change and
 the benzene pile does not. At 1750 C and 1 ms with CO2, acetylene is 21.55 %
@@ -138,14 +148,17 @@ holds 15.06 and 21.98 % at those two conditions. Naphthalene itself never exceed
 0.31 % of inlet carbon anywhere in the batch, so the carbon that leaves benzene
 does not stop at the first larger ring.
 
-**Read it as two calculations.** AramcoMech 2.0 has no species above C8, so its
+**Read it as three calculations.** AramcoMech 2.0 has no species above C8, so its
 zero above C6 is a property of the mechanism and not a prediction. CRECK's BIN
 species are lumped soot precursors in a gas-phase mechanism with no particle
-dynamics, so the BIN carbon is a mechanism output and not a soot yield. Neither
-mechanism has been checked against measured product data at these conditions.
+dynamics, so the BIN carbon is a mechanism output and not a soot yield. GRI-Mech
+3.0 is a natural-gas combustion mechanism with no validation for oxygen-free
+pyrolysis above about 1200 C, so its acetylene is an upper bound set by having
+nowhere else to put the carbon. None of the three has been checked against
+measured product data at these conditions.
 
-Generator: `run_pah_pairs.py`, report by `summarize_pah_pairs.py`. Card:
-`PAH-PAIRS-RUN-CARD.md`.
+Generator: `run_pah_pairs.py --mechanism creck|gri`, report by
+`summarize_pah_pairs.py`. Card: `PAH-PAIRS-RUN-CARD.md`.
 
 ## Supporting and stopped batches
 

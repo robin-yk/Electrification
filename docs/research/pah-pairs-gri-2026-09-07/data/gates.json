@@ -1,0 +1,10 @@
+[
+  {
+    "name": "gate-sampling-gri-co2-T1750-tau0.001",
+    "max_abs_carbon_fraction": 0.0
+  },
+  {
+    "name": "gate-sampling-gri-h2o-T1200-tau1",
+    "max_abs_carbon_fraction": 0.0
+  }
+]

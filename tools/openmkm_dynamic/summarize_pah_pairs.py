@@ -71,26 +71,26 @@ def main():
         pool_a = heavy_pool(aramco["mol_per_feed_carbon"], counts)
         analysis.append(dict(feed=row["feed"], T_C=row["T_C"], tau_s=row["tau_s"],
                              aramco_archive=row["aramco"]["archive"],
-                             light={s: dict(creck=cy_c.get(s, 0.), aramco=cy_a.get(s, 0.))
+                             light={s: {key: cy_c.get(s, 0.), "aramco": cy_a.get(s, 0.)}
                                     for s in LIGHT},
-                             CH4_conversion=dict(creck=creck["CH4_conversion"],
-                                                 aramco=aramco["CH4_conversion"]),
-                             heavy_creck=pool, heavy_aramco=pool_a))
+                             CH4_conversion={key: creck["CH4_conversion"],
+                                             "aramco": aramco["CH4_conversion"]},
+                             **{"heavy_" + key: pool, "heavy_aramco": pool_a}))
 
     def block(entry):
+        conv = entry["CH4_conversion"]
         out = [f"### {FEED_LABEL[entry['feed']]} at {entry['T_C']:g} C and {entry['tau_s']:g} s", "",
                f"Aramco row read from `{entry['aramco_archive']}`.", "",
                f"| Quantity | Aramco | {short} | difference |", "|---|---|---|---|",
-               "| CH4 conversion, % | " + pct(entry["CH4_conversion"]["aramco"]) + " | "
-               + pct(entry["CH4_conversion"]["creck"]) + " | "
-               + pct(entry["CH4_conversion"]["creck"] - entry["CH4_conversion"]["aramco"]) + " |"]
+               "| CH4 conversion, % | " + pct(conv["aramco"]) + " | " + pct(conv[key])
+               + " | " + pct(conv[key] - conv["aramco"]) + " |"]
         for s in LIGHT:
             v = entry["light"][s]
-            if max(v["creck"], v["aramco"]) < 1e-6:
+            if max(v[key], v["aramco"]) < 1e-6:
                 continue
-            out.append(f"| {s} carbon, % of inlet C | {pct(v['aramco'])} | {pct(v['creck'])} | "
-                       + pct(v["creck"] - v["aramco"]) + " |")
-        h, ha = entry["heavy_creck"], entry["heavy_aramco"]
+            out.append(f"| {s} carbon, % of inlet C | {pct(v['aramco'])} | {pct(v[key])} | "
+                       + pct(v[key] - v["aramco"]) + " |")
+        h, ha = entry["heavy_" + key], entry["heavy_aramco"]
         out += ["", f"| Above C6, % of inlet C | Aramco | {short} |", "|---|---|---|",
                 f"| all species with 7 or more carbons | {pct(ha['total'])} | {pct(h['total'])} |"]
         for r in RINGS:

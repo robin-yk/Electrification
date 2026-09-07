@@ -1,0 +1,2 @@
+START gate-sampling-gri-co2-T1750-tau0.001 substeps 41
+RESULT gate-sampling-gri-co2-T1750-tau0.001 {"carbon_yields_per_feed_carbon": {"C2H2": 0.328612974123582, "C2H4": 0.007227821653321631, "C2H6": 0.00044883717268623955, "C6H6": 0.0, "CO": 0.29360992684099646, "C2_total": 0.33703189199169525, "C6_total": 0.0}, "CH4_conversion": 0.7667141393594972, "cycles": 7, "boundary_residual": 6.661338147750939e-16, "element_residuals": {"C": -3.8754207872851774e-17, "H": 2.8266082418119955e-16, "O": 4.444404502573159e-16}, "wall_s": 0.3471769739999786}

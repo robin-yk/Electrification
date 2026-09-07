@@ -21,7 +21,13 @@ time an input. The generator asserts the archived `solver_sha256` and the
 archived `mechanism_sha256` for Aramco before it runs, so a change in either
 stops the batch instead of producing a comparison against a moved reference.
 
-Mechanism under test: CRECK 2003 high temperature with soot and NOx,
+Mechanism under test, selected with `--mechanism`. GRI-Mech 3.0, 53 species and
+325 reactions, has no species above C3 and its only C3 species are C3H7 and
+C3H8, so it has no propargyl route and no path to a ring; it is included to
+measure what a mechanism ceiling does to these four conditions, and it is a
+natural-gas combustion mechanism with no validation for oxygen-free pyrolysis
+above about 1200 C. The mechanism that answers the ring question is
+CRECK 2003 high temperature with soot and NOx,
 `tools/cantera/mechanisms/creck2003-ht-soot-nox.yaml`, 497 species and 24501
 reactions, sparse Jacobian with the adaptive preconditioner. It carries
 naphthalene, acenaphthylene, anthracene or phenanthrene, pyrene, and lumped
@@ -66,7 +72,8 @@ they say nothing about which of the two mechanisms is closer to a real reactor.
 
 ## Outputs
 
-`docs/research/pah-pairs-2026-09-07/`: per-case raw result, parameters, metrics
+One directory per mechanism, `docs/research/pah-pairs-2026-09-07/` for CRECK and
+`docs/research/pah-pairs-gri-2026-09-07/` for GRI: per-case raw result, parameters, metrics
 and log; `manifest.json` with the commit, script, solver and both mechanism
 hashes and the reference archive paths; `gates.json`; `status.json`;
 `summary.json` pairing each CRECK case with its archived Aramco row; a
@@ -91,4 +98,6 @@ is `run_aramco_cjh_baseline.py`, which gains a mechanism table so a third
 mechanism can be named; the archived manifests record the solver and mechanism
 hashes and not this script's hash, and both are asserted unchanged.
 
-Generator: `python tools/openmkm_dynamic/run_pah_pairs.py --output-dir <dir>`.
+Generator: `python tools/openmkm_dynamic/run_pah_pairs.py --mechanism creck|gri
+--output-dir <dir>`. Report: `python tools/openmkm_dynamic/summarize_pah_pairs.py
+--archive <dir>`, which reads the mechanism from the batch manifest.

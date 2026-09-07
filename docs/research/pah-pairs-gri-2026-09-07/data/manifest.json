@@ -1,0 +1,77 @@
+{
+  "commit": "29267ae45597d813f59771ee06d04b583086052b",
+  "jobs": [
+    [
+      "co2",
+      26.85,
+      0.1,
+      20,
+      "cold"
+    ],
+    [
+      "co2",
+      1750.0,
+      0.001,
+      20,
+      "gri-co2-T1750-tau0.001"
+    ],
+    [
+      "co2",
+      1200.0,
+      1.0,
+      20,
+      "gri-co2-T1200-tau1"
+    ],
+    [
+      "h2o",
+      1800.0,
+      0.001,
+      20,
+      "gri-h2o-T1800-tau0.001"
+    ],
+    [
+      "h2o",
+      1200.0,
+      1.0,
+      20,
+      "gri-h2o-T1200-tau1"
+    ],
+    [
+      "co2",
+      1750.0,
+      0.001,
+      40,
+      "gate-sampling-gri-co2-T1750-tau0.001"
+    ],
+    [
+      "h2o",
+      1200.0,
+      1.0,
+      40,
+      "gate-sampling-gri-h2o-T1200-tau1"
+    ]
+  ],
+  "budget_s": 1200,
+  "per_worker_s": 300,
+  "script_sha256": "bd2c9abd3f0ce24d7707c8257e015cc59866dd1d6184e3331585a95a00754b60",
+  "solver_sha256": "a7b5083148fe20c867634618afe94c543198485e9aed99662d0a7c1adc2786a6",
+  "mechanism_sha256": "06650b1e0ee0012f6903d5328b1bb218cb6007d07f8ebe375d18f24811039345",
+  "aramco_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+  "mechanism_key": "gri",
+  "mechanism_file": "gri30.yaml",
+  "mechanism": "GRI-Mech 3.0",
+  "feeds": {
+    "co2": "CH4:0.5, CO2:0.5",
+    "h2o": "CH4:0.5, H2O:0.5"
+  },
+  "pressure_Pa": 101325.0,
+  "closure": "constant pressure prescribed constant T, equal inlet/outlet mass/tau; variable volume",
+  "reference_archives": {
+    "co2-1750-0.001": "docs/research/cjh-refine-04-2026-09-07",
+    "co2-1200-1": "docs/research/cjh-refine-01-2026-09-07",
+    "h2o-1800-0.001": "docs/research/h2o-cjh-extend-2026-09-07",
+    "h2o-1200-1": "docs/research/h2o-cjh-2026-09-07"
+  },
+  "note": "Paired PAH comparison. The Aramco side is read from the archives listed above and is not recomputed. The two mechanisms are two models: no optimum, ranking or validation status transfers between them.",
+  "limitations": "Prescribed gas temperature, no heater energy balance, no particle dynamics and no experimental validation of either mechanism at these conditions. GRI-Mech 3.0 has no species above C3 and no aromatic chemistry, and it is a natural-gas combustion mechanism that is not validated for oxygen-free pyrolysis above about 1200 C. Its result here bounds what the mechanism can represent, not what the chemistry does."
+}

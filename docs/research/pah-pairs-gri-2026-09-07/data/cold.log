@@ -1,0 +1,2 @@
+START cold substeps 21
+RESULT cold {"carbon_yields_per_feed_carbon": {"C2H2": 0.0, "C2H4": 4.3774296827470854e-126, "C2H6": 3.490747239149121e-115, "C6H6": 0.0, "CO": 1.1143164402561016e-72, "C2_total": 3.347699091671107e-115, "C6_total": 0.0}, "CH4_conversion": 0.0, "cycles": 4, "boundary_residual": 1.962077491877422e-67, "element_residuals": {"C": 2.7330593148953026e-16, "H": -1.5673595280399775e-67, "O": 5.466118629790605e-16}, "wall_s": 0.17755040700001246}
