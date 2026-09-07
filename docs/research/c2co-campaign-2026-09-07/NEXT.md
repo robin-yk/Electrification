@@ -17,15 +17,18 @@ remain justified by measured map variation/error and within the 3600-second cap.
 Current state: 69 unique CJH conditions completed. Latest combined map and
 SAMPLING-PROGRESS.md are in ../cjh-refine-05-2026-09-07/. Run 34097793177
 passed both gates and all twelve new points. All elapsed time is reconciled
-in budget.json. Batch cjh-tolerance-01 is now reserved; workflow
-"CJH explicit integrator tolerance check" run ID: 34108821968.
-Do not duplicate dispatch. It compares default/tight tolerances at two points
-without changing the production solver or initial composition. Read its run card.
+in budget.json. Tolerance run 34108821968 completed all four comparisons;
+archive ../cjh-tolerance-01-2026-09-07/ contains the generated report and
+raw settings. No batch is reserved or active. Tolerance robustness is supported
+at these two candidates only; initial-state independence remains untested.
 The low-tau C2H4 decline has
 now been observed. C2H2 best yield did not improve and C2H4 improved only
 slightly in this last batch. Do not continue automatic low-tau extensions.
 
-Next: finish the tolerance pilot and archive it before another batch. Inspection
+Next: implement the planned initial-state diagnostic only after reading
+tools/openmkm_dynamic/CJH-INITIAL-STATE-DESIGN.md. It is a design, not an
+executable run card or a reservation. Add failing-first tests, explicit version
+transition and baseline reproduction before launching a bounded pilot. Inspection
 found integrate() copies feed accounting from the initial reactor phase; an
 alternate-state test must separate the true inlet basis rather than silently
 alter that copy. Existing feed-initialized results remain unaffected.
@@ -46,8 +49,8 @@ is a global-optimum claim. Do not spend toward 100 points merely to reach
 a count. Use the
 corrected quantitative union comparator, not strict positive-only key equality.
 Record sample need from the preceding map before reserving or launching.
-Alternate initial-state and integrator-tolerance robustness remain untested;
-sampling/horizon agreement alone does not close those questions. Keep the
+Alternate initial-state robustness remains untested. Tolerance checks at two
+candidates must not be generalized to the whole map or RPH. Keep the
 mechanism and reactor closure fixed for the next map comparison. Do not call
 the current boundary candidates global optima or launch blind retries.
 

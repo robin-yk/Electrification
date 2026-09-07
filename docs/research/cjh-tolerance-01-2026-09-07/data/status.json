@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "completed": [
+    "T1750-tau0.001-default",
+    "T1750-tau0.001-tight",
+    "T1750-tau6e-05-default",
+    "T1750-tau6e-05-tight"
+  ],
+  "gates_passed": 4,
+  "new_map_points": 0,
+  "wall_s": 113.47867943899999
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "T1750-tau0.001-default",
+    "reference": "docs/research/cjh-refine-04-2026-09-07/data/T1750-tau0.001-metrics.json",
+    "worst_species": "CO",
+    "max_abs_mol_per_feed_C": 5.589972928987663e-14,
+    "conversion_abs": 2.5091040356528538e-14,
+    "negligible_omissions": [
+      "C4H71-2,3OOH",
+      "C4H71-2,4OOH",
+      "C4H71-3,4OOH",
+      "C4H72-1,3OOH",
+      "C4H72-1,4OOH",
+      "C4H72-3,4OOH",
+      "IC4H8OOH-TO2",
+      "NC4KET12",
+      "NC4KET13",
+      "NC4KET23",
+      "NC4KET24",
+      "TQC4H7OHIQ-I",
+      "TQC4H7OHIQ-P"
+    ]
+  },
+  {
+    "name": "T1750-tau0.001-tight",
+    "reference": "out/cjh-tolerance-01/T1750-tau0.001-default-metrics.json",
+    "worst_species": "H2",
+    "max_abs_mol_per_feed_C": 2.348121697082206e-14,
+    "conversion_abs": 3.552713678800501e-15,
+    "negligible_omissions": [
+      "C4H71-2,3OOH",
+      "C4H71-2,4OOH",
+      "C4H71-3,4OOH",
+      "C4H72-1,3OOH",
+      "C4H72-1,4OOH",
+      "C4H72-3,4OOH",
+      "IC4H8OOH-TO2",
+      "NC4KET12",
+      "NC4KET13",
+      "NC4KET23",
+      "NC4KET24",
+      "TQC4H7OHIQ-I",
+      "TQC4H7OHIQ-P"
+    ]
+  },
+  {
+    "name": "T1750-tau6e-05-default",
+    "reference": "docs/research/cjh-refine-05-2026-09-07/data/T1750-tau6e-05-metrics.json",
+    "worst_species": "H2",
+    "max_abs_mol_per_feed_C": 1.3214429550600926e-12,
+    "conversion_abs": 1.6514567491299204e-12,
+    "negligible_omissions": []
+  },
+  {
+    "name": "T1750-tau6e-05-tight",
+    "reference": "out/cjh-tolerance-01/T1750-tau6e-05-default-metrics.json",
+    "worst_species": "H2",
+    "max_abs_mol_per_feed_C": 9.547918011776346e-15,
+    "conversion_abs": 1.554312234475219e-14,
+    "negligible_omissions": []
+  }
+]

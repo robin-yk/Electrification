@@ -1,0 +1,8 @@
+{
+  "mode": "default",
+  "initial_composition": "unchanged feed",
+  "default_rtol": 1e-09,
+  "default_atol": 1e-15,
+  "effective_rtol": 1e-09,
+  "effective_atol": 1e-15
+}

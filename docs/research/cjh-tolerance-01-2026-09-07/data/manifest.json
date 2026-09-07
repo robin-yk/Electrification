@@ -1,0 +1,52 @@
+{
+  "commit": "bd1d6f11ed08975b6b3eb8ff95c1281a6e022c4b",
+  "jobs": [
+    [
+      1750,
+      0.001,
+      "default",
+      "T1750-tau0.001-default",
+      "docs/research/cjh-refine-04-2026-09-07/data/T1750-tau0.001-metrics.json"
+    ],
+    [
+      1750,
+      0.001,
+      "tight",
+      "T1750-tau0.001-tight",
+      "docs/research/cjh-refine-04-2026-09-07/data/T1750-tau0.001-metrics.json"
+    ],
+    [
+      1750,
+      6e-05,
+      "default",
+      "T1750-tau6e-05-default",
+      "docs/research/cjh-refine-05-2026-09-07/data/T1750-tau6e-05-metrics.json"
+    ],
+    [
+      1750,
+      6e-05,
+      "tight",
+      "T1750-tau6e-05-tight",
+      "docs/research/cjh-refine-05-2026-09-07/data/T1750-tau6e-05-metrics.json"
+    ]
+  ],
+  "hashes": {
+    "solver_sha256": "a7b5083148fe20c867634618afe94c543198485e9aed99662d0a7c1adc2786a6",
+    "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc"
+  },
+  "budget_s": 540,
+  "worker_limit_s": 120,
+  "adapter": "instrument_factory wraps production make_reactor only to inspect/set net.rtol and net.atol",
+  "tight": {
+    "rtol": 1e-11,
+    "atol": 1e-19
+  },
+  "observation": {
+    "min_cycles": 20,
+    "max_cycles": 100,
+    "cycle_tolerance": 1e-10,
+    "cycle_output_tolerance": 1e-10,
+    "stable_cycles_required": 5
+  },
+  "limitation": "Same initial feed composition; no initial-state, physical or mechanism validation."
+}
