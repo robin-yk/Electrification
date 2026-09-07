@@ -1,0 +1,34 @@
+name: Match CJH to verified RPH conversion
+on:
+  workflow_dispatch:
+    inputs:
+      stage:
+        type: choice
+        options: [pilot, '1', '2', '3']
+        default: pilot
+permissions:
+  contents: read
+concurrency:
+  group: c2co-budgeted-campaign
+  cancel-in-progress: false
+jobs:
+  calculate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r tools/cantera/requirements.txt scipy==1.13.1
+      - name: Bounded matching
+        timeout-minutes: 9
+        run: python tools/openmkm_dynamic/match_cjh_rph_39.py --stage '${{ inputs.stage }}' --output-dir out/cjh-rph-match-${{ inputs.stage }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cjh-rph-match-${{ inputs.stage }}
+          path: out/cjh-rph-match-${{ inputs.stage }}/

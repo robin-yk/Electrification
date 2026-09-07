@@ -4,9 +4,10 @@
   "total_budget_s": 3600,
   "batch_limit_s": 600,
   "spent_s": 1973.816456354974,
-  "reserved_s": 0,
+  "reserved_s": 240,
   "baseline_excluded_run": 34084078933,
   "batches": [
+    {"id":"cjh-rph-match-pilot","status":"reserved","reserved_s":240,"actual_s":null,"new_points":3},
     {"id":"rph-yield-search-02","status":"completed","reserved_s":0,"actual_s":4.593653624993749,"new_points":0,"reason":"Frozen-model multistart search passed independent acquisition checks; no chemistry."},
     {"id":"rph-yield-01","status":"stopped","reserved_s":0,"actual_s":7.164206500982133,"proposal_s":2.852497041982133,"audit_process_s":4.311709459,"reaction_s":0,"new_points":0,"reason":"Frozen EI recommendation scored below incumbent and deterministic Sobol alternatives. Acquisition quality gate failed; no Aramco dispatch or automatic retry."},
     {"id":"rph-nextorch-01","status":"completed","reserved_s":0,"actual_s":36.38971338602433,"proposal_s":3.6267389170243405,"reaction_s":32.76297446899999,"run_id":34162441788,"new_points":1,"verification_points":3},

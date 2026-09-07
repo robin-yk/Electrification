@@ -20,12 +20,15 @@ def compare(ref,actual):
     err=max(abs(ref.get(k,0)-actual.get(k,0)) for k in keys)
     assert err<1e-5, f"reference mismatch {err}"
     return err
-def worker(out,name,x,tight=False,cold=False,reactor_type=None):
+def worker(out,name,x,tight=False,cold=False,reactor_type=None,temperature_K=None,flow_sccm=50.,pressure_K=1e-8):
     print("stage: importing cantera",flush=True)
     import cantera as ct
     import numpy as np
     started=time.monotonic()
     p=settings(x,volume_reference())
+    if temperature_K is not None:p['T_K']=float(temperature_K)
+    p['flow_sccm']=float(flow_sccm)
+    assert p['T_K']>0 and p['flow_sccm']>0 and pressure_K>0
     if cold: p["T_K"]=300.
     print("stage: loading mechanism",flush=True)
     gas=ct.Solution("gri30.yaml" if cold else str(MECH))
@@ -33,13 +36,13 @@ def worker(out,name,x,tight=False,cold=False,reactor_type=None):
     gas.TPX=p["T_K"],p["P_Pa"],p["feed"]
     feedY=gas.Y.copy(); mw=gas.molecular_weights.copy()
     atoms=np.array([[gas.n_atoms(k,e) for k in range(gas.n_species)] for e in ("C","H","O")])
-    flow_mol_s=50/22414/60
+    flow_mol_s=p['flow_sccm']/22414/60
     mdot=flow_mol_s*gas.mean_molecular_weight/1000
     inlet=ct.Reservoir(gas,clone=True); exhaust=ct.Reservoir(gas,clone=True)
     reactor_type=reactor_type or ct.IdealGasMoleReactor
     r=reactor_type(gas,energy="off",volume=p["volume_m3"],clone=True)
     mfc=ct.MassFlowController(inlet,r,mdot=mdot)
-    pc=ct.PressureController(r,exhaust,primary=mfc,K=1e-8)
+    pc=ct.PressureController(r,exhaust,primary=mfc,K=pressure_K)
     net=ct.ReactorNet([r]); net.rtol=1e-11 if tight in (1,3) else 1e-9
     net.atol=1e-19 if tight==1 else 1e-15
     if tight==2: net.atol=1e-15*p["volume_m3"]
@@ -79,7 +82,7 @@ def worker(out,name,x,tight=False,cold=False,reactor_type=None):
     rates={k:float(v*flow_mol_s*3600*gas.molecular_weights[gas.species_index(k)]) for k,v in ratios.items()}
     # g/mol numerical molecular weights, flow_mol_s is mol/s.
     result=dict(name=name,inputs=p,mechanism=gas.source,engine=ct.__version__,
-      rtol=net.rtol,atol=net.atol,pressure_controller_K=1e-8,
+      rtol=net.rtol,atol=net.atol,pressure_controller_K=pressure_K,
       mass_flow_kg_s=mdot,outlet_mass_flow_kg_s=pc.mass_flow_rate,
       mass_residence_time_s=r.mass/mdot,pressure_Pa=r.phase.P,volume_m3=r.volume,
       mol_per_feed_carbon=ratios,carbon_yields=cy,product_g_h=rates,
