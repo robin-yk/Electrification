@@ -1,0 +1,49 @@
+{
+  "peak_C": 1800.0,
+  "hold_s": 0.5,
+  "flow_sccm": 1215.7433532794082,
+  "normalized_x": [
+    1.0,
+    1.0,
+    0.9207533597946167
+  ],
+  "predicted_g_per_g_CFP_h": [
+    53.94725799560547,
+    77.52151489257812
+  ],
+  "posterior_sd": [
+    0.3793083727359772,
+    0.49339619278907776
+  ],
+  "training_n": 38,
+  "seed": 20260907,
+  "acquisition": "qEHVI",
+  "reference_raw": [
+    0,
+    0
+  ],
+  "reference_standardized": [
+    -0.5182657837867737,
+    -0.6368651390075684
+  ],
+  "objective_mean": [
+    6.7476091384887695,
+    14.696215629577637
+  ],
+  "objective_std": [
+    13.01959228515625,
+    23.075868606567383
+  ],
+  "versions": {
+    "nextorch": "0.4.0",
+    "botorch": "0.4.0",
+    "gpytorch": "1.4.0",
+    "torch": "2.2.2",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1"
+  },
+  "source_sha256": "485d80fcdf02aab7f94ec3ad04138f058db5a11167cc17d06401a360e83e857f",
+  "commit": "787f7b36a5b31d9917990c2aa52217c4b8af2b99",
+  "flow_transform": "logarithmic, 50 to 1600 sccm; other inputs linear",
+  "uncertainty_note": "GP posterior uncertainty, not validated physical or chemical uncertainty"
+}

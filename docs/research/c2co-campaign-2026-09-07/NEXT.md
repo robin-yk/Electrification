@@ -2,6 +2,11 @@
 
 ## Current: one user-approved NEXTorch point
 
+Proposal completed in 3.626738917 s and charged. Frozen proposal.json selects
+1800 C, .5 s hold, 1215.7433532794082 sccm. Reserve now only 150 s for the
+direct verification. Model/training/proposal must land on main before dispatch.
+Do not refit or generate another candidate until this output is reviewed.
+
 Read RPH-NEXTORCH-01.md. Reserve 240 s for proposal generation (90 s max)
 and one directly verified recommendation (150 s max). Charge local proposal
 time and reduce reservation to 150 before reaction dispatch. No automated
