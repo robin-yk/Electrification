@@ -20,7 +20,7 @@ def compare(ref,actual):
     err=max(abs(ref.get(k,0)-actual.get(k,0)) for k in keys)
     assert err<1e-5, f"reference mismatch {err}"
     return err
-def worker(out,name,x,tight=False,cold=False):
+def worker(out,name,x,tight=False,cold=False,reactor_type=None):
     print("stage: importing cantera",flush=True)
     import cantera as ct
     import numpy as np
@@ -36,7 +36,8 @@ def worker(out,name,x,tight=False,cold=False):
     flow_mol_s=50/22414/60
     mdot=flow_mol_s*gas.mean_molecular_weight/1000
     inlet=ct.Reservoir(gas,clone=True); exhaust=ct.Reservoir(gas,clone=True)
-    r=ct.IdealGasMoleReactor(gas,energy="off",volume=p["volume_m3"],clone=True)
+    reactor_type=reactor_type or ct.IdealGasMoleReactor
+    r=reactor_type(gas,energy="off",volume=p["volume_m3"],clone=True)
     mfc=ct.MassFlowController(inlet,r,mdot=mdot)
     pc=ct.PressureController(r,exhaust,primary=mfc,K=1e-8)
     net=ct.ReactorNet([r]); net.rtol=1e-11 if tight in (1,3) else 1e-9
