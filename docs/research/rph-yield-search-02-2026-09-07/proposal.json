@@ -1,0 +1,26 @@
+{
+  "peak_C": 1766.0857375707033,
+  "hold_s": 0.5,
+  "flow_sccm": 61.96539321286673,
+  "normalized_x": [
+    0.9434762292845056,
+    1.0,
+    0.061906924189033284
+  ],
+  "predicted_carbon_yield_pct": [
+    11.061185836791992
+  ],
+  "posterior_sd_percentage_points": [
+    0.3127889931201935
+  ],
+  "acquisition": "EI",
+  "training_n": 39,
+  "refitted": false,
+  "reaction_verified": false,
+  "input_hashes": {
+    "docs/research/rph-yield-01-2026-09-07/model-state.pt": "611426b51b39045873b06092ee9755d447689ec17a4106783e41ae57e42a2126",
+    "docs/research/rph-yield-01-2026-09-07/training.json": "033248d5683a8078b29caf05ae5c11e924c284e18f5106f1ef308ecc23c650dd",
+    "tools/openmkm_dynamic/repair_rph_yield_search.py": "a529fd1cd8c6cb113760b2d6e94437e1e98e1ea468a8c8d2f53841d4da862f13",
+    "tools/openmkm_dynamic/robust_acquisition.py": "3b820e7b396f1c13a7179adfda193de153ca4a71fd55d37b4596b34bcd09118f"
+  }
+}

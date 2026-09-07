@@ -1,5 +1,16 @@
 # Bounded C2/CO research continuation
 
+## Current: repaired yield search passed, no chemistry dispatched
+
+User requested acquisition repair. Completed in 4.593653625 s; reservation
+released. Read rph-yield-search-02-2026-09-07/REPORT.md and proposal.json.
+The frozen 39-point model recommends about 1766 C/.5 s/62 sccm with predicted
+C2H2 yield about 11.06%. It passes independent 8192-point/anchor EI checks,
+but is not an Aramco result. Use repair_rph_yield_search.py as the reviewed
+replacement search entry, not the old failed proposer. Original artifacts
+remain unchanged. Direct verification is pending; no auto retry or new run
+is queued. Heartbeat stays paused and validated point count stays 39.
+
 ## Current: single-objective C2H2 carbon yield
 
 STOPPED before chemistry. Proposal completed but frozen-model acquisition

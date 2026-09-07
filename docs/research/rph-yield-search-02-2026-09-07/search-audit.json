@@ -1,0 +1,134 @@
+{
+  "score": 0.022912267595529556,
+  "previous_score": 0.00011964530131081119,
+  "incumbent_score": 0.0028776086401194334,
+  "independent_reference_best": 0.01612147130072117,
+  "independent_reference_n": 8192,
+  "seed_n": 4138,
+  "details": {
+    "seed_best": 0.013924045488238335,
+    "local_searches": [
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.009641977027058601
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.00011798286868724972
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.00011174058454344049
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+        "score": 0.00011024023842765018
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.022902021184563637
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+        "score": 0.00011964530131081119
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.02290828339755535
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.022905616089701653
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.022901689633727074
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.022906366735696793
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.022910159081220627
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.02290370687842369
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.02291051112115383
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.02291208691895008
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.022906087338924408
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.009653092361986637
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.009627662599086761
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.022905239835381508
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.009634824469685555
+      },
+      {
+        "success": false,
+        "message": "ABNORMAL_TERMINATION_IN_LNSRCH",
+        "score": 0.022905148565769196
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.02290739305317402
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.022901689633727074
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.02290686033666134
+      },
+      {
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "score": 0.022912267595529556
+      }
+    ]
+  },
+  "passed": true
+}
