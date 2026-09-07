@@ -2,6 +2,13 @@
 
 ## Current priority: user-approved minimal fixed-volume RPH gates
 
+User subsequently required legacy-code reconciliation before new calculations.
+Read ../rph-implementation-reconciliation-2026-09-07.md first. Three algebraic
+species-inventory tests passed, with no ReactorNet integration. The isolated
+temperature_step_accounting helper is not connected to production: cooling draws
+extra feed and is incompatible with strictly fixed total inlet 50 sccm.
+Do not dispatch a retry or treat the earlier periodic pressure failure as solved.
+
 Run 34146144797 completed rph-fixed-gate-01 in 5.493213569 seconds.
 Analytic closed ramp passed; constant-temperature species comparison error is zero.
 Periodic gate run 34146617236 STOPPED at the first inert cycle after
