@@ -89,7 +89,9 @@ def pah_partition(case_json):
     assert total > 0 and audit["group_partition_ok"]
     species = audit["species_out_kmol"]
     heavy = audit["groups"]["C7+"]["fraction_of_carbon_out"]
-    named = {r: species.get(r, 0.) * _carbon_atoms(r) / total for r in RINGS}
+    # A ring the mechanism does not contain contributes nothing and is not an
+    # error: GRI-Mech 3.0 has none of them, which is the point of running it.
+    named = {r: species.get(r, 0.) * _CARBON.get(r, 0) / total for r in RINGS}
     bins = sum(v * _carbon_atoms(k) for k, v in species.items()
                if k.startswith("BIN")) / total
     return dict(C7plus_fraction=heavy, named_rings=named, BIN_fraction=bins,
