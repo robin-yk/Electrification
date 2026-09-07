@@ -1,0 +1,14 @@
+START gate-aramco-20 substeps 21
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_three_pairs.py:88: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  gas = ct.Solution(mech)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_three_pairs.py:88: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  gas = ct.Solution(mech)
+RESULT gate-aramco-20 {"carbon_yields_per_feed_carbon": {"C2H2": 0.13693130652229427, "C2H4": 0.00575071823634008, "C2H6": 0.0002107205067345918, "C6H6": 0.12036864868826308, "CO": 0.42425168692101023, "C2_total": 0.1431607369121133, "C6_total": 0.12169598706512035}, "CH4_conversion": 0.784972795353987, "cycles": 6, "boundary_residual": 1.454392162258955e-14, "element_residuals": {"C": -1.3986002150568767e-13, "H": -5.91000233006667e-14, "O": 1.917584918998219e-13}, "wall_s": 6.909133584999999}

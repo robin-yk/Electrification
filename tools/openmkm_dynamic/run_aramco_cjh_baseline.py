@@ -68,6 +68,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--output-dir", type=Path, required=True)
     ap.add_argument("--worker", nargs=5)
+    ap.add_argument("--cases-file", type=Path)
+    ap.add_argument("--reference-dir", type=Path)
     a = ap.parse_args()
     out = a.output_dir.resolve()
     out.mkdir(parents=True, exist_ok=True)
@@ -81,6 +83,25 @@ def main():
         jobs += [(1400, .1, mech, pts, f"gate-{mech}-{pts}") for pts in (20, 40)]
     jobs += [(T, tau, "aramco", 20, f"T{T}-tau{tau}") for T in TEMPERATURES_C for tau in TAUS_S
              if (T, tau) != (1400, .1)]
+    if a.cases_file:
+        budget = json.loads((ROOT / "docs/research/c2co-campaign-2026-09-07/budget.json").read_text())
+        assert budget["spent_s"] + budget["reserved_s"] <= budget["total_budget_s"]
+        assert budget["batch_limit_s"] >= 540
+        reservation = [b for b in budget["batches"] if b["id"] == a.cases_file.stem]
+        assert len(reservation) == 1 and reservation[0]["status"] == "reserved"
+        assert reservation[0]["reserved_s"] >= 540, "missing batch reservation"
+        assert a.reference_dir, "refinement requires archived baseline gates"
+        refstatus = json.loads((a.reference_dir / "status.json").read_text())
+        assert refstatus["status"] == "completed" and refstatus["map_points"] == 9
+        refmanifest = json.loads((a.reference_dir / "manifest.json").read_text())
+        for key, file in (("solver_sha256", "tools/openmkm_dynamic/run_cstr_case.py"),
+                          ("mechanism_sha256", "tools/cantera/mechanisms/aramco20.yaml")):
+            assert hashlib.sha256((ROOT / file).read_bytes()).hexdigest() == refmanifest[key]
+        selected = json.loads(a.cases_file.read_text())
+        assert 0 < len(selected) <= 19
+        assert len({(r["T_C"], r["tau_s"]) for r in selected}) == len(selected)
+        jobs = [(1400, .1, "aramco", 40, "anchor")]
+        jobs += [(r["T_C"], r["tau_s"], "aramco", 20, f"T{r['T_C']}-tau{r['tau_s']}") for r in selected]
     save(out, "manifest", dict(
         commit=subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
         jobs=jobs, budget_s=540, per_worker_s=90,
@@ -104,12 +125,17 @@ def main():
                     stdout=log, stderr=subprocess.STDOUT, check=True, timeout=min(90, remaining))
             m = json.loads((out / (name + "-metrics.json")).read_text())
             done.append(name)
+            if name == "anchor":
+                reference = json.loads((a.reference_dir / "gate-aramco-40-metrics.json").read_text())
+                assert m["mol_per_feed_carbon"].keys() == reference["mol_per_feed_carbon"].keys()
+                for s, n in m["mol_per_feed_carbon"].items():
+                    assert abs(n - reference["mol_per_feed_carbon"][s]) < 1e-5, "archive anchor mismatch: " + s
             if name.startswith("gate") and pts == 40:
                 base = json.loads((out / f"gate-{mech}-20-metrics.json").read_text())
                 for s, n in m["mol_per_feed_carbon"].items():
                     assert abs(n - base["mol_per_feed_carbon"][s]) < 1e-5, f"{mech} sampling gate: {s}"
                 assert abs(m["CH4_conversion"] - base["CH4_conversion"]) < 1e-5
-            if mech == "aramco" and (pts == 40 or not name.startswith("gate")):
+            if mech == "aramco" and name != "anchor" and (pts == 40 or not name.startswith("gate")):
                 rows.append(m)
                 save(out, "summary", rows)
             print(json.dumps(dict(case=name, wall_s=m["wall_s"], X=m["CH4_conversion"])), flush=True)

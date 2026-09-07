@@ -1,0 +1,20 @@
+{
+  "points": 9,
+  "pareto": [
+    {
+      "T_C": 1800.0,
+      "tau_s": 0.01
+    },
+    {
+      "T_C": 1800.0,
+      "tau_s": 0.1
+    },
+    {
+      "T_C": 1800.0,
+      "tau_s": 1.0
+    }
+  ],
+  "sources": [
+    "docs/research/aramco-cjh-2026-09-07/data/summary.json"
+  ]
+}

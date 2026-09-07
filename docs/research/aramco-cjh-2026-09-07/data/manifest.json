@@ -1,0 +1,104 @@
+{
+  "commit": "a15c44800cad2392bba09c80d5be46e02e6b8104",
+  "jobs": [
+    [
+      26.85,
+      0.1,
+      "gri",
+      20,
+      "cold"
+    ],
+    [
+      1400,
+      0.1,
+      "gri",
+      20,
+      "gate-gri-20"
+    ],
+    [
+      1400,
+      0.1,
+      "gri",
+      40,
+      "gate-gri-40"
+    ],
+    [
+      1400,
+      0.1,
+      "aramco",
+      20,
+      "gate-aramco-20"
+    ],
+    [
+      1400,
+      0.1,
+      "aramco",
+      40,
+      "gate-aramco-40"
+    ],
+    [
+      1000,
+      0.01,
+      "aramco",
+      20,
+      "T1000-tau0.01"
+    ],
+    [
+      1000,
+      0.1,
+      "aramco",
+      20,
+      "T1000-tau0.1"
+    ],
+    [
+      1000,
+      1.0,
+      "aramco",
+      20,
+      "T1000-tau1.0"
+    ],
+    [
+      1400,
+      0.01,
+      "aramco",
+      20,
+      "T1400-tau0.01"
+    ],
+    [
+      1400,
+      1.0,
+      "aramco",
+      20,
+      "T1400-tau1.0"
+    ],
+    [
+      1800,
+      0.01,
+      "aramco",
+      20,
+      "T1800-tau0.01"
+    ],
+    [
+      1800,
+      0.1,
+      "aramco",
+      20,
+      "T1800-tau0.1"
+    ],
+    [
+      1800,
+      1.0,
+      "aramco",
+      20,
+      "T1800-tau1.0"
+    ]
+  ],
+  "budget_s": 540,
+  "per_worker_s": 90,
+  "feed": "CH4:0.5, CO2:0.5",
+  "pressure_Pa": 101325.0,
+  "closure": "constant pressure prescribed constant T, equal inlet/outlet mass/tau; variable volume",
+  "note": "period_s is a 5-tau convergence observation block, not a heating period",
+  "solver_sha256": "a7b5083148fe20c867634618afe94c543198485e9aed99662d0a7c1adc2786a6",
+  "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "completed": [
+    "cold",
+    "gate-gri-20",
+    "gate-gri-40",
+    "gate-aramco-20",
+    "gate-aramco-40",
+    "T1000-tau0.01",
+    "T1000-tau0.1",
+    "T1000-tau1.0",
+    "T1400-tau0.01",
+    "T1400-tau1.0",
+    "T1800-tau0.01",
+    "T1800-tau0.1",
+    "T1800-tau1.0"
+  ],
+  "map_points": 9,
+  "wall_s": 94.88223265900001
+}

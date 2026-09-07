@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="500" viewBox="0 0 760 500">
+<rect width="760" height="500" fill="white"/>
+<g font-family="Arial" font-size="13" fill="#172a3a">
+<text x="80" y="30" font-size="19">Aramco CJH: evaluated points only</text>
+<path d="M80 60V420H700" fill="none" stroke="#172a3a"/>
+<text x="80.0" y="442" text-anchor="middle">0.0</text>
+<text x="68" y="424.0" text-anchor="end">0</text>
+<text x="204.0" y="442" text-anchor="middle">3.3</text>
+<text x="68" y="352.0" text-anchor="end">20</text>
+<text x="328.0" y="442" text-anchor="middle">6.6</text>
+<text x="68" y="280.0" text-anchor="end">40</text>
+<text x="452.0" y="442" text-anchor="middle">9.9</text>
+<text x="68" y="208.0" text-anchor="end">60</text>
+<text x="576.0" y="442" text-anchor="middle">13.2</text>
+<text x="68" y="136.0" text-anchor="end">80</text>
+<text x="700.0" y="442" text-anchor="middle">16.5</text>
+<text x="68" y="64.0" text-anchor="end">100</text>
+<circle cx="80.00" cy="420.00" r="5" fill="#277da1"><title>1000 C, 0.01 s</title></circle>
+<circle cx="80.00" cy="420.00" r="5" fill="#277da1"><title>1000 C, 0.1 s</title></circle>
+<circle cx="81.05" cy="419.97" r="5" fill="#277da1"><title>1000 C, 1 s</title></circle>
+<circle cx="295.81" cy="389.67" r="5" fill="#277da1"><title>1400 C, 0.01 s</title></circle>
+<circle cx="595.40" cy="267.27" r="5" fill="#277da1"><title>1400 C, 0.1 s</title></circle>
+<circle cx="533.99" cy="156.03" r="5" fill="#277da1"><title>1400 C, 1 s</title></circle>
+<circle cx="596.67" cy="143.69" r="5" fill="#c54d13"><title>1800 C, 0.01 s</title></circle>
+<text x="604.67" y="135.69">1800 C, 0.01 s</text>
+<circle cx="303.80" cy="92.40" r="5" fill="#c54d13"><title>1800 C, 0.1 s</title></circle>
+<text x="311.80" y="84.40">1800 C, 0.1 s</text>
+<circle cx="159.73" cy="71.15" r="5" fill="#c54d13"><title>1800 C, 1 s</title></circle>
+<text x="167.73" y="63.15">1800 C, 1 s</text>
+<text x="360" y="478">C2H2 carbon yield (%)</text>
+<text transform="translate(22 290) rotate(-90)">CO carbon yield (%)</text>
+<text x="400" y="52">Orange: nondominated among sampled points</text>
+</g></svg>
