@@ -17,11 +17,19 @@ remain justified by measured map variation/error and within the 3600-second cap.
 Current state: 69 unique CJH conditions completed. Latest combined map and
 SAMPLING-PROGRESS.md are in ../cjh-refine-05-2026-09-07/. Run 34097793177
 passed both gates and all twelve new points. All elapsed time is reconciled
-in budget.json; no batch is reserved or active. The low-tau C2H4 decline has
+in budget.json. Batch cjh-tolerance-01 is now reserved; locate workflow
+"CJH explicit integrator tolerance check" if its ID is not yet recorded.
+Do not duplicate dispatch. It compares default/tight tolerances at two points
+without changing the production solver or initial composition. Read its run card.
+The low-tau C2H4 decline has
 now been observed. C2H2 best yield did not improve and C2H4 improved only
 slightly in this last batch. Do not continue automatic low-tau extensions.
 
-Next: prioritize an independent numerical validation pilot, not more map
+Next: finish the tolerance pilot and archive it before another batch. Inspection
+found integrate() copies feed accounting from the initial reactor phase; an
+alternate-state test must separate the true inlet basis rather than silently
+alter that copy. Existing feed-initialized results remain unaffected.
+Prioritize a numerical validation pilot, not more map
 points. Inspect solver initialization and integrator settings; design a bounded
 test at representative C2H2/C2H4 candidates with explicit rtol/atol and a
 different initial reactor composition while keeping feed, pressure, prescribed
