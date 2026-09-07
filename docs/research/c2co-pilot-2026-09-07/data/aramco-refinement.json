@@ -1,0 +1,8 @@
+{
+  "C2H2_carbon_yield": 4.431138821926403e-05,
+  "C2H4_carbon_yield": 1.8182010044953743e-05,
+  "CO_carbon_yield": 0.0005489947677661117,
+  "H2O_mol_per_feed_C": 5.799593365091692e-05,
+  "H2_mol_per_feed_C": 0.0005466283329179505,
+  "AA_stoichiometric_carbon_upper_bound": 6.646708232889605e-05
+}

@@ -1,0 +1,16 @@
+START P4-aramco-200 substeps 210
+[WARNING][rank 0][/build/build/sundials-prefix/src/sundials/src/cvodes/cvodes.c:3528][CVode] Internal t = 1.58499999999999 and h = 7.06187167067571e-17 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][/build/build/sundials-prefix/src/sundials/src/cvodes/cvodes.c:3528][CVode] Internal t = 1.58499999999999 and h = 7.06187167067571e-17 are such that t + h = t on the next step. The solver will continue anyway.
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_three_pairs.py:88: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  gas = ct.Solution(mech)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_three_pairs.py:88: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  gas = ct.Solution(mech)
+RESULT P4-aramco-200 {"carbon_yields_per_feed_carbon": {"C2H2": 0.006863803364189079, "C2H4": 0.0003710279984361921, "C2H6": 3.8876059603346156e-05, "C6H6": 0.0016614826203737892, "CO": 0.029025199228853098, "C2_total": 0.007288707645878069, "C6_total": 0.0017101173152317373}, "CH4_conversion": 0.04202416358669425, "cycles": 4, "boundary_residual": 2.3869795029440866e-15, "element_residuals": {"C": -2.8948361192465797e-10, "H": -4.810794433285451e-10, "O": -9.753713503248897e-11}, "wall_s": 33.19143244800006}

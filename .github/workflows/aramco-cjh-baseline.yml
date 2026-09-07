@@ -1,0 +1,30 @@
+name: Aramco CJH bounded baseline
+on:
+  push:
+    branches: [codex/aramco-cjh-baseline-20260907]
+    paths: [.github/workflows/aramco-cjh-baseline.yml]
+permissions:
+  contents: read
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      PYTHONUNBUFFERED: '1'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r tools/cantera/requirements.txt
+      - run: python -m unittest discover -s tools/openmkm_dynamic -p 'test_*.py'
+      - name: Run gated CJH baseline
+        timeout-minutes: 10
+        run: python -u tools/openmkm_dynamic/run_aramco_cjh_baseline.py --output-dir out/aramco-cjh
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: aramco-cjh-baseline
+          path: out/aramco-cjh/

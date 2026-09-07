@@ -1,0 +1,40 @@
+{
+  "commit": "55086a8473893a642a44b9620a6a86f0761c6284",
+  "cases": {
+    "P1": {
+      "feed": "CH4:0.5, CO2:0.5",
+      "peak_c": 1800.0,
+      "tau_s": 0.1
+    },
+    "P2": {
+      "feed": "CH4:0.05, CO2:0.05, HE:0.90",
+      "peak_c": 1800.0,
+      "tau_s": 0.1
+    },
+    "P3": {
+      "feed": "CH4:0.5, CO2:0.5",
+      "peak_c": 1400.0,
+      "tau_s": 0.1
+    },
+    "P4": {
+      "feed": "CH4:0.5, CO2:0.5",
+      "peak_c": 1800.0,
+      "tau_s": 0.01
+    }
+  },
+  "period_s": 1.0,
+  "t_min_c": 600.0,
+  "duty": 0.05,
+  "ramp_up_fraction": 0.025,
+  "ramp_down_fraction": 0.1,
+  "pressure_Pa": 101325.0,
+  "closure": "constant pressure, prescribed gas T, inlet=outlet=mass/tau",
+  "budget_wall_s": 540,
+  "per_case_wall_s": 120,
+  "claim": "chemical pilot only; no experimental, energy, soot or downstream-reactor validation",
+  "hashes": {
+    "tools/openmkm_dynamic/run_cstr_case.py": "a7b5083148fe20c867634618afe94c543198485e9aed99662d0a7c1adc2786a6",
+    "tools/openmkm_dynamic/run_c2co_pilot.py": "47ce416942048af7caef00a81242cfdc184f5be305c63f930f9fd89c17d71456",
+    "tools/cantera/mechanisms/aramco20.yaml": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc"
+  }
+}

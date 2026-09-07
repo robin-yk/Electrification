@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "completed": [
+    "cold-gri-200",
+    "P1-gri-200",
+    "P1-gri-400",
+    "P1-aramco-200",
+    "P1-aramco-400",
+    "P2-aramco-200",
+    "P3-aramco-200",
+    "P4-aramco-200"
+  ],
+  "note": "P1 paired/refined; P2-P4 provisional base-grid only",
+  "wall_s": 300.590324195
+}
