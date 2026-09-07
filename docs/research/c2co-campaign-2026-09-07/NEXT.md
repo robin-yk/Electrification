@@ -18,8 +18,8 @@ Current state: 57 unique CJH conditions completed. Latest combined map is
 ../cjh-refine-04-2026-09-07/REPORT.md; run 34092910653 passed both gates
 and all twelve new points. All completed and failed elapsed time is reconciled
 in budget.json. Batch cjh-refine-05 is reserved for two maxima gates and twelve
-C2H4 short-residence/C2H2 peak-bracketing points. Locate workflow
-"CJH peak bracketing refinement 05" if its ID is not yet recorded.
+C2H4 short-residence/C2H2 peak-bracketing points. Workflow
+"CJH peak bracketing refinement 05" run ID: 34097793177.
 Do not dispatch a duplicate. Plan and run card are in tools/openmkm_dynamic/.
 
 Next: read the latest report and gates.json. The C2H4 maximum still lies at

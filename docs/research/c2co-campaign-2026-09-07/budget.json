@@ -12,7 +12,7 @@
     {"id": "cjh-refine-02-resume", "status": "completed", "run_id": 34085563713, "reserved_s": 0, "actual_s": 172.37044121199983, "new_points": 12, "verification_points": 3, "reuse_raw_from": 34085150481},
     {"id": "cjh-refine-03", "status": "completed", "run_id": 34088470900, "reserved_s": 0, "actual_s": 202.242021115, "new_points": 12, "verification_points": 2},
     {"id": "cjh-refine-04", "status": "completed", "run_id": 34092910653, "reserved_s": 0, "actual_s": 201.205218753, "new_points": 12, "verification_points": 2},
-    {"id": "cjh-refine-05", "status": "reserved", "run_id": null, "reserved_s": 540, "actual_s": null, "new_points": 12, "verification_points": 2}
+    {"id": "cjh-refine-05", "status": "reserved", "run_id": 34097793177, "reserved_s": 540, "actual_s": null, "new_points": 12, "verification_points": 2}
   ],
   "rule": "Before launch require spent plus all reservations <= total. One batch in flight. Reconcile actual elapsed calculation time including failed work from status or Actions step timestamps; retain full reservation if time is unknown. Never treat a timeout as zero cost. No automatic retries or budget reset. Pause on user stop, unresolved numerical failure or exhausted budget."
 }
