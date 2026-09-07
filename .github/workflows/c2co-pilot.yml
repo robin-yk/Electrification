@@ -1,0 +1,33 @@
+name: C2 CO bounded chemical pilot
+on:
+  push:
+    branches: [codex/c2co-pilot-20260907]
+    paths: [.github/workflows/c2co-pilot.yml]
+permissions:
+  contents: read
+concurrency:
+  group: c2co-chemical-pilot
+  cancel-in-progress: false
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      PYTHONUNBUFFERED: '1'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r tools/cantera/requirements.txt
+      - run: python -m unittest discover -s tools/openmkm_dynamic -p 'test_*.py'
+      - name: Run sequential gated pilot
+        timeout-minutes: 10
+        run: python -u tools/openmkm_dynamic/run_c2co_pilot.py --output-dir out/c2co-pilot
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: c2co-chemical-pilot
+          path: out/c2co-pilot/
