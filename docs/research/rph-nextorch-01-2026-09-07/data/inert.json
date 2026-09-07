@@ -1,0 +1,89 @@
+{
+  "name": "inert",
+  "engine": "3.2.0",
+  "inputs": {
+    "feed": {
+      "N2": 1
+    },
+    "flow_sccm": 1215.7433532794082,
+    "standard_T_K": 273.15,
+    "standard_P_Pa": 101325,
+    "volume_m3": 9.228077898393764e-09,
+    "pressure_target_Pa": 101325,
+    "pressure_controller_K": 1e-07,
+    "period_s": 1.0,
+    "segments": [
+      [
+        0.025,
+        723.15,
+        2073.15
+      ],
+      [
+        0.5,
+        2073.15,
+        2073.15
+      ],
+      [
+        0.1,
+        2073.15,
+        723.15
+      ],
+      [
+        0.375,
+        723.15,
+        723.15
+      ]
+    ],
+    "samples_per_segment": 800
+  },
+  "basis": "mol product per mol inlet total carbon for CH4/CO2; mol per mol inlet for inert control",
+  "mol_per_feed_carbon": {
+    "N2": 0.9999995816318908
+  },
+  "carbon_yields": {
+    "N2": 0.0
+  },
+  "product_g_h": {
+    "N2": 91.16932287871225
+  },
+  "product_g_per_g_CFP_h": {
+    "N2": 3165.6014888441755
+  },
+  "cycles": 3,
+  "history": [
+    {
+      "cycle": 1,
+      "max_species_cycle_change": null,
+      "state_change": null,
+      "elemental_residuals": {
+        "N": 4.1804610855383416e-07
+      },
+      "mass_residual": 4.1804605648351224e-07,
+      "max_pressure_relative_error": 3.195976485126373e-05,
+      "max_temperature_error_K": 6.144736744317925e-06
+    },
+    {
+      "cycle": 2,
+      "max_species_cycle_change": 4.5183312646912555e-09,
+      "state_change": 6.790711104542879e-09,
+      "elemental_residuals": {
+        "N": 4.1352798002682744e-07
+      },
+      "mass_residual": 4.1352801255652173e-07,
+      "max_pressure_relative_error": 3.195976450554028e-05,
+      "max_temperature_error_K": 1.6624411728116684e-05
+    },
+    {
+      "cycle": 3,
+      "max_species_cycle_change": 4.841297363000763e-09,
+      "state_change": 9.330889172431966e-09,
+      "elemental_residuals": {
+        "N": 4.183665039930881e-07
+      },
+      "mass_residual": 4.1836643626462156e-07,
+      "max_pressure_relative_error": 3.1959764037248206e-05,
+      "max_temperature_error_K": 1.2044481081829872e-05
+    }
+  ],
+  "wall_s": 0.23936566900000145
+}

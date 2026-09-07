@@ -1,0 +1,13 @@
+{
+  "commit": "1bc5c8834aa4d189295ad90c371cfc828da516ec",
+  "hashes": {
+    "tools/openmkm_dynamic/run_rph_nextorch_01.py": "976fdb82ad177d50a14230b0b69c66ab7aeff13f0f5daf2c3ca5d4f16924a00d",
+    "tools/openmkm_dynamic/run_rph_fixed_pulse.py": "2b1752063dc79179a64a0f4e15ea0befb839094032df3a886b86102c658b5dcb",
+    "tools/openmkm_dynamic/run_cjh_feed_ratio_01.py": "9d059b35e8602a1c569647a668b30ac3b85a32300b1d27d17a5e98d87bb0051f",
+    "tools/openmkm_dynamic/run_rph_fixed_gate.py": "44f891890dafbecbd7c5667f6ca73ac401423bc9a479a42485a5baf961b2b958",
+    "tools/cantera/mechanisms/aramco20.yaml": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+    "docs/research/rph-nextorch-01-2026-09-07/proposal.json": "23810bea6d40e5975a2cdeab44a0dde3461816f1b78a69be2925f95f6b8b628b",
+    "docs/research/rph-flow-02-2026-09-07/data/Q400-hold0.1-n800.json": "4d9c2762a657894950898ca3eb1d5e01b96023cec01918de621aaae133431182"
+  },
+  "cap_s": 150
+}

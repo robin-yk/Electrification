@@ -2,6 +2,15 @@
 
 ## Current: one user-approved NEXTorch point
 
+COMPLETED: verification 34162441788 passed inert, archive and paired gates
+in 32.762974469 s, plus 3.626738917 s proposal time. Actual productivity
+and frozen prediction comparison are in rph-nextorch-01-2026-09-07/REPORT.md.
+observations-39.json contains the original 38 plus the validated new point
+for a future fit. No second recommendation or loop was run. Budget reconciled,
+no reservation or active run; heartbeat remains paused. Prediction errors
+at this point are not cross-domain calibration. This supersedes the historical
+reservation text below. Do not rerun the fixed 38-point proposer as a new step.
+
 Proposal completed in 3.626738917 s and charged. Frozen proposal.json selects
 1800 C, .5 s hold, 1215.7433532794082 sccm. Reserve now only 150 s for the
 direct verification. Model/training/proposal must land on main before dispatch.
