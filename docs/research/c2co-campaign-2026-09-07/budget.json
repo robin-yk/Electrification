@@ -4,9 +4,10 @@
   "total_budget_s": 3600,
   "batch_limit_s": 600,
   "spent_s": 3171.743659341974,
-  "reserved_s": 0,
+  "reserved_s": 400,
   "baseline_excluded_run": 34084078933,
   "batches": [
+    {"id":"rph-xs-extension-01","status":"reserved","reserved_s":400,"actual_s":null,"new_points":4},
     {"id":"cjh-rph-match-3","status":"completed","reserved_s":0,"actual_s":383.90483128200003,"run_id":34170488939,"new_points":12},
     {"id":"cjh-rph-match-2","status":"completed","reserved_s":0,"actual_s":296.12117285700003,"run_id":34170083871,"new_points":12},
     {"id":"cjh-rph-match-1","status":"completed","reserved_s":0,"actual_s":353.48691734700003,"run_id":34169440821,"new_points":12},

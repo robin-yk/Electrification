@@ -1,5 +1,13 @@
 # Bounded C2/CO research continuation
 
+## Current: four-point conversion/selectivity extension
+
+User approved two longer holds and two lower flows, with matched CJH.
+Read RPH-XS-EXTENSION.md. Reserve 400 s within the original cumulative cap.
+No retry on failed gates or timeout. Preserve the frozen 39-pair report;
+the four new pairs receive a separate extension report. Archive actual time
+before releasing the reservation. No additional optimizer or chemistry queued.
+
 ## Current: match CJH to all 39 RPH conversions
 
 COMPLETE: 39/39 verified pairs. Group 3 passed in 383.904831282 s

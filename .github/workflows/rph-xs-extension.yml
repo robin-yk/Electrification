@@ -1,0 +1,29 @@
+name: Extend RPH conversion selectivity
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: c2co-budgeted-campaign
+  cancel-in-progress: false
+jobs:
+  calculate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r tools/cantera/requirements.txt scipy==1.13.1
+      - name: Bounded four-point extension
+        timeout-minutes: 8
+        run: python tools/openmkm_dynamic/run_rph_xs_extension.py --output-dir docs/research/rph-xs-extension-01-2026-09-07/data
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rph-xs-extension-01
+          path: docs/research/rph-xs-extension-01-2026-09-07/data/
