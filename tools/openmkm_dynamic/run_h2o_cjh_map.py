@@ -22,22 +22,45 @@ FEED = "CH4:0.5, H2O:0.5"
 REFERENCE_FEED = "CH4:0.5, CO2:0.5"
 LIMIT = 1800
 PER_WORKER = 180
-# The archived CH4/CO2 grid, reproduced exactly.
-GRID = [(T, tau) for T, taus in (
-    (1000, (.01, .1, 1.)),
-    (1200, (.01, .03, .1, .3, 1.)),
-    (1300, (.01, .03)),
-    (1400, (.01, .03, .1, .3, 1.)),
-    (1500, (.003, .01, .03, .1)),
-    (1600, (.003, .01, .03, .1, 1.)),
-    (1700, (.003, .01, .03, .1)),
-    (1800, (.01, .03, .1, .3, 1.)),
-) for tau in taus]
+# The CH4/CO2 grid is not typed here: it is read from the archived summaries, so
+# the companion map cannot drift from the map it is a companion to.
+REFERENCE_SUMMARIES = (
+    "docs/research/aramco-cjh-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-01-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-02-resume-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-03-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-04-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-05-2026-09-07/data/summary.json",
+)
+# Steam conditions already computed and archived. They are skipped, never redone.
+COMPLETED_SUMMARIES = ("docs/research/h2o-cjh-2026-09-07/data/summary.json",)
 # Horizon gate: many more cycles and far tighter tolerances than the map points.
 STRICT = dict(min_cycles=20, max_cycles=100, cycle_tolerance=1e-10,
               cycle_output_tolerance=1e-10, stable_cycles_required=5)
-# One low-conversion condition and one high-conversion condition.
-GATES = [(1400, .1), (1700, .01)]
+
+
+def grid_and_gates():
+    """The full reference grid, what is already done, and the gate conditions."""
+    full, done = set(), set()
+    for path in REFERENCE_SUMMARIES:
+        full |= {(r["T_C"], r["tau_s"]) for r in json.loads((ROOT / path).read_text())}
+    for path in COMPLETED_SUMMARIES:
+        if (ROOT / path).exists():
+            done |= {(r["T_C"], r["tau_s"]) for r in json.loads((ROOT / path).read_text())}
+    assert done <= full, "archived steam points outside the reference grid"
+    todo = sorted(full - done)
+    # One mid-residence and one short-residence gate, from the batch's own points.
+    gates = [c for c in ((1400., .003), (1800., 1e-5), (1400., .1), (1700., .01)) if c in todo][:2]
+    assert len(gates) == 2, "no gate condition available in this batch"
+    return sorted(full), todo, gates
+
+
+GRID, TODO, GATES = grid_and_gates()
+
+
+def case_name(T, tau):
+    """Case file name, matching the archived convention exactly."""
+    return f"T{T:g}-tau{tau:g}" if tau >= 1e-4 else f"T{T:g}-tau{tau!r}"
 
 
 def compare(reference, actual, what):
@@ -80,25 +103,22 @@ def main():
     old = json.loads(reference.read_text())
     for key in hashes:
         assert hashes[key] == old[key], "solver or mechanism changed since the CH4/CO2 map"
-    archived = []
-    for path in ("docs/research/aramco-cjh-2026-09-07/data/summary.json",
-                 "docs/research/cjh-refine-01-2026-09-07/data/summary.json",
-                 "docs/research/cjh-refine-02-resume-2026-09-07/data/summary.json"):
-        archived += json.loads((ROOT / path).read_text())
-    assert {(r["T_C"], r["tau_s"]) for r in archived} == set(GRID), "grid differs from the archive"
+    assert set(TODO) <= set(GRID) and TODO, "nothing left to compute on this grid"
 
     # The gated conditions are computed first so their gates close before the
     # rest of the map is spent. A failed gate then stops the remaining points.
     jobs = [(26.85, .1, "cold", "cold")]
-    jobs += [(T, tau, "map", f"T{T}-tau{tau}") for T, tau in GATES]
-    jobs += [(T, tau, "sampling", f"gate-sampling-T{T}-tau{tau}") for T, tau in GATES]
-    jobs += [(T, tau, "horizon", f"gate-horizon-T{T}-tau{tau}") for T, tau in GATES]
-    jobs += [(T, tau, "map", f"T{T}-tau{tau}") for T, tau in GRID if (T, tau) not in GATES]
+    jobs += [(T, tau, "map", case_name(T, tau)) for T, tau in GATES]
+    jobs += [(T, tau, "sampling", "gate-sampling-" + case_name(T, tau)) for T, tau in GATES]
+    jobs += [(T, tau, "horizon", "gate-horizon-" + case_name(T, tau)) for T, tau in GATES]
+    jobs += [(T, tau, "map", case_name(T, tau)) for T, tau in TODO if (T, tau) not in GATES]
 
     save(out, "manifest", dict(
         commit=subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
         jobs=jobs, budget_s=LIMIT, per_worker_s=PER_WORKER, hashes=hashes,
         feed=FEED, reference_feed=REFERENCE_FEED, pressure_Pa=101325.,
+        reference_summaries=list(REFERENCE_SUMMARIES), reference_grid_points=len(GRID),
+        already_archived=list(COMPLETED_SUMMARIES), new_points=len(TODO),
         closure=old["closure"], note=old["note"], strict_overrides=STRICT,
         gate_points=40, map_points=20,
         limitations=("Prescribed gas temperature, no heater energy balance, no soot model, "
@@ -121,7 +141,7 @@ def main():
                                timeout=min(PER_WORKER, remaining))
             actual = json.loads((out / (name + "-metrics.json")).read_text())
             if kind in ("sampling", "horizon"):
-                base = json.loads((out / f"T{T}-tau{tau}-metrics.json").read_text())
+                base = json.loads((out / (case_name(float(T), float(tau)) + "-metrics.json")).read_text())
                 gates.append(dict(name=name, **compare(base, actual, kind)))
                 save(out, "gates", gates)
             elif kind == "map":
