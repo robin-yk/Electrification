@@ -122,6 +122,9 @@ def main():
     for feed in ARCHIVES:
         for directory in ARCHIVES[feed]:
             old = json.loads((ROOT / directory / "data/manifest.json").read_text())
+            # Two manifest shapes exist in the archives: the hashes at the top
+            # level, and the same two keys nested under "hashes".
+            old = old.get("hashes", old)
             assert old["solver_sha256"] == solver_sha, directory + ": solver changed"
             assert old["mechanism_sha256"] == aramco_sha, directory + ": Aramco changed"
     reference = {f"{feed}-{T:g}-{tau:g}": dict(archive=archived_aramco(feed, T, tau)[0],
