@@ -1,0 +1,38 @@
+{
+  "solver_hashes": {
+    "tools/openmkm_dynamic/run_cjh_feed_ratio_01.py": "a7a006f53506160f7d8df07d71c29cf05a8ce573ce34b6da4bcc92252e1d4296",
+    "tools/cantera/mechanisms/aramco20.yaml": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc"
+  },
+  "script_sha256": "8b4cd070d6342d56805655ef6af6796d8c14cccfcc71e0b7b4907da302b804f1",
+  "commit": "41ea6a3c8778f80694bb3da77f305387a375a471",
+  "jobs": [
+    {
+      "id": "Q50-T1200-h0.025",
+      "source": "docs/research/rph-450-pilot-01-2026-09-07/data/T1200-hold0.025-n800.json",
+      "sha256": "ec8d149e65da1ec1849f010b844a835a79e478c96df5215845214468ecf51fc8",
+      "flow_sccm": 50,
+      "peak_C": 1200.0,
+      "hold_s": 0.025,
+      "target_X": 5.771365933937567e-05
+    },
+    {
+      "id": "Q50-T1800-h0.5",
+      "source": "docs/research/rph-450-pilot-01-2026-09-07/data/T1800-hold0.5-n800.json",
+      "sha256": "9a848e2e363921f214c7f2a12c5f37cb1179cd7bbd40bac22f3de353b8af62bb",
+      "flow_sccm": 50,
+      "peak_C": 1800.0,
+      "hold_s": 0.5,
+      "target_X": 0.4483673099015023
+    },
+    {
+      "id": "Q1600-T1800-h0.5",
+      "source": "docs/research/rph-flow-02-2026-09-07/data/Q1600-hold0.5-n800.json",
+      "sha256": "367ad022f40276e395d2e3013c4bea4e92954ec1b5e931c698418128535110f8",
+      "flow_sccm": 1600.0,
+      "peak_C": 1800.0,
+      "hold_s": 0.5,
+      "target_X": 0.1760564214592012
+    }
+  ],
+  "cap_s": 240
+}

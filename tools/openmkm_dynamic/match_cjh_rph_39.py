@@ -55,6 +55,16 @@ def solve(out,row):
     lo,hi=450.,row['peak_C']
     flo,fhi=residual(lo),residual(hi)
     assert flo*fhi<=0,f'no matched-temperature bracket: {flo}, {fhi}'
+    # Reuse exact same-flow steady trials to narrow a bracket, not interpolate
+    # a final answer. Brent and the final strict integration still run.
+    known={lo:flo,hi:fhi}
+    for folder in valid:
+        for f in folder.glob(f'steady-Q{q:.12g}-T*-a2.json'):
+            c=base.read(f);temp=c['inputs']['T_K']-273.15
+            if lo<=temp<=hi:known[temp]=c['CH4_conversion']-target
+    ordered=sorted(known)
+    brackets=[(a,b) for a,b in zip(ordered,ordered[1:]) if known[a]*known[b]<=0]
+    if brackets:lo,hi=min(brackets,key=lambda pair:pair[1]-pair[0])
     T=brentq(residual,lo,hi,xtol=1e-5,rtol=1e-10,maxiter=40)
     normal=evaluate(T);tight=evaluate(T,3)
     delta=base.compare(normal['mol_per_feed_carbon'],tight['mol_per_feed_carbon'])

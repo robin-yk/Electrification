@@ -35,3 +35,8 @@ Commit generator/card before pilot. Raw steady trials, RPH source ids, root
 result, strict check, timing and hashes live under cjh-rph-match-{stage}-2026-09-07.
 The completed outputs must be committed before follow-on, with budget reconciled.
 Do not claim all 39 complete unless 39 verified match files exist.
+
+Pilot passed in 164.414281501 s. For remaining groups, use existing same-flow
+trials to narrow the root bracket. Only identical solver/mechanism caches are
+eligible; final output is still a direct root plus strict integration. This
+reduces redundant evaluation rather than substituting interpolated yields.

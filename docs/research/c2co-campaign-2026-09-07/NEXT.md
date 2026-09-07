@@ -1,5 +1,20 @@
 # Bounded C2/CO research continuation
 
+## Current: match CJH to all 39 RPH conversions
+
+Pilot completed 34169130250 in 164.414281501 s; all controls and three matches
+passed. Reserve 450 s for group 1 (12 matches). Same-flow cached steady
+temperatures now narrow the bracket, but final root and strict check remain
+direct integrations. Pilot shows C6 suppression is not universal: at 1600
+sccm/.5 s/1800 C RPH has slightly more total C6 than the matched steady case.
+Do not generalize before the remaining map. Low-conversion cases are flagged.
+
+User approved temperature-only steady matching with each flow, feed, volume
+and pressure unchanged. Pilot run 34169130250 is dispatched, cap 240 s.
+Read CJH-RPH-MATCH-39.md. Archive and reconcile before reserving the remaining
+three groups of 12. No other task may spend the reservation. Do not claim 39
+matches until all final stricter-tolerance match files exist. Flag low-X cases.
+
 ## Current: repaired yield search passed, no chemistry dispatched
 
 User requested acquisition repair. Completed in 4.593653625 s; reservation
