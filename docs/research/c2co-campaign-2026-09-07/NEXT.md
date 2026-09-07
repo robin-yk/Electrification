@@ -1,5 +1,12 @@
 # Bounded C2/CO research continuation
 
+## Current: user-approved flow pilot
+
+Reserve 300 s for rph-flow-01, six new 100/200/400 sccm cases at 1800 C and
+0.10/0.50 s hot hold. Read tools/openmkm_dynamic/RPH-FLOW-01.md. This overrides
+the completed-grid hold below only for this flow pilot. No pressure/period/BO
+batch is queued. Archive, check gates, reconcile the budget before further work.
+
 ## Current: approved 450 C floor screening
 
 COMPLETED: run 34158956433 passed all 25 remaining pairs in 365.772934778 s.

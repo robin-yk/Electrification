@@ -15,8 +15,9 @@ def segments(period):
     assert period>0
     return [(period*f,a,b) for f,a,b in [(0.025,873.15,2073.15),(.05,2073.15,2073.15),(.1,2073.15,873.15),(.825,873.15,873.15)]]
 
-def worker(out,name,n,period=1.,inert=False,waveform=None):
+def worker(out,name,n,period=1.,inert=False,waveform=None,flow_sccm=50.):
     started=time.monotonic()
+    assert np.isfinite(flow_sccm) and flow_sccm>0
     parts=segments(period) if waveform is None else waveform
     assert all(d>0 and a>0 and b>0 for d,a,b in parts)
     assert abs(sum(d for d,_,_ in parts)-period)<1e-12
@@ -27,7 +28,7 @@ def worker(out,name,n,period=1.,inert=False,waveform=None):
     mw=gas.molecular_weights.copy(); yin=gas.Y.copy()
     elements=["N"] if inert else ["C","H","O"]
     atoms=np.array([[gas.n_atoms(k,e) for k in range(gas.n_species)] for e in elements])
-    flow_mol_s=50/22414/60
+    flow_mol_s=flow_sccm/22414/60
     mdot=flow_mol_s*gas.mean_molecular_weight/1000
     vol=base.volume_reference()
     inlet=ct.Reservoir(gas,clone=True);exhaust=ct.Reservoir(gas,clone=True)
@@ -87,7 +88,7 @@ def worker(out,name,n,period=1.,inert=False,waveform=None):
     ratiosdict={k:float(v) for k,v in zip(gas.species_names,ratios) if v>0}
     rates={k:float(v*flow_mol_s*3600*m) for k,v,m in zip(gas.species_names,ratios,mw) if v>0}
     base.write(out/(name+".json"),dict(name=name,engine=ct.__version__,
-        inputs=dict(feed=feed,flow_sccm=50,standard_T_K=273.15,standard_P_Pa=101325,volume_m3=vol,
+        inputs=dict(feed=feed,flow_sccm=flow_sccm,standard_T_K=273.15,standard_P_Pa=101325,volume_m3=vol,
           pressure_target_Pa=101325,pressure_controller_K=PRESSURE_K,period_s=period,segments=parts,samples_per_segment=n),
         basis="mol product per mol inlet total carbon for CH4/CO2; mol per mol inlet for inert control",
         mol_per_feed_carbon=ratiosdict,carbon_yields={k:float(gas.n_atoms(k,"C")*v) for k,v in ratiosdict.items()},
