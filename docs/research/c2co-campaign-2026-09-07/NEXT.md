@@ -1,5 +1,12 @@
 # Bounded C2/CO research continuation
 
+## Current: single-objective C2H2 carbon yield
+
+User specified C2H2 only. Read RPH-YIELD-01.md. Reserve 240 s for proposal
+and one direct verification, charge proposal before reducing reservation to
+150 s. Fit 39 validated points to carbon yield, not productivity. No second
+point or automatic loop. Preserve the separate qEHVI productivity record.
+
 ## Current: one user-approved NEXTorch point
 
 COMPLETED: verification 34162441788 passed inert, archive and paired gates

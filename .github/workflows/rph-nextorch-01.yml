@@ -1,6 +1,10 @@
 name: Verify one NEXTorch RPH recommendation
 on:
   workflow_dispatch:
+    inputs:
+      yield_objective:
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -21,9 +25,9 @@ jobs:
       - run: pip install -r tools/cantera/requirements.txt
       - name: Bounded calculation
         timeout-minutes: 3
-        run: python tools/openmkm_dynamic/run_rph_nextorch_01.py --output-dir out/rph-nextorch-01
+        run: python tools/openmkm_dynamic/run_rph_nextorch_01.py ${{ inputs.yield_objective && '--yield-objective' || '' }} --output-dir out/${{ inputs.yield_objective && 'rph-yield-01' || 'rph-nextorch-01' }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: rph-nextorch-01
-          path: out/rph-nextorch-01/
+          name: ${{ inputs.yield_objective && 'rph-yield-01' || 'rph-nextorch-01' }}
+          path: out/${{ inputs.yield_objective && 'rph-yield-01' || 'rph-nextorch-01' }}/

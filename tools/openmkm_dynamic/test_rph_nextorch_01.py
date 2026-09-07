@@ -4,6 +4,13 @@ from propose_rph_nextorch_01 import encode,decode,training
 from run_rph_nextorch_01 import waveform
 
 class ProposalTest(unittest.TestCase):
+    def test_yield_training_uses_carbon_fraction_not_mass_productivity(self):
+        from propose_rph_yield_01 import training as yield_training
+        rows,_=yield_training()
+        self.assertEqual(len(rows),39)
+        best=max(rows,key=lambda r:r['y'][0])
+        self.assertEqual((best['peak_C'],best['hold_s'],best['flow_sccm']),(1800,.5,50))
+        self.assertAlmostEqual(best['y'][0],11.173434652866495,places=8)
     def test_round_trip_and_bounds(self):
         for x in [(1200,.025,50),(1800,.5,1600),(1500,.2,800)]:
             self.assertTrue(np.allclose(decode(encode(*x)),x))
