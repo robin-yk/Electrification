@@ -1,5 +1,17 @@
 # Fixed-volume periodic entry pilot
 
+## Reviewed continuation: pulse-02
+
+The user requested proceeding after the implementation audit. The inert pressure
+deviation is consistent with finite controller conductance: for constant-P inert
+gas, expansion outflow is m*dT/dt/T, giving deltaP approximately m*dT/dt/(T*K).
+At t=0.00125 s the archived m=3.376694805e-9 kg, T=933.15 K and
+dT/dt=48000 K/s predict 17.369 Pa versus observed 17.375 Pa.
+Use K=1e-7 instead of 1e-8 to approximate the pressure target more closely.
+This is a documented numerical boundary-control change, not a relaxed gate.
+All acceptance limits, physical waveform, inlet flow and volume remain unchanged.
+Archive separately under rph-fixed-pulse-02-2026-09-07. Cap remains 540 s.
+
 Cap 540 seconds, single thread, each worker at most 180 seconds. Stop on failure.
 Run inert N2 open-flow control, Aramco CH4/CO2 1:1 baseline, then refined pair.
 Use existing gas waveform 600 to 1800 C, 1 s period, fractions .025/.05/.1/.825.

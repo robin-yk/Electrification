@@ -2,6 +2,12 @@ import unittest
 from run_rph_fixed_gate import PrescribedTemperatureReactor
 
 class TemperatureDerivativeTest(unittest.TestCase):
+    def test_controller_resolves_archived_inert_expansion(self):
+        from run_rph_fixed_pulse import PRESSURE_K
+        m,T,slope=3.376694805307223e-9,933.15,48000.
+        estimated_old=m*slope/T/1e-8
+        self.assertAlmostEqual(estimated_old,17.37522808842,delta=.02)
+        self.assertLess(m*slope/T/PRESSURE_K/101325,1e-4)
     def test_periodic_segments_close_without_temperature_jumps(self):
         from run_rph_fixed_pulse import segments
         for period in [.5,1.,2.]:

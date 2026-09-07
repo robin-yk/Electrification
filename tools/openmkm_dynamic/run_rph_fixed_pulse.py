@@ -9,6 +9,7 @@ import numpy as np
 import cantera as ct
 import run_cjh_feed_ratio_01 as base
 from run_rph_fixed_gate import PrescribedTemperatureReactor
+PRESSURE_K = 1e-7
 
 def segments(period):
     assert period>0
@@ -28,7 +29,7 @@ def worker(out,name,n,period=1.,inert=False):
     inlet=ct.Reservoir(gas,clone=True);exhaust=ct.Reservoir(gas,clone=True)
     r=PrescribedTemperatureReactor(gas,energy="off",volume=vol,clone=True)
     mfc=ct.MassFlowController(inlet,r,mdot=mdot)
-    pc=ct.PressureController(r,exhaust,primary=mfc,K=1e-8)
+    pc=ct.PressureController(r,exhaust,primary=mfc,K=PRESSURE_K)
     net=ct.ReactorNet([r]);net.rtol=1e-9;net.atol=1e-15*vol
     net.preconditioner=ct.AdaptivePreconditioner()
     net.derivative_settings={"skip-third-bodies":True,"skip-falloff":True}
@@ -83,7 +84,7 @@ def worker(out,name,n,period=1.,inert=False):
     rates={k:float(v*flow_mol_s*3600*m) for k,v,m in zip(gas.species_names,ratios,mw) if v>0}
     base.write(out/(name+".json"),dict(name=name,engine=ct.__version__,
         inputs=dict(feed=feed,flow_sccm=50,standard_T_K=273.15,standard_P_Pa=101325,volume_m3=vol,
-          pressure_target_Pa=101325,pressure_controller_K=1e-8,period_s=period,segments=segments(period),samples_per_segment=n),
+          pressure_target_Pa=101325,pressure_controller_K=PRESSURE_K,period_s=period,segments=segments(period),samples_per_segment=n),
         basis="mol product per mol inlet total carbon for CH4/CO2; mol per mol inlet for inert control",
         mol_per_feed_carbon=ratiosdict,carbon_yields={k:float(gas.n_atoms(k,"C")*v) for k,v in ratiosdict.items()},
         product_g_h=rates,product_g_per_g_CFP_h={k:v/.0288 for k,v in rates.items()},
@@ -97,7 +98,7 @@ def main():
         worker(out,a.worker,800 if a.worker=="refined" else 400,inert=a.worker=="inert");return
     ledger=base.read(base.ROOT/"docs/research/c2co-campaign-2026-09-07/budget.json")
     assert ledger["spent_s"]+ledger["reserved_s"]<=ledger["total_budget_s"]
-    assert any(b["id"]=="rph-fixed-pulse-01" and b["reserved_s"]==540 for b in ledger["batches"])
+    assert any(b["id"]=="rph-fixed-pulse-02" and b["reserved_s"]==540 for b in ledger["batches"])
     assert base.read(base.ROOT/"docs/research/rph-fixed-gate-01-2026-09-07/data/status.json")["status"]=="completed"
     paths=[Path(__file__),Path(base.__file__),Path(__file__).with_name("run_rph_fixed_gate.py"),base.MECH]
     base.write(out/"manifest.json",dict(commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),
