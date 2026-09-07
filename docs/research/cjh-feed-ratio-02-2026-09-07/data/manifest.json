@@ -1,0 +1,53 @@
+{
+  "commit": "8c4aa17e5bc3ed62c1009d8b8e27ad553fa6d618",
+  "script_sha256": "62be3607ef3e7aada45da21eba04be97446780ac179747eaed83618a963aab7d",
+  "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+  "jobs": [
+    [
+      "cold",
+      0.5,
+      2,
+      1
+    ],
+    [
+      "anchor",
+      0.5,
+      2,
+      0
+    ],
+    [
+      "anchor-tight",
+      0.5,
+      3,
+      0
+    ],
+    [
+      "ratio-1-4",
+      0.2,
+      2,
+      0
+    ],
+    [
+      "ratio-1-2",
+      0.3333333333333333,
+      2,
+      0
+    ],
+    [
+      "ratio-2-1",
+      0.6666666666666666,
+      2,
+      0
+    ],
+    [
+      "ratio-4-1",
+      0.8,
+      2,
+      0
+    ]
+  ],
+  "reference": "docs/research/cjh-refine-04-2026-09-07/data/T1750-tau0.001-metrics.json",
+  "budget_s": 540,
+  "worker_limit_s": 100,
+  "note": "New fixed-volume, constant feed model; pressure controller enforces near-1-atm. No device heating model."
+}
