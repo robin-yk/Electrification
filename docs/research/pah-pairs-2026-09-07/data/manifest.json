@@ -1,0 +1,75 @@
+{
+  "commit": "cf7e65a3db5ae66984de82e05e75db5a5fb01e15",
+  "jobs": [
+    [
+      "co2",
+      26.85,
+      0.1,
+      20,
+      "cold"
+    ],
+    [
+      "co2",
+      1750.0,
+      0.001,
+      20,
+      "creck-co2-T1750-tau0.001"
+    ],
+    [
+      "co2",
+      1200.0,
+      1.0,
+      20,
+      "creck-co2-T1200-tau1"
+    ],
+    [
+      "h2o",
+      1800.0,
+      0.001,
+      20,
+      "creck-h2o-T1800-tau0.001"
+    ],
+    [
+      "h2o",
+      1200.0,
+      1.0,
+      20,
+      "creck-h2o-T1200-tau1"
+    ],
+    [
+      "co2",
+      1750.0,
+      0.001,
+      40,
+      "gate-sampling-creck-co2-T1750-tau0.001"
+    ],
+    [
+      "h2o",
+      1200.0,
+      1.0,
+      40,
+      "gate-sampling-creck-h2o-T1200-tau1"
+    ]
+  ],
+  "budget_s": 1200,
+  "per_worker_s": 300,
+  "script_sha256": "6079d83a485fe764fff3c37f7c7f1bed243b641b13625fc9c10261f2685eaedd",
+  "solver_sha256": "a7b5083148fe20c867634618afe94c543198485e9aed99662d0a7c1adc2786a6",
+  "mechanism_sha256": "da1e09a31aff29e6691b8dfa3d01c46c247d94251ec43f4a776b74572a3325cd",
+  "aramco_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+  "mechanism": "CRECK 2003 high temperature with soot and NOx",
+  "feeds": {
+    "co2": "CH4:0.5, CO2:0.5",
+    "h2o": "CH4:0.5, H2O:0.5"
+  },
+  "pressure_Pa": 101325.0,
+  "closure": "constant pressure prescribed constant T, equal inlet/outlet mass/tau; variable volume",
+  "reference_archives": {
+    "co2-1750-0.001": "docs/research/cjh-refine-04-2026-09-07",
+    "co2-1200-1": "docs/research/cjh-refine-01-2026-09-07",
+    "h2o-1800-0.001": "docs/research/h2o-cjh-extend-2026-09-07",
+    "h2o-1200-1": "docs/research/h2o-cjh-2026-09-07"
+  },
+  "note": "Paired PAH comparison. The Aramco side is read from the archives listed above and is not recomputed. The two mechanisms are two models: no optimum, ranking or validation status transfers between them.",
+  "limitations": "Prescribed gas temperature, no heater energy balance, no particle dynamics and no experimental validation of either mechanism at these conditions. The CRECK BIN species are lumped soot precursors, not a measured soot yield."
+}

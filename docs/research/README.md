@@ -9,23 +9,28 @@ A directory is not a conclusion. The conclusions live in the combined reports
 named below, and the boundaries live in the run cards under
 `tools/openmkm_dynamic/`.
 
-## Three model families, and they do not mix
+## Four model families, and they do not mix
 
 The archives divide by reactor closure, and results never cross a closure
 boundary. A number from one family is not comparable to a number from another,
-whatever the species and conditions look like.
+whatever the species and conditions look like. Family D is a fourth heading and
+the same rule applies twice over: it shares family A's closure but changes the
+mechanism, which makes it a different model again.
 
 | Family | Closure | Purpose |
 |---|---|---|
 | **A. Constant-temperature map** | constant pressure, prescribed constant T, mass flow reset to reactor mass over τ each step, τ is an input | how yield depends on temperature and residence time |
 | **B. Fixed-volume composition sweep** | fixed geometric volume, fixed 50 sccm standard feed, pressure controller near 1 atm, τ is an output | how yield depends on feed composition at one temperature |
 | **C. Pulsed (RPH)** | prescribed periodic T(t), integrated to a periodic state | what a temperature waveform does that a steady state does not |
+| **D. Paired mechanism comparison** | family A's closure with the mechanism changed to CRECK 2003 HT+soot | where the carbon goes above benzene, which Aramco cannot represent |
 
 Family A carries residence time as a controlled variable and cannot say anything
 about a fixed-flow device. Family B holds one temperature and one flow and
 cannot say anything about the temperature axis. Family C is a different question
-again. None of the three carries a heater energy balance, so none of them
-supports an energy-per-product claim, and none includes a soot model.
+again. Family D shares family A's closure and changes the mechanism, which makes
+it a different model for the same reason family C's GRI and Aramco runs are.
+None of the four carries a heater energy balance, so none of them supports an
+energy-per-product claim, and none of them contains a particle model.
 
 ## A. Constant-temperature maps
 
@@ -112,6 +117,36 @@ ranking of 6300012 against 6000015 reverses between GRI and Aramco. This is the
 direct evidence that no optimum, ranking or validation status transfers across a
 mechanism change.
 
+## D. Paired mechanism comparison, PAH
+
+One archive, `pah-pairs-2026-09-07`. Family A's closure, solver and convergence
+settings exactly, with the mechanism changed to CRECK 2003 high temperature with
+soot and NOx, which carries naphthalene, acenaphthylene, anthracene or
+phenanthrene, pyrene and lumped soot-precursor particles named BIN. Four
+conditions, two per feed: each map's acetylene maximum and the benzene-rich
+corner at 1200 C and 1 s. The Aramco side of every pair is read from the family A
+archives and is not recomputed.
+
+**What it establishes.** The acetylene maximum survives the mechanism change and
+the benzene pile does not. At 1750 C and 1 ms with CO2, acetylene is 21.55 %
+under Aramco and 22.59 % under CRECK, and 1.58 % of inlet carbon sits above C6.
+At 1800 C and 1 ms with steam, acetylene is 42.12 against 43.23 % and 0.26 % sits
+above C6. At 1200 C and 1 s the two mechanisms separate: Aramco's 20.83 % benzene
+with CO2 becomes 1.97 % benzene plus 17.01 % BIN lumps under CRECK, and its
+26.79 % benzene with steam becomes 3.24 % plus 25.31 %. A single lump, BIN25CJ,
+holds 15.06 and 21.98 % at those two conditions. Naphthalene itself never exceeds
+0.31 % of inlet carbon anywhere in the batch, so the carbon that leaves benzene
+does not stop at the first larger ring.
+
+**Read it as two calculations.** AramcoMech 2.0 has no species above C8, so its
+zero above C6 is a property of the mechanism and not a prediction. CRECK's BIN
+species are lumped soot precursors in a gas-phase mechanism with no particle
+dynamics, so the BIN carbon is a mechanism output and not a soot yield. Neither
+mechanism has been checked against measured product data at these conditions.
+
+Generator: `run_pah_pairs.py`, report by `summarize_pah_pairs.py`. Card:
+`PAH-PAIRS-RUN-CARD.md`.
+
 ## Supporting and stopped batches
 
 | Archive | What it is |
@@ -139,9 +174,13 @@ interpolated and no yield is fabricated for a missing case.
 
 - **Energy per unit product.** No archive here carries a heater energy balance.
 - **Soot or carbon deposition.** AramcoMech 2.0 stops at C8 with benzene as its
-  largest ring and no PAH growth. Benzene is where the calculation stops, not
-  where the carbon stops. Equilibrium with graphite is not a substitute above
-  about 1200 K, where it returns zero solid carbon for these feeds.
+  largest ring and no PAH growth, so in every family A, B and C archive benzene
+  is where the calculation stops rather than where the carbon stops. Equilibrium
+  with graphite is not a substitute above about 1200 K, where it returns zero
+  solid carbon for these feeds. Family D bounds the missing channel at four
+  conditions with a mechanism that has it, and still reports no soot yield: it
+  has no particle dynamics and its heavy carbon sits in lumped precursor
+  species.
 - **Experimental validation.** No condition in any archive has been reproduced
   against measured product data for these feeds and conditions.
 - **Robustness beyond the recorded gates.** Initial-state dependence is untested

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "gate-sampling-creck-co2-T1750-tau0.001",
+    "max_abs_carbon_fraction": 5.859895901849654e-14
+  },
+  {
+    "name": "gate-sampling-creck-h2o-T1200-tau1",
+    "max_abs_carbon_fraction": 2.1893487023305624e-11
+  }
+]

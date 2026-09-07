@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "completed": [
+    "cold",
+    "creck-co2-T1750-tau0.001",
+    "creck-co2-T1200-tau1",
+    "creck-h2o-T1800-tau0.001",
+    "creck-h2o-T1200-tau1",
+    "gate-sampling-creck-co2-T1750-tau0.001",
+    "gate-sampling-creck-h2o-T1200-tau1"
+  ],
+  "conditions": 4,
+  "gates_passed": 2,
+  "wall_s": 361.95448299099985
+}
