@@ -11,6 +11,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 TEMPERATURES_C = (1000, 1400, 1800)
 TAUS_S = (.01, .1, 1.)
+# Mechanism table. "aramco" is the mechanism every archived map used and its
+# hash is asserted against those archives; "creck" is only for the paired PAH
+# comparison and is a different model, so no result crosses between them.
+MECHANISMS = {
+    "gri": "gri30.yaml",
+    "aramco": str(ROOT / "tools/cantera/mechanisms/aramco20.yaml"),
+    "creck": str(ROOT / "tools/cantera/mechanisms/creck2003-ht-soot-nox.yaml"),
+}
 
 
 def carbon_per_inlet_mol(feed):
@@ -62,7 +70,7 @@ def worker(out, T, tau, mech, points, name, convergence_overrides=None,
     a.points_per_cycle, a.hot_min_points = points, 0
     a.min_cycles, a.max_cycles, a.record_cycles = 3, 100, 1
     a.cycle_tolerance = 1e-8
-    a.jacobian = "sparse" if mech == "aramco" else "dense"
+    a.jacobian = "dense" if mech == "gri" else "sparse"
     p = solver.build_params(a)
     p.update(cycle_output_tolerance=1e-8, stable_cycles_required=3)
     if convergence_overrides:
@@ -71,7 +79,7 @@ def worker(out, T, tau, mech, points, name, convergence_overrides=None,
         p.update(convergence_overrides)
     save(out, name + "-parameters", p)
     pairs.OUT = out
-    mechanism = "gri30.yaml" if mech == "gri" else str(ROOT / "tools/cantera/mechanisms/aramco20.yaml")
+    mechanism = MECHANISMS[mech]
     m = pairs.execute(name, mechanism, p)
     r = json.loads((out / (name + ".json")).read_text())
     audit = r["carbon_audit"]

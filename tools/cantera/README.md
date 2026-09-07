@@ -30,6 +30,20 @@ For each mechanism, over a 400–1400 °C grid at 1 atm with a CH4:CO2 = 1:1 fee
   distribution with `ck2yaml --permissive`. Redistribution follows the
   mechanism's free-for-research terms; cite the Aramco publications when the
   data is used in academic work.
+- **CRECK 2003 high temperature with soot and NOx**
+  (`mechanisms/creck2003-ht-soot-nox.yaml`): the Politecnico di Milano CRECK
+  model, 497 species and 24501 reactions, carrying PAH growth to pyrene and
+  lumped soot-precursor particles named BIN. Used only by
+  `tools/openmkm_dynamic/run_pah_pairs.py`, which is the paired comparison
+  against AramcoMech 2.0; no other archive or figure uses it. Obtained as
+  `CRECK_2003_TOT_HT_SOOT_NOX.yaml` from
+  https://github.com/BangShiuh/creck-mech, a third-party `ck2yaml` conversion
+  of the CRECK 2003 CHEMKIN release; SHA256
+  `da1e09a31aff29e6691b8dfa3d01c46c247d94251ec43f4a776b74572a3325cd`. CRECK
+  publishes no LICENSE file and states only that the mechanisms are freely
+  available, so redistribution here follows the same free-for-research handling
+  as Aramco; cite the CRECK publications when the data is used in academic
+  work.
 
 To add a mechanism, drop its Cantera-format `.yaml` under `mechanisms/` and
 append an entry to `MECHANISMS` in `precompute.py`.
