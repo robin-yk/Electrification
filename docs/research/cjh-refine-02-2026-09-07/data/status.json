@@ -1,0 +1,9 @@
+{
+  "status": "stopped",
+  "active": "gate-T1400-tau0.01",
+  "completed": [
+    "gate-T1600-tau0.01"
+  ],
+  "reason": "species mismatch",
+  "wall_s": 63.99882395199998
+}

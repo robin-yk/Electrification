@@ -3,12 +3,13 @@
   "authorization": "User approved additional 60 minutes, maximum 10 minutes per batch, hourly continuation until stopped.",
   "total_budget_s": 3600,
   "batch_limit_s": 600,
-  "spent_s": 158.760423399,
+  "spent_s": 222.759247351,
   "reserved_s": 540,
   "baseline_excluded_run": 34084078933,
   "batches": [
     {"id": "cjh-refine-01", "status": "completed", "run_id": 34084593440, "reserved_s": 0, "actual_s": 158.760423399, "new_points": 12, "verification_points": 1},
-    {"id": "cjh-refine-02", "status": "reserved", "run_id": null, "reserved_s": 540, "actual_s": null, "new_points": 12, "verification_points": 3}
+    {"id": "cjh-refine-02", "status": "stopped", "run_id": 34085150481, "reserved_s": 0, "actual_s": 63.99882395199998, "new_points": 0, "verification_points": 1, "raw_gate_integrations_completed": 2, "reason": "Comparison required identical positive-only species keys; negligible trace omitted. Diagnosed and regression-tested before manual continuation."},
+    {"id": "cjh-refine-02-resume", "status": "reserved", "run_id": null, "reserved_s": 540, "actual_s": null, "new_points": 12, "verification_points": 3, "reuse_raw_from": 34085150481}
   ],
   "rule": "Before launch require spent plus all reservations <= total. One batch in flight. Reconcile actual elapsed calculation time including failed work from status or Actions step timestamps; retain full reservation if time is unknown. Never treat a timeout as zero cost. No automatic retries or budget reset. Pause on user stop, unresolved numerical failure or exhausted budget."
 }

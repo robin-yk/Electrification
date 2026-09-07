@@ -40,3 +40,15 @@ reservation. Reserve no next batch until this one is reconciled.
 
 No global optimum, validated reactor, soot prediction, alternative initial
 state robustness, or experimentally proven mechanism superiority is claimed.
+
+## Diagnosed continuation
+
+Run 34085150481 stopped on a positive-only output dictionary-key mismatch
+after two successful gate integrations. See the immutable failure archive
+docs/research/cjh-refine-02-2026-09-07/. The corrected comparator accepts
+only negligible unmatched entries <=1e-12 mol/feed-C and retains the 1e-5
+agreement threshold. A failing-first test establishes this correction.
+Batch cjh-refine-02-resume reserves a separate 540 s and reuses the two raw
+gate solutions after hash/input/convergence verification. Expected 2-4 minutes.
+The third gate and all twelve new points remain unchanged. This is a manually
+diagnosed continuation, not a blind retry; previously consumed time is charged.

@@ -18,9 +18,12 @@ Current state: refinement run 34084593440 completed all 12 new points and its
 anchor. Raw status is archived under ../cjh-refine-01-2026-09-07/data/.
 The combined 21-point map is in ../cjh-refine-01-2026-09-07/REPORT.md.
 Its actual calculation time has been reconciled in budget.json. Refinement 02
-is now reserved: three sampling/horizon gates before twelve new points.
-Read tools/openmkm_dynamic/CJH-REFINE-02-RUN-CARD.md and locate the workflow
-"CJH verified refinement 02" if its run ID has not yet been recorded.
+run 34085150481 stopped on a diagnosed positive-only species-key comparison
+bug, after two completed integrations. Its original output is archived unchanged.
+The comparison is corrected with a failing-first regression test. A separate
+reservation cjh-refine-02-resume reuses those two raw gates and completes the
+third gate before any new point. Read CJH-REFINE-02-RUN-CARD.md and the archive
+README. Locate workflow "CJH refinement 02 corrected comparison" for its ID.
 Do not dispatch a duplicate or launch another batch while it is reserved.
 
 1. Archive and analyze the completed Aramco 3-by-3 CJH baseline. Preserve

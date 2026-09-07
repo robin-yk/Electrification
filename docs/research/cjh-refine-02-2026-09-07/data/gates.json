@@ -1,0 +1,9 @@
+[
+  {
+    "name": "gate-T1600-tau0.01",
+    "reference": "docs/research/cjh-refine-01-2026-09-07/data/T1600-tau0.01-metrics.json",
+    "worst_species": "H2O",
+    "max_abs_mol_per_feed_C": 4.368727601899991e-14,
+    "conversion_abs": 1.3433698597964394e-14
+  }
+]

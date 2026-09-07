@@ -4,6 +4,7 @@ import hashlib
 import json
 from pathlib import Path
 import subprocess
+import shutil
 import sys
 import time
 from run_aramco_cjh_baseline import ROOT, save, worker
@@ -23,11 +24,15 @@ NEW = [(T, tau) for T in (1500, 1700) for tau in (.003, .01, .03, .1)] + [
 
 def compare(reference, actual):
     x, y = reference["mol_per_feed_carbon"], actual["mol_per_feed_carbon"]
-    assert x.keys() == y.keys(), "species mismatch"
-    errors = {s: abs(x[s]-y[s]) for s in x}
+    # carbon_audit stores only positive entries. Roundoff-sized entries may
+    # disappear between runs; a material missing entry must still fail.
+    missing = x.keys() ^ y.keys()
+    assert all(abs(x.get(s, y.get(s, 0.))) <= 1e-12 for s in missing), "material species omission"
+    errors = {s: abs(x.get(s, 0.)-y.get(s, 0.)) for s in x.keys() | y.keys()}
     worst = max(errors, key=errors.get)
     result = dict(worst_species=worst, max_abs_mol_per_feed_C=errors[worst],
-                  conversion_abs=abs(reference["CH4_conversion"]-actual["CH4_conversion"]))
+                  conversion_abs=abs(reference["CH4_conversion"]-actual["CH4_conversion"]),
+                  negligible_omissions=sorted(missing))
     assert errors[worst] < 1e-5 and result["conversion_abs"] < 1e-5, result
     return result
 
@@ -35,6 +40,8 @@ def compare(reference, actual):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--output-dir", type=Path, required=True)
+    ap.add_argument("--batch-id", default=BATCH)
+    ap.add_argument("--resume-dir", type=Path)
     ap.add_argument("--worker", nargs=4, metavar=("T", "TAU", "KIND", "NAME"))
     a = ap.parse_args()
     out = a.output_dir.resolve()
@@ -48,7 +55,7 @@ def main():
     start = time.monotonic()
     ledger = json.loads((ROOT / "docs/research/c2co-campaign-2026-09-07/budget.json").read_text())
     reservations = [b for b in ledger["batches"] if b["status"] == "reserved"]
-    assert len(reservations) == 1 and reservations[0]["id"] == BATCH
+    assert len(reservations) == 1 and reservations[0]["id"] == a.batch_id
     assert reservations[0]["reserved_s"] >= LIMIT
     assert ledger["spent_s"] + ledger["reserved_s"] <= ledger["total_budget_s"]
     assert LIMIT <= ledger["batch_limit_s"]
@@ -65,13 +72,29 @@ def main():
     assert len(set(NEW)) == len(NEW) and not set(NEW) & {(r["T_C"], r["tau_s"]) for r in existing}
     jobs = [(T, tau, "gate", f"gate-T{T}-tau{tau}", ref) for T, tau, ref in REFERENCES]
     jobs += [(T, tau, "map", f"T{T}-tau{tau}", None) for T, tau in NEW]
+    cache = []
+    if a.resume_dir:
+        source = a.resume_dir.resolve()
+        parent = json.loads((source/"manifest.json").read_text())
+        assert parent["hashes"] == hashes and parent["jobs"] == [list(j) for j in jobs]
+        archive = json.loads((source.parent/"checksums.json").read_text())
+        # The archive has already been checked by archive_checksums.py in the
+        # workflow. Each reused raw file is also hashed in this manifest.
+        for _, _, kind, name, _ in jobs:
+            raw = source/(name+".json")
+            if kind == "gate" and raw.exists():
+                assert not (out/raw.name).exists(), "refuse existing output"
+                assert hashlib.sha256(raw.read_bytes()).hexdigest() == archive["data/"+raw.name]
+                cache.append(dict(file=str(raw.relative_to(ROOT)),
+                                  sha256=hashlib.sha256(raw.read_bytes()).hexdigest()))
+                shutil.copy2(raw, out/raw.name)
     # The first refinement supplies an observed error for the original grid's
     # linear prediction, not an independent test of a fitted surrogate.
     lookup = {(r["T_C"], r["tau_s"]): r for r in existing}
     prediction = (lookup[(1400, .01)]["C2H2_carbon_yield"] + lookup[(1800, .01)]["C2H2_carbon_yield"])/2
     observed = lookup[(1600, .01)]["C2H2_carbon_yield"]
     save(out, "manifest", dict(commit=subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
-        jobs=jobs, budget_s=LIMIT, per_worker_s=120, hashes=hashes,
+        jobs=jobs, budget_s=LIMIT, per_worker_s=120, hashes=hashes, reused_raw=cache,
         closure=oldmanifest["closure"], feed="CH4:0.5, CO2:0.5", pressure_Pa=101325.,
         strict_overrides=STRICT, gate_points=80, map_points=20,
         expansion_evidence=dict(coarse_linear_C2H2_yield=prediction, observed_C2H2_yield=observed,
