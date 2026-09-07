@@ -188,7 +188,7 @@ def main():
             with (out / (name + ".log")).open("w") as log:
                 subprocess.run([sys.executable, "-u", __file__, "--output-dir", str(out),
                                 "--worker", feed, str(T), str(tau), str(points),
-                                "--name", name],
+                                "--name", name, "--mechanism", a.mechanism],
                                stdout=log, stderr=subprocess.STDOUT, check=True,
                                timeout=min(PER_WORKER, remaining))
             case = json.loads((out / (name + ".json")).read_text())
