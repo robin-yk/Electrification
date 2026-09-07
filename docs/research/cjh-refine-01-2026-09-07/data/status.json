@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "completed": [
+    "anchor",
+    "T1200-tau0.01",
+    "T1200-tau0.1",
+    "T1200-tau1.0",
+    "T1600-tau0.01",
+    "T1600-tau0.1",
+    "T1600-tau1.0",
+    "T1400-tau0.03",
+    "T1400-tau0.3",
+    "T1800-tau0.03",
+    "T1800-tau0.3",
+    "T1200-tau0.03",
+    "T1200-tau0.3"
+  ],
+  "map_points": 12,
+  "wall_s": 158.760423399
+}

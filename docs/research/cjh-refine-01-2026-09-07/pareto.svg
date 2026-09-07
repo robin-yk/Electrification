@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="500" viewBox="0 0 760 500">
+<rect width="760" height="500" fill="white"/>
+<g font-family="Arial" font-size="13" fill="#172a3a">
+<text x="80" y="30" font-size="19">Aramco CJH: evaluated points only</text>
+<path d="M80 60V420H700" fill="none" stroke="#172a3a"/>
+<text x="80.0" y="442" text-anchor="middle">0.0</text>
+<text x="68" y="424.0" text-anchor="end">0</text>
+<text x="204.0" y="442" text-anchor="middle">4.9</text>
+<text x="68" y="352.0" text-anchor="end">20</text>
+<text x="328.0" y="442" text-anchor="middle">9.8</text>
+<text x="68" y="280.0" text-anchor="end">40</text>
+<text x="452.0" y="442" text-anchor="middle">14.7</text>
+<text x="68" y="208.0" text-anchor="end">60</text>
+<text x="576.0" y="442" text-anchor="middle">19.6</text>
+<text x="68" y="136.0" text-anchor="end">80</text>
+<text x="700.0" y="442" text-anchor="middle">24.5</text>
+<text x="68" y="64.0" text-anchor="end">100</text>
+<circle cx="80.00" cy="420.00" r="5" fill="#277da1"><title>1000 C, 0.01 s</title></circle>
+<circle cx="80.00" cy="420.00" r="5" fill="#277da1"><title>1000 C, 0.1 s</title></circle>
+<circle cx="80.71" cy="419.97" r="5" fill="#277da1"><title>1000 C, 1 s</title></circle>
+<circle cx="80.57" cy="419.97" r="5" fill="#277da1"><title>1200 C, 0.01 s</title></circle>
+<circle cx="87.94" cy="419.50" r="5" fill="#277da1"><title>1200 C, 0.03 s</title></circle>
+<circle cx="117.84" cy="413.58" r="5" fill="#277da1"><title>1200 C, 0.1 s</title></circle>
+<circle cx="153.72" cy="391.00" r="5" fill="#277da1"><title>1200 C, 0.3 s</title></circle>
+<circle cx="192.77" cy="336.84" r="5" fill="#277da1"><title>1200 C, 1 s</title></circle>
+<circle cx="224.97" cy="389.67" r="5" fill="#277da1"><title>1400 C, 0.01 s</title></circle>
+<circle cx="324.03" cy="338.65" r="5" fill="#277da1"><title>1400 C, 0.03 s</title></circle>
+<circle cx="426.21" cy="267.27" r="5" fill="#277da1"><title>1400 C, 0.1 s</title></circle>
+<circle cx="448.59" cy="207.30" r="5" fill="#c54d13"><title>1400 C, 0.3 s</title></circle>
+<text x="456.59" y="199.30">1400 C, 0.3 s</text>
+<circle cx="384.97" cy="156.03" r="5" fill="#277da1"><title>1400 C, 1 s</title></circle>
+<circle cx="596.67" cy="240.96" r="5" fill="#c54d13"><title>1600 C, 0.01 s</title></circle>
+<text x="604.67" y="232.96">1600 C, 0.01 s</text>
+<circle cx="403.65" cy="142.09" r="5" fill="#c54d13"><title>1600 C, 0.1 s</title></circle>
+<text x="411.65" y="134.09">1600 C, 0.1 s</text>
+<circle cx="215.94" cy="91.77" r="5" fill="#c54d13"><title>1600 C, 1 s</title></circle>
+<text x="223.94" y="83.77">1600 C, 1 s</text>
+<circle cx="427.07" cy="143.69" r="5" fill="#c54d13"><title>1800 C, 0.01 s</title></circle>
+<text x="435.07" y="135.69">1800 C, 0.01 s</text>
+<circle cx="321.09" cy="114.19" r="5" fill="#c54d13"><title>1800 C, 0.03 s</title></circle>
+<text x="329.09" y="106.19">1800 C, 0.03 s</text>
+<circle cx="230.33" cy="92.40" r="5" fill="#c54d13"><title>1800 C, 0.1 s</title></circle>
+<text x="238.33" y="84.40">1800 C, 0.1 s</text>
+<circle cx="173.30" cy="79.68" r="5" fill="#c54d13"><title>1800 C, 0.3 s</title></circle>
+<text x="181.30" y="71.68">1800 C, 0.3 s</text>
+<circle cx="133.56" cy="71.15" r="5" fill="#c54d13"><title>1800 C, 1 s</title></circle>
+<text x="141.56" y="63.15">1800 C, 1 s</text>
+<text x="360" y="478">C2H2 carbon yield (%)</text>
+<text transform="translate(22 290) rotate(-90)">CO carbon yield (%)</text>
+<text x="400" y="52">Orange: nondominated among sampled points</text>
+</g></svg>

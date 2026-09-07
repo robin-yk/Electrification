@@ -14,6 +14,13 @@ remain justified by measured map variation/error and within the 3600-second cap.
 
 ## Research order
 
+Current state: refinement run 34084593440 completed all 12 new points and its
+anchor. Raw status is archived under ../cjh-refine-01-2026-09-07/data/.
+The combined 21-point map is in ../cjh-refine-01-2026-09-07/REPORT.md.
+Its actual calculation time has been reconciled in budget.json; no batch is
+currently reserved or running. Next inspect the combined map and measured
+changes, then prioritize candidate robustness checks before another expansion.
+
 1. Archive and analyze the completed Aramco 3-by-3 CJH baseline. Preserve
    carbon yields, all-species inventories, C2H2/CO Pareto membership, C2H4,
    and conditional mg product per mg CFP per hour (50 sccm, 28.8 mg CFP).

@@ -1,0 +1,104 @@
+{
+  "commit": "3ca82a7d6fb3b0f8ebc879f0f019f6c2438f3178",
+  "jobs": [
+    [
+      1400,
+      0.1,
+      "aramco",
+      40,
+      "anchor"
+    ],
+    [
+      1200,
+      0.01,
+      "aramco",
+      20,
+      "T1200-tau0.01"
+    ],
+    [
+      1200,
+      0.1,
+      "aramco",
+      20,
+      "T1200-tau0.1"
+    ],
+    [
+      1200,
+      1.0,
+      "aramco",
+      20,
+      "T1200-tau1.0"
+    ],
+    [
+      1600,
+      0.01,
+      "aramco",
+      20,
+      "T1600-tau0.01"
+    ],
+    [
+      1600,
+      0.1,
+      "aramco",
+      20,
+      "T1600-tau0.1"
+    ],
+    [
+      1600,
+      1.0,
+      "aramco",
+      20,
+      "T1600-tau1.0"
+    ],
+    [
+      1400,
+      0.03,
+      "aramco",
+      20,
+      "T1400-tau0.03"
+    ],
+    [
+      1400,
+      0.3,
+      "aramco",
+      20,
+      "T1400-tau0.3"
+    ],
+    [
+      1800,
+      0.03,
+      "aramco",
+      20,
+      "T1800-tau0.03"
+    ],
+    [
+      1800,
+      0.3,
+      "aramco",
+      20,
+      "T1800-tau0.3"
+    ],
+    [
+      1200,
+      0.03,
+      "aramco",
+      20,
+      "T1200-tau0.03"
+    ],
+    [
+      1200,
+      0.3,
+      "aramco",
+      20,
+      "T1200-tau0.3"
+    ]
+  ],
+  "budget_s": 540,
+  "per_worker_s": 90,
+  "feed": "CH4:0.5, CO2:0.5",
+  "pressure_Pa": 101325.0,
+  "closure": "constant pressure prescribed constant T, equal inlet/outlet mass/tau; variable volume",
+  "note": "period_s is a 5-tau convergence observation block, not a heating period",
+  "solver_sha256": "a7b5083148fe20c867634618afe94c543198485e9aed99662d0a7c1adc2786a6",
+  "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc"
+}
