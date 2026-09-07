@@ -39,8 +39,9 @@ def worker(out,name,x,tight=False,cold=False):
     r=ct.IdealGasMoleReactor(gas,energy="off",volume=p["volume_m3"],clone=True)
     mfc=ct.MassFlowController(inlet,r,mdot=mdot)
     pc=ct.PressureController(r,exhaust,primary=mfc,K=1e-8)
-    net=ct.ReactorNet([r]); net.rtol=1e-11 if tight else 1e-9
-    net.atol=1e-19 if tight else 1e-15
+    net=ct.ReactorNet([r]); net.rtol=1e-11 if tight==1 else 1e-9
+    net.atol=1e-19 if tight==1 else 1e-15
+    if tight==2: net.atol=1e-15*p["volume_m3"]
     net.preconditioner=ct.AdaptivePreconditioner()
     net.derivative_settings={"skip-third-bodies":True,"skip-falloff":True}
     last=None; stable=0; hist=[]
@@ -53,8 +54,14 @@ def worker(out,name,x,tight=False,cold=False):
         residual=1. if last is None else float(max(np.max(abs(y-last[:-1])),abs(r.mass/last[-1]-1)))
         last=state
         stable=stable+1 if residual<1e-8 else 0
-        hist.append(dict(time_s=net.time,residual=residual,P_Pa=r.phase.P,mass_kg=r.mass))
+        hist.append(dict(time_s=net.time,residual=residual,P_Pa=r.phase.P,mass_kg=r.mass,
+                         Y_CH4=float(y[gas.species_index("CH4")]),
+                         Y_C2H2=float(y[gas.species_index("C2H2")]),
+                         flow_ratio=pc.mass_flow_rate/mdot))
         if block>=20 and stable>=5: break
+    write(out/(name+"-diagnostic.json"),dict(inputs=p,rtol=net.rtol,atol=net.atol,
+        stable=stable,history=hist,moles_kmol=r.mass/r.phase.mean_molecular_weight,
+        solver_stats=net.solver_stats,wall_s=time.monotonic()-started))
     assert stable>=5,"stationarity failed"
     assert abs(r.phase.P/p["P_Pa"]-1)<1e-4,"pressure drift"
     assert abs(r.volume/p["volume_m3"]-1)<1e-12,"volume drift"
@@ -85,7 +92,7 @@ def main():
     ap.add_argument("--worker",nargs=4);a=ap.parse_args()
     out=a.output_dir.resolve();out.mkdir(parents=True,exist_ok=True)
     if a.worker:
-        name,x,tight,cold=a.worker;worker(out,name,float(x),bool(int(tight)),bool(int(cold)));return
+        name,x,tight,cold=a.worker;worker(out,name,float(x),int(tight),bool(int(cold)));return
     ledger=read(ROOT/"docs/research/c2co-campaign-2026-09-07/budget.json")
     assert ledger["spent_s"]+ledger["reserved_s"]<=3600
     assert any(b["id"]==BATCH and b["reserved_s"]==540 for b in ledger["batches"])
