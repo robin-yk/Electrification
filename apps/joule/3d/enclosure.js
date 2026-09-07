@@ -179,7 +179,7 @@ export function solveEnclosure3D(x,cfg,plan={},progress=()=>{}) {
     const prev=Float64Array.from(T);
     const solve=iterate(T,x,cfg,d,transient?{dt,Tprev:prev}:null,scale,p=>progress({...p,time}));
     const op=solve.op,loss=losses(T,x,cfg,d,op);let storage=0;
-    if(transient)for(let a=0;a<d.nt;a++)storage+=storageRate2D(rows(T,a,d),rows(prev,a,d),cfg,x.material,d.mesh,dt)/d.nt;
+    if(transient)for(let a=0;a<d.nt;a++)storage+=storageRate2D(rows(T,a,d),rows(prev,a,d),cfg,x.material,d.mesh,dt,x)/d.nt;
     const closure=Math.abs(op.pBulk-loss.total-storage)/Math.max(op.pBulk,Math.abs(loss.total),Math.abs(storage),1e-8);
     worstClosure=Math.max(worstClosure,closure);time+=dt;
     inputEnergy+=op.pBulk*dt;contactEnergy+=op.pContact*dt;lossEnergy+=loss.total*dt;storedEnergy+=storage*dt;

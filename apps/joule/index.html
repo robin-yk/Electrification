@@ -1012,6 +1012,11 @@
                 <div class="control-row"><input id="boxHeight" type="number" min="0" step="any" value="0.21"><span class="unit">mm</span></div>
               </div>
               <div class="field full">
+                <label for="porousMode">Porous-body approximation</label>
+                <select id="porousMode"><option value="legacy">Off | existing property treatment</option><option value="effective">On | skeleton density and effective k</option></select>
+                <label for="effectiveK">Body-scale effective k (when enabled)</label>
+                <div class="control-row"><input id="effectiveK" type="number" min="0" step="any" value="60"><span class="unit">W/m·K</span></div>
+                <span class="context-note">Use solid-skeleton density, heat capacity and resistivity. Enter an isotropic effective k for this porosity; 60 is an editable example, not a calibrated value. Internal channel flow, reaction heat and pore-gas storage are excluded. Do not use bulk-density presets without replacing their density with the skeleton value.</span>
                 <label for="voidFraction">Void fraction, φ</label>
                 <div class="control-row"><input id="voidFraction" type="number" min="0" max="0.99" step="0.01" value="0"><span class="unit">0 = solid</span></div>
               </div>
@@ -1800,6 +1805,8 @@
       return {
         material: materialFromInputs(),
         solidFraction: 1 - num("voidFraction"),
+        porousMode: $("porousMode").value,
+        effectiveK: num("effectiveK"),
         porosity: num("voidFraction"),
         shape: $("shape").value,
         // A box carries its three real dimensions; the cylinder fields are
@@ -1853,6 +1860,7 @@
       return JSON.stringify({
         material:material.name,rho:material.rhoOhmCm,k:material.k,cp:material.cp,density:material.density,jmax:material.jmax,
         volume:x.volumeCm3,ratio:x.aspectRatio,solidFraction:x.solidFraction,
+        porousMode:x.porousMode,effectiveK:x.effectiveK,
         imax:x.imax,vmax:x.vmax,pmax:x.pmax,supplyMode:x.supplyMode,iset:x.iset,vset:x.vset,ambient:x.ambientK,target:x.targetK,
         emissivity:x.emissivity,convection:x.convection,h:x.h,gas:x.gasK,cfg
       });
@@ -1865,7 +1873,7 @@
       $("t2dFraction").textContent=`${format(result.g.solidFraction,3)} · ${format(result.g.porosity*100,1)}%`;
       $("t2dVolumes").textContent=`solid ${sig4(result.g.solidVolume*1e6)} · envelope ${sig4(result.g.envelopeVolume*1e6)} cm³`;
       $("t2dImportedRho").textContent=`${sig4(result.initial.props.rhoOhmCm)} Ω·cm`;
-      $("t2dImportedK").textContent=`${sig4(result.initial.props.k)} W/m·K`;
+      $("t2dImportedK").textContent=`${sig4(result.input.porousMode === "effective" ? result.input.effectiveK : result.initial.props.k)} W/m·K`;
       $("t2dZeroD").textContent=fmtTemp(result.tss);
       if (!current2DResult) return;
       const fresh=current2DResult.material.name===result.material.name && current2DResult.signature===signature2D(result.input,result.material);
@@ -3348,6 +3356,7 @@
         loadMaterial($("material").selectedIndex);
         updateAll();
       });
+      ["porousMode", "effectiveK"].forEach((id) => $(id).addEventListener("input", updateAll));
       ["rhoValue","rhoUnit","density","cp","thermalK","jmax","nominalVolume","aspectRatio","voidFraction","imax","vmax","pmax","iset","vset","ambientC","targetC","emissivity","convection","hConv","gasC","biLimit"]
         .forEach((id) => $(id).addEventListener("input", updateAll));
       document.querySelectorAll(".mode-btn").forEach((btn) => btn.addEventListener("click", () => {

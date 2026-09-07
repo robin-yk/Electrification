@@ -9,6 +9,7 @@ import assert from "node:assert/strict";
 import {
   MATERIALS, calculate, geometry, propertiesAt,
   solveTransient2D, solveThermal2D, elementTimeConstant,
+  elementK, rhoCp2D,
 } from "../apps/joule/solver.js";
 
 const sic = MATERIALS.find((m) => m.name === "SiC");
@@ -42,6 +43,39 @@ const LOSSY = {
   gap: 0.001, gapK: 0.03, endMode: "ambient", endK: 293.15, endH: 200,
   contactRho: 0, maxIter: 200, tolerance: 1e-5, ...GRID,
 };
+
+test("porous mode uses explicit effective k without remixture and skeleton storage", () => {
+  const x = {...makeInput(ADIABATIC), porousMode:"effective", effectiveK:30, solidFraction:0.25};
+  const m = {...sic, kIsSkeleton:true, cpTable:[[20,500],[800,1500]]};
+  assert.equal(elementK(m,600,x,ADIABATIC),30);
+  for (const T of [293.15,1073.15]) {
+    assert.equal(rhoCp2D(0,T,m,ADIABATIC,x),0.25*m.density*propertiesAt(m,T).cp);
+    assert.equal(rhoCp2D(0,T,m,ADIABATIC,{...x,porousMode:"legacy"}),m.density*propertiesAt(m,T).cp);
+  }
+  assert.equal(rhoCp2D(2,600,m,ADIABATIC,x),rhoCp2D(2,600,m,ADIABATIC));
+  assert.ok(calculate({...x,effectiveK:0}).errors.length);
+  assert.ok(solveTransient2D({...x,effectiveK:0},{},ADIABATIC,sic,{dt:1,steps:1}).errors.length);
+});
+
+test("porous adiabatic ramp closes against solid mass, not envelope mass", () => {
+  const x={...makeInput(ADIABATIC),porousMode:"effective",effectiveK:60,solidFraction:0.5,volumeCm3:5};
+  const z=calculate(x),g=geometry(x);
+  const r=solveTransient2D(x,z,ADIABATIC,sic,{dt:0.05,steps:10});
+  assert.deepEqual(r.errors,[]);
+  assert.ok(r.converged);
+  const rate=z.target.power/(sic.density*g.solidVolume*sic.cp);
+  for(const h of r.history) assert.ok(Math.abs(h.avgK-x.ambientK-rate*h.t)<1e-3);
+  assert.ok(r.worstClosure<1e-8);
+  assert.ok(Math.abs(r.storedEnergy-r.electricalEnergy)/r.electricalEnergy<1e-5);
+});
+
+test("zero porosity with matching k preserves the legacy transient exactly", () => {
+  const x=makeInput(ADIABATIC),z=calculate(x),plan={dt:0.05,steps:3};
+  const baseline=solveTransient2D(x,z,ADIABATIC,sic,plan);
+  const porous=solveTransient2D({...x,porousMode:"effective",effectiveK:sic.k},z,ADIABATIC,sic,plan);
+  assert.deepEqual(porous.T,baseline.T);
+  assert.equal(porous.storedEnergy,baseline.storedEnergy);
+});
 
 test("solveTransient2D() reproduces the analytic adiabatic ramp P/(m·cp)", () => {
   const x = makeInput(ADIABATIC);

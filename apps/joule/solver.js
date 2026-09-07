@@ -133,6 +133,8 @@ export function maxwellEucken(kSolid, kGas, voidFraction) {
 // The pore gas is the process gas, so it shares cfg.gapK with the gap and purge
 // regions instead of introducing a second gas model.
 export function elementK(material, tempK, x, cfg) {
+  // Explicit body-scale isotropic value; never mix an effective value again.
+  if (x?.porousMode === "effective") return x.effectiveK;
   const kSolid = Math.max(1e-6, propertiesAt(material, tempK).k);
   if (!material || !material.kIsSkeleton) return kSolid;
   const solidFraction = finite(x && x.solidFraction) ? clamp(x.solidFraction, 1e-6, 1) : 1;
@@ -206,8 +208,16 @@ export function validate2DConfig(cfg) {
   return errors;
 }
 
-export function validateInput(x) {
+function porousInputErrors(x) {
   const errors = [];
+  if (x.porousMode != null && x.porousMode !== "legacy" && x.porousMode !== "effective") errors.push("Unknown porous-body mode.");
+  if (x.porousMode === "effective" && (!finite(x.effectiveK) || x.effectiveK <= 0)) errors.push("Porous-body effective conductivity must be greater than zero.");
+  if (x.porousMode === "effective" && (!finite(x.solidFraction) || x.solidFraction <= 0 || x.solidFraction > 1)) errors.push("Porous-body solid fraction must be in (0, 1].");
+  return errors;
+}
+
+export function validateInput(x) {
+  const errors = porousInputErrors(x);
   const positive = [
     ["Electrical resistivity", x.material.rhoOhmCm],
     ["Density", x.material.density],
@@ -620,8 +630,9 @@ export function cellK2D(code, tempK, material, cfg, x) {
 // cellK2D. Only the element and the wall carry meaningful thermal mass; the
 // gas codes fall back to an ideal-gas scaling so that a hot cell stores less
 // than a cold one rather than being pinned at its reference value.
-export function rhoCp2D(code, tempK, material, cfg) {
-  if (code === 0) return Math.max(1, material.density * propertiesAt(material, tempK).cp);
+export function rhoCp2D(code, tempK, material, cfg, x) {
+  // Skeleton density and cp; pore-gas storage is neglected in this opt-in mode.
+  if (code === 0) return Math.max(1, material.density * propertiesAt(material, tempK).cp) * (x?.porousMode === "effective" ? x.solidFraction : 1);
   if (code === 2) {
     const wall = T2D_WALLS[cfg.wallMaterial] || T2D_WALLS.custom;
     const density = finite(cfg.wallDensity) ? cfg.wallDensity : wall.density;
@@ -887,7 +898,7 @@ export function assemble2DSystem(T, x, g, cfg, material, mesh, op, transient = n
     // integral of rho*cp dT across the step. The midpoint value makes the
     // discrete term a second-order approximation to that integral, and lets
     // storageRate2D reproduce it exactly rather than approximately.
-    if(transient) addStorage(p,rhoCp2D(code,0.5*(T[j][i]+transient.Tprev[j][i]),material,cfg)*mesh.cellVolume(i,j)/transient.dt,transient.Tprev[j][i]);
+    if(transient) addStorage(p,rhoCp2D(code,0.5*(T[j][i]+transient.Tprev[j][i]),material,cfg,x)*mesh.cellVolume(i,j)/transient.dt,transient.Tprev[j][i]);
     if(i<mesh.nr-1) {
       const q=idx(i+1,j),face=mesh.edges[i+1],area=2*Math.PI*face*(mesh.zEdges[j+1]-mesh.zEdges[j]),nextCode=mesh.materialAt(i+1,j),kn=kAt(i+1,j,nextCode);
       const G=pairConductance(area,face-mesh.centers[i],kp,mesh.centers[i+1]-face,kn,code,nextCode);
@@ -1062,11 +1073,11 @@ export function boundaryLoss2D(T,x,g,cfg,material,mesh,op) {
 }
 
 // Total internal energy of the domain above a reference temperature, J.
-export function internalEnergy2D(T, cfg, material, mesh, refK) {
+export function internalEnergy2D(T, cfg, material, mesh, refK, x) {
   let sum=0;
   for(let j=0;j<mesh.nz;j++)for(let i=0;i<mesh.nr;i++){
     const code=mesh.materialAt(i,j);
-    sum+=rhoCp2D(code,T[j][i],material,cfg)*mesh.cellVolume(i,j)*(T[j][i]-refK);
+    sum+=rhoCp2D(code,T[j][i],material,cfg,x)*mesh.cellVolume(i,j)*(T[j][i]-refK);
   }
   return sum;
 }
@@ -1075,11 +1086,11 @@ export function internalEnergy2D(T, cfg, material, mesh, refK) {
 // the way assemble2DSystem builds its storage term -- same midpoint rho*cp,
 // same cell volumes -- so that the transient closure measures the physics
 // rather than a mismatch between two spellings of the same quantity.
-export function storageRate2D(T, Tprev, cfg, material, mesh, dt) {
+export function storageRate2D(T, Tprev, cfg, material, mesh, dt, x) {
   let sum=0;
   for(let j=0;j<mesh.nz;j++)for(let i=0;i<mesh.nr;i++){
     const code=mesh.materialAt(i,j);
-    sum+=rhoCp2D(code,0.5*(T[j][i]+Tprev[j][i]),material,cfg)*mesh.cellVolume(i,j)*(T[j][i]-Tprev[j][i]);
+    sum+=rhoCp2D(code,0.5*(T[j][i]+Tprev[j][i]),material,cfg,x)*mesh.cellVolume(i,j)*(T[j][i]-Tprev[j][i]);
   }
   return sum/dt;
 }
@@ -1124,7 +1135,7 @@ export function elementTimeConstant(result) {
 }
 
 export function createTransientRun(x, zeroD, cfg, material, plan = {}) {
-  const configErrors=validate2DConfig(cfg);if(configErrors.length)return{errors:configErrors};
+  const configErrors=[...validate2DConfig(cfg),...porousInputErrors(x)];if(configErrors.length)return{errors:configErrors};
   const dt0=plan.dt,steps=plan.steps;
   if(!finite(dt0)||dt0<=0) return {errors:["Time step must be greater than zero."]};
   if(!Number.isInteger(steps)||steps<1) return {errors:["Step count must be a positive integer."]};
@@ -1211,7 +1222,7 @@ export function createTransientRun(x, zeroD, cfg, material, plan = {}) {
       }
       if(step>picardTol)converged=false;
       const loss=boundaryLoss2D(T,x,g,cfg,material,mesh,op);
-      const storageRate=storageRate2D(T,Tprev,cfg,material,mesh,stepDt);
+      const storageRate=storageRate2D(T,Tprev,cfg,material,mesh,stepDt,x);
       // The transient balance carries a term the steady one does not: what the
       // domain absorbed. It is normalised against the largest term present, not
       // against P_bulk: a duty-cycled drive spends most of its period with
@@ -1264,7 +1275,7 @@ export function createTransientRun(x, zeroD, cfg, material, plan = {}) {
       stopReason,tSteady,reachedSteady:stopReason==="steady",rise:riseTimes(),
       avgK:elementAverage(),tMin,tMax,deltaT:tMax-tMin,
       center:T[mid][0],wallOuter:T[mid][mesh.nElement+mesh.nGap+mesh.nWall-1],
-      storedEnergy:internalEnergy2D(T,cfg,material,mesh,ambientK),
+      storedEnergy:internalEnergy2D(T,cfg,material,mesh,ambientK,x),
       electricalEnergy,linearIterations:totalLinear,worstClosure,converged};
   };
 
@@ -1284,7 +1295,7 @@ export function solveTransient2D(x, zeroD, cfg, material, plan = {}) {
 }
 
 export function solveThermal2D(x, zeroD, cfg, material) {
-  const configErrors=validate2DConfig(cfg);if(configErrors.length)return{errors:configErrors};
+  const configErrors=[...validate2DConfig(cfg),...porousInputErrors(x)];if(configErrors.length)return{errors:configErrors};
   const g=geometry(x),mesh=build2DMesh(g,cfg),ambientK=x.ambientK;
   const seedK=finite(zeroD.tss)?clamp(zeroD.tss,ambientK,3500):clamp(x.targetK,ambientK,2500);
   const T=Array.from({length:mesh.nz},(_,j)=>Array.from({length:mesh.nr},(_,i)=>{const code=mesh.materialAt(i,j);return ambientK+(code===0?0.65:code===1?0.25:code===2?0.10:code===4?0.08:0)*(seedK-ambientK);}));
