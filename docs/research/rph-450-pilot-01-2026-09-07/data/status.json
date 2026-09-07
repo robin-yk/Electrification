@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "completed": [
+    "inert",
+    "T1200-hold0.025-n400",
+    "T1200-hold0.025-n800",
+    "T1800-hold0.025-n400",
+    "T1800-hold0.025-n800",
+    "T1800-hold0.5-n400",
+    "T1800-hold0.5-n800"
+  ],
+  "wall_s": 45.42679587899998
+}

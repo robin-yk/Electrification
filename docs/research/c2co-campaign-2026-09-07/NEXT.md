@@ -1,5 +1,19 @@
 # Bounded C2/CO research continuation
 
+## Current: approved 450 C floor screening
+
+This section supersedes historical next-task statements below. User approved
+28 peak/hold conditions before NEXTorch. Pilot 34158782803 passed all gates,
+45.426795879 s, archived under rph-450-pilot-01-2026-09-07/data.
+Reserve 540 s for rph-450-screen-01, the other 25 conditions with paired
+400/800 checks. No other batch may start. Read RPH-450-SCREEN.md.
+Pilot span is resolved numerically and large across both axes; the three
+corners cannot locate the interior transition. Proceed with the approved
+grid, not an extra BO or learning-curve campaign. The seven pilot integrations
+took about 6.5 s each including overhead, suggesting roughly 325 s for the
+remaining 50 integrations; hard cap stays 540 s. Stop on any failed gate.
+Archive, generate report_rph_screen_450.py, reconcile budget before further work.
+
 ## Latest dispatch superseding the hold below
 
 Completed fixed-flow baseline/refinement 34156729563 and paired period runs
