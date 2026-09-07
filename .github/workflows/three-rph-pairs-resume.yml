@@ -1,0 +1,38 @@
+name: Resume three GRI Aramco RPH pairs
+on:
+  push:
+    branches: [codex/three-rph-pairs-resume-20260906]
+    paths: [.github/workflows/three-rph-pairs-resume.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  pairs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 33
+    env:
+      PYTHONUNBUFFERED: '1'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r tools/cantera/requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: three-rph-pairs
+          run-id: 34075748186
+          github-token: ${{ github.token }}
+          path: out/three-pairs
+      - name: Resume only missing calculations
+        timeout-minutes: 29
+        run: python -u tools/openmkm_dynamic/run_three_pairs.py 2>&1 | tee out/three-pairs/resume.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: three-rph-pairs-combined
+          path: out/three-pairs/
