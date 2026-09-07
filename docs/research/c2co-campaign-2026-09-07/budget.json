@@ -4,7 +4,7 @@
   "total_budget_s": 3600,
   "batch_limit_s": 600,
   "spent_s": 1067.681057236,
-  "reserved_s": 0,
+  "reserved_s": 540,
   "baseline_excluded_run": 34084078933,
   "batches": [
     {"id": "cjh-refine-01", "status": "completed", "run_id": 34084593440, "reserved_s": 0, "actual_s": 158.760423399, "new_points": 12, "verification_points": 1},
@@ -13,7 +13,8 @@
     {"id": "cjh-refine-03", "status": "completed", "run_id": 34088470900, "reserved_s": 0, "actual_s": 202.242021115, "new_points": 12, "verification_points": 2},
     {"id": "cjh-refine-04", "status": "completed", "run_id": 34092910653, "reserved_s": 0, "actual_s": 201.205218753, "new_points": 12, "verification_points": 2},
     {"id": "cjh-refine-05", "status": "completed", "run_id": 34097793177, "reserved_s": 0, "actual_s": 155.625449366, "new_points": 12, "verification_points": 2},
-    {"id": "cjh-tolerance-01", "status": "completed", "run_id": 34108821968, "reserved_s": 0, "actual_s": 113.47867943899999, "new_points": 0, "verification_points": 4}
+    {"id": "cjh-tolerance-01", "status": "completed", "run_id": 34108821968, "reserved_s": 0, "actual_s": 113.47867943899999, "new_points": 0, "verification_points": 4},
+    {"id": "cjh-feed-ratio-01", "status": "reserved", "run_id": null, "reserved_s": 540, "actual_s": null, "new_points": 5, "verification_points": 2, "execution": "local committed isolated worktree"}
   ],
   "rule": "Before launch require spent plus all reservations <= total. One batch in flight. Reconcile actual elapsed calculation time including failed work from status or Actions step timestamps; retain full reservation if time is unknown. Never treat a timeout as zero cost. No automatic retries or budget reset. Pause on user stop, unresolved numerical failure or exhausted budget."
 }
