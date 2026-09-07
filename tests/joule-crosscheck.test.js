@@ -56,3 +56,11 @@ test("sig4 renders the same strings the page and the CLI report", () => {
   assert.equal(sig4(0.1201234), "0.1201");
   assert.equal(sig4(1234.5678), "1,235");
 });
+
+test("Zheng retains the measured downstream temperatures without claiming a peak measurement", () => {
+  const item=byId(evaluateCrossChecks(DEFAULT_ENCLOSURE),"zheng");
+  const comparison=thermalComparison(item,null);
+  assert.equal(comparison.referenceC,752);
+  assert.match(comparison.referenceLabel,/downstream/);
+  assert.ok(item.rows.some(row=>row[2].includes("650 °C")));
+});

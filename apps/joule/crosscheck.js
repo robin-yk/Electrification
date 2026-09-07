@@ -107,11 +107,13 @@ export function crossCheckCases(enclosure = DEFAULT_ENCLOSURE) {
         ["Current at 13.04 V", `${sig4(z1.operatingCurrent)} A`, "30.26 A measured"],
         ["Current at 14.10 V", `${sig4(z2.operatingCurrent)} A`, "34.70 A measured"],
         ["Power at 14.10 V", `${sig4(z2.power)} W`, "489.3 W measured"],
+        ["0D temperature at 13.04 V", `${sig4(celsius(z1.tss))} °C`, "T_down = 650 °C; Table 2, GHSV 150,000 cm³/h/g_cat"],
+        ["0D temperature at 14.10 V", `${sig4(celsius(z2.tss))} °C`, "T_down = 752 °C; Table 2, GHSV 150,000 cm³/h/g_cat"],
       ],
-      // The paper's electrical operating points are tabulated; a matching
-      // element temperature is not, so this case has no experimental
-      // temperature to sit beside 0D and 2D.
-      thermal: { input: "v1410", referenceC: null, referenceLabel: "not tabulated in the paper" },
+      // User-supplied Table 2 supplies downstream temperatures and enthalpy
+      // duties. They are not volume-average or peak solid temperatures.
+      // No reaction/feed enthalpy sink is applied by this heater-only case.
+      thermal: { input: "v1410", referenceC: 752, referenceLabel: "T_down, Table 2; downstream observable, not solid average or peak; reaction/feed duty omitted" },
     },
 
     {
