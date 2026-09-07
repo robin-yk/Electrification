@@ -1,5 +1,14 @@
 # Fixed-volume CJH feed-ratio pilot
 
+Corrected batch cjh-feed-ratio-02: diagnosis 34139030070 confirmed nominal
+mole atol caused small-volume stationarity noise. Preserve nominal diagnostics;
+use mode 2 (rtol 1e-9, atol 1e-15 times volume in m3 / 1 m3) for production
+and mode 3 (rtol 1e-11, atol 1e-17 times the same volume ratio) for the paired
+anchor. Same physical conditions and acceptance gates. Seven integrations,
+five composition conditions. Fresh 540 s reservation within the original
+budget. Remote outputs use a new directory and artifact name, never overwrite
+the failed runs. This continuation was explicitly requested by the user.
+
 User-directed continuation after local timeout: run on GitHub Actions, where
 previous Aramco loading was measured in seconds. This is a separately charged
 attempt, not an automatic retry or a relaxed gate. Add stage timestamps to

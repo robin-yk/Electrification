@@ -2,7 +2,7 @@
 import argparse, hashlib, json, subprocess, sys, time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
-BATCH="cjh-feed-ratio-01-remote"
+BATCH="cjh-feed-ratio-02"
 MECH=ROOT/"tools/cantera/mechanisms/aramco20.yaml"
 REF=ROOT/"docs/research/cjh-refine-04-2026-09-07/data/T1750-tau0.001-metrics.json"
 def read(p): return json.loads(Path(p).read_text())
@@ -39,9 +39,10 @@ def worker(out,name,x,tight=False,cold=False):
     r=ct.IdealGasMoleReactor(gas,energy="off",volume=p["volume_m3"],clone=True)
     mfc=ct.MassFlowController(inlet,r,mdot=mdot)
     pc=ct.PressureController(r,exhaust,primary=mfc,K=1e-8)
-    net=ct.ReactorNet([r]); net.rtol=1e-11 if tight==1 else 1e-9
+    net=ct.ReactorNet([r]); net.rtol=1e-11 if tight in (1,3) else 1e-9
     net.atol=1e-19 if tight==1 else 1e-15
     if tight==2: net.atol=1e-15*p["volume_m3"]
+    if tight==3: net.atol=1e-17*p["volume_m3"]
     net.preconditioner=ct.AdaptivePreconditioner()
     net.derivative_settings={"skip-third-bodies":True,"skip-falloff":True}
     last=None; stable=0; hist=[]
@@ -96,9 +97,9 @@ def main():
     ledger=read(ROOT/"docs/research/c2co-campaign-2026-09-07/budget.json")
     assert ledger["spent_s"]+ledger["reserved_s"]<=3600
     assert any(b["id"]==BATCH and b["reserved_s"]==540 for b in ledger["batches"])
-    jobs=[("cold",.5,0,1),("anchor",.5,0,0),("anchor-tight",.5,1,0),
-          ("ratio-1-4",.2,0,0),("ratio-1-2",1/3,0,0),
-          ("ratio-2-1",2/3,0,0),("ratio-4-1",.8,0,0)]
+    jobs=[("cold",.5,2,1),("anchor",.5,2,0),("anchor-tight",.5,3,0),
+          ("ratio-1-4",.2,2,0),("ratio-1-2",1/3,2,0),
+          ("ratio-2-1",2/3,2,0),("ratio-4-1",.8,2,0)]
     write(out/"manifest.json",dict(commit=subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip(),
        script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
        mechanism_sha256=hashlib.sha256(MECH.read_bytes()).hexdigest(),jobs=jobs,
