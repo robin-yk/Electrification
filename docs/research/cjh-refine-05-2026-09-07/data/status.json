@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "completed": [
+    "gate-T1750-tau0.001",
+    "gate-T1800-tau3e-05",
+    "T1800-tau1e-05",
+    "T1800-tau3e-06",
+    "T1800-tau6e-05",
+    "T1750-tau1e-05",
+    "T1750-tau3e-05",
+    "T1750-tau6e-05",
+    "T1750-tau0.0001",
+    "T1700-tau6e-05",
+    "T1750-tau0.002",
+    "T1750-tau0.003",
+    "T1725-tau0.001",
+    "T1725-tau0.002"
+  ],
+  "map_points": 12,
+  "gates_passed": 2,
+  "wall_s": 155.625449366
+}

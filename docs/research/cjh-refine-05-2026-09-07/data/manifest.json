@@ -1,0 +1,213 @@
+{
+  "commit": "1c1f7144659ce48cf1b87d8c903b3385d3800814",
+  "jobs": [
+    [
+      1750,
+      0.001,
+      "gate",
+      "gate-T1750-tau0.001",
+      "docs/research/cjh-refine-04-2026-09-07/data/T1750-tau0.001-metrics.json"
+    ],
+    [
+      1800,
+      3e-05,
+      "gate",
+      "gate-T1800-tau3e-05",
+      "docs/research/cjh-refine-04-2026-09-07/data/T1800-tau3e-05-metrics.json"
+    ],
+    [
+      1800,
+      1e-05,
+      "map",
+      "T1800-tau1e-05",
+      null
+    ],
+    [
+      1800,
+      3e-06,
+      "map",
+      "T1800-tau3e-06",
+      null
+    ],
+    [
+      1800,
+      6e-05,
+      "map",
+      "T1800-tau6e-05",
+      null
+    ],
+    [
+      1750,
+      1e-05,
+      "map",
+      "T1750-tau1e-05",
+      null
+    ],
+    [
+      1750,
+      3e-05,
+      "map",
+      "T1750-tau3e-05",
+      null
+    ],
+    [
+      1750,
+      6e-05,
+      "map",
+      "T1750-tau6e-05",
+      null
+    ],
+    [
+      1750,
+      0.0001,
+      "map",
+      "T1750-tau0.0001",
+      null
+    ],
+    [
+      1700,
+      6e-05,
+      "map",
+      "T1700-tau6e-05",
+      null
+    ],
+    [
+      1750,
+      0.002,
+      "map",
+      "T1750-tau0.002",
+      null
+    ],
+    [
+      1750,
+      0.003,
+      "map",
+      "T1750-tau0.003",
+      null
+    ],
+    [
+      1725,
+      0.001,
+      "map",
+      "T1725-tau0.001",
+      null
+    ],
+    [
+      1725,
+      0.002,
+      "map",
+      "T1725-tau0.002",
+      null
+    ]
+  ],
+  "budget_s": 540,
+  "per_worker_s": 120,
+  "hashes": {
+    "solver_sha256": "a7b5083148fe20c867634618afe94c543198485e9aed99662d0a7c1adc2786a6",
+    "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc"
+  },
+  "reused_raw": [],
+  "plan": {
+    "batch_id": "cjh-refine-05",
+    "references": [
+      [
+        1750,
+        0.001,
+        "docs/research/cjh-refine-04-2026-09-07/data/T1750-tau0.001-metrics.json"
+      ],
+      [
+        1800,
+        3e-05,
+        "docs/research/cjh-refine-04-2026-09-07/data/T1800-tau3e-05-metrics.json"
+      ]
+    ],
+    "new_points": [
+      [
+        1800,
+        1e-05
+      ],
+      [
+        1800,
+        3e-06
+      ],
+      [
+        1800,
+        6e-05
+      ],
+      [
+        1750,
+        1e-05
+      ],
+      [
+        1750,
+        3e-05
+      ],
+      [
+        1750,
+        6e-05
+      ],
+      [
+        1750,
+        0.0001
+      ],
+      [
+        1700,
+        6e-05
+      ],
+      [
+        1750,
+        0.002
+      ],
+      [
+        1750,
+        0.003
+      ],
+      [
+        1725,
+        0.001
+      ],
+      [
+        1725,
+        0.002
+      ]
+    ],
+    "prior_summaries": [
+      "docs/research/aramco-cjh-2026-09-07/data/summary.json",
+      "docs/research/cjh-refine-01-2026-09-07/data/summary.json",
+      "docs/research/cjh-refine-02-resume-2026-09-07/data/summary.json",
+      "docs/research/cjh-refine-03-2026-09-07/data/summary.json",
+      "docs/research/cjh-refine-04-2026-09-07/data/summary.json"
+    ]
+  },
+  "closure": "constant pressure prescribed constant T, equal inlet/outlet mass/tau; variable volume",
+  "feed": "CH4:0.5, CO2:0.5",
+  "pressure_Pa": 101325.0,
+  "strict_overrides": {
+    "min_cycles": 20,
+    "max_cycles": 100,
+    "cycle_tolerance": 1e-10,
+    "cycle_output_tolerance": 1e-10,
+    "stable_cycles_required": 5
+  },
+  "gate_points": 80,
+  "map_points": 20,
+  "expansion_evidence": {
+    "coarse_linear_C2H2_yield": 0.09730227997118929,
+    "observed_C2H2_yield": 0.2043465717154457,
+    "abs_error": 0.10704429174425642,
+    "prior_points": 57,
+    "prior_maxima": {
+      "C2H2_carbon_yield": {
+        "T_C": 1750.0,
+        "tau_s": 0.001,
+        "yield": 0.21549394207698574
+      },
+      "C2H4_carbon_yield": {
+        "T_C": 1800.0,
+        "tau_s": 3e-05,
+        "yield": 0.040955226824220724
+      }
+    }
+  },
+  "limitations": "No solver rtol/atol or alternate initial-state test; prescribed gas T, not an electrical device."
+}

@@ -14,20 +14,28 @@ remain justified by measured map variation/error and within the 3600-second cap.
 
 ## Research order
 
-Current state: 57 unique CJH conditions completed. Latest combined map is
-../cjh-refine-04-2026-09-07/REPORT.md; run 34092910653 passed both gates
-and all twelve new points. All completed and failed elapsed time is reconciled
-in budget.json. Batch cjh-refine-05 is reserved for two maxima gates and twelve
-C2H4 short-residence/C2H2 peak-bracketing points. Workflow
-"CJH peak bracketing refinement 05" run ID: 34097793177.
-Do not dispatch a duplicate. Plan and run card are in tools/openmkm_dynamic/.
+Current state: 69 unique CJH conditions completed. Latest combined map and
+SAMPLING-PROGRESS.md are in ../cjh-refine-05-2026-09-07/. Run 34097793177
+passed both gates and all twelve new points. All elapsed time is reconciled
+in budget.json; no batch is reserved or active. The low-tau C2H4 decline has
+now been observed. C2H2 best yield did not improve and C2H4 improved only
+slightly in this last batch. Do not continue automatic low-tau extensions.
 
-Next: read the latest report and gates.json. The C2H4 maximum still lies at
-the lower-tau boundary; C2H2 now peaks at an intermediate temperature. Batch
-05 brackets these candidates without raising the 1800 C ceiling. Once the
-lower-tau decline is observed, stop extending that boundary automatically;
-assess map refinement gain and prioritize unresolved numerical/model checks.
-Do not spend toward 100 points merely to reach a count. Use the
+Next: prioritize an independent numerical validation pilot, not more map
+points. Inspect solver initialization and integrator settings; design a bounded
+test at representative C2H2/C2H4 candidates with explicit rtol/atol and a
+different initial reactor composition while keeping feed, pressure, prescribed
+gas T and mass-flow/tau convention matched. Initial composition must not
+silently change inlet feed or the effective mass-flow basis. If core solver
+changes are needed, add failing-first tests, retain immutable old archives,
+document the changed hash and reestablish baseline agreement before any
+new mechanism/closure claim. Do not bypass model-hash guards. First commit
+a run card and reserve budget before dispatch. If matching the model requires
+an unresolved physical choice, ask the user rather than infer equivalence.
+
+The sampled-gain table is not a predictive learning curve, and neither peak
+is a global-optimum claim. Do not spend toward 100 points merely to reach
+a count. Use the
 corrected quantitative union comparator, not strict positive-only key equality.
 Record sample need from the preceding map before reserving or launching.
 Alternate initial-state and integrator-tolerance robustness remain untested;

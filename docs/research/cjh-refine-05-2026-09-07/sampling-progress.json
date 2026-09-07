@@ -1,0 +1,110 @@
+[
+  {
+    "source": "docs/research/aramco-cjh-2026-09-07/data/summary.json",
+    "cumulative_points": 9,
+    "maxima": {
+      "C2H2_carbon_yield": {
+        "T_C": 1800.0,
+        "tau_s": 0.01,
+        "value": 0.13726831320685629,
+        "gain_percentage_points": null
+      },
+      "C2H4_carbon_yield": {
+        "T_C": 1400.0,
+        "tau_s": 0.01,
+        "value": 0.017612364009950598,
+        "gain_percentage_points": null
+      }
+    }
+  },
+  {
+    "source": "docs/research/cjh-refine-01-2026-09-07/data/summary.json",
+    "cumulative_points": 21,
+    "maxima": {
+      "C2H2_carbon_yield": {
+        "T_C": 1600.0,
+        "tau_s": 0.01,
+        "value": 0.2043465717154457,
+        "gain_percentage_points": 6.707825850858942
+      },
+      "C2H4_carbon_yield": {
+        "T_C": 1400.0,
+        "tau_s": 0.01,
+        "value": 0.017612364009950598,
+        "gain_percentage_points": 0.0
+      }
+    }
+  },
+  {
+    "source": "docs/research/cjh-refine-02-resume-2026-09-07/data/summary.json",
+    "cumulative_points": 33,
+    "maxima": {
+      "C2H2_carbon_yield": {
+        "T_C": 1700.0,
+        "tau_s": 0.003,
+        "value": 0.2124532007921523,
+        "gain_percentage_points": 0.810662907670659
+      },
+      "C2H4_carbon_yield": {
+        "T_C": 1500.0,
+        "tau_s": 0.003,
+        "value": 0.019025501459421054,
+        "gain_percentage_points": 0.14131374494704557
+      }
+    }
+  },
+  {
+    "source": "docs/research/cjh-refine-03-2026-09-07/data/summary.json",
+    "cumulative_points": 45,
+    "maxima": {
+      "C2H2_carbon_yield": {
+        "T_C": 1800.0,
+        "tau_s": 0.001,
+        "value": 0.213061686083048,
+        "gain_percentage_points": 0.06084852908957161
+      },
+      "C2H4_carbon_yield": {
+        "T_C": 1600.0,
+        "tau_s": 0.0003,
+        "value": 0.03393172901447262,
+        "gain_percentage_points": 1.4906227555051565
+      }
+    }
+  },
+  {
+    "source": "docs/research/cjh-refine-04-2026-09-07/data/summary.json",
+    "cumulative_points": 57,
+    "maxima": {
+      "C2H2_carbon_yield": {
+        "T_C": 1750.0,
+        "tau_s": 0.001,
+        "value": 0.21549394207698574,
+        "gain_percentage_points": 0.2432255993937732
+      },
+      "C2H4_carbon_yield": {
+        "T_C": 1800.0,
+        "tau_s": 3e-05,
+        "value": 0.040955226824220724,
+        "gain_percentage_points": 0.7023497809748105
+      }
+    }
+  },
+  {
+    "source": "docs/research/cjh-refine-05-2026-09-07/data/summary.json",
+    "cumulative_points": 69,
+    "maxima": {
+      "C2H2_carbon_yield": {
+        "T_C": 1750.0,
+        "tau_s": 0.001,
+        "value": 0.21549394207698574,
+        "gain_percentage_points": 0.0
+      },
+      "C2H4_carbon_yield": {
+        "T_C": 1750.0,
+        "tau_s": 6e-05,
+        "value": 0.041014365794870514,
+        "gain_percentage_points": 0.005913897064978996
+      }
+    }
+  }
+]

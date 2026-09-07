@@ -1,0 +1,44 @@
+[
+  {
+    "name": "gate-T1750-tau0.001",
+    "reference": "docs/research/cjh-refine-04-2026-09-07/data/T1750-tau0.001-metrics.json",
+    "worst_species": "CO",
+    "max_abs_mol_per_feed_C": 5.589972928987663e-14,
+    "conversion_abs": 2.5091040356528538e-14,
+    "negligible_omissions": [
+      "C4H71-2,3OOH",
+      "C4H71-2,4OOH",
+      "C4H71-3,4OOH",
+      "C4H72-1,3OOH",
+      "C4H72-1,4OOH",
+      "C4H72-3,4OOH",
+      "IC4H8OOH-TO2",
+      "NC4KET12",
+      "NC4KET13",
+      "NC4KET23",
+      "NC4KET24",
+      "TQC4H7OHIQ-I",
+      "TQC4H7OHIQ-P"
+    ]
+  },
+  {
+    "name": "gate-T1800-tau3e-05",
+    "reference": "docs/research/cjh-refine-04-2026-09-07/data/T1800-tau3e-05-metrics.json",
+    "worst_species": "H2",
+    "max_abs_mol_per_feed_C": 2.4005797349957447e-13,
+    "conversion_abs": 3.2085445411667024e-13,
+    "negligible_omissions": [
+      "C2CYCOOC-I1",
+      "C4H6OHOOH1-2-3",
+      "C4H6OHOOH1-3-4",
+      "C4H6OHOOH1-4-3",
+      "C4H6OHOOH2-2-1",
+      "C6H5OOH",
+      "C8H131-5,3,SAO",
+      "C8H131-5,3,TAO",
+      "C8H132-6,SAO",
+      "CCYC2OCO",
+      "CH2O2H"
+    ]
+  }
+]
