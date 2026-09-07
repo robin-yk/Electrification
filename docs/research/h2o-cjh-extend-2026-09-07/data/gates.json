@@ -1,0 +1,36 @@
+[
+  {
+    "name": "gate-sampling-T1400-tau0.003",
+    "gate": "sampling",
+    "worst_species": "H2",
+    "max_abs_mol_per_feed_C": 3.470002063465927e-13,
+    "conversion_abs": 4.574118861455645e-14,
+    "negligible_omissions": []
+  },
+  {
+    "name": "gate-sampling-T1800-tau1e-05",
+    "gate": "sampling",
+    "worst_species": "H2",
+    "max_abs_mol_per_feed_C": 3.103628465339625e-13,
+    "conversion_abs": 2.5435209494162336e-13,
+    "negligible_omissions": []
+  },
+  {
+    "name": "gate-horizon-T1400-tau0.003",
+    "gate": "horizon",
+    "worst_species": "H2",
+    "max_abs_mol_per_feed_C": 1.921796055626146e-13,
+    "conversion_abs": 4.7628567756419216e-14,
+    "negligible_omissions": []
+  },
+  {
+    "name": "gate-horizon-T1800-tau1e-05",
+    "gate": "horizon",
+    "worst_species": "H2",
+    "max_abs_mol_per_feed_C": 2.570860191397628e-13,
+    "conversion_abs": 2.2959412149248237e-13,
+    "negligible_omissions": [
+      "C8H131-5,3,TAO"
+    ]
+  }
+]

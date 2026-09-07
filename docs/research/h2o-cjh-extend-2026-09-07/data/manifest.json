@@ -1,0 +1,285 @@
+{
+  "commit": "d6b6af57eb111d53866a9bb2b8ab7b950f849360",
+  "jobs": [
+    [
+      26.85,
+      0.1,
+      "cold",
+      "cold"
+    ],
+    [
+      1400.0,
+      0.003,
+      "map",
+      "T1400-tau0.003"
+    ],
+    [
+      1800.0,
+      1e-05,
+      "map",
+      "T1800-tau1e-05"
+    ],
+    [
+      1400.0,
+      0.003,
+      "sampling",
+      "gate-sampling-T1400-tau0.003"
+    ],
+    [
+      1800.0,
+      1e-05,
+      "sampling",
+      "gate-sampling-T1800-tau1e-05"
+    ],
+    [
+      1400.0,
+      0.003,
+      "horizon",
+      "gate-horizon-T1400-tau0.003"
+    ],
+    [
+      1800.0,
+      1e-05,
+      "horizon",
+      "gate-horizon-T1800-tau1e-05"
+    ],
+    [
+      1300.0,
+      0.003,
+      "map",
+      "T1300-tau0.003"
+    ],
+    [
+      1400.0,
+      0.001,
+      "map",
+      "T1400-tau0.001"
+    ],
+    [
+      1500.0,
+      0.0003,
+      "map",
+      "T1500-tau0.0003"
+    ],
+    [
+      1500.0,
+      0.001,
+      "map",
+      "T1500-tau0.001"
+    ],
+    [
+      1550.0,
+      0.0003,
+      "map",
+      "T1550-tau0.0003"
+    ],
+    [
+      1550.0,
+      0.001,
+      "map",
+      "T1550-tau0.001"
+    ],
+    [
+      1600.0,
+      3e-05,
+      "map",
+      "T1600-tau3e-05"
+    ],
+    [
+      1600.0,
+      0.0001,
+      "map",
+      "T1600-tau0.0001"
+    ],
+    [
+      1600.0,
+      0.0003,
+      "map",
+      "T1600-tau0.0003"
+    ],
+    [
+      1600.0,
+      0.001,
+      "map",
+      "T1600-tau0.001"
+    ],
+    [
+      1650.0,
+      0.0001,
+      "map",
+      "T1650-tau0.0001"
+    ],
+    [
+      1650.0,
+      0.0003,
+      "map",
+      "T1650-tau0.0003"
+    ],
+    [
+      1700.0,
+      3e-05,
+      "map",
+      "T1700-tau3e-05"
+    ],
+    [
+      1700.0,
+      6e-05,
+      "map",
+      "T1700-tau6e-05"
+    ],
+    [
+      1700.0,
+      0.0001,
+      "map",
+      "T1700-tau0.0001"
+    ],
+    [
+      1700.0,
+      0.0003,
+      "map",
+      "T1700-tau0.0003"
+    ],
+    [
+      1700.0,
+      0.001,
+      "map",
+      "T1700-tau0.001"
+    ],
+    [
+      1725.0,
+      0.001,
+      "map",
+      "T1725-tau0.001"
+    ],
+    [
+      1725.0,
+      0.002,
+      "map",
+      "T1725-tau0.002"
+    ],
+    [
+      1750.0,
+      1e-05,
+      "map",
+      "T1750-tau1e-05"
+    ],
+    [
+      1750.0,
+      3e-05,
+      "map",
+      "T1750-tau3e-05"
+    ],
+    [
+      1750.0,
+      6e-05,
+      "map",
+      "T1750-tau6e-05"
+    ],
+    [
+      1750.0,
+      0.0001,
+      "map",
+      "T1750-tau0.0001"
+    ],
+    [
+      1750.0,
+      0.0003,
+      "map",
+      "T1750-tau0.0003"
+    ],
+    [
+      1750.0,
+      0.001,
+      "map",
+      "T1750-tau0.001"
+    ],
+    [
+      1750.0,
+      0.002,
+      "map",
+      "T1750-tau0.002"
+    ],
+    [
+      1750.0,
+      0.003,
+      "map",
+      "T1750-tau0.003"
+    ],
+    [
+      1800.0,
+      3e-06,
+      "map",
+      "T1800-tau3e-06"
+    ],
+    [
+      1800.0,
+      3e-05,
+      "map",
+      "T1800-tau3e-05"
+    ],
+    [
+      1800.0,
+      6e-05,
+      "map",
+      "T1800-tau6e-05"
+    ],
+    [
+      1800.0,
+      0.0001,
+      "map",
+      "T1800-tau0.0001"
+    ],
+    [
+      1800.0,
+      0.0003,
+      "map",
+      "T1800-tau0.0003"
+    ],
+    [
+      1800.0,
+      0.001,
+      "map",
+      "T1800-tau0.001"
+    ],
+    [
+      1800.0,
+      0.003,
+      "map",
+      "T1800-tau0.003"
+    ]
+  ],
+  "budget_s": 1800,
+  "per_worker_s": 180,
+  "hashes": {
+    "solver_sha256": "a7b5083148fe20c867634618afe94c543198485e9aed99662d0a7c1adc2786a6",
+    "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc"
+  },
+  "feed": "CH4:0.5, H2O:0.5",
+  "reference_feed": "CH4:0.5, CO2:0.5",
+  "pressure_Pa": 101325.0,
+  "reference_summaries": [
+    "docs/research/aramco-cjh-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-01-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-02-resume-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-03-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-04-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-05-2026-09-07/data/summary.json"
+  ],
+  "reference_grid_points": 69,
+  "already_archived": [
+    "docs/research/h2o-cjh-2026-09-07/data/summary.json"
+  ],
+  "new_points": 36,
+  "closure": "constant pressure prescribed constant T, equal inlet/outlet mass/tau; variable volume",
+  "note": "period_s is a 5-tau convergence observation block, not a heating period",
+  "strict_overrides": {
+    "min_cycles": 20,
+    "max_cycles": 100,
+    "cycle_tolerance": 1e-10,
+    "cycle_output_tolerance": 1e-10,
+    "stable_cycles_required": 5
+  },
+  "gate_points": 40,
+  "map_points": 20,
+  "limitations": "Prescribed gas temperature, no heater energy balance, no soot model, no experimental validation. Carbon yields are per total inlet carbon, which is all CH4 here and half CO2 in the reference feed."
+}
