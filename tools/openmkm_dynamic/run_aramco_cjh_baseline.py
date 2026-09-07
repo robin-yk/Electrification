@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import re
 import subprocess
 import sys
 import time
@@ -12,9 +13,26 @@ TEMPERATURES_C = (1000, 1400, 1800)
 TAUS_S = (.01, .1, 1.)
 
 
-def reference_rates(species_mol_per_feed_C, flow_sccm=50., mass_mg=28.8):
-    # Feed is CH4/CO2 50/50, so one carbon per inlet molecule. Standard 0 C, 1 atm.
-    mol_C_h = flow_sccm * 1e-3 * 60 / 22.414
+def carbon_per_inlet_mol(feed):
+    """Carbon atoms per mole of feed, from the feed string alone.
+
+    CH4/CO2 50/50 gives 1.0; CH4/H2O 50/50 gives 0.5. The mass-normalized
+    rates are per unit volumetric feed, so they need this factor and the
+    carbon-basis yields do not.
+    """
+    total = carbon = 0.
+    for term in feed.split(","):
+        name, _, amount = term.partition(":")
+        x = float(amount)
+        total += x
+        carbon += x * sum(int(n or 1) for n in re.findall(r"C(\d*)", name.strip().upper()))
+    assert total > 0
+    return carbon / total
+
+
+def reference_rates(species_mol_per_feed_C, flow_sccm=50., mass_mg=28.8, carbon_per_mol=1.):
+    # Standard 0 C, 1 atm. carbon_per_mol converts feed moles to feed carbon.
+    mol_C_h = flow_sccm * 1e-3 * 60 / 22.414 * carbon_per_mol
     mw = {"C2H2": 26.038, "C2H4": 28.054, "C2H6": 30.07,
           "CO": 28.01, "H2": 2.016, "H2O": 18.015}
     rates = {s: species_mol_per_feed_C.get(s, 0.) * mol_C_h * m * 1000 / mass_mg
@@ -27,7 +45,8 @@ def save(out, name, value):
     (out / (name + ".json")).write_text(json.dumps(value, indent=2) + "\n")
 
 
-def worker(out, T, tau, mech, points, name, convergence_overrides=None):
+def worker(out, T, tau, mech, points, name, convergence_overrides=None,
+           feed="CH4:0.5, CO2:0.5"):
     import run_cstr_case as solver
     import run_three_pairs as pairs
     from run_c2co_pilot import product_metrics
@@ -38,7 +57,7 @@ def worker(out, T, tau, mech, points, name, convergence_overrides=None):
     a.period_s = 5 * tau  # convergence observation blocks, NOT physical pulses
     a.duty = a.ramp_up_fraction = a.ramp_down_fraction = 0.
     a.waveform = "square"
-    a.feed = "CH4:0.5, CO2:0.5"
+    a.feed = feed
     a.residence_time_s = tau
     a.points_per_cycle, a.hot_min_points = points, 0
     a.min_cycles, a.max_cycles, a.record_cycles = 3, 100, 1
@@ -60,7 +79,8 @@ def worker(out, T, tau, mech, points, name, convergence_overrides=None):
     m.update(product_metrics(audit))
     m.update(T_C=T, tau_s=tau, mechanism=mech,
         mol_per_feed_carbon=ratios,
-        conditional_mg_product_per_mg_CFP_h=reference_rates(ratios),
+        conditional_mg_product_per_mg_CFP_h=reference_rates(
+            ratios, carbon_per_mol=carbon_per_inlet_mol(feed)),
         normalization=dict(flow_sccm=50., standard_T_K=273.15, standard_P_Pa=101325.,
                            CFP_mass_mg=28.8, implemented_device=False))
     save(out, name + "-metrics", m)
