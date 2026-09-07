@@ -1,0 +1,67 @@
+{
+  "points": 45,
+  "pareto": [
+    {
+      "T_C": 1600.0,
+      "tau_s": 0.01
+    },
+    {
+      "T_C": 1600.0,
+      "tau_s": 0.1
+    },
+    {
+      "T_C": 1600.0,
+      "tau_s": 1.0
+    },
+    {
+      "T_C": 1700.0,
+      "tau_s": 0.003
+    },
+    {
+      "T_C": 1700.0,
+      "tau_s": 0.01
+    },
+    {
+      "T_C": 1700.0,
+      "tau_s": 0.03
+    },
+    {
+      "T_C": 1700.0,
+      "tau_s": 0.1
+    },
+    {
+      "T_C": 1800.0,
+      "tau_s": 0.001
+    },
+    {
+      "T_C": 1800.0,
+      "tau_s": 0.003
+    },
+    {
+      "T_C": 1800.0,
+      "tau_s": 0.01
+    },
+    {
+      "T_C": 1800.0,
+      "tau_s": 0.03
+    },
+    {
+      "T_C": 1800.0,
+      "tau_s": 0.1
+    },
+    {
+      "T_C": 1800.0,
+      "tau_s": 0.3
+    },
+    {
+      "T_C": 1800.0,
+      "tau_s": 1.0
+    }
+  ],
+  "sources": [
+    "docs/research/aramco-cjh-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-01-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-02-resume-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-03-2026-09-07/data/summary.json"
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "gate-T1700-tau0.003",
+    "reference": "docs/research/cjh-refine-02-resume-2026-09-07/data/T1700-tau0.003-metrics.json",
+    "worst_species": "H2",
+    "max_abs_mol_per_feed_C": 6.45039577307216e-14,
+    "conversion_abs": 5.773159728050814e-15,
+    "negligible_omissions": []
+  },
+  {
+    "name": "gate-T1500-tau0.003",
+    "reference": "docs/research/cjh-refine-02-resume-2026-09-07/data/T1500-tau0.003-metrics.json",
+    "worst_species": "H2",
+    "max_abs_mol_per_feed_C": 1.4410694859634532e-13,
+    "conversion_abs": 5.484501741648273e-14,
+    "negligible_omissions": []
+  }
+]

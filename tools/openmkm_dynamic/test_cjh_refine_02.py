@@ -37,10 +37,12 @@ class ValidationGateTests(unittest.TestCase):
 
     def test_short_residence_plan_has_no_repeated_prior_points(self):
         root = Path(__file__).resolve().parents[2]
-        plan = json.loads((Path(__file__).parent/"cjh-refine-03.json").read_text())
-        new = {tuple(row) for row in plan["new_points"]}
-        self.assertEqual(len(new), 12)
-        self.assertEqual(len(plan["references"]), 2)
-        prior = [r for p in plan["prior_summaries"] for r in json.loads((root/p).read_text())]
-        self.assertEqual(len(prior), 33)
-        self.assertFalse(new & {(r["T_C"], r["tau_s"]) for r in prior})
+        for batch, count in (("03", 33), ("04", 45)):
+            with self.subTest(batch=batch):
+                plan = json.loads((Path(__file__).parent/f"cjh-refine-{batch}.json").read_text())
+                new = {tuple(row) for row in plan["new_points"]}
+                self.assertEqual(len(new), 12)
+                self.assertEqual(len(plan["references"]), 2)
+                prior = [r for p in plan["prior_summaries"] for r in json.loads((root/p).read_text())]
+                self.assertEqual(len(prior), count)
+                self.assertFalse(new & {(r["T_C"], r["tau_s"]) for r in prior})

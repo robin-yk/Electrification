@@ -1,0 +1,31 @@
+name: CJH ethylene boundary refinement 04
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: c2co-budgeted-campaign
+  cancel-in-progress: false
+jobs:
+  refine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r tools/cantera/requirements.txt
+      - run: python -m unittest discover -s tools/openmkm_dynamic -p 'test_*.py'
+      - name: Run reserved batch
+        timeout-minutes: 10
+        run: python -u tools/openmkm_dynamic/run_cjh_refine_02.py --output-dir out/cjh-refine-04 --batch-id cjh-refine-04 --plan tools/openmkm_dynamic/cjh-refine-04.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cjh-refine-04
+          path: out/cjh-refine-04/

@@ -1,0 +1,211 @@
+{
+  "commit": "14e638842f1180d1a35575a986ce490541a7e522",
+  "jobs": [
+    [
+      1700,
+      0.003,
+      "gate",
+      "gate-T1700-tau0.003",
+      "docs/research/cjh-refine-02-resume-2026-09-07/data/T1700-tau0.003-metrics.json"
+    ],
+    [
+      1500,
+      0.003,
+      "gate",
+      "gate-T1500-tau0.003",
+      "docs/research/cjh-refine-02-resume-2026-09-07/data/T1500-tau0.003-metrics.json"
+    ],
+    [
+      1300,
+      0.003,
+      "map",
+      "T1300-tau0.003",
+      null
+    ],
+    [
+      1400,
+      0.003,
+      "map",
+      "T1400-tau0.003",
+      null
+    ],
+    [
+      1400,
+      0.001,
+      "map",
+      "T1400-tau0.001",
+      null
+    ],
+    [
+      1500,
+      0.001,
+      "map",
+      "T1500-tau0.001",
+      null
+    ],
+    [
+      1500,
+      0.0003,
+      "map",
+      "T1500-tau0.0003",
+      null
+    ],
+    [
+      1600,
+      0.001,
+      "map",
+      "T1600-tau0.001",
+      null
+    ],
+    [
+      1600,
+      0.0003,
+      "map",
+      "T1600-tau0.0003",
+      null
+    ],
+    [
+      1700,
+      0.001,
+      "map",
+      "T1700-tau0.001",
+      null
+    ],
+    [
+      1700,
+      0.0003,
+      "map",
+      "T1700-tau0.0003",
+      null
+    ],
+    [
+      1800,
+      0.003,
+      "map",
+      "T1800-tau0.003",
+      null
+    ],
+    [
+      1800,
+      0.001,
+      "map",
+      "T1800-tau0.001",
+      null
+    ],
+    [
+      1800,
+      0.0003,
+      "map",
+      "T1800-tau0.0003",
+      null
+    ]
+  ],
+  "budget_s": 540,
+  "per_worker_s": 120,
+  "hashes": {
+    "solver_sha256": "a7b5083148fe20c867634618afe94c543198485e9aed99662d0a7c1adc2786a6",
+    "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc"
+  },
+  "reused_raw": [],
+  "plan": {
+    "batch_id": "cjh-refine-03",
+    "references": [
+      [
+        1700,
+        0.003,
+        "docs/research/cjh-refine-02-resume-2026-09-07/data/T1700-tau0.003-metrics.json"
+      ],
+      [
+        1500,
+        0.003,
+        "docs/research/cjh-refine-02-resume-2026-09-07/data/T1500-tau0.003-metrics.json"
+      ]
+    ],
+    "new_points": [
+      [
+        1300,
+        0.003
+      ],
+      [
+        1400,
+        0.003
+      ],
+      [
+        1400,
+        0.001
+      ],
+      [
+        1500,
+        0.001
+      ],
+      [
+        1500,
+        0.0003
+      ],
+      [
+        1600,
+        0.001
+      ],
+      [
+        1600,
+        0.0003
+      ],
+      [
+        1700,
+        0.001
+      ],
+      [
+        1700,
+        0.0003
+      ],
+      [
+        1800,
+        0.003
+      ],
+      [
+        1800,
+        0.001
+      ],
+      [
+        1800,
+        0.0003
+      ]
+    ],
+    "prior_summaries": [
+      "docs/research/aramco-cjh-2026-09-07/data/summary.json",
+      "docs/research/cjh-refine-01-2026-09-07/data/summary.json",
+      "docs/research/cjh-refine-02-resume-2026-09-07/data/summary.json"
+    ]
+  },
+  "closure": "constant pressure prescribed constant T, equal inlet/outlet mass/tau; variable volume",
+  "feed": "CH4:0.5, CO2:0.5",
+  "pressure_Pa": 101325.0,
+  "strict_overrides": {
+    "min_cycles": 20,
+    "max_cycles": 100,
+    "cycle_tolerance": 1e-10,
+    "cycle_output_tolerance": 1e-10,
+    "stable_cycles_required": 5
+  },
+  "gate_points": 80,
+  "map_points": 20,
+  "expansion_evidence": {
+    "coarse_linear_C2H2_yield": 0.09730227997118929,
+    "observed_C2H2_yield": 0.2043465717154457,
+    "abs_error": 0.10704429174425642,
+    "prior_points": 33,
+    "prior_maxima": {
+      "C2H2_carbon_yield": {
+        "T_C": 1700.0,
+        "tau_s": 0.003,
+        "yield": 0.2124532007921523
+      },
+      "C2H4_carbon_yield": {
+        "T_C": 1500.0,
+        "tau_s": 0.003,
+        "yield": 0.019025501459421054
+      }
+    }
+  },
+  "limitations": "No solver rtol/atol or alternate initial-state test; prescribed gas T, not an electrical device."
+}

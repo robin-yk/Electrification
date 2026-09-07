@@ -14,20 +14,18 @@ remain justified by measured map variation/error and within the 3600-second cap.
 
 ## Research order
 
-Current state: 33 unique CJH conditions completed. Latest combined map is
-../cjh-refine-02-resume-2026-09-07/REPORT.md; run 34085563713 passed all three
-sampling/horizon gates and completed twelve new points. Its two reused raw
-gates came from the archived stopped run 34085150481. The stop was caused by
-a diagnosed positive-only dictionary-key comparison bug, fixed by a
-failing-first regression test; no core chemistry solver change. All completed
-and failed elapsed time is reconciled in budget.json. Batch cjh-refine-03 is
-reserved for two maxima gates and twelve short-residence points. Workflow
-"CJH short-residence refinement 03" run ID: 34088470900.
+Current state: 45 unique CJH conditions completed. Latest combined map is
+../cjh-refine-03-2026-09-07/REPORT.md; run 34088470900 passed both gates
+and all twelve new points. All completed and failed elapsed time is reconciled
+in budget.json. Batch cjh-refine-04 is reserved for two maxima gates and twelve
+C2H4 short-residence/temperature-gap points. Locate workflow
+"CJH ethylene boundary refinement 04" if its ID is not yet recorded.
 Do not dispatch a duplicate. Plan and run card are in tools/openmkm_dynamic/.
 
-Next: read the latest report and gates.json. The sampled C2H2 and C2H4 maxima
-both lie at the new short-residence boundary. Prepare a bounded lower-tau
-extension with matching temperatures and gate the new maxima first. Use the
+Next: read the latest report and gates.json. The C2H4 maximum still lies at
+the lower-tau boundary; C2H2 improvement has become small and its maximum
+lies at the upper T boundary, not the lower-tau boundary. Batch 04 probes
+C2H4 at shorter tau and adds temperature gaps without raising the T ceiling. Use the
 corrected quantitative union comparator, not strict positive-only key equality.
 Record sample need from the preceding map before reserving or launching.
 Alternate initial-state and integrator-tolerance robustness remain untested;
