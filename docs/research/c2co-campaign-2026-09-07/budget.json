@@ -3,8 +3,8 @@
   "authorization": "User approved additional 60 minutes, maximum 10 minutes per batch, hourly continuation until stopped.",
   "total_budget_s": 3600,
   "batch_limit_s": 600,
-  "spent_s": 1202.6280082629737,
-  "reserved_s": 140,
+  "spent_s": 1211.1373990569737,
+  "reserved_s": 0,
   "baseline_excluded_run": 34084078933,
   "batches": [
     {
@@ -97,10 +97,11 @@
     },
     {
       "id": "cjh-small-volume-diagnostic",
-      "status": "reserved",
-      "reserved_s": 140,
-      "actual_s": null,
-      "run_id": null
+      "status": "completed",
+      "reserved_s": 0,
+      "actual_s": 8.509390794,
+      "run_id": 34139030070,
+      "result": "Nominal atol failed; volume-scaled atol passed stationarity and archive comparison. Diagnostic only."
     }
   ],
   "rule": "Before launch require spent plus all reservations <= total. One batch in flight. Reconcile actual elapsed calculation time including failed work from status or Actions step timestamps; retain full reservation if time is unknown. Never treat a timeout as zero cost. No automatic retries or budget reset. Pause on user stop, unresolved numerical failure or exhausted budget."

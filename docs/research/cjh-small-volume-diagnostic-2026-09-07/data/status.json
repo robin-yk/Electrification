@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "name": "nominal",
+      "returncode": 1
+    },
+    {
+      "name": "volume-scaled-atol",
+      "returncode": 0,
+      "archive_max_abs": 2.1919280923654583e-07
+    }
+  ],
+  "wall_s": 8.509390793999984,
+  "purpose": "Diagnose absolute mole tolerances at small volume; not a feed-ratio batch",
+  "commit": "a80d36c46b03551f4f453d68e9835791c9daa527"
+}
