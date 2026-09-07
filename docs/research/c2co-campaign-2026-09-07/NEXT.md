@@ -1,5 +1,13 @@
 # Bounded C2/CO research continuation
 
+## Current: one user-approved NEXTorch point
+
+Read RPH-NEXTORCH-01.md. Reserve 240 s for proposal generation (90 s max)
+and one directly verified recommendation (150 s max). Charge local proposal
+time and reduce reservation to 150 before reaction dispatch. No automated
+loop, extra point or restart is authorized. Keep heartbeat paused. Archive
+proposal and model before chemistry; compare actual output with prediction.
+
 ## Current: approved extension to 1600 sccm
 
 COMPLETED: run 34161531681 passed all gates in 95.931335446 s. Four new

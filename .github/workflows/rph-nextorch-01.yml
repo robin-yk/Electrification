@@ -1,0 +1,29 @@
+name: Verify one NEXTorch RPH recommendation
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: c2co-budgeted-campaign
+  cancel-in-progress: false
+jobs:
+  calculate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r tools/cantera/requirements.txt
+      - name: Bounded calculation
+        timeout-minutes: 3
+        run: python tools/openmkm_dynamic/run_rph_nextorch_01.py --output-dir out/rph-nextorch-01
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rph-nextorch-01
+          path: out/rph-nextorch-01/
