@@ -135,7 +135,7 @@ export function annulusDrops(aspectRatio) {
 // Manufactured solution on a uniform-k domain. T* = Ta + A f(r) g(z) with
 // quartic bumps that vanish (value and slope) on every outer boundary, so the
 // solver's ambient boundary handling is exactly consistent with T*.
-export function mmsStudy(levels = 3) {
+export function mmsStudy(levels = 3, grids = gridLevels(levels)) {
   const A = 400; // K amplitude
   const x = defaultInput(
     {
@@ -145,7 +145,7 @@ export function mmsStudy(levels = 3) {
     { gap: 0, gapK: OUTSIDE_AIR_K, wallK: OUTSIDE_AIR_K, wallEmissivity: 0, tolerance: 1e-7, maxIter: 400 },
   );
   const rows = [];
-  for (const grid of gridLevels(levels)) {
+  for (const grid of grids) {
     const g = geometry(x);
     const probe = build2DMesh(g, { ...x.enclosure, ...grid });
     const Rd = probe.domainRadius, Hd = probe.domainHeight, Ta = x.ambientK, k = OUTSIDE_AIR_K;
@@ -172,8 +172,9 @@ export function mmsStudy(levels = 3) {
     rows.push({ grid: `${grid.nr}×${grid.nz}`, ...norms });
   }
   for (let n = 1; n < rows.length; n++) {
-    rows[n].orderL2 = observedOrder(rows[n - 1].l2, rows[n].l2);
-    rows[n].orderLinf = observedOrder(rows[n - 1].linf, rows[n].linf);
+    const logRatio = Math.log(grids[n].nr / grids[n - 1].nr);
+    rows[n].orderL2 = Math.log(rows[n - 1].l2 / rows[n].l2) / logRatio;
+    rows[n].orderLinf = Math.log(rows[n - 1].linf / rows[n].linf) / logRatio;
   }
   return rows;
 }
