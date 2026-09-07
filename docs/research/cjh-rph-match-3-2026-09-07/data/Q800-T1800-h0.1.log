@@ -1,0 +1,123 @@
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/match_cjh_rph_39.py:38: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  gas=ct.Solution(str(base.MECH))
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/match_cjh_rph_39.py:38: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  gas=ct.Solution(str(base.MECH))
+stage: importing cantera
+stage: loading mechanism
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_cjh_feed_ratio_01.py:34: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  gas=ct.Solution("gri30.yaml" if cold else str(MECH))
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_cjh_feed_ratio_01.py:34: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  gas=ct.Solution("gri30.yaml" if cold else str(MECH))
+stage: mechanism loaded 2.306536078000022
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_cjh_feed_ratio_01.py:41: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  inlet=ct.Reservoir(gas,clone=True); exhaust=ct.Reservoir(gas,clone=True)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_cjh_feed_ratio_01.py:41: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  inlet=ct.Reservoir(gas,clone=True); exhaust=ct.Reservoir(gas,clone=True)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_cjh_feed_ratio_01.py:43: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  r=reactor_type(gas,energy="off",volume=p["volume_m3"],clone=True)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_cjh_feed_ratio_01.py:43: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  r=reactor_type(gas,energy="off",volume=p["volume_m3"],clone=True)
+stage: integration 1 2.70841141599999
+stage: integration 20 2.7108212159999994
+stage: importing cantera
+stage: loading mechanism
+stage: mechanism loaded 2.3177866269999754
+stage: integration 1 3.080894251000018
+stage: integration 20 3.2516813720000073
+stage: importing cantera
+stage: loading mechanism
+stage: mechanism loaded 2.335649048999983
+stage: integration 1 2.816015891999996
+stage: integration 20 2.820058297999992
+stage: importing cantera
+stage: loading mechanism
+stage: mechanism loaded 2.330133289999992
+stage: integration 1 2.8902173660000017
+stage: integration 20 2.9021575179999672
+stage: importing cantera
+stage: loading mechanism
+stage: mechanism loaded 2.347792444999982
+stage: integration 1 2.913767742999994
+stage: integration 20 2.966414803999953
+stage: importing cantera
+stage: loading mechanism
+stage: mechanism loaded 2.328833297000017
+stage: integration 1 3.1313604729999724
+stage: integration 20 3.549143458000003
+stage: importing cantera
+stage: loading mechanism
+stage: mechanism loaded 2.343763561000003
+stage: integration 1 3.0097914719999608
+stage: integration 20 3.2213739679999662
+stage: importing cantera
+stage: loading mechanism
+stage: mechanism loaded 2.3325650790000054
+stage: integration 1 3.027655323000033
+stage: integration 20 3.539264311000011
+stage: importing cantera
+stage: loading mechanism
+stage: mechanism loaded 2.3670777049999856
+stage: integration 1 2.962138099000015
+stage: integration 20 3.339102082000011
+stage: importing cantera
+stage: loading mechanism
+stage: mechanism loaded 2.3343493060000355
+stage: integration 1 3.0438588940000386
+stage: integration 20 3.3261188630000333
+stage: importing cantera
+stage: loading mechanism
+stage: mechanism loaded 2.353198522000014
+stage: integration 1 3.062580304999983
+stage: integration 20 3.618759613000009
+stage: importing cantera
+stage: loading mechanism
+stage: mechanism loaded 2.3435488200000236
+stage: integration 1 3.087709791000009
+stage: integration 20 3.270080747999998
+stage: importing cantera
+stage: loading mechanism
+stage: mechanism loaded 2.374378438000008
+stage: integration 1 3.0966761650000194
+stage: integration 20 3.4904169670000442
+stage: importing cantera
+stage: loading mechanism
+stage: mechanism loaded 2.349649679000038
+stage: integration 1 2.951417973000048
+stage: integration 20 3.252047805000018
+stage: importing cantera
+stage: loading mechanism
+stage: mechanism loaded 2.320243894999976
+stage: integration 1 3.0473213409999858
+stage: integration 20 3.5811130079999884

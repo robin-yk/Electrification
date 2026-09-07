@@ -1,6 +1,6 @@
 # CJH versus RPH at matched methane conversion
 
-Completed verified matches: 27/39.
+Completed verified matches: 39/39.
 
 For each pair, feed composition, standard flow, gas volume and pressure are identical. Only steady CJH gas temperature is varied. Carbon yields use total inlet carbon. RPH floor is 450 C and period is 1 s. C6 total includes every gas-phase species with six carbon atoms; it is not a soot prediction.
 
@@ -31,7 +31,19 @@ For each pair, feed composition, standard flow, gas volume and pressure are iden
 | 50 | 1800 | 0.05 | 6.41375 | 1371.706 | 0.5449116 | 1.555466 | 0.462147 | 0.173945 | 0.4752397 | 0.1976738 | False |
 | 50 | 1800 | 0.1 | 10.68298 | 1396.41 | 1.054099 | 2.624117 | 1.161641 | 0.1933326 | 1.18889 | 0.2305535 | False |
 | 50 | 1800 | 0.2 | 19.22142 | 1434.573 | 2.268105 | 4.761429 | 2.924279 | 0.2321085 | 2.984515 | 0.296314 | False |
+| 50 | 1800 | 0.3 | 27.75986 | 1467.541 | 3.747367 | 6.898753 | 4.792537 | 0.270885 | 4.894191 | 0.3620755 | False |
+| 50 | 1800 | 0.4 | 36.2983 | 1498.722 | 5.564448 | 9.036089 | 6.41031 | 0.3096619 | 6.564353 | 0.4278379 | False |
 | 50 | 1800 | 0.5 | 44.83673 | 1530.03 | 7.85086 | 11.17343 | 7.429026 | 0.3484391 | 7.647642 | 0.493601 | False |
+| 100 | 1800 | 0.1 | 9.755894 | 1438.206 | 0.9368288 | 2.508393 | 0.7745573 | 0.1837162 | 0.796094 | 0.2284821 | False |
+| 100 | 1800 | 0.5 | 41.89229 | 1571.083 | 7.512324 | 10.99632 | 5.539783 | 0.4640903 | 5.758683 | 0.6516537 | False |
+| 200 | 1800 | 0.1 | 8.611315 | 1481.549 | 0.7728457 | 2.202636 | 0.439876 | 0.1847892 | 0.4544012 | 0.2304277 | False |
+| 200 | 1800 | 0.5 | 37.79566 | 1610.267 | 6.630225 | 9.897722 | 3.807088 | 0.6175577 | 3.99992 | 0.818049 | False |
+| 400 | 1800 | 0.1 | 7.212694 | 1526.207 | 0.568408 | 1.71726 | 0.1895435 | 0.1782879 | 0.1969837 | 0.2164767 | False |
+| 400 | 1800 | 0.5 | 32.32802 | 1646.819 | 5.228793 | 7.880524 | 2.296249 | 0.7139354 | 2.436967 | 0.8875544 | False |
+| 800 | 1800 | 0.1 | 5.580065 | 1571.292 | 0.3487514 | 1.133009 | 0.04914235 | 0.1405476 | 0.0514424 | 0.1652206 | False |
+| 800 | 1800 | 0.5 | 25.52463 | 1681.414 | 3.524151 | 5.29638 | 1.089667 | 0.6243357 | 1.165632 | 0.7397623 | False |
+| 1215.743 | 1800 | 0.5 | 20.86066 | 1702.027 | 2.489328 | 3.713666 | 0.5604914 | 0.4641945 | 0.6014883 | 0.5377979 | False |
+| 1600 | 1800 | 0.1 | 3.773507 | 1613.012 | 0.154756 | 0.578271 | 0.004671282 | 0.07075199 | 0.00493562 | 0.08068471 | False |
 | 1600 | 1800 | 0.5 | 17.60564 | 1715.415 | 1.854419 | 2.75056 | 0.3108931 | 0.3335258 | 0.3340724 | 0.3811789 | False |
 
 Low-X warning means the RPH 400/800 phase-conversion difference exceeds one tenth of target conversion. Those trace-conversion comparisons require caution even when the CJH root is tightly matched. No blanket RPH selectivity advantage is assumed. CO, other C2 species, strict match errors and provenance are retained in report.json.

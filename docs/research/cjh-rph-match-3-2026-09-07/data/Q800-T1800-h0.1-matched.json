@@ -1,0 +1,63 @@
+{
+  "id": "Q800-T1800-h0.1",
+  "source": "docs/research/rph-flow-02-2026-09-07/data/Q800-hold0.1-n800.json",
+  "sha256": "f950a5346608cd2692f1bef13455c3acc1cde1e9423102791d6eb5076f5e9e51",
+  "flow_sccm": 800.0,
+  "peak_C": 1800.0,
+  "hold_s": 0.1,
+  "target_X": 0.055800650394085105,
+  "CJH_T_C": 1571.2923796907273,
+  "CJH_X": 0.05580064966521103,
+  "match_tolerance": 5.5800650394085105e-06,
+  "match_error": -7.28874072208896e-10,
+  "refinement_species_error": 1.0806350259073838e-09,
+  "RPH_yield_pct": {
+    "C2H2": 1.1330086528147556,
+    "C2H4": 0.43282723357177405,
+    "C2H6": 0.028593939106219497,
+    "C6H6": 0.1405475835477561,
+    "CO": 0.845094529874954,
+    "C6_total": 0.16522064080512464
+  },
+  "CJH_yield_pct": {
+    "C2H2": 0.3487514379608137,
+    "C2H4": 1.3242738025045684,
+    "C2H6": 0.28397672425179105,
+    "C6H6": 0.049142351179524014,
+    "CO": 0.15795529356640145,
+    "C6_total": 0.05144240481403434
+  },
+  "RPH_phase_conversion_difference": 2.342416401734937e-06,
+  "low_conversion_warning": false,
+  "inputs": {
+    "T_K": 1844.4423796907272,
+    "P_Pa": 101325.0,
+    "flow_sccm": 800.0,
+    "standard_T_K": 273.15,
+    "standard_P_Pa": 101325.0,
+    "volume_m3": 9.228077898393764e-09,
+    "feed": {
+      "CH4": 0.5,
+      "CO2": 0.5
+    }
+  },
+  "CJH_mass_residence_time_s": 0.00010095100333763547,
+  "evaluated_files": [
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-rph-match-3/steady-Q800-T1200.53922212-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-rph-match-3/steady-Q800-T1500.26961106-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-rph-match-3/steady-Q800-T1535.83837128-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-rph-match-3/steady-Q800-T1564.28052467-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-rph-match-3/steady-Q800-T1571.24663822-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-rph-match-3/steady-Q800-T1571.29209415-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-rph-match-3/steady-Q800-T1571.29237969-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-rph-match-3/steady-Q800-T1571.29237969-a3.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-rph-match-3/steady-Q800-T1571.29238985-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-rph-match-3/steady-Q800-T1572.04108083-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-rph-match-3/steady-Q800-T1594.29282246-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-rph-match-3/steady-Q800-T1650.13480553-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-rph-match-3/steady-Q800-T1800-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-rph-match-3/steady-Q800-T450-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-rph-match-3/steady-Q800-T601.078444232-a2.json"
+  ],
+  "raw_CJH": "/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-rph-match-3/steady-Q800-T1571.29237969-a3.json"
+}

@@ -2,6 +2,12 @@
 
 ## Current: match CJH to all 39 RPH conversions
 
+COMPLETE: 39/39 verified pairs. Group 3 passed in 383.904831282 s
+(run 34170488939). Budget reconciled, no reserved work or follow-on chemistry.
+The user requested a classic conversion/selectivity plot, generated from the
+archived pairs with explicit methane-consumption normalization. No new
+integration is needed for that plot. Historical reservations below are closed.
+
 27/39 verified matches are archived. Group 2 completed in 296.121172857 s
 (run 34170083871). Reserve 450 s for group 3, the final 12 conditions.
 No other calculation may spend this reservation. Reconcile after completion.
