@@ -1,0 +1,23 @@
+{
+  "commit": "e70d32ea83ef01d4488b9b9f2a2a18abf31f1cb6",
+  "script_sha256": "9a2550b0da77aec40b159f40001aeef47e4230d418505c6cfe463d54f05db35b",
+  "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+  "jobs": [
+    [
+      "ch4-40",
+      0.4,
+      2,
+      0
+    ],
+    [
+      "ch4-60",
+      0.6,
+      2,
+      0
+    ]
+  ],
+  "reference": "docs/research/cjh-refine-04-2026-09-07/data/T1750-tau0.001-metrics.json",
+  "budget_s": 180,
+  "worker_limit_s": 100,
+  "note": "New fixed-volume, constant feed model; pressure controller enforces near-1-atm. No device heating model."
+}

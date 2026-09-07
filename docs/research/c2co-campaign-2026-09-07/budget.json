@@ -3,8 +3,8 @@
   "authorization": "User approved additional 60 minutes, maximum 10 minutes per batch, hourly continuation until stopped.",
   "total_budget_s": 3600,
   "batch_limit_s": 600,
-  "spent_s": 1238.2638509179737,
-  "reserved_s": 180,
+  "spent_s": 1247.0166007339737,
+  "reserved_s": 0,
   "baseline_excluded_run": 34084078933,
   "batches": [
     {
@@ -114,10 +114,11 @@
     },
     {
       "id": "cjh-feed-ratio-03",
-      "status": "reserved",
-      "reserved_s": 180,
-      "actual_s": null,
-      "run_id": null
+      "status": "completed",
+      "reserved_s": 0,
+      "actual_s": 8.752749816,
+      "run_id": 34140378445,
+      "new_points": 2
     }
   ],
   "rule": "Before launch require spent plus all reservations <= total. One batch in flight. Reconcile actual elapsed calculation time including failed work from status or Actions step timestamps; retain full reservation if time is unknown. Never treat a timeout as zero cost. No automatic retries or budget reset. Pause on user stop, unresolved numerical failure or exhausted budget."
