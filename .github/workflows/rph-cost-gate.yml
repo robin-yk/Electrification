@@ -1,0 +1,42 @@
+name: Validate RPH early stopping
+on:
+  push:
+    branches: [codex/rph-cost-controls-20260906]
+    paths: [.github/workflows/rph-cost-gate.yml]
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: rph-early-stop-validation
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    env:
+      PYTHONUNBUFFERED: '1'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r tools/cantera/requirements.txt
+      - run: python -m unittest discover -s tools/openmkm_dynamic -p 'test_*.py'
+      - uses: actions/download-artifact@v4
+        with:
+          name: three-rph-pairs
+          run-id: 34075748186
+          github-token: ${{ github.token }}
+          path: references
+      - name: Compare early stopping with archived 20-cycle results
+        timeout-minutes: 5
+        run: |
+          mkdir -p out/early-stop
+          python -u tools/openmkm_dynamic/validate_early_stop.py --reference-dir references --output-dir out/early-stop 2>&1 | tee out/early-stop/run.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rph-early-stop-validation
+          path: out/early-stop/

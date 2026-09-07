@@ -268,6 +268,15 @@ def carbon_audit(gas, mw_all, n_atom, n_c_species, y_feed,
     }
 
 
+def periodic_gate(cycle, boundary_residual, output_residual, streak, p):
+    """Opt-in consecutive state AND cycle-output convergence, legacy by default."""
+    valid = math.isfinite(boundary_residual) and boundary_residual < p["cycle_tolerance"]
+    if "cycle_output_tolerance" in p:
+        valid = valid and math.isfinite(output_residual) and output_residual < p["cycle_output_tolerance"]
+    streak = streak + 1 if valid else 0
+    return streak, (cycle >= p["min_cycles"] and streak >= p.get("stable_cycles_required", 1))
+
+
 def integrate(ct, mech, p, on_sample=None):
     """March cycles until the cycle-boundary state stops moving."""
     import numpy as np
@@ -288,6 +297,8 @@ def integrate(ct, mech, p, on_sample=None):
     grid = phase_grid(p)
     cycles = []
     prev_boundary = None
+    prev_outflow = None
+    stable_streak = 0
     t = 0.0
     for cycle in range(1, p["max_cycles"] + 1):
         w_ch4 = w_feed = w_total = 0.0
@@ -329,6 +340,11 @@ def integrate(ct, mech, p, on_sample=None):
         residual = (float(abs(boundary - prev_boundary).max())
                     if prev_boundary is not None else float("inf"))
         prev_boundary = boundary
+        mean_outflow = w_all / w_total
+        output_residual = (float(abs(mean_outflow - prev_outflow).max())
+                           if prev_outflow is not None else float("inf"))
+        prev_outflow = mean_outflow.copy()
+        stable_streak, accepted = periodic_gate(cycle, residual, output_residual, stable_streak, p)
         conversion = 1.0 - w_ch4 / w_feed
         selectivity = (min(1.0, max(0.0, c2_carbon / conv_carbon))
                        if conv_carbon > 1e-15 else 0.0)
@@ -339,11 +355,13 @@ def integrate(ct, mech, p, on_sample=None):
         # the lumped C2 selectivity cannot be split after the fact without the
         # 3 percent reconstruction error of re-averaging the thinned trajectory.
         cycles.append({"cycle": cycle, "boundary_residual": residual,
+                       "outflow_residual": output_residual,
+                       "stable_streak": stable_streak, "accepted_periodic": accepted,
                        "ch4_conversion": conversion,
                        "c2_selectivity_carbon": selectivity,
                        "outflow_mass_fractions": {
                            sp: w_out[sp] / w_total for sp in RECORD_SPECIES}})
-        if cycle >= p["min_cycles"] and residual < p["cycle_tolerance"]:
+        if accepted:
             break
     return gas, reactor, cycles, audit
 
@@ -406,7 +424,12 @@ def run_case(mech, p):
                         "points_per_cycle", "substeps_per_cycle") if k in p},
             "reactor_constraint": f"{p['closure']}_prescribed_T",
             "cycle_summary": {
-                "converged": last["boundary_residual"] < p["cycle_tolerance"],
+                "converged": (last["accepted_periodic"] if "cycle_output_tolerance" in p
+                              else last["boundary_residual"] < p["cycle_tolerance"]),
+                "cycle_outflow_residual": last["outflow_residual"],
+                "stable_cycles": last["stable_streak"],
+                "stopping_policy": {k: p[k] for k in ("min_cycles", "max_cycles", "cycle_tolerance",
+                    "cycle_output_tolerance", "stable_cycles_required") if k in p},
                 "cycles_to_convergence": len(cycles),
                 "cycle_boundary_residual": last["boundary_residual"],
                 "mean_ch4_conversion": last["ch4_conversion"],
@@ -421,7 +444,7 @@ def run_case(mech, p):
             "carbon_audit": audit,
             "convergence_history": [
                 {k: c[k] for k in ("cycle", "boundary_residual",
-                                   "ch4_conversion")}
+                                   "ch4_conversion", "outflow_residual", "stable_streak")}
                 for c in cycles[:: max(1, len(cycles) // 50)]],
             "trajectory": trajectory,
         }
