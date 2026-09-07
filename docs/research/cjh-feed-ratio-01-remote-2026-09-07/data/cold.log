@@ -1,0 +1,5 @@
+stage: importing cantera
+stage: loading mechanism
+stage: mechanism loaded 0.06680028099999902
+stage: integration 1 0.10471855000000119
+stage: integration 20 0.10538524000000393

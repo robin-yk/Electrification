@@ -1,0 +1,9 @@
+{
+  "status": "stopped",
+  "completed": [
+    "cold"
+  ],
+  "active": "anchor",
+  "reason": "Command '['/opt/hostedtoolcache/Python/3.11.16/x64/bin/python', '/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_cjh_feed_ratio_01.py', '--output-dir', '/home/runner/work/Electrification-Suite/Electrification-Suite/out/cjh-feed-ratio-01-remote', '--worker', 'anchor', '0.5', '0', '0']' returned non-zero exit status 1.",
+  "wall_s": 4.591573652000001
+}
