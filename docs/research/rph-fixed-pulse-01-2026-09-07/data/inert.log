@@ -1,0 +1,12 @@
+inert 1 {'cycle': 1, 'max_species_cycle_change': None, 'state_change': None, 'elemental_residuals': {'N': 5.105624067469889e-05}, 'mass_residual': 5.1056240679064454e-05, 'max_pressure_relative_error': 0.0001945303030377321, 'max_temperature_error_K': 3.18649722430564e-06}
+Traceback (most recent call last):
+  File "/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py", line 118, in <module>
+    if __name__=="__main__":main()
+                            ^^^^^^
+  File "/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py", line 97, in main
+    worker(out,a.worker,800 if a.worker=="refined" else 400,inert=a.worker=="inert");return
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py", line 76, in worker
+    assert maxp<1e-4,"pressure control failed"
+           ^^^^^^^^^
+AssertionError: pressure control failed

@@ -3,11 +3,11 @@
   "authorization": "User approved additional 60 minutes, maximum 10 minutes per batch, hourly continuation until stopped.",
   "total_budget_s": 3600,
   "batch_limit_s": 600,
-  "spent_s": 1252.5098143029737,
-  "reserved_s": 540,
+  "spent_s": 1252.8243666839737,
+  "reserved_s": 0,
   "baseline_excluded_run": 34084078933,
   "batches": [
-    {"id":"rph-fixed-pulse-01","status":"reserved","reserved_s":540,"actual_s":null,"run_id":null,"new_points":1,"verification_points":2},
+    {"id":"rph-fixed-pulse-01","status":"stopped","reserved_s":0,"actual_s":0.3145523809999986,"run_id":34146617236,"new_points":0,"verification_points":0,"reason":"Inert first-cycle relative pressure deviation 1.945303e-4 exceeded 1e-4. Temperature and finite-cycle balances passed. No reacting integration launched."},
     {"id":"rph-fixed-gate-01","status":"completed","reserved_s":0,"actual_s":5.493213568999998,"run_id":34146144797,"new_points":0,"verification_points":2},
     {
       "id": "cjh-refine-01",

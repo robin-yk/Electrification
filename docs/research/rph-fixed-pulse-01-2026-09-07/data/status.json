@@ -1,0 +1,7 @@
+{
+  "status": "stopped",
+  "active": "inert",
+  "completed": [],
+  "reason": "Command '['/opt/hostedtoolcache/Python/3.11.16/x64/bin/python', '/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py', '--output-dir', '/home/runner/work/Electrification-Suite/Electrification-Suite/out/rph-fixed-pulse-01', '--worker', 'inert']' returned non-zero exit status 1.",
+  "wall_s": 0.3145523809999986
+}

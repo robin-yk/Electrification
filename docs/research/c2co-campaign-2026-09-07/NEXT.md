@@ -4,7 +4,14 @@
 
 Run 34146144797 completed rph-fixed-gate-01 in 5.493213569 seconds.
 Analytic closed ramp passed; constant-temperature species comparison error is zero.
-No batch is in flight or reserved. Use /private/tmp/aramco-feed-ratio-20260907
+Periodic gate run 34146617236 STOPPED at the first inert cycle after
+0.314552381 seconds. Raw diagnostics are archived and budget reconciled.
+Pressure relative error 1.945303e-4 exceeds 1e-4; temperature and balances pass.
+No reacting or refined integration was launched. No batch is reserved.
+Do not dispatch follow-on cases or automatically retry. Diagnose finite pressure
+controller response versus numerical interpolation/solver effects before any
+manually reviewed correction. Do not loosen the threshold to pass the test.
+Use /private/tmp/aramco-feed-ratio-20260907
 and this ledger. No new CJH map is queued. This instruction supersedes
 historical priorities below. Read tools/openmkm_dynamic/RPH-FIXED-GATE-01.md.
 After success, periodic waveform and flow-integral validation remain required
