@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "completed": [
+    "inert",
+    "Q50-hold0.1-n800",
+    "Q100-hold0.1-n400",
+    "Q100-hold0.1-n800",
+    "Q100-hold0.5-n400",
+    "Q100-hold0.5-n800",
+    "Q200-hold0.1-n400",
+    "Q200-hold0.1-n800",
+    "Q200-hold0.5-n400",
+    "Q200-hold0.5-n800",
+    "Q400-hold0.1-n400",
+    "Q400-hold0.1-n800",
+    "Q400-hold0.5-n400",
+    "Q400-hold0.5-n800"
+  ],
+  "wall_s": 113.365813586
+}

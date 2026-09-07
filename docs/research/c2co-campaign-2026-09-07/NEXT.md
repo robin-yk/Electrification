@@ -2,6 +2,16 @@
 
 ## Current: user-approved flow pilot
 
+COMPLETED: run 34160516964, 113.365813586 s. Inert, archive reproduction
+and all six paired conditions passed. Eight-condition report includes the two
+existing 50 sccm anchors. Raw files and generated report are under
+docs/research/rph-flow-01-2026-09-07. Budget reconciled, no reservation or
+run in flight. Higher flow lowered C2H2/CO carbon yields but raised g/h in
+this sampled range. Do not mistake constant prescribed gas T for a proven
+power-feasible operating point. No pressure/period/BO run has been launched.
+Reservation text below describes the completed dispatch only. Initial HTTP
+404 was workflow registration delay and created no run; one dispatch exists.
+
 Reserve 300 s for rph-flow-01, six new 100/200/400 sccm cases at 1800 C and
 0.10/0.50 s hot hold. Read tools/openmkm_dynamic/RPH-FLOW-01.md. This overrides
 the completed-grid hold below only for this flow pilot. No pressure/period/BO
