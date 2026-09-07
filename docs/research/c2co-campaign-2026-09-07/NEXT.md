@@ -2,6 +2,10 @@
 
 ## Current: match CJH to all 39 RPH conversions
 
+27/39 verified matches are archived. Group 2 completed in 296.121172857 s
+(run 34170083871). Reserve 450 s for group 3, the final 12 conditions.
+No other calculation may spend this reservation. Reconcile after completion.
+
 15/39 verified matches are archived. Group 1 completed in 353.486917347 s
 (run 34169440821). Reserve 450 s for group 2, the next 12 conditions.
 No other calculation may spend this reservation. Reconcile before group 3.
