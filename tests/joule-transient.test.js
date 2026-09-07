@@ -10,6 +10,7 @@ import {
   MATERIALS, calculate, geometry, propertiesAt,
   solveTransient2D, solveThermal2D, elementTimeConstant,
   elementK, rhoCp2D,
+  integratedRhoCp2D, internalEnergy2D, GAS_RHOCP_REF, AIR_RHOCP_REF, RHOCP_REF_K,
 } from "../apps/joule/solver.js";
 
 const sic = MATERIALS.find((m) => m.name === "SiC");
@@ -43,6 +44,29 @@ const LOSSY = {
   gap: 0.001, gapK: 0.03, endMode: "ambient", endK: 293.15, endH: 200,
   contactRho: 0, maxIter: 200, tolerance: 1e-5, ...GRID,
 };
+
+test("stored energy integrates variable cp instead of using its final value", () => {
+  const m={...sic,cpTable:[[20,500],[800,1500]]};
+  const x={porousMode:"effective",solidFraction:0.5,effectiveK:30};
+  const mesh={nz:1,nr:1,materialAt:()=>0,cellVolume:()=>1e-6};
+  const actual=internalEnergy2D([[1073.15]],ADIABATIC,m,mesh,293.15,x);
+  const exact=m.density*0.5*1e-6*1000*780;
+  assert.ok(Math.abs(actual-exact)<1e-9);
+  assert.ok(Math.abs(internalEnergy2D([[293.15]],ADIABATIC,m,mesh,1073.15,x)+exact)<1e-9);
+});
+
+test("storage integral covers cp knots, endpoint extensions, gas and wall", () => {
+  const m={...sic,cpTable:[[20,500],[120,1500],[220,500]]};
+  const expected=m.density*(500*10+1000*100+1000*100+500*10);
+  assert.ok(Math.abs(integratedRhoCp2D(0,283.15,503.15,m,ADIABATIC)-expected)<1e-6);
+  assert.equal(integratedRhoCp2D(0,300,400,sic,ADIABATIC),sic.density*sic.cp*100);
+  assert.equal(integratedRhoCp2D(2,300,400,sic,ADIABATIC),2200*740*100);
+  for(const [code,ref] of [[3,AIR_RHOCP_REF],[4,GAS_RHOCP_REF]]) {
+    const expected=ref*RHOCP_REF_K*Math.log(2);
+    assert.ok(Math.abs(integratedRhoCp2D(code,300,600,sic,ADIABATIC)-expected)<1e-8);
+  }
+  assert.equal(integratedRhoCp2D(0,300,300,m,ADIABATIC),0);
+});
 
 test("porous mode uses explicit effective k without remixture and skeleton storage", () => {
   const x = {...makeInput(ADIABATIC), porousMode:"effective", effectiveK:30, solidFraction:0.25};

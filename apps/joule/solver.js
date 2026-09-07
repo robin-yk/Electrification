@@ -1072,12 +1072,42 @@ export function boundaryLoss2D(T,x,g,cfg,material,mesh,op) {
   return {total:staticLoss+gasAdvective,staticLoss,gasAdvective,gasOutletK,byChannel,flowConnected:system.gasFlow.connected};
 }
 
-// Total internal energy of the domain above a reference temperature, J.
+// Integral of the existing volumetric storage coefficient, J/m^3.
+// Split tabulated cp at every knot, including constant endpoint extensions.
+// Gas storage follows the same bounded inverse-temperature law as rhoCp2D.
+export function integratedRhoCp2D(code, fromK, toK, material, cfg, x) {
+  if (fromK === toK) return 0;
+  if (toK < fromK) return -integratedRhoCp2D(code,toK,fromK,material,cfg,x);
+  if (code === 2) return rhoCp2D(code,fromK,material,cfg,x)*(toK-fromK);
+  if (code !== 0) {
+    const a=(code===3?AIR_RHOCP_REF:GAS_RHOCP_REF)*RHOCP_REF_K;
+    const cuts=[fromK,...[1,a].filter(t=>t>fromK&&t<toK),toK];
+    let sum=0;
+    for(let i=1;i<cuts.length;i++) {
+      const lo=cuts[i-1],hi=cuts[i];
+      sum+=hi<=1?a*(hi-lo):lo>=a?hi-lo:a*Math.log(hi/lo);
+    }
+    return sum;
+  }
+  const cuts=[fromK,...(material.cpTable||[]).map(([t])=>kelvin(t)).filter(t=>t>fromK&&t<toK),toK];
+  let sum=0;
+  for(let i=1;i<cuts.length;i++) {
+    const lo=cuts[i-1],hi=cuts[i];
+    const a=material.density*propertiesAt(material,lo).cp,b=material.density*propertiesAt(material,hi).cp;
+    if((a<1&&b>1)||(b<1&&a>1)) {
+      const f=(1-a)/(b-a);
+      sum+=(hi-lo)*(f*(Math.max(1,a)+1)/2+(1-f)*(1+Math.max(1,b))/2);
+    } else sum+=(hi-lo)*(Math.max(1,a)+Math.max(1,b))/2;
+  }
+  return sum*(x?.porousMode==="effective"?x.solidFraction:1);
+}
+
+// Total internal energy relative to the reference, integrating cp(T), J.
 export function internalEnergy2D(T, cfg, material, mesh, refK, x) {
   let sum=0;
   for(let j=0;j<mesh.nz;j++)for(let i=0;i<mesh.nr;i++){
     const code=mesh.materialAt(i,j);
-    sum+=rhoCp2D(code,T[j][i],material,cfg,x)*mesh.cellVolume(i,j)*(T[j][i]-refK);
+    sum+=integratedRhoCp2D(code,refK,T[j][i],material,cfg,x)*mesh.cellVolume(i,j);
   }
   return sum;
 }
