@@ -2,6 +2,17 @@
 
 ## Current: approved 450 C floor screening
 
+COMPLETED: run 34158956433 passed all 25 remaining pairs in 365.772934778 s.
+All 28 conditions now have paired, gate-passing outputs; report.json and
+REPORT.md are generated in rph-450-screen-01-2026-09-07. Budget reconciled;
+no reservation or run in flight. Do not repeat this grid or start NEXTorch
+automatically. Interpret this map first. C2H2/CO maxima lie at the hot/long
+boundary, while the highest sampled C2H4 occurs at 1400 C/0.5 s.
+Hot-hold trends are nearly linear within each sampled temperature; account
+for changing mean gas temperature and the fixed very small gas volume before
+attributing improvement to pulse chemistry. The reservation paragraphs below
+describe the now-completed dispatch, not a pending authorization.
+
 This section supersedes historical next-task statements below. User approved
 28 peak/hold conditions before NEXTorch. Pilot 34158782803 passed all gates,
 45.426795879 s, archived under rph-450-pilot-01-2026-09-07/data.
