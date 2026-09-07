@@ -9,6 +9,8 @@ import { resolve, dirname } from "node:path";
 // as an HTML entry), Vite never sees that reference either — it needs the
 // same explicit copy.
 const projectPages = [
+  'apps/joule/3d/enclosure.html', 'apps/joule/3d/enclosure.js',
+  'apps/joule/3d/enclosure-app.js', 'apps/joule/3d/enclosure-worker.js',
   'apps/joule/3d/index.html', 'apps/joule/3d/app.js', 'apps/joule/3d/solver.js',
   'apps/joule/3d/worker.js', 'apps/joule/3d/import-design.js',
   'apps/joule/crosscheck.js', 'apps/joule/data/crosscheck-2d.json',

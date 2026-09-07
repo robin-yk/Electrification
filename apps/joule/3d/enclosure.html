@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Joule3D | Enclosed reactor</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:24px;color:#192b39;background:#f4f6f8;font:15px system-ui,sans-serif}h1{margin:4px 0 10px;font-size:28px}h2{font-size:18px;margin:0 0 14px}p{line-height:1.5}a{color:#235d91}.tag{color:#8d431d;font-size:12px;letter-spacing:.1em;text-transform:uppercase}.layout{display:grid;grid-template-columns:290px 1fr;gap:18px}.card{background:white;border:1px solid #d9e0e5;border-radius:10px;padding:18px;margin-bottom:16px}label{display:block;margin:10px 0;font-size:13px}input,select,button{font:inherit;padding:8px;border:1px solid #bac7d1;border-radius:5px}input[type=number],select{width:100%;margin-top:4px}button{cursor:pointer;background:white;margin:3px 4px 3px 0}button.primary{background:#173f60;color:white}button:disabled{opacity:.45;cursor:default}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.metric{padding:12px;background:#f2f5f7;border-radius:6px}.metric span{display:block;color:#536778;font-size:12px}.metric strong{font-size:21px}canvas{width:100%;height:auto;background:#f7f8fa;border:1px solid #e0e5e8}pre{white-space:pre-wrap;font:13px ui-monospace,monospace;line-height:1.6}small{line-height:1.5;color:#526677}#status{min-height:22px}input[type=range]{width:100%}.plots{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:760px){.layout,.plots{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}}
+input[type=file]{width:100%;min-width:0;font-size:12px}.card{min-width:0}
+</style></head><body>
+<div class="tag">Development model · cylindrical finite volumes</div>
+<h1>Enclosed Joule3D</h1>
+<p>Element, gas gap, containment wall and surrounding air. Shared Joule2D material laws and boundary operators, with coupled radial, angular and axial fields.</p>
+<div class="layout"><aside>
+<div class="card"><h2>Current design</h2><p id="design">Import a cylindrical design from the parent Joule page, or load saved settings.</p>
+<button id="save">Save settings</button><label>Load settings JSON<input id="load" type="file" accept=".json"></label>
+<small>Change materials, geometry, contact resistance and thermal boundaries in the main Joule inputs, then import again. No room-temperature property freezing.</small></div>
+<div class="card"><h2>Resolution &amp; physics</h2>
+<label>Radial cells<input id="nr" type="number" min="16" max="100" value="20"></label>
+<label>Axial cells<input id="nz" type="number" min="12" max="160" value="24"></label>
+<label>Angular cells<input id="nt" type="number" min="3" max="32" value="8"></label>
+<label><input id="currentField" type="checkbox" checked> Solve 3D electrical field</label>
+<label><input id="purge" type="checkbox" checked> 50 sccm He purge, same as 2D</label>
+</div>
+<div class="card"><h2>Operation</h2>
+<label>Study<select id="study"><option value="steady">Steady state</option><option value="transient">Transient / pulses / quench</option></select></label>
+<label>Initial temperature (°C)<input id="startC" type="number" value="25"></label>
+<label>Duration (s)<input id="duration" type="number" value="2" min="0.001"></label>
+<label>Maximum time step (s)<input id="dt" type="number" value="0.1" min="0.000001"></label>
+<label>Pulse period (s)<input id="period" type="number" value="1" min="0.000001"></label>
+<label>Duty fraction (0 = quench; 1 = continuous)<input id="duty" type="number" value="1" min="0" max="1" step=".05"></label>
+<label><input id="warmStart" type="checkbox"> Start from last computed 3D field</label>
+<label><input id="initialSteady" type="checkbox"> Compute a 3D steady field first</label>
+<label><input id="steadyStop" type="checkbox"> Grow time step and stop at steady state (continuous or quench only)</label>
+<button id="solve" class="primary" disabled>Calculate 3D</button><button id="compare" disabled>Compare with 2D</button><button id="cancel" disabled>Cancel</button>
+</div></aside><main>
+<div class="card"><h2>Result</h2><p id="status" role="status">Waiting for a design.</p><div id="metrics" class="metrics"></div><pre id="balance"></pre><pre id="comparison"></pre></div>
+<div class="card"><h2>Spatial fields</h2>
+<label>Field<select id="field"><option value="T">Temperature (°C)</option><option value="q">Joule source (W/m³)</option><option value="potential">Potential (V)</option><option value="J">Current-density magnitude (A/m²)</option></select></label>
+<label>Angular slice<input id="angle" type="range" min="0" max="7" value="0"></label>
+<label>Axial cross-section<input id="axial" type="range" min="0" max="23" value="12"></label>
+<div class="plots"><div><p>r–z slice</p><canvas id="slice" width="520" height="400"></canvas></div><div><p>r–θ cross-section</p><canvas id="cross" width="520" height="400"></canvas></div></div><p id="legend"></p>
+<button id="csv" disabled>Export 3D field CSV</button><button id="history" disabled>Export time history CSV</button>
+</div>
+<div class="card"><h2>Time response</h2><canvas id="trace" width="900" height="260"></canvas><small>Element mean (red), maximum (orange), minimum (blue) and wall mean (gray). Time in seconds; temperature in °C.</small></div>
+<div class="card"><h2>Model boundaries</h2><p>Supply resistance uses the mean element temperature, as in Joule2D. The 3D potential determines the spatial distribution of bulk heating, normalized to that supply budget. Fixed current/voltage settings report limit violations rather than silently clipping them.</p><p>Contact dissipation is counted as heat leaving through external leads, not deposited in the simulated domain. Gap radiation uses sector-local concentric-cylinder exchange, not a general 3D view-factor calculation. Flow is prescribed thermal transport, not CFD. Porosity uses the existing 2D effective-property conventions.</p><p>Axisymmetric agreement tests code consistency; it does not validate arbitrary asymmetric reactors. Actual rectangular geometry and offset electrodes remain available in the <a href="./index.html">separate solid-only model</a>. A rectangular import here requires the explicit 2D equivalent-cylinder approximation.</p></div>
+</main></div><script type="module" src="./enclosure-app.js"></script></body></html>

@@ -1,23 +1,36 @@
 import { test, expect } from '@playwright/test';
 
-test('Joule tabs open the 3D worker and import the current dense design',async({page})=>{
+test('Joule tabs transfer the full cylinder design and compare enclosed 3D with 2D',async({page},testInfo)=>{
   const errors=[];page.on('pageerror',error=>errors.push(String(error)));
   await page.goto('/apps/joule/');
-  await page.selectOption('#shape','box');
-  await page.fill('#boxLength','40');await page.fill('#boxWidth','10');await page.fill('#boxHeight','2');
+  await page.selectOption('#shape','cylinder');
   await page.fill('#voidFraction','0');
   await page.fill('#pmax','30');
   await page.click('[data-tab="thermal3d"]');
   const frame=page.frameLocator('#joule3dFrame');
-  await expect(frame.locator('#solve')).toBeEnabled({timeout:30000});
+  await expect(page.locator('#import3d')).toBeEnabled({timeout:30000});
   await page.click('#import3d');
-  await expect(frame.locator('#shape')).toHaveValue('block');
-  await expect(frame.locator('#length')).toHaveValue('40');
-  await expect(frame.locator('#status')).toContainText('Imported 0D');
+  await expect(frame.locator('#status')).toContainText('Imported complete');
+  await frame.locator('#nr').fill('16');await frame.locator('#nz').fill('12');await frame.locator('#nt').fill('4');
+  await frame.locator('#compare').click();
+  await expect(frame.locator('#status')).toContainText('Completed',{timeout:30000});
+  await expect(frame.locator('#comparison')).toContainText('Paired 3D minus 2D');
+  await expect(frame.locator('#balance')).toContainText('external contact');
+  await frame.locator('#study').selectOption('transient');
+  await frame.locator('#duration').fill('0.3');await frame.locator('#dt').fill('0.1');
+  await frame.locator('#duty').fill('0');await frame.locator('#warmStart').check();
   await frame.locator('#solve').click();
-  await expect(frame.locator('#budget')).toBeVisible({timeout:30000});
-  await expect(frame.locator('#savg')).toHaveText(/\d/);
+  await expect(frame.locator('#status')).toContainText('Completed at t = 0.30000',{timeout:30000});
+  await frame.locator('#field').selectOption('J');
+  const download=page.waitForEvent('download');await frame.locator('#csv').click();
+  expect((await download).suggestedFilename()).toBe('joule-enclosure3d-field.csv');
+  await page.screenshot({path:testInfo.outputPath('enclosure3d.png'),fullPage:true});
   await page.click('[data-tab="calculator"]');
-  await expect(page.locator('#boxLength')).toHaveValue('40');
+  await expect(page.locator('#shape')).toHaveValue('cylinder');
+  await page.selectOption('#shape','box');
+  await page.click('[data-tab="thermal3d"]');await page.click('#import3d');
+  await expect(page.locator('#import3dNote')).toContainText('explicitly enable');
+  await page.check('#equivalent3d');await page.click('#import3d');
+  await expect(frame.locator('#design')).toContainText('Not an actual rectangular 3D domain');
   expect(errors).toEqual([]);
 });

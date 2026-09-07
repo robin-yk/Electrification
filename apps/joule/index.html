@@ -915,7 +915,7 @@
       <button class="tab" data-tab="howto" role="tab" aria-selected="false">How to Use</button>
       <button class="tab active" data-tab="calculator" role="tab" aria-selected="true">0D Single Design</button>
       <button class="tab" data-tab="thermal2d" role="tab" aria-selected="false">2D Thermal Field</button>
-      <button class="tab" data-tab="thermal3d" role="tab" aria-selected="false">3D Solid Field</button>
+      <button class="tab" data-tab="thermal3d" role="tab" aria-selected="false">3D Enclosed Field</button>
       <button class="tab" data-tab="dynamic" role="tab" aria-selected="false">Dynamic</button>
       <button class="tab" data-tab="screening" role="tab" aria-selected="false">Screening</button>
       <button class="tab" data-tab="reference" role="tab" aria-selected="false">Reference</button>
@@ -924,11 +924,13 @@
 
   <main>
     <section id="thermal3d" class="panel" role="tabpanel">
-      <h2 class="section-title">3D solid and electrode design</h2>
-      <p class="section-lede">0D screens the supply and geometry; 2D resolves the axisymmetric reactor and enclosure; 3D resolves the actual solid and end-electrode patches. The 3D model uses ambient heat loss without a gas or containment-wall domain.</p>
-      <button id="import3d" type="button" disabled>Use current 0D design in 3D</button>
-      <p id="import3dNote" role="status">Import supports dense elements and freezes material properties at 25 °C. Voltage, current and power limits transfer; the material current-density ceiling, contact resistance, enclosure and pulse settings do not. Review the independent 3D boundary settings before calculating.</p>
-      <iframe id="joule3dFrame" title="Joule3D electrothermal modeler" data-src="./3d/index.html" style="width:100%;height:1100px;border:1px solid #e3e7ea;border-radius:8px"></iframe>
+      <h2 class="section-title">3D enclosed reactor</h2>
+      <p class="section-lede">Cylindrical r/θ/z fields with the Joule2D material laws, wall, gas, purge, radiation and end conditions. The original <a href="./3d/index.html" target="_blank" rel="noopener">solid-only Cartesian 3D model</a> remains separate.</p>
+      <button id="import3d" type="button" disabled>Use current cylindrical design in 3D</button>
+      <button id="importDyn3d" type="button" disabled>Import Dynamic settings too</button>
+      <label><input id="equivalent3d" type="checkbox"> For a rectangular design, explicitly use the same surface-equivalent cylinder as 2D</label>
+      <p id="import3dNote" role="status">Transfers temperature-dependent materials, porosity, all supply settings and enclosure conditions. Select a cylinder in Single Design. Dynamic import also transfers the drive, period, duty, duration and time step; a steady start is recomputed in 3D.</p>
+      <iframe id="joule3dFrame" title="Joule3D enclosed reactor" data-src="./3d/enclosure.html" style="width:100%;height:1400px;border:1px solid #e3e7ea;border-radius:8px"></iframe>
     </section>
     <section id="howto" class="panel" role="tabpanel">
       <p class="section-kicker">Five-minute workflow</p>
@@ -1734,7 +1736,6 @@
       equivalentCylinder, surfaceEquivalentDiameter
     } from "./solver.js";
     import { evaluateCrossChecks, thermalComparison, sig4 } from "./crosscheck.js";
-    import { importDesign } from './3d/import-design.js';
   (() => {
     "use strict";
 
@@ -3280,7 +3281,7 @@
       if (name === 'thermal3d') {
         const frame = $('joule3dFrame');
         if (!frame.getAttribute('src')) {
-          frame.addEventListener('load', () => { $('import3d').disabled = false; }, {once:true});
+          frame.addEventListener('load', () => { $('import3d').disabled = false; $('importDyn3d').disabled = false; }, {once:true});
           frame.src = frame.dataset.src;
         }
       }
@@ -3305,10 +3306,27 @@
 
     $('import3d').addEventListener('click', () => {
       try {
-        const parameters = importDesign(baseInputs());
-        $('joule3dFrame').contentWindow.postMessage({type:'joule3d-import', parameters}, location.origin);
-        $('import3dNote').textContent = 'Sent current dense-element design. Properties are constant at 25 °C; J limit, contact resistance, wall, gas and pulse settings are not transferred. Review the 3D inputs, then Calculate 3D.';
+        const original = baseInputs(), cfg = get2DConfig();
+        if (original.shape !== 'cylinder' && !$('equivalent3d').checked) throw Error('Select a cylinder, or explicitly enable the same equivalent-cylinder approximation as 2D.');
+        const eq=equivalentCylinder(original,original.material),x=eq.x;
+        const geometryNote=eq.substituted?'Rectangular input represented by the 2D surface-equivalent cylinder. Not an actual rectangular 3D domain.':'Actual cylindrical geometry.';
+        $('joule3dFrame').contentWindow.postMessage({type:'joule-enclosure-import', x, cfg,geometryNote}, location.origin);
+        $('import3dNote').textContent = geometryNote+' Sent material tables, porosity, supply limits, contacts, wall and gas settings. Choose steady or transient operation inside 3D.';
       } catch (error) { $('import3dNote').textContent = error.message; }
+    });
+    $('importDyn3d').addEventListener('click', () => {
+      try {
+        const original=baseInputs(), cfg=get2DConfig(), p=dynPlanFromInputs();
+        if(original.shape!=='cylinder'&&!$('equivalent3d').checked)throw Error('Select a cylinder or explicitly enable the equivalent-cylinder approximation.');
+        const eq=equivalentCylinder(original,original.material),x=eq.x;
+        const geometryNote=eq.substituted?'Rectangular input represented by the 2D surface-equivalent cylinder. Not an actual rectangular 3D domain.':'Actual cylindrical geometry.';
+        const plan={study:'transient',startK:x.ambientK,dt:p.dt,duration:p.duration,
+          period:p.period,duty:p.drive==='off'?0:p.drive==='on'?1:p.duty,
+          dtGrowth:p.dtGrowth,maxDt:p.maxDt,steadyTol:p.steadyTol,
+          initialSteady:$('dynStart').value==='steady'};
+        $('joule3dFrame').contentWindow.postMessage({type:'joule-enclosure-import',x,cfg,plan,geometryNote},location.origin);
+        $('import3dNote').textContent='Sent design and Dynamic settings. The 3D march resolves pulse edges; its time sampling can differ from 2D cycle-averaged steps. Review settings before calculating.';
+      }catch(error){$('import3dNote').textContent=error.message;}
     });
 
     // The three published-reactor cases live in crosscheck.js so that
