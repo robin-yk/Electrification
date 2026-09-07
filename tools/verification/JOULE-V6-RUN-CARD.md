@@ -15,13 +15,18 @@ Reacting and elemental gates are not applicable to this nonreacting heater.
 Gates: existing independent porous calorimetry and 112-test suite passed.
 Start with a small 0D grid; compare a selected 30x60 field with 45x90.
 Require convergence, relative steady closure <1e-5 and peak refinement <5 K.
-Check two connected transient excursions at dt=5 and 2.5 s; require <2 K
+Check two connected transient excursions at dt=2.5 and 1.25 s; require <2 K
 endpoint difference and relative stepwise energy closure <1e-4.
 Pilot elapsed time controls continuation. No training or adaptive sample
 expansion: fixed grids describe sensitivities, not a learned optimum.
 
-Output: docs/research/joule-v6-2026-09-07/data.json, containing full inputs,
+Output: docs/research/joule-v6-2026-09-07/data-v6-final.json, containing full inputs,
 solver and generator hashes, counts, timing, fields and histories. Save after
-each expensive case; reuse completed data rather than repeat it. Stop on a
+each expensive case. The author requested a full rerun after model changes;
+do not reuse numerical arrays from the stopped data.json pilot. Recalculate
+analytic checks, MMS and all three literature cases using current code.
+Literature cases retain their own geometry and property mappings. Material
+screening maps are equivalent cylinders, including CFP; they are not a
+resolved paper-strip or channel model and must be labelled accordingly. Stop on a
 failed gate or budget. Only v6 figures are new; do not replace archived data.
 Command: node tools/verification/joule-v6.mjs
