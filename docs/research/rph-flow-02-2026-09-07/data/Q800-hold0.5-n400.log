@@ -1,0 +1,39 @@
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:25: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  gas=ct.Solution("gri30.yaml" if inert else str(base.MECH))
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:25: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  gas=ct.Solution("gri30.yaml" if inert else str(base.MECH))
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:34: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  inlet=ct.Reservoir(gas,clone=True);exhaust=ct.Reservoir(gas,clone=True)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:34: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  inlet=ct.Reservoir(gas,clone=True);exhaust=ct.Reservoir(gas,clone=True)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:35: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  r=PrescribedTemperatureReactor(gas,energy="off",volume=vol,clone=True)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:35: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  r=PrescribedTemperatureReactor(gas,energy="off",volume=vol,clone=True)
+Q800-hold0.5-n400 1 {'cycle': 1, 'max_species_cycle_change': None, 'state_change': None, 'elemental_residuals': {'C': -6.26605500886321e-07, 'H': -6.136833718260215e-07, 'O': -6.327114325159535e-07}, 'mass_residual': -6.289913603635532e-07, 'max_pressure_relative_error': 3.409614760330193e-05, 'max_temperature_error_K': 2.7828264137497172e-08}
+Q800-hold0.5-n400 2 {'cycle': 2, 'max_species_cycle_change': 8.89679779847441e-09, 'state_change': 4.836131495267182e-13, 'elemental_residuals': {'C': -6.130345509526771e-07, 'H': -6.189112409343697e-07, 'O': -6.084122370657323e-07}, 'mass_residual': -6.109661787279328e-07, 'max_pressure_relative_error': 3.4096147014883726e-05, 'max_temperature_error_K': 2.525257514207624e-08}
+Q800-hold0.5-n400 3 {'cycle': 3, 'max_species_cycle_change': 9.383099158766228e-09, 'state_change': 1.797562099170591e-12, 'elemental_residuals': {'C': -6.285094786860489e-07, 'H': -6.105029592798537e-07, 'O': -6.342953365546933e-07}, 'mass_residual': -6.303834149877153e-07, 'max_pressure_relative_error': 3.4096161214858256e-05, 'max_temperature_error_K': 2.4808969101286493e-08}

@@ -1,0 +1,89 @@
+{
+  "name": "inert",
+  "engine": "3.2.0",
+  "inputs": {
+    "feed": {
+      "N2": 1
+    },
+    "flow_sccm": 1600.0,
+    "standard_T_K": 273.15,
+    "standard_P_Pa": 101325,
+    "volume_m3": 9.228077898393764e-09,
+    "pressure_target_Pa": 101325,
+    "pressure_controller_K": 1e-07,
+    "period_s": 1.0,
+    "segments": [
+      [
+        0.025,
+        723.15,
+        2073.15
+      ],
+      [
+        0.1,
+        2073.15,
+        2073.15
+      ],
+      [
+        0.1,
+        2073.15,
+        723.15
+      ],
+      [
+        0.775,
+        723.15,
+        723.15
+      ]
+    ],
+    "samples_per_segment": 800
+  },
+  "basis": "mol product per mol inlet total carbon for CH4/CO2; mol per mol inlet for inert control",
+  "mol_per_feed_carbon": {
+    "N2": 0.9999987752114816
+  },
+  "carbon_yields": {
+    "N2": 0.0
+  },
+  "product_g_h": {
+    "N2": 119.98486241288244
+  },
+  "product_g_per_g_CFP_h": {
+    "N2": 4166.141056002863
+  },
+  "cycles": 3,
+  "history": [
+    {
+      "cycle": 1,
+      "max_species_cycle_change": null,
+      "state_change": null,
+      "elemental_residuals": {
+        "N": 1.2244793745912127e-06
+      },
+      "mass_residual": 1.2244793804035602e-06,
+      "max_pressure_relative_error": 3.1959764830391535e-05,
+      "max_temperature_error_K": 3.90029481422971e-06
+    },
+    {
+      "cycle": 2,
+      "max_species_cycle_change": 3.1911873143997127e-10,
+      "state_change": 4.298638334176985e-09,
+      "elemental_residuals": {
+        "N": 1.2247975164330359e-06
+      },
+      "mass_residual": 1.2247975244505974e-06,
+      "max_pressure_relative_error": 3.195976463299388e-05,
+      "max_temperature_error_K": 4.8013514515332645e-06
+    },
+    {
+      "cycle": 3,
+      "max_species_cycle_change": 9.559908420442298e-12,
+      "state_change": 1.530387327974836e-08,
+      "elemental_residuals": {
+        "N": 1.2247865179967467e-06
+      },
+      "mass_residual": 1.2247865328504755e-06,
+      "max_pressure_relative_error": 3.19597648894554e-05,
+      "max_temperature_error_K": 1.2632329799089348e-05
+    }
+  ],
+  "wall_s": 0.24324873700000182
+}

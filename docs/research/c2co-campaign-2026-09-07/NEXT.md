@@ -2,6 +2,15 @@
 
 ## Current: approved extension to 1600 sccm
 
+COMPLETED: run 34161531681 passed all gates in 95.931335446 s. Four new
+paired points, inert control and exact 400 sccm reproduction are archived in
+rph-flow-02-2026-09-07/data. Generated report combines 12 conditions. Budget
+reconciled; no reservation or active run. CO productivity decreases between
+800 and 1600 sccm for both holds, while C2H2 gains become small but positive.
+Do not call 800 sccm the exact optimum or C2H2 plateau an established
+asymptote. No automatic extension beyond 1600 sccm is queued. Text below
+describes the completed dispatch only.
+
 Reserve 240 s for rph-flow-02: 800/1600 sccm at both .1/.5 s holds.
 Read the extension in RPH-FLOW-01.md. Run only --extend, stop on failed
 gates, then archive and reconcile. No other batch may spend this reservation.

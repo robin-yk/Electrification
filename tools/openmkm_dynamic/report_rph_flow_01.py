@@ -34,6 +34,14 @@ def main():
         vals=[r['hold_s'],r['flow_sccm']]+[c.get(k,0) for k in major]+[sum(v for k,v in c.items() if k not in major),sum(c.values()),g.get('C2H2',0),g.get('CO',0),s.get('C2H2',0),s.get('CO',0)]
         lines.append('| '+' | '.join(f'{v:.7g}' for v in vals)+' |')
     lines+=['','Flow changes residence time at fixed volume. The imposed waveform does not establish that the heater can supply the increased heat load. All species, exact volume and conditions remain in report.json and raw files.']
+    if a.extend:
+        lines+=['','## High-flow response','', 'Productivity below is g-product g-CFP^-1 h^-1, with the same 28.8 mg CFP basis.']
+        for h in [.1,.5]:
+            pair={r['flow_sccm']:r for r in rows if r['hold_s']==h}
+            if 800 not in pair or 1600 not in pair:continue
+            changes={k:100*(pair[1600]['product_g_per_g_CFP_h'][k]/pair[800]['product_g_per_g_CFP_h'][k]-1) for k in ['C2H2','CO']}
+            lines+=['',f"At hold {h:g} s, doubling flow from 800 to 1600 sccm changes C2H2 productivity by {changes['C2H2']:+.2f}% and CO by {changes['CO']:+.2f}%."]
+        lines+=['','The sampled CO maximum is at 800 sccm for both holds, with a decline by 1600 sccm. C2H2 remains increasing but shows small incremental gains over this interval; its maximum has not been bracketed. No exact optimum or diffusion limitation is inferred.']
     (dest/'REPORT.md').write_text('\n'.join(lines)+'\n')
     print('\n'.join(lines))
 

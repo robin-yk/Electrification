@@ -1,0 +1,31 @@
+{
+  "commit": "9bbb7bc7d379fb24e6f9fc04e14d7a447524fe81",
+  "hashes": {
+    "tools/openmkm_dynamic/run_rph_flow_01.py": "d04cbb1b110a1260f531e39ad3d250422afd1ed8432dbfef9528b9da8f154f92",
+    "tools/openmkm_dynamic/run_rph_fixed_pulse.py": "2b1752063dc79179a64a0f4e15ea0befb839094032df3a886b86102c658b5dcb",
+    "tools/openmkm_dynamic/run_cjh_feed_ratio_01.py": "9d059b35e8602a1c569647a668b30ac3b85a32300b1d27d17a5e98d87bb0051f",
+    "tools/openmkm_dynamic/run_rph_screen_450.py": "5219ec88f1a24e814bdbe50f20afd9af1ec985de33f68da8e0bb2aa104b04710",
+    "tools/openmkm_dynamic/run_rph_fixed_gate.py": "44f891890dafbecbd7c5667f6ca73ac401423bc9a479a42485a5baf961b2b958",
+    "tools/cantera/mechanisms/aramco20.yaml": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+    "docs/research/rph-flow-01-2026-09-07/data/Q400-hold0.1-n800.json": "442dfc8a98d53735932dea4bb0ea07918fddd188e0167d7e6010cb0a3cab385a"
+  },
+  "jobs": [
+    [
+      800,
+      0.1
+    ],
+    [
+      800,
+      0.5
+    ],
+    [
+      1600,
+      0.1
+    ],
+    [
+      1600,
+      0.5
+    ]
+  ],
+  "cap_s": 240
+}
