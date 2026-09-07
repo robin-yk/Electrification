@@ -1,4 +1,4 @@
-"""Paired PAH comparison: CRECK 2003 HT+soot against the archived Aramco map.
+"""Paired mechanism comparison against the archived Aramco constant-temperature map.
 
 AramcoMech 2.0 stops at C8 and carries benzene as its largest ring, so every
 archived map here reports the carbon that reaches C2H2, C4H2 and C6H6 and then
@@ -6,9 +6,11 @@ stops. That leaves one question the archives cannot answer: how much of that
 carbon would keep going, to naphthalene and past it.
 
 This batch answers it by running four conditions taken from the archived maps
-under a mechanism that has the channel, CRECK 2003 high-temperature with PAH
-and soot-precursor lumps. The Aramco side is read from the archives and is not
-recomputed, so nothing about the archived result can move here.
+under a second mechanism, named with --mechanism. CRECK 2003 high temperature
+carries PAH and soot-precursor lumps and answers the question. GRI-Mech 3.0
+stops at C3, so it answers nothing about rings and instead shows what a
+mechanism ceiling does to the same four conditions. The Aramco side is read
+from the archives and is not recomputed, so nothing archived can move here.
 
 A changed mechanism is a new model. The two mechanisms are reported side by
 side and nothing is transferred between them: no optimum, no ranking, and no
@@ -49,6 +51,17 @@ SAMPLING_GATES = (("co2", 1750., .001), ("h2o", 1200., 1.))
 # Named rings tracked out of the C7+ bucket. Everything else in that bucket is
 # reported as a remainder, so the partition still closes.
 RINGS = ("C10H8", "C12H8", "C14H10", "C16H10")
+MECHANISM_LABELS = {
+    "creck": "CRECK 2003 high temperature with soot and NOx",
+    "gri": "GRI-Mech 3.0",
+}
+MECHANISM_CAVEATS = {
+    "creck": ("The CRECK BIN species are lumped soot precursors, not a measured soot yield."),
+    "gri": ("GRI-Mech 3.0 has no species above C3 and no aromatic chemistry, and it is a "
+            "natural-gas combustion mechanism that is not validated for oxygen-free pyrolysis "
+            "above about 1200 C. Its result here bounds what the mechanism can represent, not "
+            "what the chemistry does."),
+}
 
 
 def archived_aramco(feed, T, tau):
@@ -60,8 +73,8 @@ def archived_aramco(feed, T, tau):
     raise AssertionError(f"{feed} {T} C {tau} s is not in the archived map")
 
 
-def case_name(feed, T, tau):
-    return f"creck-{feed}-T{T:g}-tau{tau:g}"
+def case_name(mech, feed, T, tau):
+    return f"{mech}-{feed}-T{T:g}-tau{tau:g}"
 
 
 def pah_partition(case_json):
@@ -91,9 +104,9 @@ def _carbon_atoms(name):
 _CARBON = {}
 
 
-def load_carbon_counts():
+def load_carbon_counts(mechanism):
     import cantera as ct
-    gas = ct.Solution(MECHANISMS["creck"])
+    gas = ct.Solution(mechanism)
     return {s: gas.n_atoms(s, "C") for s in gas.species_names}
 
 
@@ -102,6 +115,9 @@ def main():
     ap.add_argument("--output-dir", type=Path, required=True)
     ap.add_argument("--worker", nargs=4, metavar=("FEED", "T", "TAU", "POINTS"))
     ap.add_argument("--name", default=None)
+    # The mechanism under test. Aramco is the archived side and is never rerun.
+    ap.add_argument("--mechanism", default="creck",
+                    choices=[k for k in MECHANISMS if k != "aramco"])
     a = ap.parse_args()
     out = a.output_dir.resolve()
     out.mkdir(parents=True, exist_ok=True)
@@ -109,7 +125,7 @@ def main():
     if a.worker:
         feed, T, tau, points = a.worker
         name = a.name
-        worker(out, float(T), float(tau), "creck", int(points), name, feed=FEEDS[feed])
+        worker(out, float(T), float(tau), a.mechanism, int(points), name, feed=FEEDS[feed])
         if name == "cold":
             m = json.loads((out / "cold-metrics.json").read_text())
             assert abs(m["CH4_conversion"]) < 1e-8, "cold limit is not zero conversion"
@@ -118,7 +134,11 @@ def main():
     start = time.monotonic()
     solver_sha = hashlib.sha256((ROOT / "tools/openmkm_dynamic/run_cstr_case.py").read_bytes()).hexdigest()
     aramco_sha = hashlib.sha256((ROOT / "tools/cantera/mechanisms/aramco20.yaml").read_bytes()).hexdigest()
-    creck_sha = hashlib.sha256(Path(MECHANISMS["creck"]).read_bytes()).hexdigest()
+    test_path = Path(MECHANISMS[a.mechanism])
+    if not test_path.exists():          # a mechanism Cantera ships, named not pathed
+        import cantera as ct
+        test_path = Path(ct.__file__).resolve().parent / "data" / MECHANISMS[a.mechanism]
+    test_sha = hashlib.sha256(test_path.read_bytes()).hexdigest()
     for feed in ARCHIVES:
         for directory in ARCHIVES[feed]:
             old = json.loads((ROOT / directory / "data/manifest.json").read_text())
@@ -132,16 +152,18 @@ def main():
                  for feed, T, tau in CONDITIONS}
 
     jobs = [("co2", 26.85, .1, 20, "cold")]
-    jobs += [(f, T, tau, 20, case_name(f, T, tau)) for f, T, tau in CONDITIONS]
-    jobs += [(f, T, tau, 40, "gate-sampling-" + case_name(f, T, tau))
+    jobs += [(f, T, tau, 20, case_name(a.mechanism, f, T, tau)) for f, T, tau in CONDITIONS]
+    jobs += [(f, T, tau, 40, "gate-sampling-" + case_name(a.mechanism, f, T, tau))
              for f, T, tau in SAMPLING_GATES]
 
     save(out, "manifest", dict(
         commit=subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
         jobs=jobs, budget_s=LIMIT, per_worker_s=PER_WORKER,
         script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-        solver_sha256=solver_sha, mechanism_sha256=creck_sha,
-        aramco_sha256=aramco_sha, mechanism="CRECK 2003 high temperature with soot and NOx",
+        solver_sha256=solver_sha, mechanism_sha256=test_sha,
+        aramco_sha256=aramco_sha, mechanism_key=a.mechanism,
+        mechanism_file=MECHANISMS[a.mechanism],
+        mechanism=MECHANISM_LABELS[a.mechanism],
         feeds=FEEDS, pressure_Pa=101325.,
         closure="constant pressure prescribed constant T, equal inlet/outlet mass/tau; variable volume",
         reference_archives={k: v["archive"] for k, v in reference.items()},
@@ -150,10 +172,9 @@ def main():
               "or validation status transfers between them."),
         limitations=("Prescribed gas temperature, no heater energy balance, no particle "
                      "dynamics and no experimental validation of either mechanism at these "
-                     "conditions. The CRECK BIN species are lumped soot precursors, not a "
-                     "measured soot yield.")))
+                     "conditions. " + MECHANISM_CAVEATS[a.mechanism])))
 
-    _CARBON.update(load_carbon_counts())
+    _CARBON.update(load_carbon_counts(MECHANISMS[a.mechanism]))
     done, rows, gates, active = [], [], [], None
     try:
         for feed, T, tau, points, name in jobs:
@@ -183,9 +204,10 @@ def main():
                 save(out, "gates", gates)
             elif name != "cold":
                 key = f"{feed}-{T:g}-{tau:g}"
-                rows.append(dict(feed=feed, T_C=T, tau_s=tau, mechanism="creck",
-                                 creck=dict(metrics=metrics, pah=partition),
-                                 aramco=reference[key]))
+                rows.append({"feed": feed, "T_C": T, "tau_s": tau,
+                             "mechanism": a.mechanism,
+                             a.mechanism: dict(metrics=metrics, pah=partition),
+                             "aramco": reference[key]})
                 save(out, "summary", rows)
             done.append(name)
             print(json.dumps(dict(case=name, wall_s=metrics["wall_s"])), flush=True)
