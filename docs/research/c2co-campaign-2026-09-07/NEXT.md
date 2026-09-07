@@ -2,6 +2,17 @@
 
 ## Current: single-objective C2H2 carbon yield
 
+STOPPED before chemistry. Proposal completed but frozen-model acquisition
+audit failed: chosen EI is below both the incumbent and a 2048-point Sobol
+alternative. Read rph-yield-01-2026-09-07/REPORT.md and acquisition-audit.json.
+No Aramco run or new validated point. Charge proposal plus both audit process
+times; reservation released. Still 39 validated 450 C observations. Keep
+heartbeat paused and do not dispatch this candidate. A reviewed acquisition
+search correction and an explicit quality gate must precede any retry.
+The initial high-uncertainty interpretation was insufficient; no chemical
+meaning should be assigned to the rejected recommendation. Historical
+reservation text below is no longer active.
+
 User specified C2H2 only. Read RPH-YIELD-01.md. Reserve 240 s for proposal
 and one direct verification, charge proposal before reducing reservation to
 150 s. Fit 39 validated points to carbon yield, not productivity. No second

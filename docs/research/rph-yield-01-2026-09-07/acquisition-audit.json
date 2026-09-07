@@ -1,0 +1,14 @@
+{
+  "status": "failed",
+  "chosen_EI_standardized": 0.00011960240226471797,
+  "incumbent_EI_standardized": 0.0029047252610325813,
+  "sobol_best_EI_standardized": 0.008671929128468037,
+  "sobol_best_normalized_x": [
+    0.8904154896736145,
+    0.9891878366470337,
+    0.1134008914232254
+  ],
+  "audit": "Frozen model, correct standardized incumbent, 2048 deterministic Sobol evaluations; not a new proposal or global maximum proof",
+  "wall_s": 0.06916629202896729,
+  "reaction_runs": 0
+}

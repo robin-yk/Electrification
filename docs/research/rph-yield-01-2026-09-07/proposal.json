@@ -1,0 +1,50 @@
+{
+  "peak_C": 1200.0,
+  "hold_s": 0.025,
+  "flow_sccm": 1600.0,
+  "normalized_x": [
+    0.0,
+    0.0,
+    1.0
+  ],
+  "predicted_carbon_yield_pct": [
+    0.2003633975982666
+  ],
+  "posterior_sd_percentage_points": [
+    3.3117542266845703
+  ],
+  "incumbent": {
+    "peak_C": 1800.0,
+    "hold_s": 0.5,
+    "flow_sccm": 50,
+    "x": [
+      1.0,
+      1.0,
+      0.0
+    ],
+    "y": [
+      11.173434652866495
+    ],
+    "source": "docs/research/rph-450-pilot-01-2026-09-07/data/T1800-hold0.5-n800.json"
+  },
+  "training_n": 39,
+  "seed": 20260908,
+  "acquisition": "EI",
+  "objective_mean": [
+    2.8429408073425293
+  ],
+  "objective_std": [
+    3.343702793121338
+  ],
+  "versions": {
+    "nextorch": "0.4.0",
+    "botorch": "0.4.0",
+    "gpytorch": "1.4.0",
+    "torch": "2.2.2",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1"
+  },
+  "source_sha256": "ea87a4f25ff5f8fe259fd10cab3871aaa854d3301a19e2c9b0f309e62cbc1cb8",
+  "commit": "15571d4ae2a7281e9686135f94aad984264d0f8e",
+  "uncertainty_note": "Single-objective GP posterior, not validated chemical uncertainty; CO is diagnostic only"
+}

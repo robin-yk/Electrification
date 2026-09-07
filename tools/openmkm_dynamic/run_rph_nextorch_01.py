@@ -22,6 +22,8 @@ def main():
     out=a.output_dir.resolve();out.mkdir(parents=True,exist_ok=True)
     proposal=base.ROOT/'docs/research/rph-yield-01-2026-09-07/proposal.json' if a.yield_objective else PROPOSAL
     batch='rph-yield-01' if a.yield_objective else 'rph-nextorch-01'
+    if a.yield_objective:
+        assert base.read(proposal.with_name('acquisition-audit.json'))['status']=='passed','yield acquisition audit has not passed'
     d=base.read(proposal);p,h,q=d['peak_C'],d['hold_s'],d['flow_sccm'];assert 50<=q<=1600
     if a.worker:
         if a.worker=='anchor':p,h,q=1800,.1,400
