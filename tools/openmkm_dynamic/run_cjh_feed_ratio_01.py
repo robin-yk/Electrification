@@ -114,4 +114,3 @@ def main():
         write(out/"status.json",dict(status="stopped",completed=done,active=active,reason=str(e),wall_s=time.monotonic()-started))
         raise
 if __name__=="__main__":main()
-
