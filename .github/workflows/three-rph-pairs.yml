@@ -1,0 +1,30 @@
+name: Three GRI Aramco RPH pairs
+on:
+  push:
+    branches: [codex/three-rph-pairs-20260906]
+    paths: [.github/workflows/three-rph-pairs.yml, tools/openmkm_dynamic/run_three_pairs.py]
+permissions:
+  contents: read
+jobs:
+  pairs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUNBUFFERED: '1'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r tools/cantera/requirements.txt
+      - name: Sequential gated pairs
+        run: |
+          mkdir -p out/three-pairs
+          python -u tools/openmkm_dynamic/run_three_pairs.py 2>&1 | tee out/three-pairs/run.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: three-rph-pairs
+          path: out/three-pairs/
