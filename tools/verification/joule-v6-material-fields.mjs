@@ -4,7 +4,7 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {calculate,solveThermal2D,MATERIALS,propertiesAt} from '../../apps/joule/solver.js';
 import {defaultInput} from './joule.mjs';
-const path=new URL('../../docs/research/joule-v6-2026-09-07/material-fields.json',import.meta.url);
+const path=new URL('../../docs/research/joule-v6-2026-09-07/material-fields-final.json',import.meta.url);
 if(fs.existsSync(path))throw Error('Preserve existing output');
 const out={status:'running',commit:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),solverHash:createHash('sha256').update(fs.readFileSync(new URL('../../apps/joule/solver.js',import.meta.url))).digest('hex'),targetC:900,rows:[]};
 const save=()=>fs.writeFileSync(path,JSON.stringify(out));
@@ -27,7 +27,10 @@ function solve(name,fine=false,matched){
  out.rows.push(row);save();console.log(name,fine,JSON.stringify({avg:row.avg,max:row.max,spread:row.max-row.min,k:row.k,I:s.op.current,V:s.op.voltage}));return row;
 }
 try{
- for(const name of ['SiC','SiSiC (Si-infiltrated SiC)','MoSi₂','Kanthal A-1 (FeCrAl)','Inconel 601'])solve(name);
+ // The preserved pilot failed the MoSi2 current-density feasibility gate.
+ // Exclude it from this matched-temperature study without relaxing any limit.
+ out.excluded=['MoSi₂: 900 C target infeasible within preset current-density limit at this geometry'];
+ for(const name of ['SiC','SiSiC (Si-infiltrated SiC)','Kanthal A-1 (FeCrAl)','Inconel 601'])solve(name);
  for(const name of ['SiC','Kanthal A-1 (FeCrAl)']){const a=out.rows.find(r=>r.name===name);const b=solve(name,true,a.input);if(Math.max(Math.abs(a.max-b.max),Math.abs(a.min-b.min))>2)throw Error('Refinement gate '+name);}
  out.status='complete';save();
 }catch(e){out.status='stopped';out.reason=e.message;save();throw e;}
