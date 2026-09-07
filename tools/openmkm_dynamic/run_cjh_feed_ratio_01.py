@@ -90,27 +90,35 @@ def worker(out,name,x,tight=False,cold=False):
     write(out/(name+".json"),result)
 def main():
     ap=argparse.ArgumentParser();ap.add_argument("--output-dir",type=Path,required=True)
+    ap.add_argument("--refine",action="store_true")
     ap.add_argument("--worker",nargs=4);a=ap.parse_args()
     out=a.output_dir.resolve();out.mkdir(parents=True,exist_ok=True)
     if a.worker:
         name,x,tight,cold=a.worker;worker(out,name,float(x),int(tight),bool(int(cold)));return
     ledger=read(ROOT/"docs/research/c2co-campaign-2026-09-07/budget.json")
     assert ledger["spent_s"]+ledger["reserved_s"]<=3600
-    assert any(b["id"]==BATCH and b["reserved_s"]==540 for b in ledger["batches"])
+    batch,cap=("cjh-feed-ratio-03",180) if a.refine else (BATCH,540)
+    assert any(b["id"]==batch and b["reserved_s"]==cap for b in ledger["batches"])
     jobs=[("cold",.5,2,1),("anchor",.5,2,0),("anchor-tight",.5,3,0),
           ("ratio-1-4",.2,2,0),("ratio-1-2",1/3,2,0),
           ("ratio-2-1",2/3,2,0),("ratio-4-1",.8,2,0)]
+    if a.refine:
+        prior=ROOT/"docs/research/cjh-feed-ratio-02-2026-09-07/data"
+        assert read(prior/"status.json")["status"]=="completed"
+        assert len(read(prior/"gates.json"))==2
+        assert hashlib.sha256(MECH.read_bytes()).hexdigest()==read(prior/"manifest.json")["mechanism_sha256"]
+        jobs=[("ch4-40",.4,2,0),("ch4-60",.6,2,0)]
     write(out/"manifest.json",dict(commit=subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip(),
        script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
        mechanism_sha256=hashlib.sha256(MECH.read_bytes()).hexdigest(),jobs=jobs,
-       reference=str(REF.relative_to(ROOT)),budget_s=540,worker_limit_s=100,
+       reference=str(REF.relative_to(ROOT)),budget_s=cap,worker_limit_s=100,
        note="New fixed-volume, constant feed model; pressure controller enforces near-1-atm. No device heating model."))
     started=time.monotonic();done=[];gates=[];active=None
     try:
         for name,x,tight,cold in jobs:
             active=name
             write(out/"status.json",dict(status="running",completed=done,active=name))
-            left=540-(time.monotonic()-started)
+            left=cap-(time.monotonic()-started)
             assert left>5,"batch exhausted"
             with (out/(name+".log")).open("w") as log:
                 subprocess.run([sys.executable,__file__,"--output-dir",str(out),"--worker",

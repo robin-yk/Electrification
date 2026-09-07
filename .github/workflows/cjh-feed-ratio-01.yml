@@ -22,9 +22,9 @@ jobs:
       - run: pip install -r tools/cantera/requirements.txt
       - name: Run gated ratio pilot
         timeout-minutes: 10
-        run: python -u tools/openmkm_dynamic/run_cjh_feed_ratio_01.py --output-dir out/cjh-feed-ratio-02
+        run: python -u tools/openmkm_dynamic/run_cjh_feed_ratio_01.py --refine --output-dir out/cjh-feed-ratio-03
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: cjh-feed-ratio-02
-          path: out/cjh-feed-ratio-02/
+          name: cjh-feed-ratio-03
+          path: out/cjh-feed-ratio-03/
