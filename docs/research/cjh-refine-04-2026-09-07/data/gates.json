@@ -1,0 +1,18 @@
+[
+  {
+    "name": "gate-T1800-tau0.001",
+    "reference": "docs/research/cjh-refine-03-2026-09-07/data/T1800-tau0.001-metrics.json",
+    "worst_species": "H2",
+    "max_abs_mol_per_feed_C": 3.674838211509268e-14,
+    "conversion_abs": 1.4765966227514582e-14,
+    "negligible_omissions": []
+  },
+  {
+    "name": "gate-T1600-tau0.0003",
+    "reference": "docs/research/cjh-refine-03-2026-09-07/data/T1600-tau0.0003-metrics.json",
+    "worst_species": "CO2",
+    "max_abs_mol_per_feed_C": 1.723066134218243e-13,
+    "conversion_abs": 1.7885692926711272e-13,
+    "negligible_omissions": []
+  }
+]

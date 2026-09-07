@@ -37,7 +37,7 @@ class ValidationGateTests(unittest.TestCase):
 
     def test_short_residence_plan_has_no_repeated_prior_points(self):
         root = Path(__file__).resolve().parents[2]
-        for batch, count in (("03", 33), ("04", 45)):
+        for batch, count in (("03", 33), ("04", 45), ("05", 57)):
             with self.subTest(batch=batch):
                 plan = json.loads((Path(__file__).parent/f"cjh-refine-{batch}.json").read_text())
                 new = {tuple(row) for row in plan["new_points"]}

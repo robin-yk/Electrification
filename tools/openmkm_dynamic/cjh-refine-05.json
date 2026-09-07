@@ -1,0 +1,15 @@
+{
+  "batch_id": "cjh-refine-05",
+  "references": [
+    [1750, 0.001, "docs/research/cjh-refine-04-2026-09-07/data/T1750-tau0.001-metrics.json"],
+    [1800, 0.00003, "docs/research/cjh-refine-04-2026-09-07/data/T1800-tau3e-05-metrics.json"]
+  ],
+  "new_points": [[1800,0.00001],[1800,0.000003],[1800,0.00006],[1750,0.00001],[1750,0.00003],[1750,0.00006],[1750,0.0001],[1700,0.00006],[1750,0.002],[1750,0.003],[1725,0.001],[1725,0.002]],
+  "prior_summaries": [
+    "docs/research/aramco-cjh-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-01-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-02-resume-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-03-2026-09-07/data/summary.json",
+    "docs/research/cjh-refine-04-2026-09-07/data/summary.json"
+  ]
+}

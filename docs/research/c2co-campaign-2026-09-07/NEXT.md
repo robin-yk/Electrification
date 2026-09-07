@@ -14,18 +14,20 @@ remain justified by measured map variation/error and within the 3600-second cap.
 
 ## Research order
 
-Current state: 45 unique CJH conditions completed. Latest combined map is
-../cjh-refine-03-2026-09-07/REPORT.md; run 34088470900 passed both gates
+Current state: 57 unique CJH conditions completed. Latest combined map is
+../cjh-refine-04-2026-09-07/REPORT.md; run 34092910653 passed both gates
 and all twelve new points. All completed and failed elapsed time is reconciled
-in budget.json. Batch cjh-refine-04 is reserved for two maxima gates and twelve
-C2H4 short-residence/temperature-gap points. Workflow
-"CJH ethylene boundary refinement 04" run ID: 34092910653.
+in budget.json. Batch cjh-refine-05 is reserved for two maxima gates and twelve
+C2H4 short-residence/C2H2 peak-bracketing points. Locate workflow
+"CJH peak bracketing refinement 05" if its ID is not yet recorded.
 Do not dispatch a duplicate. Plan and run card are in tools/openmkm_dynamic/.
 
 Next: read the latest report and gates.json. The C2H4 maximum still lies at
-the lower-tau boundary; C2H2 improvement has become small and its maximum
-lies at the upper T boundary, not the lower-tau boundary. Batch 04 probes
-C2H4 at shorter tau and adds temperature gaps without raising the T ceiling. Use the
+the lower-tau boundary; C2H2 now peaks at an intermediate temperature. Batch
+05 brackets these candidates without raising the 1800 C ceiling. Once the
+lower-tau decline is observed, stop extending that boundary automatically;
+assess map refinement gain and prioritize unresolved numerical/model checks.
+Do not spend toward 100 points merely to reach a count. Use the
 corrected quantitative union comparator, not strict positive-only key equality.
 Record sample need from the preceding map before reserving or launching.
 Alternate initial-state and integrator-tolerance robustness remain untested;
