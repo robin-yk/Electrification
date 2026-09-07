@@ -1,0 +1,9 @@
+{
+  "status": "stopped",
+  "completed": [
+    "cold"
+  ],
+  "active": "anchor",
+  "reason": "Command '['/private/tmp/aramco-repro-32-env/bin/python', '/private/tmp/aramco-feed-ratio-20260907/tools/openmkm_dynamic/run_cjh_feed_ratio_01.py', '--output-dir', '/private/tmp/aramco-feed-ratio-20260907/docs/research/cjh-feed-ratio-01-2026-09-07/data', '--worker', 'anchor', '0.5', '0', '0']' timed out after 99.9999276670278 seconds",
+  "wall_s": 130.3553773749736
+}
