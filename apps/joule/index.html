@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Browser-based 0D Joule heating calculator for material, geometry, electrical, and thermal screening.">
-  <title>Joule Heating: 0D, 2D and 3D</title>
+  <title>Joule Heating 2D Model</title>
   <link rel="preload" href="../../assets/fonts/roboto-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../assets/fonts/roboto.css">
   <style>
@@ -913,9 +913,8 @@
   <nav class="tabs-shell" aria-label="Calculator sections">
     <div class="tabs" role="tablist">
       <button class="tab" data-tab="howto" role="tab" aria-selected="false">How to Use</button>
-      <button class="tab active" data-tab="calculator" role="tab" aria-selected="true">0D Single Design</button>
+      <button class="tab active" data-tab="calculator" role="tab" aria-selected="true">Single Design</button>
       <button class="tab" data-tab="thermal2d" role="tab" aria-selected="false">2D Thermal Field</button>
-      <button class="tab" data-tab="thermal3d" role="tab" aria-selected="false">3D Enclosed Field</button>
       <button class="tab" data-tab="dynamic" role="tab" aria-selected="false">Dynamic</button>
       <button class="tab" data-tab="screening" role="tab" aria-selected="false">Screening</button>
       <button class="tab" data-tab="reference" role="tab" aria-selected="false">Reference</button>
@@ -923,15 +922,6 @@
   </nav>
 
   <main>
-    <section id="thermal3d" class="panel" role="tabpanel">
-      <h2 class="section-title">3D enclosed reactor</h2>
-      <p class="section-lede">Cylindrical r/θ/z fields with the Joule2D material laws, wall, gas, purge, radiation and end conditions. The original <a href="./3d/index.html" target="_blank" rel="noopener">solid-only Cartesian 3D model</a> remains separate.</p>
-      <button id="import3d" type="button" disabled>Use current cylindrical design in 3D</button>
-      <button id="importDyn3d" type="button" disabled>Import Dynamic settings too</button>
-      <label><input id="equivalent3d" type="checkbox"> For a rectangular design, explicitly use the same surface-equivalent cylinder as 2D</label>
-      <p id="import3dNote" role="status">Transfers temperature-dependent materials, porosity, all supply settings and enclosure conditions. Select a cylinder in Single Design. Dynamic import also transfers the drive, period, duty, duration and time step; a steady start is recomputed in 3D.</p>
-      <iframe id="joule3dFrame" title="Joule3D enclosed reactor" data-src="./3d/enclosure.html" style="width:100%;height:1400px;border:1px solid #e3e7ea;border-radius:8px"></iframe>
-    </section>
     <section id="howto" class="panel" role="tabpanel">
       <p class="section-kicker">Five-minute workflow</p>
       <h2 class="section-title">How to use this model</h2>
@@ -3278,13 +3268,6 @@
     }
 
     function activateTab(name) {
-      if (name === 'thermal3d') {
-        const frame = $('joule3dFrame');
-        if (!frame.getAttribute('src')) {
-          frame.addEventListener('load', () => { $('import3d').disabled = false; $('importDyn3d').disabled = false; }, {once:true});
-          frame.src = frame.dataset.src;
-        }
-      }
       document.querySelectorAll(".tab").forEach((tab) => {
         const active = tab.dataset.tab === name;
         tab.classList.toggle("active", active);
@@ -3303,31 +3286,6 @@
       }
       if (name === "dynamic") { suggestPulsePeriod(); syncDynControls(); renderEquivalenceNotes(); }
     }
-
-    $('import3d').addEventListener('click', () => {
-      try {
-        const original = baseInputs(), cfg = get2DConfig();
-        if (original.shape !== 'cylinder' && !$('equivalent3d').checked) throw Error('Select a cylinder, or explicitly enable the same equivalent-cylinder approximation as 2D.');
-        const eq=equivalentCylinder(original,original.material),x=eq.x;
-        const geometryNote=eq.substituted?'Rectangular input represented by the 2D surface-equivalent cylinder. Not an actual rectangular 3D domain.':'Actual cylindrical geometry.';
-        $('joule3dFrame').contentWindow.postMessage({type:'joule-enclosure-import', x, cfg,geometryNote}, location.origin);
-        $('import3dNote').textContent = geometryNote+' Sent material tables, porosity, supply limits, contacts, wall and gas settings. Choose steady or transient operation inside 3D.';
-      } catch (error) { $('import3dNote').textContent = error.message; }
-    });
-    $('importDyn3d').addEventListener('click', () => {
-      try {
-        const original=baseInputs(), cfg=get2DConfig(), p=dynPlanFromInputs();
-        if(original.shape!=='cylinder'&&!$('equivalent3d').checked)throw Error('Select a cylinder or explicitly enable the equivalent-cylinder approximation.');
-        const eq=equivalentCylinder(original,original.material),x=eq.x;
-        const geometryNote=eq.substituted?'Rectangular input represented by the 2D surface-equivalent cylinder. Not an actual rectangular 3D domain.':'Actual cylindrical geometry.';
-        const plan={study:'transient',startK:x.ambientK,dt:p.dt,duration:p.duration,
-          period:p.period,duty:p.drive==='off'?0:p.drive==='on'?1:p.duty,
-          dtGrowth:p.dtGrowth,maxDt:p.maxDt,steadyTol:p.steadyTol,
-          initialSteady:$('dynStart').value==='steady'};
-        $('joule3dFrame').contentWindow.postMessage({type:'joule-enclosure-import',x,cfg,plan,geometryNote},location.origin);
-        $('import3dNote').textContent='Sent design and Dynamic settings. The 3D march resolves pulse edges; its time sampling can differ from 2D cycle-averaged steps. Review settings before calculating.';
-      }catch(error){$('import3dNote').textContent=error.message;}
-    });
 
     // The three published-reactor cases live in crosscheck.js so that
     // tools/verification/crosscheck.mjs can regenerate every number in these

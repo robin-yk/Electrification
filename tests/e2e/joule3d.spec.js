@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 
-test('Joule tabs transfer the full cylinder design and compare enclosed 3D with 2D',async({page},testInfo)=>{
+// Historical integration coverage, retained for the experimental integration.
+test.skip('Joule tabs transfer the full cylinder design and compare enclosed 3D with 2D',async({page},testInfo)=>{
   const errors=[];page.on('pageerror',error=>errors.push(String(error)));
   await page.goto('/apps/joule/');
   await page.selectOption('#shape','cylinder');
@@ -32,5 +33,18 @@ test('Joule tabs transfer the full cylinder design and compare enclosed 3D with 
   await expect(page.locator('#import3dNote')).toContainText('explicitly enable');
   await page.check('#equivalent3d');await page.click('#import3d');
   await expect(frame.locator('#design')).toContainText('Not an actual rectangular 3D domain');
+  expect(errors).toEqual([]);
+});
+
+test('Joule main retains its original navigation without embedded 3D', async ({page}) => {
+  const errors=[]; page.on('pageerror', error => errors.push(String(error)));
+  await page.goto('/apps/joule/');
+  await expect(page).toHaveTitle('Joule Heating 2D Model');
+  await expect(page.getByRole('tab')).toHaveText([
+    'How to Use', 'Single Design', '2D Thermal Field', 'Dynamic', 'Screening', 'Reference'
+  ]);
+  await expect(page.locator('#joule3dFrame')).toHaveCount(0);
+  await expect(page.locator('#import3d')).toHaveCount(0);
+  await expect(page.locator('#tssValue')).not.toHaveText('—');
   expect(errors).toEqual([]);
 });

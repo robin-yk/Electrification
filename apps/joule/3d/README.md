@@ -1,6 +1,11 @@
 # Joule3D integration
 
-## Enclosed cylindrical model (current main-page entry)
+## Enclosed cylindrical model (standalone experimental code)
+
+The main Joule page has been restored to its pre-integration version at
+`ad2545d`. It has no 3D tab, embedded page or design-transfer buttons. Both 3D
+models and their numerical tests remain preserved here. The parent-page import
+workflow described below is historical and is not available in the main UI.
 
 `enclosure.js` builds a coupled r/theta/z finite-volume system from the shared
 Joule2D radial/axial operators. Each angular sector receives its fraction of
@@ -8,11 +13,11 @@ every volume, conductance, radiation exchange, gas enthalpy flux and storage
 term. Periodic angular faces couple both temperature and electrical potential.
 This is not an array of independent 2D solutions or a revolved 2D picture.
 
-The main Joule 3D tab now opens `enclosure.html`. Import the cylindrical design
-from the parent page, choose the grid and run. Compare with 2D uses the same
+The former main Joule 3D tab opened `enclosure.html` and imported a cylindrical
+design from the parent page. Compare with 2D uses the same
 radial/axial grid and boundary data. The original Cartesian solid-only model
 is preserved at `index.html`; the earlier import adapter is still available
-for that legacy model but no longer drives the main tab.
+for that legacy model. Neither model is linked from the restored main page.
 
 ### Feature transfer
 
@@ -69,8 +74,9 @@ second-order angular Fourier-mode conduction, porous/electrode parity,
 temperature-dependent transient parity, pulse energy and rejected inputs.
 The paired steady test prints its measured temperature differences and closure.
 
-`npx playwright test tests/e2e/joule3d.spec.js` checks parent import, worker
-execution, paired comparison, warm-start quench, field selection and CSV export.
+`npx playwright test tests/e2e/joule3d.spec.js` checks the restored navigation.
+The historical parent-import integration test is retained but skipped because
+that entry point has been removed from the main page.
 `npm test` checks the whole repository and `npm run build` checks deployment
 assets. The existing 2D solver and manuscript figure generators are unchanged.
 
