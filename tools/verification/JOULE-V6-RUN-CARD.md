@@ -30,3 +30,14 @@ screening maps are equivalent cylinders, including CFP; they are not a
 resolved paper-strip or channel model and must be labelled accordingly. Stop on a
 failed gate or budget. Only v6 figures are new; do not replace archived data.
 Command: node tools/verification/joule-v6.mjs
+
+V6 assembly supplement, authorized by the request to rerun and deliver v6:
+approximately 1200 additional lumped points, under one minute expected.
+Recompute CFP fixed-thickness strip maps and dimensions, three supplied
+commercial voltage/current/power envelopes and resistivity screening.
+No optimization or fitted inference is performed. Every result must be finite
+and free of solver input errors. A separate CFP thermal ODE comparison uses
+the existing RPH module, no chemistry, and explicitly different thermal
+boundaries; require periodic convergence and energy residual below 1%.
+Inputs and hashes are saved to supplement.json; existing arrays are preserved.
+Command: node tools/verification/joule-v6-supplement.mjs
