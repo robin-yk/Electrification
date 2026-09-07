@@ -1,0 +1,14 @@
+START T1500-tau0.1 substeps 21
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_three_pairs.py:88: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  gas = ct.Solution(mech)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_three_pairs.py:88: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  gas = ct.Solution(mech)
+RESULT T1500-tau0.1 {"carbon_yields_per_feed_carbon": {"C2H2": 0.16612684561817753, "C2H4": 0.003111796888969482, "C2H6": 8.175681869145409e-05, "C6H6": 0.017246851814797015, "CO": 0.6377096869776289, "C2_total": 0.16958157255828987, "C6_total": 0.017998777954149787}, "CH4_conversion": 0.8712956044871233, "cycles": 5, "boundary_residual": 6.494804694057166e-14, "element_residuals": {"C": 6.219159376080112e-15, "H": -4.370760587640667e-14, "O": 6.066303480369612e-14}, "wall_s": 8.305754504999868}

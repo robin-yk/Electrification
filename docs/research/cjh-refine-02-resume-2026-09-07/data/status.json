@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "completed": [
+    "gate-T1600-tau0.01",
+    "gate-T1400-tau0.01",
+    "gate-T1400-tau0.3",
+    "T1500-tau0.003",
+    "T1500-tau0.01",
+    "T1500-tau0.03",
+    "T1500-tau0.1",
+    "T1700-tau0.003",
+    "T1700-tau0.01",
+    "T1700-tau0.03",
+    "T1700-tau0.1",
+    "T1600-tau0.003",
+    "T1600-tau0.03",
+    "T1300-tau0.01",
+    "T1300-tau0.03"
+  ],
+  "map_points": 12,
+  "gates_passed": 3,
+  "wall_s": 172.37044121199983
+}

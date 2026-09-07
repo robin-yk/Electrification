@@ -14,17 +14,23 @@ remain justified by measured map variation/error and within the 3600-second cap.
 
 ## Research order
 
-Current state: refinement run 34084593440 completed all 12 new points and its
-anchor. Raw status is archived under ../cjh-refine-01-2026-09-07/data/.
-The combined 21-point map is in ../cjh-refine-01-2026-09-07/REPORT.md.
-Its actual calculation time has been reconciled in budget.json. Refinement 02
-run 34085150481 stopped on a diagnosed positive-only species-key comparison
-bug, after two completed integrations. Its original output is archived unchanged.
-The comparison is corrected with a failing-first regression test. A separate
-reservation cjh-refine-02-resume reuses those two raw gates and completes the
-third gate before any new point. Read CJH-REFINE-02-RUN-CARD.md and the archive
-README. Locate workflow "CJH refinement 02 corrected comparison" for its ID.
-Do not dispatch a duplicate or launch another batch while it is reserved.
+Current state: 33 unique CJH conditions completed. Latest combined map is
+../cjh-refine-02-resume-2026-09-07/REPORT.md; run 34085563713 passed all three
+sampling/horizon gates and completed twelve new points. Its two reused raw
+gates came from the archived stopped run 34085150481. The stop was caused by
+a diagnosed positive-only dictionary-key comparison bug, fixed by a
+failing-first regression test; no core chemistry solver change. All completed
+and failed elapsed time is reconciled in budget.json. No batch is reserved.
+
+Next: read the latest report and gates.json. The sampled C2H2 and C2H4 maxima
+both lie at the new short-residence boundary. Prepare a bounded lower-tau
+extension with matching temperatures and gate the new maxima first. Use the
+corrected quantitative union comparator, not strict positive-only key equality.
+Record sample need from the preceding map before reserving or launching.
+Alternate initial-state and integrator-tolerance robustness remain untested;
+sampling/horizon agreement alone does not close those questions. Keep the
+mechanism and reactor closure fixed for the next map comparison. Do not call
+the current boundary candidates global optima or launch blind retries.
 
 1. Archive and analyze the completed Aramco 3-by-3 CJH baseline. Preserve
    carbon yields, all-species inventories, C2H2/CO Pareto membership, C2H4,

@@ -1,0 +1,144 @@
+{
+  "commit": "3be6f1bf2525008a03eb9f17c09132ec8665a444",
+  "jobs": [
+    [
+      1600,
+      0.01,
+      "gate",
+      "gate-T1600-tau0.01",
+      "docs/research/cjh-refine-01-2026-09-07/data/T1600-tau0.01-metrics.json"
+    ],
+    [
+      1400,
+      0.01,
+      "gate",
+      "gate-T1400-tau0.01",
+      "docs/research/aramco-cjh-2026-09-07/data/T1400-tau0.01-metrics.json"
+    ],
+    [
+      1400,
+      0.3,
+      "gate",
+      "gate-T1400-tau0.3",
+      "docs/research/cjh-refine-01-2026-09-07/data/T1400-tau0.3-metrics.json"
+    ],
+    [
+      1500,
+      0.003,
+      "map",
+      "T1500-tau0.003",
+      null
+    ],
+    [
+      1500,
+      0.01,
+      "map",
+      "T1500-tau0.01",
+      null
+    ],
+    [
+      1500,
+      0.03,
+      "map",
+      "T1500-tau0.03",
+      null
+    ],
+    [
+      1500,
+      0.1,
+      "map",
+      "T1500-tau0.1",
+      null
+    ],
+    [
+      1700,
+      0.003,
+      "map",
+      "T1700-tau0.003",
+      null
+    ],
+    [
+      1700,
+      0.01,
+      "map",
+      "T1700-tau0.01",
+      null
+    ],
+    [
+      1700,
+      0.03,
+      "map",
+      "T1700-tau0.03",
+      null
+    ],
+    [
+      1700,
+      0.1,
+      "map",
+      "T1700-tau0.1",
+      null
+    ],
+    [
+      1600,
+      0.003,
+      "map",
+      "T1600-tau0.003",
+      null
+    ],
+    [
+      1600,
+      0.03,
+      "map",
+      "T1600-tau0.03",
+      null
+    ],
+    [
+      1300,
+      0.01,
+      "map",
+      "T1300-tau0.01",
+      null
+    ],
+    [
+      1300,
+      0.03,
+      "map",
+      "T1300-tau0.03",
+      null
+    ]
+  ],
+  "budget_s": 540,
+  "per_worker_s": 120,
+  "hashes": {
+    "solver_sha256": "a7b5083148fe20c867634618afe94c543198485e9aed99662d0a7c1adc2786a6",
+    "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc"
+  },
+  "reused_raw": [
+    {
+      "file": "docs/research/cjh-refine-02-2026-09-07/data/gate-T1600-tau0.01.json",
+      "sha256": "92a7da235c05b3365718ec3d5a1b7078ebd258878834ea145bae2326bc136de5"
+    },
+    {
+      "file": "docs/research/cjh-refine-02-2026-09-07/data/gate-T1400-tau0.01.json",
+      "sha256": "235c4e1449f205d37b0c3a02f0a808f239779f610777a1b268a118077155f96c"
+    }
+  ],
+  "closure": "constant pressure prescribed constant T, equal inlet/outlet mass/tau; variable volume",
+  "feed": "CH4:0.5, CO2:0.5",
+  "pressure_Pa": 101325.0,
+  "strict_overrides": {
+    "min_cycles": 20,
+    "max_cycles": 100,
+    "cycle_tolerance": 1e-10,
+    "cycle_output_tolerance": 1e-10,
+    "stable_cycles_required": 5
+  },
+  "gate_points": 80,
+  "map_points": 20,
+  "expansion_evidence": {
+    "coarse_linear_C2H2_yield": 0.09730227997118929,
+    "observed_C2H2_yield": 0.2043465717154457,
+    "abs_error": 0.10704429174425642
+  },
+  "limitations": "No solver rtol/atol or alternate initial-state test; prescribed gas T, not an electrical device."
+}
