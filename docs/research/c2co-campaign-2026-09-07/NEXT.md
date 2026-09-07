@@ -12,6 +12,48 @@ subsequently supported a larger CJH map after seeing the 95-second baseline.
 Provisional target: approximately 100 CJH points, only while successive batches
 remain justified by measured map variation/error and within the 3600-second cap.
 
+## Latest continuation decision (supersedes the historical queue below)
+
+The user redirected work to reactor-volume/throughput interpretation and
+feed composition. Completed fixed-volume pilots: run 34139549926 (five feed
+ratios plus controls) and 34140378445 (40 and 60 mol% CH4). Seven composition
+points now exist at 1750 C, total 50 sccm (273.15 K, 1 atm), fixed equivalent
+gas volume about 0.009228 cm3. Mass residence time is an output, not held fixed.
+The HTML Figure 2 uses numerical CH4/(CH4+CO2) mol% spacing and conditional
+28.8 mg CFP productivity. The original 69-point variable-volume map remains
+separate; do not sum the maps as independent validation of one closure.
+
+Nominal absolute mole tolerance failed at the tiny reactor volume. Diagnostic
+run 34139030070 showed that volume-scaled atol restores stationarity and
+archive agreement without relaxing gates. The corrected pilot also passed
+the stricter paired anchor. All failures and completed results are archived
+and charged in budget.json. No batch is reserved or in flight.
+
+The original checkout /private/tmp/electrification-suite-runtime-check has
+uncommitted initial-state work and a stale draft budget. Preserve it; do not
+dispatch from or reconcile against that draft. Current worktree:
+ /private/tmp/aramco-feed-ratio-20260907
+The current main budget ledger is authoritative.
+
+Existing Aramco equal-conversion pathway analysis was found in a DIFFERENT
+repository: robin-yk/Electrification, branch claude/electrification-main.
+Read docs/C2-PULSE.md and
+tools/openmkm_dynamic/data/c2pulse/pathway-ch4co2-tau0.2.json before proposing
+duplicate matched-conversion runs. The diagram is
+docs/figures/pathway-ch4co2-tau0.2.svg: 5/5/90 CH4/CO2/He, tau 0.2 s,
+CJH 1191.99 C, CH4 conversion about 16.5%, RPH peak 1800 C.
+Its normalization is carbon fed as methane, not total feed carbon.
+The source document explicitly flags an older three-row matched table as
+partially uncorrected; do not confuse that table with the corrected pathway
+figure. Do not silently transfer that reactor formulation to the new
+fixed-volume series.
+
+Next safe task: compare the existing pathway source, normalization and
+reactor formulation against current archives. No new sweep or duplicate
+equal-conversion calculation is justified before that read-only comparison.
+Initial-state work below remains historical pending work, not the immediate
+dispatch queue.
+
 ## Research order
 
 Current state: 69 unique CJH conditions completed. Latest combined map and
