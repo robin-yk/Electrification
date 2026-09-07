@@ -35,3 +35,15 @@ Cache: no reuse of legacy yields or prior timing tests. Upload partial outputs
 even on failure. No existing artifacts are invalidated or overwritten. Generator:
 python tools/openmkm_dynamic/run_three_pairs.py. Changes are confined to this
 card, the isolated generator and execution workflow; solver modules unchanged.
+
+## Approved continuation
+
+The user explicitly approved up to 60 minutes total to finish all three pairs.
+The first paired grid study cost about 17 minutes. Reuse completed outputs from
+run 34075748186, never repeat an accepted case. The continuation checks cached
+origin commit, unchanged solver and element-drive bytes, Cantera version,
+mechanism SHA256, exact recorded input parameters and all acceptance gates.
+The original manifest remains as parent-manifest.json. The first job is stopped
+at a completed-case boundary so its always-upload step can preserve artifacts.
+Continuation has a 29-minute calculation-step limit inside a 33-minute job limit
+to leave artifact-upload time. Combined elapsed compute budget remains 60 minutes.

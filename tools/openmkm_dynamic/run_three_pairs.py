@@ -60,6 +60,26 @@ def metrics(r):
 
 
 def execute(name, mech, p):
+    cached = OUT / (name + ".json")
+    if cached.exists():
+        r = json.loads(cached.read_text())
+        assert r["mechanism"] == mech, name + ": cached mechanism mismatch"
+        for key, value in r["inputs"].items():
+            assert p[key] == value, name + ": cached input mismatch " + key
+        mech_path = Path(mech)
+        if not mech_path.exists():
+            mech_path = Path(ct.__file__).resolve().parent / "data" / mech
+        digest = hashlib.sha256(mech_path.read_bytes()).hexdigest()
+        assert r["mechanism_provenance"]["mechanism_sha256"] == digest, name + ": cached mechanism hash mismatch"
+        m = metrics(r)
+        assert r["cycle_summary"]["converged"] and m["boundary_residual"] < p["cycle_tolerance"]
+        assert r["carbon_audit"]["group_partition_ok"]
+        assert abs(r["outflow_mass_partition_residual"]) < 1e-6
+        assert max(abs(x) for x in m["element_residuals"].values()) < 0.005
+        m["wall_s"] = r["wall_s"]
+        m["reused"] = True
+        print("REUSE", name, json.dumps(m), flush=True)
+        return m
     print("START", name, "substeps", len(solver.phase_grid(p)), flush=True)
     started = time.perf_counter()
     r = solver.run_case(mech, p)
@@ -86,9 +106,19 @@ def execute(name, mech, p):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
+    prior_path = OUT / "manifest.json"
+    prior = json.loads(prior_path.read_text()) if prior_path.exists() else None
+    if prior:
+        assert prior["commit"] == "e841b5d49a0530cc82b6f35a036af7a1c6f5ef7d", "unrecognized cache origin"
+        assert prior["cantera"] == ct.__version__, "cached Cantera version mismatch"
+        for path in ("tools/openmkm_dynamic/run_cstr_case.py", "tools/openmkm_dynamic/element_drive.py"):
+            old = subprocess.check_output(["git", "show", prior["commit"] + ":" + path], cwd=ROOT)
+            assert old == (ROOT / path).read_bytes(), "cached solver changed: " + path
+        save("parent-manifest", prior)
     manifest = {"commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
                 "cantera": ct.__version__, "python": platform.python_version(),
                 "platform": platform.platform(), "cases": SOURCES,
+                "parent_commit": prior["commit"] if prior else None,
                 "limits": {"element_fraction": 0.005, "periodic_Y": 1e-8,
                            "yield_refinement_absolute": 0.002, "yield_refinement_relative": 0.02}}
     save("manifest", manifest)
