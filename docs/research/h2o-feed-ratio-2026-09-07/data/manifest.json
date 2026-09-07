@@ -1,0 +1,82 @@
+{
+  "commit": "5f9cbd4b29342462a379af7673a35752d0e698ab",
+  "script_sha256": "a8cfbd5b80d7856ad5408087f5eb06307bca9e310fe664df9795728d0ced87c5",
+  "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+  "jobs": [
+    [
+      "cold",
+      0.5,
+      "H2O",
+      2,
+      1
+    ],
+    [
+      "co2-anchor",
+      0.5,
+      "CO2",
+      2,
+      0
+    ],
+    [
+      "h2o-anchor",
+      0.5,
+      "H2O",
+      2,
+      0
+    ],
+    [
+      "h2o-anchor-tight",
+      0.5,
+      "H2O",
+      3,
+      0
+    ],
+    [
+      "h2o-ratio-1-4",
+      0.2,
+      "H2O",
+      2,
+      0
+    ],
+    [
+      "h2o-ratio-1-2",
+      0.3333333333333333,
+      "H2O",
+      2,
+      0
+    ],
+    [
+      "h2o-ch4-40",
+      0.4,
+      "H2O",
+      2,
+      0
+    ],
+    [
+      "h2o-ch4-60",
+      0.6,
+      "H2O",
+      2,
+      0
+    ],
+    [
+      "h2o-ratio-2-1",
+      0.6666666666666666,
+      "H2O",
+      2,
+      0
+    ],
+    [
+      "h2o-ratio-4-1",
+      0.8,
+      "H2O",
+      2,
+      0
+    ]
+  ],
+  "reference": "docs/research/cjh-refine-04-2026-09-07/data/T1750-tau0.001-metrics.json",
+  "co2_sweep": "docs/research/cjh-feed-ratio-02-2026-09-07/data",
+  "budget_s": 600,
+  "worker_limit_s": 100,
+  "note": "Steam companion to the fixed-volume CH4/CO2 composition sweep. Same reactor volume, temperature and standard volumetric feed; residence time is an output. No device heating model and no soot model."
+}

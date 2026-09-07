@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "completed": [
+    "cold",
+    "co2-anchor",
+    "h2o-anchor",
+    "h2o-anchor-tight",
+    "h2o-ratio-1-4",
+    "h2o-ratio-1-2",
+    "h2o-ch4-40",
+    "h2o-ch4-60",
+    "h2o-ratio-2-1",
+    "h2o-ratio-4-1"
+  ],
+  "gates": 2,
+  "wall_s": 71.59011238900001
+}
