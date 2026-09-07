@@ -2,7 +2,7 @@
 import argparse, hashlib, json, subprocess, sys, time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
-BATCH="cjh-feed-ratio-01"
+BATCH="cjh-feed-ratio-01-remote"
 MECH=ROOT/"tools/cantera/mechanisms/aramco20.yaml"
 REF=ROOT/"docs/research/cjh-refine-04-2026-09-07/data/T1750-tau0.001-metrics.json"
 def read(p): return json.loads(Path(p).read_text())
@@ -21,12 +21,15 @@ def compare(ref,actual):
     assert err<1e-5, f"reference mismatch {err}"
     return err
 def worker(out,name,x,tight=False,cold=False):
+    print("stage: importing cantera",flush=True)
     import cantera as ct
     import numpy as np
     started=time.monotonic()
     p=settings(x,volume_reference())
     if cold: p["T_K"]=300.
+    print("stage: loading mechanism",flush=True)
     gas=ct.Solution("gri30.yaml" if cold else str(MECH))
+    print("stage: mechanism loaded",time.monotonic()-started,flush=True)
     gas.TPX=p["T_K"],p["P_Pa"],p["feed"]
     feedY=gas.Y.copy(); mw=gas.molecular_weights.copy()
     atoms=np.array([[gas.n_atoms(k,e) for k in range(gas.n_species)] for e in ("C","H","O")])
@@ -44,6 +47,7 @@ def worker(out,name,x,tight=False,cold=False):
     # Physical comparison times are identical between normal/tight integrations.
     for block in range(1,101):
         net.advance(block*.005)
+        if block==1 or block%20==0: print("stage: integration",block,time.monotonic()-started,flush=True)
         y=r.phase.Y.copy()
         state=np.r_[y,r.mass]
         residual=1. if last is None else float(max(np.max(abs(y-last[:-1])),abs(r.mass/last[-1]-1)))

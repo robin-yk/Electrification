@@ -1,5 +1,12 @@
 # Fixed-volume CJH feed-ratio pilot
 
+User-directed continuation after local timeout: run on GitHub Actions, where
+previous Aramco loading was measured in seconds. This is a separately charged
+attempt, not an automatic retry or a relaxed gate. Add stage timestamps to
+distinguish mechanism loading and integration. Keep the original chemistry,
+100 s worker cap, 540 s batch reservation and prerequisite comparisons.
+Prior local raw outputs remain immutable. Store remote outputs separately.
+
 User requested five CH4:CO2 ratios for Figure 2. Prescribed gas temperature
 1750 C, 1 atm target, 50 sccm total at 0 C/1 atm, no dilution. Fix volume
 to the archived 1:1, 1750 C, 1 ms equivalent CSTR value, computed from the
