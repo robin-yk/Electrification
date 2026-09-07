@@ -20,7 +20,10 @@ sampling/horizon gates and completed twelve new points. Its two reused raw
 gates came from the archived stopped run 34085150481. The stop was caused by
 a diagnosed positive-only dictionary-key comparison bug, fixed by a
 failing-first regression test; no core chemistry solver change. All completed
-and failed elapsed time is reconciled in budget.json. No batch is reserved.
+and failed elapsed time is reconciled in budget.json. Batch cjh-refine-03 is
+reserved for two maxima gates and twelve short-residence points. Locate
+workflow "CJH short-residence refinement 03" if its ID is not yet recorded.
+Do not dispatch a duplicate. Plan and run card are in tools/openmkm_dynamic/.
 
 Next: read the latest report and gates.json. The sampled C2H2 and C2H4 maxima
 both lie at the new short-residence boundary. Prepare a bounded lower-tau

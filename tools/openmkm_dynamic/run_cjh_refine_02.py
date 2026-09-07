@@ -42,6 +42,7 @@ def main():
     ap.add_argument("--output-dir", type=Path, required=True)
     ap.add_argument("--batch-id", default=BATCH)
     ap.add_argument("--resume-dir", type=Path)
+    ap.add_argument("--plan", type=Path)
     ap.add_argument("--worker", nargs=4, metavar=("T", "TAU", "KIND", "NAME"))
     a = ap.parse_args()
     out = a.output_dir.resolve()
@@ -53,6 +54,13 @@ def main():
                name, STRICT if kind == "gate" else None)
         return
     start = time.monotonic()
+    plan = json.loads(a.plan.read_text()) if a.plan else None
+    selected = [tuple(row) for row in plan["new_points"]] if plan else NEW
+    references = [tuple(row) for row in plan["references"]] if plan else REFERENCES
+    assert 0 < len(selected) <= 19 and 0 < len(references) <= 3
+    assert len(selected) + len(references) <= 20
+    if plan:
+        assert plan["batch_id"] == a.batch_id
     ledger = json.loads((ROOT / "docs/research/c2co-campaign-2026-09-07/budget.json").read_text())
     reservations = [b for b in ledger["batches"] if b["status"] == "reserved"]
     assert len(reservations) == 1 and reservations[0]["id"] == a.batch_id
@@ -67,11 +75,15 @@ def main():
         hashes[key] = hashlib.sha256((ROOT / path).read_bytes()).hexdigest()
         assert hashes[key] == oldmanifest[key], "model changed"
     existing = []
-    for path in (baseline / "summary.json", ROOT / "docs/research/cjh-refine-01-2026-09-07/data/summary.json"):
+    paths = [ROOT / s for s in plan["prior_summaries"]] if plan else [baseline / "summary.json", ROOT / "docs/research/cjh-refine-01-2026-09-07/data/summary.json"]
+    for path in paths:
         existing += json.loads(path.read_text())
-    assert len(set(NEW)) == len(NEW) and not set(NEW) & {(r["T_C"], r["tau_s"]) for r in existing}
-    jobs = [(T, tau, "gate", f"gate-T{T}-tau{tau}", ref) for T, tau, ref in REFERENCES]
-    jobs += [(T, tau, "map", f"T{T}-tau{tau}", None) for T, tau in NEW]
+    assert len(set(selected)) == len(selected) and not set(selected) & {(r["T_C"], r["tau_s"]) for r in existing}
+    for T, tau, ref in references:
+        reference = json.loads((ROOT/ref).read_text())
+        assert (reference["T_C"], reference["tau_s"], reference["mechanism"]) == (T, tau, "aramco")
+    jobs = [(T, tau, "gate", f"gate-T{T}-tau{tau}", ref) for T, tau, ref in references]
+    jobs += [(T, tau, "map", f"T{T}-tau{tau}", None) for T, tau in selected]
     cache = []
     if a.resume_dir:
         source = a.resume_dir.resolve()
@@ -94,11 +106,13 @@ def main():
     prediction = (lookup[(1400, .01)]["C2H2_carbon_yield"] + lookup[(1800, .01)]["C2H2_carbon_yield"])/2
     observed = lookup[(1600, .01)]["C2H2_carbon_yield"]
     save(out, "manifest", dict(commit=subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
-        jobs=jobs, budget_s=LIMIT, per_worker_s=120, hashes=hashes, reused_raw=cache,
+        jobs=jobs, budget_s=LIMIT, per_worker_s=120, hashes=hashes, reused_raw=cache, plan=plan,
         closure=oldmanifest["closure"], feed="CH4:0.5, CO2:0.5", pressure_Pa=101325.,
         strict_overrides=STRICT, gate_points=80, map_points=20,
         expansion_evidence=dict(coarse_linear_C2H2_yield=prediction, observed_C2H2_yield=observed,
-                                abs_error=abs(prediction-observed)),
+                                abs_error=abs(prediction-observed), prior_points=len(existing),
+                                prior_maxima={k: {"T_C": (r := max(existing, key=lambda r: r[k]))["T_C"],
+                                    "tau_s": r["tau_s"], "yield": r[k]} for k in ("C2H2_carbon_yield", "C2H4_carbon_yield")}),
         limitations="No solver rtol/atol or alternate initial-state test; prescribed gas T, not an electrical device."))
     done, rows, gates = [], [], []
     active = None

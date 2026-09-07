@@ -1,4 +1,6 @@
 import unittest
+import json
+from pathlib import Path
 from run_cjh_refine_02 import compare, NEW, REFERENCES, STRICT
 
 
@@ -32,3 +34,13 @@ class ValidationGateTests(unittest.TestCase):
         self.assertEqual(len(set(NEW)), 12)
         self.assertEqual(len(REFERENCES), 3)
         self.assertEqual(STRICT["min_cycles"], 20)
+
+    def test_short_residence_plan_has_no_repeated_prior_points(self):
+        root = Path(__file__).resolve().parents[2]
+        plan = json.loads((Path(__file__).parent/"cjh-refine-03.json").read_text())
+        new = {tuple(row) for row in plan["new_points"]}
+        self.assertEqual(len(new), 12)
+        self.assertEqual(len(plan["references"]), 2)
+        prior = [r for p in plan["prior_summaries"] for r in json.loads((root/p).read_text())]
+        self.assertEqual(len(prior), 33)
+        self.assertFalse(new & {(r["T_C"], r["tau_s"]) for r in prior})
