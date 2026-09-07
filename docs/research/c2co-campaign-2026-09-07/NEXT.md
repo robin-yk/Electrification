@@ -1,5 +1,14 @@
 # Bounded C2/CO research continuation
 
+## Latest dispatch superseding the hold below
+
+User explicitly requested proceeding with fixed-50-sccm CH4/CO2 RPH.
+Run 34156729563 is active, reservation 540 s, batch rph-fixed-pulse-02.
+Finite inert expansion predicts the earlier pressure offset, so reviewed
+continuation increases controller K tenfold without changing any gate.
+Archive and reconcile this run before any follow-on. Only inert, baseline
+and refined checks are queued. Stop on failure; no automatic retry.
+
 ## Current priority: user-approved minimal fixed-volume RPH gates
 
 User subsequently required legacy-code reconciliation before new calculations.
