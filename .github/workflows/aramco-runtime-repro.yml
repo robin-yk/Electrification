@@ -1,0 +1,43 @@
+name: Aramco runtime reproduction
+on:
+  push:
+    branches: [codex/aramco-runtime-repro-20260906]
+    paths: [.github/workflows/aramco-runtime-repro.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHONUNBUFFERED: '1'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r tools/cantera/requirements.txt
+      - name: Environment and mechanism load
+        run: |
+          mkdir -p out
+          python -u - <<'PY' | tee out/load.json
+          import cantera as ct, time, json, platform, hashlib
+          from pathlib import Path
+          p=Path('tools/cantera/mechanisms/aramco20.yaml')
+          print('Starting mechanism load', flush=True)
+          wall=time.perf_counter(); cpu=time.process_time()
+          gas=ct.Solution(str(p))
+          print(json.dumps(dict(cantera=ct.__version__, python=platform.python_version(), platform=platform.platform(), species=gas.n_species, reactions=gas.n_reactions, wall_s=time.perf_counter()-wall, cpu_s=time.process_time()-cpu, sha256=hashlib.sha256(p.read_bytes()).hexdigest())), flush=True)
+          PY
+      - name: Existing dense and sparse pilot
+        run: |
+          python -u tools/cantera/aramco_transient_pilot.py | tee out/pilot.log
+          cp tools/cantera/data/aramco-transient-pilot.json out/pilot.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: aramco-runtime-reproduction
+          path: out/
