@@ -1,0 +1,119 @@
+{
+  "solver_hashes": {
+    "tools/openmkm_dynamic/run_cjh_feed_ratio_01.py": "a7a006f53506160f7d8df07d71c29cf05a8ce573ce34b6da4bcc92252e1d4296",
+    "tools/cantera/mechanisms/aramco20.yaml": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc"
+  },
+  "script_sha256": "57040914770e89eb849f4db444509587ebd2b0fd30e040a61bdd213eea629c07",
+  "commit": "3f97a3c523546caa54aea7b8e3ab093257598f44",
+  "jobs": [
+    {
+      "id": "Q50-T1200-h0.05",
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.05-n800.json",
+      "sha256": "c72b64ee6f194659a81e00fe79dcc1e96481460f8047f4db2a23453185614360",
+      "flow_sccm": 50,
+      "peak_C": 1200.0,
+      "hold_s": 0.05,
+      "target_X": 8.250078145355388e-05
+    },
+    {
+      "id": "Q50-T1200-h0.1",
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.1-n800.json",
+      "sha256": "f258e5e054d4eec5a3082c03710f2c40642a8cd73e4fbf9ff8754d49c7ac3182",
+      "flow_sccm": 50,
+      "peak_C": 1200.0,
+      "hold_s": 0.1,
+      "target_X": 0.000131974974732052
+    },
+    {
+      "id": "Q50-T1200-h0.2",
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.2-n800.json",
+      "sha256": "1cc53349f9108fc172f759e5d5f055da4007d10a44bb7c007076a66a2805889e",
+      "flow_sccm": 50,
+      "peak_C": 1200.0,
+      "hold_s": 0.2,
+      "target_X": 0.00023113481414127612
+    },
+    {
+      "id": "Q50-T1200-h0.3",
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.3-n800.json",
+      "sha256": "27e4d92de2809ecaa7d0e44922fd8cfee8c833e07be6c706f218e7662ba6affd",
+      "flow_sccm": 50,
+      "peak_C": 1200.0,
+      "hold_s": 0.3,
+      "target_X": 0.0003300773189870432
+    },
+    {
+      "id": "Q50-T1200-h0.4",
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.4-n800.json",
+      "sha256": "c2cb239c1f3789d8c3c3a06bec3024d8020f96af3d076ce724c508aed735b08b",
+      "flow_sccm": 50,
+      "peak_C": 1200.0,
+      "hold_s": 0.4,
+      "target_X": 0.00042894575291319015
+    },
+    {
+      "id": "Q50-T1200-h0.5",
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.5-n800.json",
+      "sha256": "41482d640ef1678b56f1bf6ce62085b85c7ebf098f25a992c31147346391f046",
+      "flow_sccm": 50,
+      "peak_C": 1200.0,
+      "hold_s": 0.5,
+      "target_X": 0.0005279481824069787
+    },
+    {
+      "id": "Q50-T1400-h0.025",
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.025-n800.json",
+      "sha256": "061e29a36fb7d9a6e034af300dbc845bd101d236b7594f6454ace726379e0259",
+      "flow_sccm": 50,
+      "peak_C": 1400.0,
+      "hold_s": 0.025,
+      "target_X": 0.0035228613226362393
+    },
+    {
+      "id": "Q50-T1400-h0.05",
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.05-n800.json",
+      "sha256": "17b7794c81a7f865ae6ce03c152ae5d50dd9352c25f5bcadeebc92c64370a7a8",
+      "flow_sccm": 50,
+      "peak_C": 1400.0,
+      "hold_s": 0.05,
+      "target_X": 0.006371220237145092
+    },
+    {
+      "id": "Q50-T1400-h0.1",
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.1-n800.json",
+      "sha256": "0a94ec3c808e3b0c85f556973bf6b829c9056e12ea4d546fba1f8d588f005d7b",
+      "flow_sccm": 50,
+      "peak_C": 1400.0,
+      "hold_s": 0.1,
+      "target_X": 0.012067716134351647
+    },
+    {
+      "id": "Q50-T1400-h0.2",
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.2-n800.json",
+      "sha256": "58a9a5c55529b568d6de94b28656dc1ca4b8b0bb65cef3afbc75a51e7f90fe1b",
+      "flow_sccm": 50,
+      "peak_C": 1400.0,
+      "hold_s": 0.2,
+      "target_X": 0.023460873146153305
+    },
+    {
+      "id": "Q50-T1400-h0.3",
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.3-n800.json",
+      "sha256": "22ad2f86e926813c93074ee2dd3488456a9f2a934b875e4f35629e7e013187e9",
+      "flow_sccm": 50,
+      "peak_C": 1400.0,
+      "hold_s": 0.3,
+      "target_X": 0.034854016717216996
+    },
+    {
+      "id": "Q50-T1400-h0.4",
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.4-n800.json",
+      "sha256": "438c427eba550a8d3aa495a81a3c081d6774c4e2d814be520c16c0870153fd6a",
+      "flow_sccm": 50,
+      "peak_C": 1400.0,
+      "hold_s": 0.4,
+      "target_X": 0.04624701038842849
+    }
+  ],
+  "cap_s": 450
+}

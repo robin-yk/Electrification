@@ -2,6 +2,11 @@
 
 ## Current: match CJH to all 39 RPH conversions
 
+15/39 verified matches are archived. Group 1 completed in 353.486917347 s
+(run 34169440821). Reserve 450 s for group 2, the next 12 conditions.
+No other calculation may spend this reservation. Reconcile before group 3.
+The cumulative generated report includes the pilot and group 1.
+
 Pilot completed 34169130250 in 164.414281501 s; all controls and three matches
 passed. Reserve 450 s for group 1 (12 matches). Same-flow cached steady
 temperatures now narrow the bracket, but final root and strict check remain
