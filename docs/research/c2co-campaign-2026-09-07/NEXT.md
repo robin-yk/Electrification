@@ -2,6 +2,14 @@
 
 ## Latest dispatch superseding the hold below
 
+Completed fixed-flow baseline/refinement 34156729563 and paired period runs
+34157035244. All gates passed. No run in flight or reserved; see budget.json.
+The 0.5/1/2 s results and deterministic report are in rph-fixed-period-01 archive.
+Half-period improves C2H2/CO by only about 0.26/0.29% relative to 1 s. Do not
+automatically densify the period axis. Next candidate axis is feed or hot hold,
+after a committed bounded card; Bayesian/global optimization is not completed.
+This paragraph supersedes stale active/reserved statements and pressure holds below.
+
 User explicitly requested proceeding with fixed-50-sccm CH4/CO2 RPH.
 Run 34156729563 completed and is archived; batch rph-fixed-period-01 reserves 240 s.
 Accidental prior-version dispatch 34156921810 was cancelled; 16 s charged.

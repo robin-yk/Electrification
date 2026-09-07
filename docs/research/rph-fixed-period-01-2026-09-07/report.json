@@ -1,0 +1,56 @@
+{
+  "scope": "Fixed-flow three-period comparison; not global or Bayesian optimization",
+  "rows": [
+    {
+      "file": "docs/research/rph-fixed-period-01-2026-09-07/data/half-refined.json",
+      "sha256": "0306857570ddc6b1da0cd5b57855b72523d3fcb25672ec39cc7ffc87a6807be2",
+      "period_s": 0.5,
+      "cycles": 3,
+      "carbon_yield_percent": {
+        "C2H2": 1.6200794957736278,
+        "C2H4": 0.11420650565093243,
+        "CO": 3.1386836411630004,
+        "C6H6": 0.1974131516975485
+      },
+      "product_g_per_g_CFP_h": {
+        "C2H2": 0.9802195314812941,
+        "CO": 4.085733655535958
+      },
+      "max_element_residual": 0.000052502858550816805
+    },
+    {
+      "file": "docs/research/rph-fixed-pulse-02-2026-09-07/data/refined.json",
+      "sha256": "9a8793f811da6dec1e6ec9b1d072885d08a8d587f98fbef77c18327e90e5d156",
+      "period_s": 1,
+      "cycles": 3,
+      "carbon_yield_percent": {
+        "C2H2": 1.6159339668872543,
+        "C2H4": 0.11214733063080716,
+        "CO": 3.1295696399643544,
+        "C6H6": 0.19281123759026716
+      },
+      "product_g_per_g_CFP_h": {
+        "C2H2": 0.9777113037101609,
+        "CO": 4.073869643201123
+      },
+      "max_element_residual": 0.00002628205380545486
+    },
+    {
+      "file": "docs/research/rph-fixed-period-01-2026-09-07/data/double-refined.json",
+      "sha256": "0327a3fb6adfdb49d12dcc62889e69abdbc072746ab183b4a5401da686fc132b",
+      "period_s": 2,
+      "cycles": 3,
+      "carbon_yield_percent": {
+        "C2H2": 1.6148239265044744,
+        "C2H4": 0.11138446731882999,
+        "CO": 3.127139447917996,
+        "C6H6": 0.19155220340742735
+      },
+      "product_g_per_g_CFP_h": {
+        "C2H2": 0.9770396803319423,
+        "CO": 4.070706177695073
+      },
+      "max_element_residual": 0.000013107607509996908
+    }
+  ]
+}
