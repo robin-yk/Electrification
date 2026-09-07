@@ -9,6 +9,7 @@ import { existsSync } from "node:fs";
 // `npm run test:e2e` will fail to launch - that's expected in that case; run
 // `npm test` (no browser needed) instead and skip the e2e suite.
 const candidateChromiumPaths = [
+  '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
   "/opt/pw-browsers/chromium",
   "/usr/bin/chromium",
   "/usr/bin/chromium-browser",
