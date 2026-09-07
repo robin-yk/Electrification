@@ -1,5 +1,16 @@
 # Bounded C2/CO research continuation
 
+## Current priority: user-approved minimal fixed-volume RPH gates
+
+Run 34146144797 completed rph-fixed-gate-01 in 5.493213569 seconds.
+Analytic closed ramp passed; constant-temperature species comparison error is zero.
+No batch is in flight or reserved. Use /private/tmp/aramco-feed-ratio-20260907
+and this ledger. No new CJH map is queued. This instruction supersedes
+historical priorities below. Read tools/openmkm_dynamic/RPH-FIXED-GATE-01.md.
+After success, periodic waveform and flow-integral validation remain required
+before the proposed baseline pulse and half/double-period comparisons.
+An initial dispatch HTTP 404 preceded workflow registration and launched no run.
+
 User authorized hourly continuation, an additional total 3600 seconds of
 single-thread calculation time, and at most 600 seconds per batch on 2026-09-07.
 The initial CJH run 34084078933 was already running when approval arrived and
