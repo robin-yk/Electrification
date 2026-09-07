@@ -1,0 +1,34 @@
+name: RPH 450 C bounded screen
+on:
+  workflow_dispatch:
+    inputs:
+      stage:
+        type: choice
+        options: [pilot, screen]
+        default: pilot
+permissions:
+  contents: read
+concurrency:
+  group: c2co-budgeted-campaign
+  cancel-in-progress: false
+jobs:
+  calculate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r tools/cantera/requirements.txt
+      - name: Bounded calculation
+        timeout-minutes: 10
+        run: python tools/openmkm_dynamic/run_rph_screen_450.py --stage ${{ inputs.stage }} --output-dir out/rph-450-${{ inputs.stage }}-01
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rph-450-${{ inputs.stage }}-01
+          path: out/rph-450-${{ inputs.stage }}-01/

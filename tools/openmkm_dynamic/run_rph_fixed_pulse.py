@@ -15,11 +15,15 @@ def segments(period):
     assert period>0
     return [(period*f,a,b) for f,a,b in [(0.025,873.15,2073.15),(.05,2073.15,2073.15),(.1,2073.15,873.15),(.825,873.15,873.15)]]
 
-def worker(out,name,n,period=1.,inert=False):
+def worker(out,name,n,period=1.,inert=False,waveform=None):
     started=time.monotonic()
+    parts=segments(period) if waveform is None else waveform
+    assert all(d>0 and a>0 and b>0 for d,a,b in parts)
+    assert abs(sum(d for d,_,_ in parts)-period)<1e-12
+    assert all(abs(a[2]-b[1])<1e-10 for a,b in zip(parts,parts[1:]+parts[:1]))
     gas=ct.Solution("gri30.yaml" if inert else str(base.MECH))
     feed={"N2":1} if inert else {"CH4":.5,"CO2":.5}
-    gas.TPX=873.15,101325,feed
+    gas.TPX=parts[0][1],101325,feed
     mw=gas.molecular_weights.copy(); yin=gas.Y.copy()
     elements=["N"] if inert else ["C","H","O"]
     atoms=np.array([[gas.n_atoms(k,e) for k in range(gas.n_species)] for e in elements])
@@ -39,7 +43,7 @@ def worker(out,name,n,period=1.,inert=False):
     for cycle in range(1,9):
         inventory0=r.mass*r.phase.Y/mw
         integral=np.zeros(gas.n_species);massout=0.;maxp=0.;maxt=0.;samples=[]
-        for duration,ta,tb in segments(period):
+        for duration,ta,tb in parts:
             r.temperature_slope=(tb-ta)/duration
             net.reinitialize()
             start=t
@@ -84,7 +88,7 @@ def worker(out,name,n,period=1.,inert=False):
     rates={k:float(v*flow_mol_s*3600*m) for k,v,m in zip(gas.species_names,ratios,mw) if v>0}
     base.write(out/(name+".json"),dict(name=name,engine=ct.__version__,
         inputs=dict(feed=feed,flow_sccm=50,standard_T_K=273.15,standard_P_Pa=101325,volume_m3=vol,
-          pressure_target_Pa=101325,pressure_controller_K=PRESSURE_K,period_s=period,segments=segments(period),samples_per_segment=n),
+          pressure_target_Pa=101325,pressure_controller_K=PRESSURE_K,period_s=period,segments=parts,samples_per_segment=n),
         basis="mol product per mol inlet total carbon for CH4/CO2; mol per mol inlet for inert control",
         mol_per_feed_carbon=ratiosdict,carbon_yields={k:float(gas.n_atoms(k,"C")*v) for k,v in ratiosdict.items()},
         product_g_h=rates,product_g_per_g_CFP_h={k:v/.0288 for k,v in rates.items()},
