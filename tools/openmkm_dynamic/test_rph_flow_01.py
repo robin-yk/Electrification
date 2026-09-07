@@ -4,6 +4,10 @@ from pathlib import Path
 import run_rph_fixed_pulse as pulse
 
 class FlowInputTest(unittest.TestCase):
+    def test_extension_is_four_new_conditions(self):
+        from run_rph_flow_01 import plan
+        self.assertEqual(plan(True),('rph-flow-02',240,[800,1600],400))
+        self.assertEqual(plan(False),('rph-flow-01',300,[100,200,400],50))
     def test_rejects_nonpositive_or_nonfinite_flow(self):
         for q in [0,-1,float('nan'),float('inf')]:
             with self.assertRaises(AssertionError):pulse.worker(Path('/private/tmp'),'unused',400,flow_sccm=q)

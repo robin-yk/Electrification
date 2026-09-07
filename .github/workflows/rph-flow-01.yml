@@ -1,6 +1,10 @@
 name: RPH fixed-volume flow pilot
 on:
   workflow_dispatch:
+    inputs:
+      extend:
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -21,9 +25,9 @@ jobs:
       - run: pip install -r tools/cantera/requirements.txt
       - name: Bounded calculation
         timeout-minutes: 6
-        run: python tools/openmkm_dynamic/run_rph_flow_01.py --output-dir out/rph-flow-01
+        run: python tools/openmkm_dynamic/run_rph_flow_01.py ${{ inputs.extend && '--extend' || '' }} --output-dir out/rph-flow-${{ inputs.extend && '02' || '01' }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: rph-flow-01
-          path: out/rph-flow-01/
+          name: rph-flow-${{ inputs.extend && '02' || '01' }}
+          path: out/rph-flow-${{ inputs.extend && '02' || '01' }}/

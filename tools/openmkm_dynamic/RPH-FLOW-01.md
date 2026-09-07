@@ -1,5 +1,19 @@
 # Fixed-volume RPH flow pilot
 
+## Approved extension: 800 and 1600 sccm
+
+The user approved both hot holds at these two additional flows. Run with
+--extend, batch rph-flow-02, cap 240 s. Inert 1600 sccm, archived 400 sccm
+reproduction at 800 samples, then four new 400/800 pairs. Previous fourteen
+integrations took 113.365813586 s, suggesting about 81 s for these ten before
+any high-flow stiffness; this is an estimate, not a guarantee. All gates,
+waveforms, physical closures, and fixed volume remain unchanged. No bulk
+optimization or higher-flow continuation beyond 1600 sccm is queued.
+Archive separately in docs/research/rph-flow-02-2026-09-07/data. Generate the
+12-condition report with report_rph_flow_01.py --extend. Inspect turnover or
+flattening of g-product/g-CFP/h, together with carbon yields. Flow-01 raw
+outputs remain immutable. Stop on any failed gate; no automatic retries.
+
 User approved six new conditions on 7 September 2026: total inlet 100/200/400
 sccm and hot hold 0.10/0.50 s. Reuse existing 50 sccm points only after archive
 reproduction with the modified input interface. Question: does throughput

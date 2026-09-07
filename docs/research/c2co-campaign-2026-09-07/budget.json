@@ -4,9 +4,10 @@
   "total_budget_s": 3600,
   "batch_limit_s": 600,
   "spent_s": 1829.7375473969738,
-  "reserved_s": 0,
+  "reserved_s": 240,
   "baseline_excluded_run": 34084078933,
   "batches": [
+    {"id":"rph-flow-02","status":"reserved","reserved_s":240,"actual_s":null,"new_points":4,"verification_points":6},
     {"id":"rph-flow-01","status":"completed","reserved_s":0,"actual_s":113.365813586,"run_id":34160516964,"new_points":6,"verification_points":8},
     {"id":"rph-450-screen-01","status":"completed","reserved_s":0,"actual_s":365.772934778,"run_id":34158956433,"new_points":25,"verification_points":25},
     {"id":"rph-450-pilot-01","status":"completed","reserved_s":0,"actual_s":45.42679587899998,"run_id":34158782803,"new_points":3,"verification_points":4},

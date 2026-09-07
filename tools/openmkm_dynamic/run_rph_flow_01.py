@@ -11,8 +11,12 @@ from run_rph_screen_450 import waveform
 
 def tag(flow,hold,n):return f'Q{flow:g}-hold{hold:g}-n{n}'
 
+def plan(extend):
+    return ('rph-flow-02',240,[800,1600],400) if extend else ('rph-flow-01',300,[100,200,400],50)
+
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--output-dir',type=Path,required=True)
+    ap.add_argument('--extend',action='store_true')
     ap.add_argument('--worker',action='store_true');ap.add_argument('--inert',action='store_true')
     ap.add_argument('--flow',type=float,default=50);ap.add_argument('--hold',type=float,default=.1)
     ap.add_argument('--samples',type=int,default=800);a=ap.parse_args()
@@ -21,16 +25,17 @@ def main():
         pulse.worker(out,'inert' if a.inert else tag(a.flow,a.hold,a.samples),a.samples,
             inert=a.inert,waveform=waveform(1800,a.hold),flow_sccm=a.flow)
         return
-    cap=300;ledger=base.read(base.ROOT/'docs/research/c2co-campaign-2026-09-07/budget.json')
+    batch,cap,flows,anchor_flow=plan(a.extend)
+    ledger=base.read(base.ROOT/'docs/research/c2co-campaign-2026-09-07/budget.json')
     assert ledger['spent_s']+ledger['reserved_s']<=ledger['total_budget_s']
     assert ledger['reserved_s']==cap
-    assert any(b['id']=='rph-flow-01' and b['reserved_s']==cap for b in ledger['batches'])
-    ref=base.ROOT/'docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.1-n800.json'
+    assert any(b['id']==batch and b['reserved_s']==cap for b in ledger['batches'])
+    ref=base.ROOT/('docs/research/rph-flow-01-2026-09-07/data/Q400-hold0.1-n800.json' if a.extend else 'docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.1-n800.json')
     prior=base.read(ref)
     prior_manifest=base.read(ref.parent/'manifest.json')
     assert hashlib.sha256(base.MECH.read_bytes()).hexdigest()==prior_manifest['hashes'][str(base.MECH.relative_to(base.ROOT))]
     paths=[Path(__file__),Path(pulse.__file__),Path(base.__file__),Path(__file__).with_name('run_rph_screen_450.py'),Path(__file__).with_name('run_rph_fixed_gate.py'),base.MECH,ref]
-    jobs=[(q,h) for q in [100,200,400] for h in [.1,.5]]
+    jobs=[(q,h) for q in flows for h in [.1,.5]]
     base.write(out/'manifest.json',dict(commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=base.ROOT,text=True).strip(),
         hashes={str(p.relative_to(base.ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths},jobs=jobs,cap_s=cap))
     started=time.monotonic();done=[];active=None
@@ -48,8 +53,8 @@ def main():
         a,b=x['mol_per_feed_carbon'],y['mol_per_feed_carbon']
         return max(abs(a.get(k,0)-b.get(k,0)) for k in set(a)|set(b))
     try:
-        run(400,.1,800,True)
-        anchor=run(50,.1,800)
+        run(max(flows),.1,800,True)
+        anchor=run(anchor_flow,.1,800)
         e=error(anchor,prior);assert e<1e-8,f'archive reproduction failed: {e}'
         assert anchor['inputs']==prior['inputs'],'anchor input mismatch'
         base.write(out/'anchor-gates.json',dict(max_species_error=e,threshold=1e-8))

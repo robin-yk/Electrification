@@ -1,5 +1,12 @@
 # Bounded C2/CO research continuation
 
+## Current: approved extension to 1600 sccm
+
+Reserve 240 s for rph-flow-02: 800/1600 sccm at both .1/.5 s holds.
+Read the extension in RPH-FLOW-01.md. Run only --extend, stop on failed
+gates, then archive and reconcile. No other batch may spend this reservation.
+This supersedes the flow-01 completion hold below for these four points only.
+
 ## Current: user-approved flow pilot
 
 COMPLETED: run 34160516964, 113.365813586 s. Inert, archive reproduction
