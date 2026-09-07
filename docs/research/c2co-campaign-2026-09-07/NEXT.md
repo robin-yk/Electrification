@@ -18,8 +18,8 @@ Current state: 45 unique CJH conditions completed. Latest combined map is
 ../cjh-refine-03-2026-09-07/REPORT.md; run 34088470900 passed both gates
 and all twelve new points. All completed and failed elapsed time is reconciled
 in budget.json. Batch cjh-refine-04 is reserved for two maxima gates and twelve
-C2H4 short-residence/temperature-gap points. Locate workflow
-"CJH ethylene boundary refinement 04" if its ID is not yet recorded.
+C2H4 short-residence/temperature-gap points. Workflow
+"CJH ethylene boundary refinement 04" run ID: 34092910653.
 Do not dispatch a duplicate. Plan and run card are in tools/openmkm_dynamic/.
 
 Next: read the latest report and gates.json. The C2H4 maximum still lies at
