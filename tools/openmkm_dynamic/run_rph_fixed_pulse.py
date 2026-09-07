@@ -92,27 +92,35 @@ def worker(out,name,n,period=1.,inert=False):
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument("--output-dir",type=Path,required=True)
-    ap.add_argument("--worker",choices=["inert","baseline","refined"]);a=ap.parse_args()
+    ap.add_argument("--period-study",action="store_true")
+    ap.add_argument("--worker",choices=["inert","baseline","refined","half","half-refined","double","double-refined"]);a=ap.parse_args()
     out=a.output_dir.resolve();out.mkdir(parents=True,exist_ok=True)
     if a.worker:
-        worker(out,a.worker,800 if a.worker=="refined" else 400,inert=a.worker=="inert");return
+        period=.5 if a.worker.startswith("half") else 2. if a.worker.startswith("double") else 1.
+        worker(out,a.worker,800 if "refined" in a.worker else 400,period=period,inert=a.worker=="inert");return
     ledger=base.read(base.ROOT/"docs/research/c2co-campaign-2026-09-07/budget.json")
     assert ledger["spent_s"]+ledger["reserved_s"]<=ledger["total_budget_s"]
-    assert any(b["id"]=="rph-fixed-pulse-02" and b["reserved_s"]==540 for b in ledger["batches"])
+    batch,cap=("rph-fixed-period-01",240) if a.period_study else ("rph-fixed-pulse-02",540)
+    assert any(b["id"]==batch and b["reserved_s"]==cap for b in ledger["batches"])
+    if a.period_study:
+        assert base.read(base.ROOT/"docs/research/rph-fixed-pulse-02-2026-09-07/data/status.json")["status"]=="completed"
     assert base.read(base.ROOT/"docs/research/rph-fixed-gate-01-2026-09-07/data/status.json")["status"]=="completed"
     paths=[Path(__file__),Path(base.__file__),Path(__file__).with_name("run_rph_fixed_gate.py"),base.MECH]
     base.write(out/"manifest.json",dict(commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),
-        hashes={str(p.relative_to(base.ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths},cap_s=540))
+        hashes={str(p.relative_to(base.ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths},cap_s=cap))
     started=time.monotonic();done=[];active=None
     try:
-        for active in ["inert","baseline","refined"]:
+        jobs=["half","half-refined","double","double-refined"] if a.period_study else ["inert","baseline","refined"]
+        for active in jobs:
             with (out/(active+".log")).open("w") as f:
-                subprocess.run([sys.executable,__file__,"--output-dir",str(out),"--worker",active],stdout=f,stderr=subprocess.STDOUT,check=True,timeout=max(1,min(180,540-(time.monotonic()-started))))
+                subprocess.run([sys.executable,__file__,"--output-dir",str(out),"--worker",active],stdout=f,stderr=subprocess.STDOUT,check=True,timeout=max(1,min(100,cap-(time.monotonic()-started))))
             done.append(active)
-        r1=base.read(out/"baseline.json")["mol_per_feed_carbon"];r2=base.read(out/"refined.json")["mol_per_feed_carbon"]
-        err=max(abs(r1.get(k,0)-r2.get(k,0)) for k in set(r1)|set(r2))
-        assert err<1e-4,f"phase integration refinement failed: {err}"
-        base.write(out/"gates.json",dict(max_species_refinement_error=err,threshold=1e-4))
+            if "refined" in active:
+                first=active.replace("-refined","") if "-refined" in active else "baseline"
+                r1=base.read(out/(first+".json"))["mol_per_feed_carbon"];r2=base.read(out/(active+".json"))["mol_per_feed_carbon"]
+                err=max(abs(r1.get(k,0)-r2.get(k,0)) for k in set(r1)|set(r2))
+                assert err<1e-4,f"phase integration refinement failed: {err}"
+                base.write(out/(first+"-gates.json"),dict(max_species_refinement_error=err,threshold=1e-4))
         base.write(out/"status.json",dict(status="completed",completed=done,wall_s=time.monotonic()-started))
     except Exception as e:
         base.write(out/"status.json",dict(status="stopped",active=active,completed=done,reason=str(e),wall_s=time.monotonic()-started));raise

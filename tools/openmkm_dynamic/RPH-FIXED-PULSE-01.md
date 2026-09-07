@@ -1,5 +1,14 @@
 # Fixed-volume periodic entry pilot
 
+## Period pilot after successful pulse-02
+
+Run 34156729563 passed inert, baseline and refinement gates in 15.732464199 s.
+Next approved cases: period 0.5 and 2 s, all four segment fractions and all other
+inputs unchanged. Each gets 400/800 samples per segment. Cap 240 s, worker 100 s.
+Require the baseline archived status and all unchanged checks; stop before the
+next period if the preceding refinement fails. This is a three-period comparison,
+not Bayesian or global optimization. Outputs: rph-fixed-period-01-2026-09-07/data.
+
 ## Reviewed continuation: pulse-02
 
 The user requested proceeding after the implementation audit. The inert pressure

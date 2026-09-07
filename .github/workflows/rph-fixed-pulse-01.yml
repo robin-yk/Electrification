@@ -21,9 +21,9 @@ jobs:
       - run: pip install -r tools/cantera/requirements.txt
       - name: Run periodic gates
         timeout-minutes: 10
-        run: python tools/openmkm_dynamic/run_rph_fixed_pulse.py --output-dir out/rph-fixed-pulse-02
+        run: python tools/openmkm_dynamic/run_rph_fixed_pulse.py --period-study --output-dir out/rph-fixed-period-01
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: rph-fixed-pulse-02
-          path: out/rph-fixed-pulse-02/
+          name: rph-fixed-period-01
+          path: out/rph-fixed-period-01/
