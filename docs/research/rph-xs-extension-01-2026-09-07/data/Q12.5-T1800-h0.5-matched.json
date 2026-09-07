@@ -1,0 +1,59 @@
+{
+  "id": "Q12.5-T1800-h0.5",
+  "source": "docs/research/rph-xs-extension-01-2026-09-07/data/Q12.5-T1800-h0.5-n800.json",
+  "sha256": "c903d80161767c756a4cbbc3847e0171c3fa924277f434e2b605dfc0619ceb92",
+  "flow_sccm": 12.5,
+  "peak_C": 1800,
+  "hold_s": 0.5,
+  "target_X": 0.48693485248238466,
+  "CJH_T_C": 1447.701854128473,
+  "CJH_X": 0.48693485319334173,
+  "match_tolerance": 4.869348524823847e-05,
+  "match_error": 7.109570709928903e-10,
+  "refinement_species_error": 4.306790479802203e-10,
+  "RPH_yield_pct": {
+    "C2H2": 9.635066572221149,
+    "C2H4": 0.17734102939197227,
+    "C2H6": 0.010528645528560854,
+    "C6H6": 0.29772461705138564,
+    "CO": 34.25690064041546,
+    "C6_total": 0.3552326756811074
+  },
+  "CJH_yield_pct": {
+    "C2H2": 7.424294623024134,
+    "C2H4": 1.7813863894699942,
+    "C2H6": 0.13788122840599587,
+    "C6H6": 11.332478376671736,
+    "CO": 10.22529439709488,
+    "C6_total": 11.504656960489958
+  },
+  "RPH_phase_conversion_difference": 8.82857888405697e-05,
+  "low_conversion_warning": false,
+  "inputs": {
+    "T_K": 1720.851854128473,
+    "P_Pa": 101325.0,
+    "flow_sccm": 12.5,
+    "standard_T_K": 273.15,
+    "standard_P_Pa": 101325.0,
+    "volume_m3": 9.228077898393764e-09,
+    "feed": {
+      "CH4": 0.5,
+      "CO2": 0.5
+    }
+  },
+  "CJH_mass_residence_time_s": 0.005863149509012266,
+  "evaluated_files": [
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-xs-extension-01-2026-09-07/data/steady-Q12.5-T1170.87585579-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-xs-extension-01-2026-09-07/data/steady-Q12.5-T1382.18503499-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-xs-extension-01-2026-09-07/data/steady-Q12.5-T1447.42580769-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-xs-extension-01-2026-09-07/data/steady-Q12.5-T1447.70184906-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-xs-extension-01-2026-09-07/data/steady-Q12.5-T1447.70185413-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-xs-extension-01-2026-09-07/data/steady-Q12.5-T1447.70185413-a3.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-xs-extension-01-2026-09-07/data/steady-Q12.5-T1447.70365573-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-xs-extension-01-2026-09-07/data/steady-Q12.5-T1452.31344522-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-xs-extension-01-2026-09-07/data/steady-Q12.5-T1506.04187019-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-xs-extension-01-2026-09-07/data/steady-Q12.5-T1800-a2.json",
+    "/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-xs-extension-01-2026-09-07/data/steady-Q12.5-T450-a2.json"
+  ],
+  "raw_CJH": "/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-xs-extension-01-2026-09-07/data/steady-Q12.5-T1447.70185413-a3.json"
+}

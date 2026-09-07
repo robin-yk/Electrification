@@ -2,6 +2,14 @@
 
 ## Current: four-point conversion/selectivity extension
 
+COMPLETED: run 34171504239 passed both inert boundaries, archive reproduction,
+four refined RPH conditions and four matched CJH states in 178.657733723 s.
+Raw data and generated X/S report are in rph-xs-extension-01-2026-09-07.
+Budget reconciled, no reservation or queued continuation. The high-hold RPH
+selectivity persists but the highest-conversion CJH surpasses it. Lower flow
+reduces RPH selectivity. Do not infer an exact crossing or reaction pathway
+from these four points. Historical reservation below is closed.
+
 User approved two longer holds and two lower flows, with matched CJH.
 Read RPH-XS-EXTENSION.md. Reserve 400 s within the original cumulative cap.
 No retry on failed gates or timeout. Preserve the frozen 39-pair report;
