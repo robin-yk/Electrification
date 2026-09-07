@@ -1,0 +1,129 @@
+{
+  "completed": 11,
+  "expected": 12,
+  "cases": [
+    {
+      "case": 6300012,
+      "mechanism": "gri",
+      "grid": "base",
+      "file": "data/three-rph-pairs-2026-09-06/6300012-gri-base.json",
+      "status": "completed",
+      "converged": true,
+      "substeps": 200,
+      "sha256": "b6959794dd5159a8d35c2cb1e88279a0cd051720d290a9c7f35d3cf9b00f78f1"
+    },
+    {
+      "case": 6300012,
+      "mechanism": "gri",
+      "grid": "refined",
+      "file": "data/three-rph-pairs-2026-09-06/6300012-gri-refined.json",
+      "status": "completed",
+      "converged": true,
+      "substeps": 400,
+      "sha256": "44f5339f642da71e7c3b6ac75d943d3e732dc50b8863c3deca5dc11f79824ea2"
+    },
+    {
+      "case": 6300012,
+      "mechanism": "aramco",
+      "grid": "base",
+      "file": "data/three-rph-pairs-2026-09-06/6300012-aramco-base.json",
+      "status": "completed",
+      "converged": true,
+      "substeps": 200,
+      "sha256": "699c82cefa00d858881422ef411617278e7fec0a96baa6cfea6f0168a4d2ab59"
+    },
+    {
+      "case": 6300012,
+      "mechanism": "aramco",
+      "grid": "refined",
+      "file": "data/three-rph-pairs-2026-09-06/6300012-aramco-refined.json",
+      "status": "completed",
+      "converged": true,
+      "substeps": 400,
+      "sha256": "8733ce16b4ab3a999d98c1082846a8c7526f3d31c11dae497246b5028a0b543c"
+    },
+    {
+      "case": 6000015,
+      "mechanism": "gri",
+      "grid": "base",
+      "file": "data/three-rph-pairs-2026-09-06/6000015-gri-base.json",
+      "status": "completed",
+      "converged": true,
+      "substeps": 200,
+      "sha256": "8a26c89f9517cfdd9c89af5ff33ebaa1ebb8ddb35237d8d3b6105ecb9b664450"
+    },
+    {
+      "case": 6000015,
+      "mechanism": "gri",
+      "grid": "refined",
+      "file": "data/three-rph-pairs-2026-09-06/6000015-gri-refined.json",
+      "status": "completed",
+      "converged": true,
+      "substeps": 400,
+      "sha256": "c669bb06e6e7fe9209125972d5b4ed325d9b2169d05c307651fe2dd9855c8702"
+    },
+    {
+      "case": 6000015,
+      "mechanism": "aramco",
+      "grid": "base",
+      "file": "data/three-rph-pairs-2026-09-06/6000015-aramco-base.json",
+      "status": "completed",
+      "converged": true,
+      "substeps": 200,
+      "sha256": "71cb1832c43652cabe618fc1dcb2f41f97004d455614f815184376d4133ce2bf"
+    },
+    {
+      "case": 6000015,
+      "mechanism": "aramco",
+      "grid": "refined",
+      "file": "data/three-rph-pairs-2026-09-06/6000015-aramco-refined.json",
+      "status": "completed",
+      "converged": true,
+      "substeps": 400,
+      "sha256": "93284fce22170240fededeb9ca59b784f44c9c5ee4ee0d304284d25df53e7871"
+    },
+    {
+      "case": 8300048,
+      "mechanism": "gri",
+      "grid": "base",
+      "file": "data/three-rph-pairs-2026-09-06/8300048-gri-base.json",
+      "status": "completed",
+      "converged": true,
+      "substeps": 201,
+      "sha256": "141fe58e694ca224ccc3921cf5bd7caf063f508b2da1e287ba138356d6f217f9"
+    },
+    {
+      "case": 8300048,
+      "mechanism": "gri",
+      "grid": "refined",
+      "file": "data/three-rph-pairs-2026-09-06/8300048-gri-refined.json",
+      "status": "completed",
+      "converged": true,
+      "substeps": 401,
+      "sha256": "ced6a9583752fb7c7ab9e76326a7dd4f65e161b53e3366197d6d2771a03fb60a"
+    },
+    {
+      "case": 8300048,
+      "mechanism": "aramco",
+      "grid": "base",
+      "file": "data/three-rph-pairs-2026-09-06/8300048-aramco-base.json",
+      "status": "completed",
+      "converged": true,
+      "substeps": 201,
+      "sha256": "99331f26ea61bd508d5ea9fecf86d3ab895431e2aa8b35bdd662736f1d6a1c68"
+    },
+    {
+      "case": 8300048,
+      "mechanism": "aramco",
+      "grid": "refined",
+      "file": "data/three-rph-pairs-2026-09-06/8300048-aramco-refined.json",
+      "status": "missing",
+      "reason": "resume run timed out before result was written"
+    }
+  ],
+  "source_runs": [
+    34075748186,
+    34077150687
+  ],
+  "early_stop_validation_run": 34078455559
+}

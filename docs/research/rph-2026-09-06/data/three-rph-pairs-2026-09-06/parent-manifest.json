@@ -1,0 +1,26 @@
+{
+  "commit": "e841b5d49a0530cc82b6f35a036af7a1c6f5ef7d",
+  "cantera": "3.2.0",
+  "python": "3.11.16",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "cases": [
+    [
+      6300012,
+      "design-wide-frontier-w3.jsonl"
+    ],
+    [
+      6000015,
+      "design-wide-frontier2-w2.jsonl"
+    ],
+    [
+      8300048,
+      "design-wide-aimed-lowduty-w3.jsonl"
+    ]
+  ],
+  "limits": {
+    "element_fraction": 0.005,
+    "periodic_Y": 1e-08,
+    "yield_refinement_absolute": 0.002,
+    "yield_refinement_relative": 0.02
+  }
+}

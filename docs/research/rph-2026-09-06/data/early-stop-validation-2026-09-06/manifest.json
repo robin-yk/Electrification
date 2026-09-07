@@ -1,0 +1,9 @@
+{
+  "commit": "2efdd055135a294f1442ce64aef959c6ec7470b9",
+  "reference_directory": "references",
+  "min_cycles": 3,
+  "stable_cycles_required": 3,
+  "state_tolerance": 1e-08,
+  "outflow_tolerance": 1e-08,
+  "reference_yield_agreement": 1e-06
+}
