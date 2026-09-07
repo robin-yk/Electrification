@@ -17,9 +17,11 @@ remain justified by measured map variation/error and within the 3600-second cap.
 Current state: refinement run 34084593440 completed all 12 new points and its
 anchor. Raw status is archived under ../cjh-refine-01-2026-09-07/data/.
 The combined 21-point map is in ../cjh-refine-01-2026-09-07/REPORT.md.
-Its actual calculation time has been reconciled in budget.json; no batch is
-currently reserved or running. Next inspect the combined map and measured
-changes, then prioritize candidate robustness checks before another expansion.
+Its actual calculation time has been reconciled in budget.json. Refinement 02
+is now reserved: three sampling/horizon gates before twelve new points.
+Read tools/openmkm_dynamic/CJH-REFINE-02-RUN-CARD.md and locate the workflow
+"CJH verified refinement 02" if its run ID has not yet been recorded.
+Do not dispatch a duplicate or launch another batch while it is reserved.
 
 1. Archive and analyze the completed Aramco 3-by-3 CJH baseline. Preserve
    carbon yields, all-species inventories, C2H2/CO Pareto membership, C2H4,

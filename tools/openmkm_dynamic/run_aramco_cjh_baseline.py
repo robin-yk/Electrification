@@ -27,7 +27,7 @@ def save(out, name, value):
     (out / (name + ".json")).write_text(json.dumps(value, indent=2) + "\n")
 
 
-def worker(out, T, tau, mech, points, name):
+def worker(out, T, tau, mech, points, name, convergence_overrides=None):
     import run_cstr_case as solver
     import run_three_pairs as pairs
     from run_c2co_pilot import product_metrics
@@ -46,6 +46,10 @@ def worker(out, T, tau, mech, points, name):
     a.jacobian = "sparse" if mech == "aramco" else "dense"
     p = solver.build_params(a)
     p.update(cycle_output_tolerance=1e-8, stable_cycles_required=3)
+    if convergence_overrides:
+        allowed = {"min_cycles", "max_cycles", "cycle_tolerance", "cycle_output_tolerance", "stable_cycles_required"}
+        assert set(convergence_overrides) <= allowed
+        p.update(convergence_overrides)
     save(out, name + "-parameters", p)
     pairs.OUT = out
     mechanism = "gri30.yaml" if mech == "gri" else str(ROOT / "tools/cantera/mechanisms/aramco20.yaml")
