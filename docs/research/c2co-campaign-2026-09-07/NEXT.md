@@ -3,7 +3,8 @@
 ## Latest dispatch superseding the hold below
 
 User explicitly requested proceeding with fixed-50-sccm CH4/CO2 RPH.
-Run 34156729563 is active, reservation 540 s, batch rph-fixed-pulse-02.
+Run 34156729563 completed and is archived; batch rph-fixed-period-01 reserves 240 s.
+Accidental prior-version dispatch 34156921810 was cancelled; 16 s charged.
 Finite inert expansion predicts the earlier pressure offset, so reviewed
 continuation increases controller K tenfold without changing any gate.
 Archive and reconcile this run before any follow-on. Only inert, baseline
