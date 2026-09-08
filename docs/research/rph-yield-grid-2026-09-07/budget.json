@@ -2,10 +2,11 @@
   "authorization": "User approved another 60 minutes, maximum 10 minutes per batch, for broader RPH yield screening followed by Bayesian search.",
   "total_budget_s": 3600,
   "batch_limit_s": 600,
-  "spent_s": 862.4546181090287,
-  "reserved_s": 120,
-  "active_stage": "bo-propose",
+  "spent_s": 871.1075509430253,
+  "reserved_s": 240,
+  "active_stage": "bo-verify",
   "batches": [
+    {"stage":"bo-propose","status":"completed","wall_s":8.652932833996601,"includes":"Both preserved preflight attempts and successful fit/search"},
     {
       "stage": "pilot",
       "status": "completed",

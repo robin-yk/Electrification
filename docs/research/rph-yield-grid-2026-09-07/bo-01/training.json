@@ -1,0 +1,3761 @@
+{
+  "rows": [
+    {
+      "peak_C": 1400,
+      "hold_s": 0.1,
+      "flow_sccm": 12.5,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.1-Q12.5-n800.json",
+      "sha256": "a8dba8c15856f8937d846d3338b1124447634c92308b2d89bd6905432402751e",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 12.5,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.775,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 3.8110339119448056,
+      "C2H2_Y_pct": 0.4738982044312353,
+      "CO_Y_pct": 0.5144981564882652,
+      "C6H6_Y_pct": 0.9002248106630967,
+      "C2H2_g_gCFP_h": 0.07168232749214419,
+      "CO_g_gCFP_h": 0.16743503598983323
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.1,
+      "flow_sccm": 25,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.1-Q25-n800.json",
+      "sha256": "980f184d38ccd7a5375981d2dd084619bb809ae49b57df844bc8caa3913d6d0c",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 25.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.775,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 2.359243479281692,
+      "C2H2_Y_pct": 0.27259162135840886,
+      "CO_Y_pct": 0.19941764544558754,
+      "C6H6_Y_pct": 0.43425294059294856,
+      "C2H2_g_gCFP_h": 0.08246497535174084,
+      "CO_g_gCFP_h": 0.1297944422972925
+    },
+    {
+      "peak_C": 1400.0,
+      "hold_s": 0.1,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.1-n800.json",
+      "sha256": "0a94ec3c808e3b0c85f556973bf6b829c9056e12ea4d546fba1f8d588f005d7b",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.775,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 1.2067716134351647,
+      "C2H2_Y_pct": 0.11923247168565555,
+      "CO_Y_pct": 0.05877709441211745,
+      "C6H6_Y_pct": 0.13246834766244045,
+      "C2H2_g_gCFP_h": 0.07214090286184367,
+      "CO_g_gCFP_h": 0.07651218799650004
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.1,
+      "flow_sccm": 100,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.1-Q100-n800.json",
+      "sha256": "53e23f2b9c6656aee86ca987fe166aac314edd1dfafa297b566353f0829f382a",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 100.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.775,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 0.4498651270459231,
+      "C2H2_Y_pct": 0.03128994358684791,
+      "CO_Y_pct": 0.011580704061992679,
+      "C6H6_Y_pct": 0.014090921041587419,
+      "C2H2_g_gCFP_h": 0.0378635911667162,
+      "CO_g_gCFP_h": 0.030150010482326427
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.1,
+      "flow_sccm": 200,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.1-Q200-n800.json",
+      "sha256": "d0fa5c9c3782e17bc4b675f0e5e9843600bef79ac47869ba112cbb5b0f008e45",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 200.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.775,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 0.15355126312885936,
+      "C2H2_Y_pct": 0.004983203610764228,
+      "CO_Y_pct": 0.002189974497923248,
+      "C6H6_Y_pct": 0.0002512327009928152,
+      "C2H2_g_gCFP_h": 0.012060231664833639,
+      "CO_g_gCFP_h": 0.011403063875039072
+    },
+    {
+      "peak_C": 1400.0,
+      "hold_s": 0.2,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.2-n800.json",
+      "sha256": "58a9a5c55529b568d6de94b28656dc1ca4b8b0bb65cef3afbc75a51e7f90fe1b",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.2,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.675,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 2.3460873146153305,
+      "C2H2_Y_pct": 0.23385044089890497,
+      "CO_Y_pct": 0.11595345372485827,
+      "C6H6_Y_pct": 0.26199723257484475,
+      "C2H2_g_gCFP_h": 0.14148982825386494,
+      "CO_g_gCFP_h": 0.15094064344240207
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.3,
+      "flow_sccm": 12.5,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.3-Q12.5-n800.json",
+      "sha256": "58c534a2638ced0a88277177d5f35b5db3c7569dde3c2137acf4b5c2b00c4ad0",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 12.5,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.3,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.575,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 10.66095793510865,
+      "C2H2_Y_pct": 1.3434941203724402,
+      "CO_Y_pct": 1.4982182643248987,
+      "C6H6_Y_pct": 2.5598397479051536,
+      "C2H2_g_gCFP_h": 0.20321829586987117,
+      "CO_g_gCFP_h": 0.4875707052481663
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.3,
+      "flow_sccm": 25,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.3-Q25-n800.json",
+      "sha256": "0c577e64e56b94cf1f1eecf132cd052d786ff586d7b502365a70f3dbdfff581f",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 25.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.3,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.575,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 6.7324743714216595,
+      "C2H2_Y_pct": 0.7867188563682253,
+      "CO_Y_pct": 0.5848568189683911,
+      "C6H6_Y_pct": 1.2637176645142287,
+      "C2H2_g_gCFP_h": 0.23799979902483576,
+      "CO_g_gCFP_h": 0.3806642309518381
+    },
+    {
+      "peak_C": 1400.0,
+      "hold_s": 0.3,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.3-n800.json",
+      "sha256": "22ad2f86e926813c93074ee2dd3488456a9f2a934b875e4f35629e7e013187e9",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.3,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.575,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 3.4854016717216996,
+      "C2H2_Y_pct": 0.34846786768821497,
+      "CO_Y_pct": 0.17312964483858154,
+      "C6H6_Y_pct": 0.3915260347114073,
+      "C2H2_g_gCFP_h": 0.21083842545548498,
+      "CO_g_gCFP_h": 0.2253688799377932
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.3,
+      "flow_sccm": 100,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.3-Q100-n800.json",
+      "sha256": "d6799a609e29d14e311e79acb6c5624480bb3bcf8d7699d6ee2b5e8bd79e98cf",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 100.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.3,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.575,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 1.300545879308257,
+      "C2H2_Y_pct": 0.09198778072416057,
+      "CO_Y_pct": 0.034041426295085754,
+      "C6H6_Y_pct": 0.041995845732853275,
+      "C2H2_g_gCFP_h": 0.11131332698014694,
+      "CO_g_gCFP_h": 0.08862581706051946
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.3,
+      "flow_sccm": 200,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.3-Q200-n800.json",
+      "sha256": "fe3c3721c669745cfbf74b6aeafa30b94cccfcd820b62c171a2cad17b26492d7",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 200.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.3,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.575,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 0.440762719964094,
+      "C2H2_Y_pct": 0.014655183711267505,
+      "CO_Y_pct": 0.0063929235037790055,
+      "C6H6_Y_pct": 0.0007493114374237174,
+      "C2H2_g_gCFP_h": 0.03546812943119473,
+      "CO_g_gCFP_h": 0.03328756345380304
+    },
+    {
+      "peak_C": 1400.0,
+      "hold_s": 0.4,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.4-n800.json",
+      "sha256": "438c427eba550a8d3aa495a81a3c081d6774c4e2d814be520c16c0870153fd6a",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.4,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.475,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 4.624701038842849,
+      "C2H2_Y_pct": 0.4630847491677558,
+      "CO_Y_pct": 0.2303056661492543,
+      "C6H6_Y_pct": 0.5210547579558107,
+      "C2H2_g_gCFP_h": 0.28018669272064955,
+      "CO_g_gCFP_h": 0.29979689539464793
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.5,
+      "flow_sccm": 12.5,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.5-Q12.5-n800.json",
+      "sha256": "8d5f221a34ea7a3311ca3e116b3a247f653d7a33bb6c2bf0ec430a4a63e87d21",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 12.5,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.5,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.375,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 17.510895269326255,
+      "C2H2_Y_pct": 2.213084599077951,
+      "CO_Y_pct": 2.481936765708197,
+      "C6H6_Y_pct": 4.219453013793118,
+      "C2H2_g_gCFP_h": 0.3347534418057613,
+      "CO_g_gCFP_h": 0.807705851712455
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.5,
+      "flow_sccm": 25,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.5-Q25-n800.json",
+      "sha256": "f7f145647366b24f7e22328dce98043e57a15e57386bc40cf4ba80e866e4f44a",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 25.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.5,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.375,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 11.105689553174368,
+      "C2H2_Y_pct": 1.3008423325652392,
+      "CO_Y_pct": 0.9702948679928101,
+      "C6H6_Y_pct": 2.093181471720106,
+      "C2H2_g_gCFP_h": 0.39353348557418655,
+      "CO_g_gCFP_h": 0.6315332877070555
+    },
+    {
+      "peak_C": 1400.0,
+      "hold_s": 0.5,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.5-n800.json",
+      "sha256": "0376c33c389533f5647763e0b2742897f6e7d4cc88bb4f305d7c5fa32cc734b1",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.5,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.375,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 5.763996305897068,
+      "C2H2_Y_pct": 0.5777010804774133,
+      "CO_Y_pct": 0.28748151673211375,
+      "C6H6_Y_pct": 0.6505834086774985,
+      "C2H2_g_gCFP_h": 0.3495346271087752,
+      "CO_g_gCFP_h": 0.37422468860917035
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.5,
+      "flow_sccm": 100,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.5-Q100-n800.json",
+      "sha256": "67308272cd23427dca4b3f32bdf4913edca691652808af6089cd44331ee18e5b",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 100.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.5,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.375,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 2.151209409553745,
+      "C2H2_Y_pct": 0.15268466034967826,
+      "CO_Y_pct": 0.05650181831828657,
+      "C6H6_Y_pct": 0.06990072359526728,
+      "C2H2_g_gCFP_h": 0.18476190411986382,
+      "CO_g_gCFP_h": 0.14710076394731036
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.5,
+      "flow_sccm": 200,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.5-Q200-n800.json",
+      "sha256": "3d99e50e2dced74c7e2f7566c3939e6bf3a9b0a5b66a8c1f17de3ce119598abe",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 200.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.5,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.375,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 0.727961026238988,
+      "C2H2_Y_pct": 0.02432686647505535,
+      "CO_Y_pct": 0.010595742335532128,
+      "C6H6_Y_pct": 0.0012473880273212437,
+      "C2H2_g_gCFP_h": 0.05887530759026084,
+      "CO_g_gCFP_h": 0.055171385223940196
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.65,
+      "flow_sccm": 12.5,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q12.5-n800.json",
+      "sha256": "b5be59ce88e48c7039af008f19635bc1ae8e889286858d67e202bc341269936b",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 12.5,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.65,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.22499999999999998,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 22.64835310927712,
+      "C2H2_Y_pct": 2.8652738907900304,
+      "CO_Y_pct": 3.219724594082779,
+      "C6H6_Y_pct": 5.4641619804615456,
+      "C2H2_g_gCFP_h": 0.43340426166164986,
+      "CO_g_gCFP_h": 1.047806870615866
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.65,
+      "flow_sccm": 25,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q25-n800.json",
+      "sha256": "3069c30bfbd58629544c69030d53fe476b0cb064f53a91c57352d81dd1bf09b1",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 25.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.65,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.22499999999999998,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 14.385595137332208,
+      "C2H2_Y_pct": 1.686432455708769,
+      "CO_Y_pct": 1.2593726648381072,
+      "C6H6_Y_pct": 2.7152788246026316,
+      "C2H2_g_gCFP_h": 0.5101829990201545,
+      "CO_g_gCFP_h": 0.8196845986817061
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.65,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q50-n800.json",
+      "sha256": "c19a5605ee9df4bc399e863ba3cb569a20c961dd3ee3835e7e1bc64ffc71b706",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.65,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.22499999999999998,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 7.472925983622892,
+      "C2H2_Y_pct": 0.7496245302881402,
+      "CO_Y_pct": 0.3732449699851761,
+      "C6H6_Y_pct": 0.8448762727710126,
+      "C2H2_g_gCFP_h": 0.45355589511676564,
+      "CO_g_gCFP_h": 0.4858659584636826
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.65,
+      "flow_sccm": 100,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q100-n800.json",
+      "sha256": "5466cee50e92edf0e39da0df50d055bfad7b376da5cc1faf0a1f33229a2d6e1b",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 100.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.65,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.22499999999999998,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 2.789207978324315,
+      "C2H2_Y_pct": 0.19820666131106493,
+      "CO_Y_pct": 0.07334688919388523,
+      "C6H6_Y_pct": 0.0908293622148236,
+      "C2H2_g_gCFP_h": 0.23984753981967685,
+      "CO_g_gCFP_h": 0.19095639316951504
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.65,
+      "flow_sccm": 200,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q200-n800.json",
+      "sha256": "88b6b1b924bdd86efed1e1e23083e20711efa61dc79ecfae8ed3412a8d35941c",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 200.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.65,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.22499999999999998,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 0.9433560455386236,
+      "C2H2_Y_pct": 0.031580412325226424,
+      "CO_Y_pct": 0.013747768574422949,
+      "C6H6_Y_pct": 0.0016209448844828628,
+      "C2H2_g_gCFP_h": 0.07643016791256262,
+      "CO_g_gCFP_h": 0.07158379394009451
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.8,
+      "flow_sccm": 12.5,
+      "source": "docs/research/rph-yield-grid-2026-09-07/pilot/data/T1400-h0.8-Q12.5-n800.json",
+      "sha256": "d213c4c53c00e5bfd78b6f358743b3b36a947ebc95f92d07cb667c60cde3c052",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 12.5,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.8,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.07499999999999996,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 27.7858514424944,
+      "C2H2_Y_pct": 3.5174601255372897,
+      "CO_Y_pct": 3.957511551241608,
+      "C6H6_Y_pct": 6.708870265584116,
+      "C2H2_g_gCFP_h": 0.5320546191179105,
+      "CO_g_gCFP_h": 1.2879076059963157
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.8,
+      "flow_sccm": 25,
+      "source": "docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.8-Q25-n800.json",
+      "sha256": "d5ab4eaac27a18bff55ebf39b454d50118e767369fcb3624f7330249683272f6",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 25.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.8,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.07499999999999996,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 17.665473669283994,
+      "C2H2_Y_pct": 2.0720204221295955,
+      "CO_Y_pct": 1.5484498262330593,
+      "C6H6_Y_pct": 3.337375811428832,
+      "C2H2_g_gCFP_h": 0.6268318600099547,
+      "CO_g_gCFP_h": 1.0078354960624494
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.8,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1400-h0.8-Q50-n800.json",
+      "sha256": "d9dc31cabdda5a24f1de75eaaed30647c7b61f8c6c8fadffc43b680a571ddfe1",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.8,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.07499999999999996,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 9.181852157757497,
+      "C2H2_Y_pct": 0.9215466868396752,
+      "CO_Y_pct": 0.4590080321381575,
+      "C6H6_Y_pct": 1.0391690425632567,
+      "C2H2_g_gCFP_h": 0.5575763806459193,
+      "CO_g_gCFP_h": 0.5975067192096174
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.8,
+      "flow_sccm": 100,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1400-h0.8-Q100-n800.json",
+      "sha256": "f0aed7c0d9c7413d7a3056efe094037a4cb43b7362c9b51d21c3c45eb5e75f48",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 100.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.8,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.07499999999999996,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 3.42718516706384,
+      "C2H2_Y_pct": 0.2437280552450089,
+      "CO_Y_pct": 0.09019176318860875,
+      "C6H6_Y_pct": 0.11175799485582336,
+      "C2H2_g_gCFP_h": 0.2949324409627512,
+      "CO_g_gCFP_h": 0.23481150981835489
+    },
+    {
+      "peak_C": 1400,
+      "hold_s": 0.8,
+      "flow_sccm": 200,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1400-h0.8-Q200-n800.json",
+      "sha256": "7129a5ac294d6aa528165314ccaca4f21e67404ac5e3b2c2582f9272eb9bc24b",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 200.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1673.15
+          ],
+          [
+            0.8,
+            1673.15,
+            1673.15
+          ],
+          [
+            0.1,
+            1673.15,
+            723.15
+          ],
+          [
+            0.07499999999999996,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 1.1587494622576688,
+      "C2H2_Y_pct": 0.038833746306901853,
+      "CO_Y_pct": 0.016899719057800366,
+      "C6H6_Y_pct": 0.0019945024748643436,
+      "C2H2_g_gCFP_h": 0.093984515475736,
+      "CO_g_gCFP_h": 0.08799580820190286
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.1,
+      "flow_sccm": 12.5,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.1-Q12.5-n800.json",
+      "sha256": "f2fa0ac3c601daeed2223a07aee19aa575aa37a6abda366727f6c0bcc6ea0b09",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 12.5,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.775,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 9.598075586660837,
+      "C2H2_Y_pct": 2.330389964667109,
+      "CO_Y_pct": 4.119225643456219,
+      "C6H6_Y_pct": 0.681049420809848,
+      "C2H2_g_gCFP_h": 0.352497171480449,
+      "CO_g_gCFP_h": 1.3405348205131362
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.1,
+      "flow_sccm": 25,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.1-Q25-n800.json",
+      "sha256": "dad360975dbf9b67ecd29f9e58bb29fff9d123aebed61ec247d51583546827d5",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 25.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.775,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 8.398517124822236,
+      "C2H2_Y_pct": 2.007789444833797,
+      "CO_Y_pct": 2.825002495949135,
+      "C6H6_Y_pct": 0.7605518856736468,
+      "C2H2_g_gCFP_h": 0.607400573262693,
+      "CO_g_gCFP_h": 1.8387019996694607
+    },
+    {
+      "peak_C": 1600.0,
+      "hold_s": 0.1,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.1-n800.json",
+      "sha256": "5a3b00792a5c2f0169f77231e231c2dd0878fa58d474c6a088bb3ba159c6769a",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.775,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 7.015843556520607,
+      "C2H2_Y_pct": 1.5588127826071205,
+      "CO_Y_pct": 1.7338084722102545,
+      "C6H6_Y_pct": 0.7657909751627118,
+      "C2H2_g_gCFP_h": 0.9431504684926321,
+      "CO_g_gCFP_h": 2.2569587881555258
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.1,
+      "flow_sccm": 100,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.1-Q100-n800.json",
+      "sha256": "777f36c0c8647f03c05ab920fa00514b57433c94e9087b697287f627eb520743",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 100.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.775,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 5.459387509862202,
+      "C2H2_Y_pct": 1.070808052336217,
+      "CO_Y_pct": 0.9290009945000646,
+      "C6H6_Y_pct": 0.631942855231265,
+      "C2H2_g_gCFP_h": 1.2957721767426986,
+      "CO_g_gCFP_h": 2.418625808269646
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.1,
+      "flow_sccm": 200,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.1-Q200-n800.json",
+      "sha256": "51c45e01a01285a1ea2fff937848ee6bc15d520905835564f29bd804351066ed",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 200.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.775,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 3.8473304431475785,
+      "C2H2_Y_pct": 0.6327329131663924,
+      "CO_Y_pct": 0.42411165669877127,
+      "C6H6_Y_pct": 0.3919717093375614,
+      "C2H2_g_gCFP_h": 1.5313252499392607,
+      "CO_g_gCFP_h": 2.208323574576266
+    },
+    {
+      "peak_C": 1600.0,
+      "hold_s": 0.2,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.2-n800.json",
+      "sha256": "af20ba3805bfdac1674bc3d59f4e8fa3b2220b88f1affeb86c9007a22b0b6cc0",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.2,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.675,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 13.166278795809184,
+      "C2H2_Y_pct": 2.9736718396895676,
+      "CO_Y_pct": 3.332864404446113,
+      "C6H6_Y_pct": 1.4058948340341073,
+      "C2H2_g_gCFP_h": 1.7992025854803584,
+      "CO_g_gCFP_h": 4.338505508486866
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.3,
+      "flow_sccm": 12.5,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.3-Q12.5-n800.json",
+      "sha256": "b6c4fe8951fcbdd15a869adebb364df585e9198d7339725392a23bc2e95eb5bb",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 12.5,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.3,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.575,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 25.313023522027823,
+      "C2H2_Y_pct": 6.352922040240838,
+      "CO_Y_pct": 11.393990877308312,
+      "C6H6_Y_pct": 1.4867228222765698,
+      "C2H2_g_gCFP_h": 0.9609494907606977,
+      "CO_g_gCFP_h": 3.7079885487470374
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.3,
+      "flow_sccm": 25,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.3-Q25-n800.json",
+      "sha256": "3f0bfaa7f2b8ba1f0f2a760315658e08a71cc2fdcf572a25be4c8aa7d7417f7f",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 25.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.3,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.575,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 22.69719302990302,
+      "C2H2_Y_pct": 5.579381784479597,
+      "CO_Y_pct": 7.944195969000549,
+      "C6H6_Y_pct": 1.8878029134619279,
+      "C2H2_g_gCFP_h": 1.687885999731843,
+      "CO_g_gCFP_h": 5.170618091457566
+    },
+    {
+      "peak_C": 1600.0,
+      "hold_s": 0.3,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.3-n800.json",
+      "sha256": "7bb26e1f1cedc102ebcadf00e70d8cc35d64f29e38c4ed80f7973da679c37acc",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.3,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.575,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 19.316655923520976,
+      "C2H2_Y_pct": 4.388521778999759,
+      "CO_Y_pct": 4.931907258300464,
+      "C6H6_Y_pct": 2.0460038893843966,
+      "C2H2_g_gCFP_h": 2.655249185813826,
+      "CO_g_gCFP_h": 6.420035204234147
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.3,
+      "flow_sccm": 100,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.3-Q100-n800.json",
+      "sha256": "014361a437ede95ce35e2af49e99f510780664646f1d7f6db6445fc96947da4d",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 100.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.3,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.575,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 15.263959930218164,
+      "C2H2_Y_pct": 3.046239992999431,
+      "CO_Y_pct": 2.665925078455715,
+      "C6H6_Y_pct": 1.760839152541287,
+      "C2H2_g_gCFP_h": 3.6862190361734104,
+      "CO_g_gCFP_h": 6.940654784913501
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.3,
+      "flow_sccm": 200,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.3-Q200-n800.json",
+      "sha256": "813e655172906ee01cad043140673c0a76a93ec9aa82cea96e6a72aab345282b",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 200.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.3,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.575,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 10.90546961905724,
+      "C2H2_Y_pct": 1.8183809758732277,
+      "CO_Y_pct": 1.226468968067664,
+      "C6H6_Y_pct": 1.1216408810645815,
+      "C2H2_g_gCFP_h": 4.40080268375672,
+      "CO_g_gCFP_h": 6.386149243697255
+    },
+    {
+      "peak_C": 1600.0,
+      "hold_s": 0.4,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.4-n800.json",
+      "sha256": "884545ed9d72d9acac48847ad514001faf67f7f79207b15d7e5711ae7e8d21bb",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.4,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.475,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 25.46698347466728,
+      "C2H2_Y_pct": 5.803363014419018,
+      "CO_Y_pct": 6.530937786820839,
+      "C6H6_Y_pct": 2.686117925280571,
+      "C2H2_g_gCFP_h": 3.511290519909487,
+      "CO_g_gCFP_h": 8.501548855665531
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.5,
+      "flow_sccm": 12.5,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.5-Q12.5-n800.json",
+      "sha256": "258c1c84dc0c95c7187b95597792083d8dade62773c85179f751961f20a16d46",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 12.5,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.5,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.375,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 41.027696308200646,
+      "C2H2_Y_pct": 10.375448780828474,
+      "CO_Y_pct": 18.668697396544847,
+      "C6H6_Y_pct": 2.292477974973517,
+      "C2H2_g_gCFP_h": 1.569401003065489,
+      "CO_g_gCFP_h": 6.075423169266664
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.5,
+      "flow_sccm": 25,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.5-Q25-n800.json",
+      "sha256": "1721650de7de9baaaa12cc53bb6849192781d085cfc889d5a223fa615f5cf099",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 25.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.5,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.375,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 36.995635163823536,
+      "C2H2_Y_pct": 9.150946663694862,
+      "CO_Y_pct": 13.063328877974028,
+      "C6H6_Y_pct": 3.0151010764627317,
+      "C2H2_g_gCFP_h": 2.768363118815328,
+      "CO_g_gCFP_h": 8.502494764062373
+    },
+    {
+      "peak_C": 1600.0,
+      "hold_s": 0.5,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.5-n800.json",
+      "sha256": "b59e34b993c8f3f9b7cdab95ca6df4bf4a6c396fe19434771237c9a9b4b8687b",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.5,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.375,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 31.617273996149788,
+      "C2H2_Y_pct": 7.218197034950323,
+      "CO_Y_pct": 8.129955408060404,
+      "C6H6_Y_pct": 3.3262368959880426,
+      "C2H2_g_gCFP_h": 4.367327488679799,
+      "CO_g_gCFP_h": 10.583045705240583
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.5,
+      "flow_sccm": 100,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.5-Q100-n800.json",
+      "sha256": "53549722ec8ef3cfa547d6a04ed8569d4e6bcd98d5dd9d2294cd7ef708152fd6",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 100.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.5,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.375,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 25.06836094574487,
+      "C2H2_Y_pct": 5.021639988106886,
+      "CO_Y_pct": 4.402812590639471,
+      "C6H6_Y_pct": 2.8897343362907115,
+      "C2H2_g_gCFP_h": 6.076627238664408,
+      "CO_g_gCFP_h": 11.462588548062556
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.5,
+      "flow_sccm": 200,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.5-Q200-n800.json",
+      "sha256": "5e257c088238e01b5b359ef62d8bb2a6d2f37bdd885eaa1b81844d31eac407c2",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 200.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.5,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.375,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 17.96346502363435,
+      "C2H2_Y_pct": 3.004004664341817,
+      "CO_Y_pct": 2.028803717135835,
+      "C6H6_Y_pct": 1.8512970321521174,
+      "C2H2_g_gCFP_h": 7.270221127618546,
+      "CO_g_gCFP_h": 10.563857432292085
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.65,
+      "flow_sccm": 12.5,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.65-Q12.5-n800.json",
+      "sha256": "481c0e59636b31bd4897e7724124a33a5c154a4b1502e7661b09bbc39713f79d",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 12.5,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.65,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.22499999999999998,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 52.81353360344586,
+      "C2H2_Y_pct": 13.392343331455839,
+      "CO_Y_pct": 24.12468963608663,
+      "C6H6_Y_pct": 2.8968437752913676,
+      "C2H2_g_gCFP_h": 2.0257395609354965,
+      "CO_g_gCFP_h": 7.850986882115002
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.65,
+      "flow_sccm": 25,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.65-Q25-n800.json",
+      "sha256": "266d3103754eb8325c9d88bed76d297db9029241423b9dbca65b097a138e0b4a",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 25.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.65,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.22499999999999998,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 47.71934079180228,
+      "C2H2_Y_pct": 11.829605534137908,
+      "CO_Y_pct": 16.90263929960654,
+      "C6H6_Y_pct": 3.8606031176594557,
+      "C2H2_g_gCFP_h": 3.5787164841389454,
+      "CO_g_gCFP_h": 11.001376715398745
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.65,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.65-Q50-n800.json",
+      "sha256": "83eec6ef63683b720234d6d3ff10927d13fc1ae7e200f7b9cc0c68c8240b88fb",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.65,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.22499999999999998,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 40.84262327205632,
+      "C2H2_Y_pct": 9.340434596446777,
+      "CO_Y_pct": 10.528458364188532,
+      "C6H6_Y_pct": 4.286422989774386,
+      "C2H2_g_gCFP_h": 5.65137479231454,
+      "CO_g_gCFP_h": 13.705260420427374
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.65,
+      "flow_sccm": 100,
+      "source": "docs/research/rph-yield-grid-2026-09-07/3/data/T1600-h0.65-Q100-n800.json",
+      "sha256": "0459b1a765991d3d3a30cad3a2379a2df8db1060e4fbf4c76fa334197883c852",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 100.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.65,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.22499999999999998,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 32.42157470977428,
+      "C2H2_Y_pct": 6.503175568093093,
+      "CO_Y_pct": 5.705454553271911,
+      "C6H6_Y_pct": 3.7364044306809783,
+      "C2H2_g_gCFP_h": 7.869415945484591,
+      "CO_g_gCFP_h": 14.853977242380715
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.65,
+      "flow_sccm": 200,
+      "source": "docs/research/rph-yield-grid-2026-09-07/3/data/T1600-h0.65-Q200-n800.json",
+      "sha256": "04ae7f2573bb3d30d5d23553df1ac0d3bdf9ac9e222dda36649677d6515b1594",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 200.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.65,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.22499999999999998,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 23.25689935277112,
+      "C2H2_Y_pct": 3.8932147833538746,
+      "CO_Y_pct": 2.630541412509855,
+      "C6H6_Y_pct": 2.3985317827960837,
+      "C2H2_g_gCFP_h": 9.422266452604786,
+      "CO_g_gCFP_h": 13.69706897556606
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.8,
+      "flow_sccm": 25,
+      "source": "docs/research/rph-yield-grid-2026-09-07/pilot/data/T1600-h0.8-Q25-n800.json",
+      "sha256": "d2b285d7853445397b648bc7fb934e5f8bf8786f5a2198dee373bce74f4171d6",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 25.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.8,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.07499999999999996,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 58.44293422889282,
+      "C2H2_Y_pct": 14.50825458394992,
+      "CO_Y_pct": 20.741915131018782,
+      "C6H6_Y_pct": 4.706127146231352,
+      "C2H2_g_gCFP_h": 4.389066878505157,
+      "CO_g_gCFP_h": 13.500236153088752
+    },
+    {
+      "peak_C": 1800.0,
+      "hold_s": 0.1,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.1-n800.json",
+      "sha256": "958c7c4d7e70b8d914a2e6179555320aff6df6a77603efb9fc8900984b0bac94",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            723.15
+          ],
+          [
+            0.775,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 10.682977765345282,
+      "C2H2_Y_pct": 2.624116743684804,
+      "CO_Y_pct": 5.386152401991434,
+      "C6H6_Y_pct": 0.1933325891913248,
+      "C2H2_g_gCFP_h": 1.5877063389526107,
+      "CO_g_gCFP_h": 7.011341905904238
+    },
+    {
+      "peak_C": 1800.0,
+      "hold_s": 0.1,
+      "flow_sccm": 100.0,
+      "source": "docs/research/rph-flow-01-2026-09-07/data/Q100-hold0.1-n800.json",
+      "sha256": "052657ca0f62fb905d67d45f28089a3763f0732d26e3afacef292c4dcd021c9b",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 100.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            723.15
+          ],
+          [
+            0.775,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 9.755894141411636,
+      "C2H2_Y_pct": 2.508392932628109,
+      "CO_Y_pct": 4.016216700667095,
+      "C6H6_Y_pct": 0.18371619973783418,
+      "C2H2_g_gCFP_h": 3.0353766609676014,
+      "CO_g_gCFP_h": 10.456097917381001
+    },
+    {
+      "peak_C": 1800.0,
+      "hold_s": 0.1,
+      "flow_sccm": 200.0,
+      "source": "docs/research/rph-flow-01-2026-09-07/data/Q200-hold0.1-n800.json",
+      "sha256": "b6e16ce2a4cea61828eecd75ed4d8af3785bc1c8335b635dd589f86e8e972909",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 200.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            723.15
+          ],
+          [
+            0.775,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 8.61131522475478,
+      "C2H2_Y_pct": 2.2026360461005137,
+      "CO_Y_pct": 2.7158339186947034,
+      "C6H6_Y_pct": 0.18478924530208563,
+      "C2H2_g_gCFP_h": 5.330767727793378,
+      "CO_g_gCFP_h": 14.141181862273328
+    },
+    {
+      "peak_C": 1800.0,
+      "hold_s": 0.2,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.2-n800.json",
+      "sha256": "6895649a31722751530517c0f0aa033202fba7c26823632f9dc8dc035396c61d",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            2073.15
+          ],
+          [
+            0.2,
+            2073.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            723.15
+          ],
+          [
+            0.675,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 19.221418784743026,
+      "C2H2_Y_pct": 4.7614288737917,
+      "CO_Y_pct": 10.072546854888207,
+      "C6H6_Y_pct": 0.2321084545161839,
+      "C2H2_g_gCFP_h": 2.8808744213017046,
+      "CO_g_gCFP_h": 13.111784552689294
+    },
+    {
+      "peak_C": 1800,
+      "hold_s": 0.3,
+      "flow_sccm": 25,
+      "source": "docs/research/rph-yield-grid-2026-09-07/pilot/data/T1800-h0.3-Q25-n800.json",
+      "sha256": "f15a422ffa702dbfb2d7f9380182488f62a8c75824e7d258d24b497447204884",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 25.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            2073.15
+          ],
+          [
+            0.3,
+            2073.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            723.15
+          ],
+          [
+            0.575,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 29.227620833317648,
+      "C2H2_Y_pct": 6.6096156828301025,
+      "CO_Y_pct": 18.117085363116313,
+      "C6H6_Y_pct": 0.2580453477750605,
+      "C2H2_g_gCFP_h": 1.9995544677890378,
+      "CO_g_gCFP_h": 11.791820054357952
+    },
+    {
+      "peak_C": 1800.0,
+      "hold_s": 0.3,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.3-n800.json",
+      "sha256": "a6b3b6628cf34b44a5d44568c568691ab1651858a606865b840973f5ebe27ebf",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            2073.15
+          ],
+          [
+            0.3,
+            2073.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            723.15
+          ],
+          [
+            0.575,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 27.759863599668577,
+      "C2H2_Y_pct": 6.89875317016506,
+      "CO_Y_pct": 14.758935019847275,
+      "C6H6_Y_pct": 0.2708849530739432,
+      "C2H2_g_gCFP_h": 4.174049864778474,
+      "CO_g_gCFP_h": 19.21221901424715
+    },
+    {
+      "peak_C": 1800.0,
+      "hold_s": 0.4,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.4-n800.json",
+      "sha256": "ed5043f5164ea28a97ad76c811e66c5b8c51eb170e652ea88120036fb75a77f7",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            2073.15
+          ],
+          [
+            0.4,
+            2073.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            723.15
+          ],
+          [
+            0.475,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 36.29829944182335,
+      "C2H2_Y_pct": 9.036088843852042,
+      "CO_Y_pct": 19.44531230585965,
+      "C6H6_Y_pct": 0.3096618721048408,
+      "C2H2_g_gCFP_h": 5.46723219203166,
+      "CO_g_gCFP_h": 25.31263931430174
+    },
+    {
+      "peak_C": 1800,
+      "hold_s": 0.5,
+      "flow_sccm": 12.5,
+      "source": "docs/research/rph-xs-extension-01-2026-09-07/data/Q12.5-T1800-h0.5-n800.json",
+      "sha256": "c903d80161767c756a4cbbc3847e0171c3fa924277f434e2b605dfc0619ceb92",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 12.5,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            2073.15
+          ],
+          [
+            0.5,
+            2073.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            723.15
+          ],
+          [
+            0.375,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 48.69348524823847,
+      "C2H2_Y_pct": 9.635066572221149,
+      "CO_Y_pct": 34.25690064041546,
+      "C6H6_Y_pct": 0.29772461705138564,
+      "C2H2_g_gCFP_h": 1.4574100323243278,
+      "CO_g_gCFP_h": 11.148349744881791
+    },
+    {
+      "peak_C": 1800,
+      "hold_s": 0.5,
+      "flow_sccm": 25.0,
+      "source": "docs/research/rph-xs-extension-01-2026-09-07/data/Q25-T1800-h0.5-n800.json",
+      "sha256": "fde2438e117699647c8424b930ffca344f0ce0668aad7ac8a8c252724815736e",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 25.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            2073.15
+          ],
+          [
+            0.5,
+            2073.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            723.15
+          ],
+          [
+            0.375,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 46.98471421325726,
+      "C2H2_Y_pct": 10.634164909379045,
+      "CO_Y_pct": 29.51801968236686,
+      "C6H6_Y_pct": 0.29614827720611026,
+      "C2H2_g_gCFP_h": 3.2170693389921334,
+      "CO_g_gCFP_h": 19.212316411782624
+    },
+    {
+      "peak_C": 1800.0,
+      "hold_s": 0.5,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-450-pilot-01-2026-09-07/data/T1800-hold0.5-n800.json",
+      "sha256": "9a848e2e363921f214c7f2a12c5f37cb1179cd7bbd40bac22f3de353b8af62bb",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            2073.15
+          ],
+          [
+            0.5,
+            2073.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            723.15
+          ],
+          [
+            0.375,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 44.83673099015023,
+      "C2H2_Y_pct": 11.173434652866495,
+      "CO_Y_pct": 24.13167887060863,
+      "C6H6_Y_pct": 0.3484390790498042,
+      "C2H2_g_gCFP_h": 6.76042065160488,
+      "CO_g_gCFP_h": 31.41304565811489
+    },
+    {
+      "peak_C": 1800.0,
+      "hold_s": 0.5,
+      "flow_sccm": 100.0,
+      "source": "docs/research/rph-flow-01-2026-09-07/data/Q100-hold0.5-n800.json",
+      "sha256": "96d48b91efde449d6ae8b37d7e14bb76b08f275554e56ede47ba8e383c426e92",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 100.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            2073.15
+          ],
+          [
+            0.5,
+            2073.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            723.15
+          ],
+          [
+            0.375,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 41.89228909112064,
+      "C2H2_Y_pct": 10.996320639884129,
+      "CO_Y_pct": 18.290685763165506,
+      "C6H6_Y_pct": 0.4640903371053657,
+      "C2H2_g_gCFP_h": 13.306517728005884,
+      "CO_g_gCFP_h": 47.61924357416735
+    },
+    {
+      "peak_C": 1800.0,
+      "hold_s": 0.5,
+      "flow_sccm": 200.0,
+      "source": "docs/research/rph-flow-01-2026-09-07/data/Q200-hold0.5-n800.json",
+      "sha256": "432df062b6006a5464067b9c8153fc7655915b1a05ed03a6aafe2ee156d22b2b",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 200.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            2073.15
+          ],
+          [
+            0.5,
+            2073.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            723.15
+          ],
+          [
+            0.375,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 37.795658342993896,
+      "C2H2_Y_pct": 9.897721623942173,
+      "CO_Y_pct": 12.541197628301282,
+      "C6H6_Y_pct": 0.6175576547178919,
+      "C2H2_g_gCFP_h": 23.95423206888982,
+      "CO_g_gCFP_h": 65.30125248518763
+    },
+    {
+      "peak_C": 1800,
+      "hold_s": 0.65,
+      "flow_sccm": 50.0,
+      "source": "docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.65-n800.json",
+      "sha256": "24932eaad40086c5bb02b30104d63f59a8a8b8010a7add4bda21701d946a8f07",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            2073.15
+          ],
+          [
+            0.65,
+            2073.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            723.15
+          ],
+          [
+            0.22499999999999998,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 57.644387036418784,
+      "C2H2_Y_pct": 14.379471302871478,
+      "CO_Y_pct": 31.16120951964906,
+      "C6H6_Y_pct": 0.4066053376135956,
+      "C2H2_g_gCFP_h": 8.700214193328007,
+      "CO_g_gCFP_h": 40.56363018302224
+    },
+    {
+      "peak_C": 1800,
+      "hold_s": 0.8,
+      "flow_sccm": 50.0,
+      "source": "docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.8-n800.json",
+      "sha256": "d518ec5004bb193e77c97535515890268f96a0fc9dc8ba41b0fb39fd0c06d611",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 50.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            2073.15
+          ],
+          [
+            0.8,
+            2073.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            723.15
+          ],
+          [
+            0.07499999999999996,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 70.45204074314151,
+      "C2H2_Y_pct": 17.58552665564628,
+      "CO_Y_pct": 38.190723828279,
+      "C6H6_Y_pct": 0.4647720262299719,
+      "C2H2_g_gCFP_h": 10.640019051051562,
+      "CO_g_gCFP_h": 49.71419343704896
+    },
+    {
+      "peak_C": 1800,
+      "hold_s": 0.8,
+      "flow_sccm": 200,
+      "source": "docs/research/rph-yield-grid-2026-09-07/pilot/data/T1800-h0.8-Q200-n800.json",
+      "sha256": "b8621d34b3b678a6e649f193a5fbd33a77e0a1e9335d5beb136006ce19fd8cfa",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 200.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            2073.15
+          ],
+          [
+            0.8,
+            2073.15,
+            2073.15
+          ],
+          [
+            0.1,
+            2073.15,
+            723.15
+          ],
+          [
+            0.07499999999999996,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 59.683921479064495,
+      "C2H2_Y_pct": 15.669066387442365,
+      "CO_Y_pct": 19.910158060049323,
+      "C6H6_Y_pct": 0.9421364249984899,
+      "C2H2_g_gCFP_h": 37.92190433399366,
+      "CO_g_gCFP_h": 103.6709807973405
+    },
+    {
+      "peak_C": 1900,
+      "hold_s": 0.8,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-yield-grid-2026-09-07/hot-boundary-02/data/T1900-h0.8-Q50-n800.json",
+      "sha256": "77d96a017a39c4ff82e0ed5e51f22687e12f4a137ac0b1c9c8f999bdcbc430d7",
+      "C2H2_Y_pct": 16.136762233820885
+    },
+    {
+      "peak_C": 2000,
+      "hold_s": 0.8,
+      "flow_sccm": 50,
+      "source": "docs/research/rph-yield-grid-2026-09-07/hot-boundary-02/data/T2000-h0.8-Q50-n800.json",
+      "sha256": "6a6a5b3ada1b10d9ce057c65e55901b20b7b60dbd73f7255ef5b749dd56b91e4",
+      "C2H2_Y_pct": 14.0025717569953
+    }
+  ],
+  "x": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.25
+    ],
+    [
+      0.0,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.75
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.14285714285714288,
+      0.5
+    ],
+    [
+      0.0,
+      0.2857142857142857,
+      0.0
+    ],
+    [
+      0.0,
+      0.2857142857142857,
+      0.25
+    ],
+    [
+      0.0,
+      0.2857142857142857,
+      0.5
+    ],
+    [
+      0.0,
+      0.2857142857142857,
+      0.75
+    ],
+    [
+      0.0,
+      0.2857142857142857,
+      1.0
+    ],
+    [
+      0.0,
+      0.42857142857142866,
+      0.5
+    ],
+    [
+      0.0,
+      0.5714285714285715,
+      0.0
+    ],
+    [
+      0.0,
+      0.5714285714285715,
+      0.25
+    ],
+    [
+      0.0,
+      0.5714285714285715,
+      0.5
+    ],
+    [
+      0.0,
+      0.5714285714285715,
+      0.75
+    ],
+    [
+      0.0,
+      0.5714285714285715,
+      1.0
+    ],
+    [
+      0.0,
+      0.7857142857142858,
+      0.0
+    ],
+    [
+      0.0,
+      0.7857142857142858,
+      0.25
+    ],
+    [
+      0.0,
+      0.7857142857142858,
+      0.5
+    ],
+    [
+      0.0,
+      0.7857142857142858,
+      0.75
+    ],
+    [
+      0.0,
+      0.7857142857142858,
+      1.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.25
+    ],
+    [
+      0.0,
+      1.0,
+      0.5
+    ],
+    [
+      0.0,
+      1.0,
+      0.75
+    ],
+    [
+      0.0,
+      1.0,
+      1.0
+    ],
+    [
+      0.3333333333333333,
+      0.0,
+      0.0
+    ],
+    [
+      0.3333333333333333,
+      0.0,
+      0.25
+    ],
+    [
+      0.3333333333333333,
+      0.0,
+      0.5
+    ],
+    [
+      0.3333333333333333,
+      0.0,
+      0.75
+    ],
+    [
+      0.3333333333333333,
+      0.0,
+      1.0
+    ],
+    [
+      0.3333333333333333,
+      0.14285714285714288,
+      0.5
+    ],
+    [
+      0.3333333333333333,
+      0.2857142857142857,
+      0.0
+    ],
+    [
+      0.3333333333333333,
+      0.2857142857142857,
+      0.25
+    ],
+    [
+      0.3333333333333333,
+      0.2857142857142857,
+      0.5
+    ],
+    [
+      0.3333333333333333,
+      0.2857142857142857,
+      0.75
+    ],
+    [
+      0.3333333333333333,
+      0.2857142857142857,
+      1.0
+    ],
+    [
+      0.3333333333333333,
+      0.42857142857142866,
+      0.5
+    ],
+    [
+      0.3333333333333333,
+      0.5714285714285715,
+      0.0
+    ],
+    [
+      0.3333333333333333,
+      0.5714285714285715,
+      0.25
+    ],
+    [
+      0.3333333333333333,
+      0.5714285714285715,
+      0.5
+    ],
+    [
+      0.3333333333333333,
+      0.5714285714285715,
+      0.75
+    ],
+    [
+      0.3333333333333333,
+      0.5714285714285715,
+      1.0
+    ],
+    [
+      0.3333333333333333,
+      0.7857142857142858,
+      0.0
+    ],
+    [
+      0.3333333333333333,
+      0.7857142857142858,
+      0.25
+    ],
+    [
+      0.3333333333333333,
+      0.7857142857142858,
+      0.5
+    ],
+    [
+      0.3333333333333333,
+      0.7857142857142858,
+      0.75
+    ],
+    [
+      0.3333333333333333,
+      0.7857142857142858,
+      1.0
+    ],
+    [
+      0.3333333333333333,
+      1.0,
+      0.25
+    ],
+    [
+      0.6666666666666666,
+      0.0,
+      0.5
+    ],
+    [
+      0.6666666666666666,
+      0.0,
+      0.75
+    ],
+    [
+      0.6666666666666666,
+      0.0,
+      1.0
+    ],
+    [
+      0.6666666666666666,
+      0.14285714285714288,
+      0.5
+    ],
+    [
+      0.6666666666666666,
+      0.2857142857142857,
+      0.25
+    ],
+    [
+      0.6666666666666666,
+      0.2857142857142857,
+      0.5
+    ],
+    [
+      0.6666666666666666,
+      0.42857142857142866,
+      0.5
+    ],
+    [
+      0.6666666666666666,
+      0.5714285714285715,
+      0.0
+    ],
+    [
+      0.6666666666666666,
+      0.5714285714285715,
+      0.25
+    ],
+    [
+      0.6666666666666666,
+      0.5714285714285715,
+      0.5
+    ],
+    [
+      0.6666666666666666,
+      0.5714285714285715,
+      0.75
+    ],
+    [
+      0.6666666666666666,
+      0.5714285714285715,
+      1.0
+    ],
+    [
+      0.6666666666666666,
+      0.7857142857142858,
+      0.5
+    ],
+    [
+      0.6666666666666666,
+      1.0,
+      0.5
+    ],
+    [
+      0.6666666666666666,
+      1.0,
+      1.0
+    ],
+    [
+      0.8333333333333334,
+      1.0,
+      0.5
+    ],
+    [
+      1.0,
+      1.0,
+      0.5
+    ]
+  ],
+  "y": [
+    [
+      0.4738982044312353
+    ],
+    [
+      0.27259162135840886
+    ],
+    [
+      0.11923247168565555
+    ],
+    [
+      0.03128994358684791
+    ],
+    [
+      0.004983203610764228
+    ],
+    [
+      0.23385044089890497
+    ],
+    [
+      1.3434941203724402
+    ],
+    [
+      0.7867188563682253
+    ],
+    [
+      0.34846786768821497
+    ],
+    [
+      0.09198778072416057
+    ],
+    [
+      0.014655183711267505
+    ],
+    [
+      0.4630847491677558
+    ],
+    [
+      2.213084599077951
+    ],
+    [
+      1.3008423325652392
+    ],
+    [
+      0.5777010804774133
+    ],
+    [
+      0.15268466034967826
+    ],
+    [
+      0.02432686647505535
+    ],
+    [
+      2.8652738907900304
+    ],
+    [
+      1.686432455708769
+    ],
+    [
+      0.7496245302881402
+    ],
+    [
+      0.19820666131106493
+    ],
+    [
+      0.031580412325226424
+    ],
+    [
+      3.5174601255372897
+    ],
+    [
+      2.0720204221295955
+    ],
+    [
+      0.9215466868396752
+    ],
+    [
+      0.2437280552450089
+    ],
+    [
+      0.038833746306901853
+    ],
+    [
+      2.330389964667109
+    ],
+    [
+      2.007789444833797
+    ],
+    [
+      1.5588127826071205
+    ],
+    [
+      1.070808052336217
+    ],
+    [
+      0.6327329131663924
+    ],
+    [
+      2.9736718396895676
+    ],
+    [
+      6.352922040240838
+    ],
+    [
+      5.579381784479597
+    ],
+    [
+      4.388521778999759
+    ],
+    [
+      3.046239992999431
+    ],
+    [
+      1.8183809758732277
+    ],
+    [
+      5.803363014419018
+    ],
+    [
+      10.375448780828474
+    ],
+    [
+      9.150946663694862
+    ],
+    [
+      7.218197034950323
+    ],
+    [
+      5.021639988106886
+    ],
+    [
+      3.004004664341817
+    ],
+    [
+      13.392343331455839
+    ],
+    [
+      11.829605534137908
+    ],
+    [
+      9.340434596446777
+    ],
+    [
+      6.503175568093093
+    ],
+    [
+      3.8932147833538746
+    ],
+    [
+      14.50825458394992
+    ],
+    [
+      2.624116743684804
+    ],
+    [
+      2.508392932628109
+    ],
+    [
+      2.2026360461005137
+    ],
+    [
+      4.7614288737917
+    ],
+    [
+      6.6096156828301025
+    ],
+    [
+      6.89875317016506
+    ],
+    [
+      9.036088843852042
+    ],
+    [
+      9.635066572221149
+    ],
+    [
+      10.634164909379045
+    ],
+    [
+      11.173434652866495
+    ],
+    [
+      10.996320639884129
+    ],
+    [
+      9.897721623942173
+    ],
+    [
+      14.379471302871478
+    ],
+    [
+      17.58552665564628
+    ],
+    [
+      15.669066387442365
+    ],
+    [
+      16.136762233820885
+    ],
+    [
+      14.0025717569953
+    ]
+  ],
+  "bounds": [
+    [
+      1400,
+      2000
+    ],
+    [
+      0.1,
+      0.8
+    ],
+    [
+      12.5,
+      200
+    ]
+  ],
+  "flow_transform": "log",
+  "objective": "C2H2 total-feed-carbon yield percent"
+}
