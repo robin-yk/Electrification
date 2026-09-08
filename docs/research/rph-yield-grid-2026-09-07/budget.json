@@ -3,8 +3,8 @@
   "total_budget_s": 3600,
   "batch_limit_s": 600,
   "spent_s": 862.4546181090287,
-  "reserved_s": 0,
-  "active_stage": null,
+  "reserved_s": 120,
+  "active_stage": "bo-propose",
   "batches": [
     {
       "stage": "pilot",
