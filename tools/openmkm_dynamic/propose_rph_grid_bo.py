@@ -28,6 +28,8 @@ def main():
         assert len(rows)==67 and len({(r['peak_C'],r['hold_s'],r['flow_sccm']) for r in rows})==67
         for r in rows:assert hashlib.sha256((ROOT/r['source']).read_bytes()).hexdigest()==r['sha256']
         x=np.array([[(r['peak_C']-1400)/600,(r['hold_s']-.1)/.7,np.log(r['flow_sccm']/12.5)/np.log(16)] for r in rows])
+        assert np.all(x>=-1e-12) and np.all(x<=1+1e-12)
+        x=np.clip(x,0.,1.) # Remove roundoff at physical bounds, not out-of-domain data.
         y=np.array([[r['C2H2_Y_pct']] for r in rows])
         import torch
         from nextorch import bo
