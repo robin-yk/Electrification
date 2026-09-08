@@ -2,10 +2,10 @@
   "authorization": "User approved another 60 minutes, maximum 10 minutes per batch, for broader RPH yield screening followed by Bayesian search.",
   "total_budget_s": 3600,
   "batch_limit_s": 600,
-  "spent_s": 644.680716605,
-  "reserved_s": 540,
-  "active_stage": "3",
-  "batches": [{"stage":"pilot","status":"completed","wall_s":90.05688279200001,"run_id":34173331305},{"stage":"1","status":"completed","wall_s":270.438281281,"run_id":34173536742},{"stage":"2","status":"completed","wall_s":284.18555253200003,"run_id":34173881050}],
+  "spent_s": 699.843320419,
+  "reserved_s": 0,
+  "active_stage": null,
+  "batches": [{"stage":"pilot","status":"completed","wall_s":90.05688279200001,"run_id":34173331305},{"stage":"1","status":"completed","wall_s":270.438281281,"run_id":34173536742},{"stage":"2","status":"completed","wall_s":284.18555253200003,"run_id":34173881050},{"stage":"3","status":"stopped","wall_s":55.162603814,"run_id":34174250027,"reason":"T1600-h0.8-Q12.5-n800 failed periodic output convergence after eight cycles. Two new pairs passed before stop. No retry or downstream Bayesian run."}],
   "previous_ledger": "docs/research/c2co-campaign-2026-09-07/budget.json",
   "rule": "One batch at a time. Reconcile actual elapsed calculation time including failed work before another reservation. Stop on failed gate or cap. No automatic retries. Do not reset the previous ledger or borrow its residual allowance."
 }

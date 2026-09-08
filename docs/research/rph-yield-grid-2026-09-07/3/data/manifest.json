@@ -1,0 +1,224 @@
+{
+  "commit": "a3c42bb98e50fc0a824a0af7b39ca58faaef74ce",
+  "hashes": {
+    "tools/openmkm_dynamic/run_rph_yield_grid.py": "ed3068a453a1f540b9848c50feb9e3f191a18b20c7f7ea6744abc7a7267e0670",
+    "tools/openmkm_dynamic/run_cjh_feed_ratio_01.py": "a7a006f53506160f7d8df07d71c29cf05a8ce573ce34b6da4bcc92252e1d4296",
+    "tools/openmkm_dynamic/run_rph_fixed_pulse.py": "2b1752063dc79179a64a0f4e15ea0befb839094032df3a886b86102c658b5dcb",
+    "tools/openmkm_dynamic/run_rph_fixed_gate.py": "44f891890dafbecbd7c5667f6ca73ac401423bc9a479a42485a5baf961b2b958",
+    "tools/cantera/mechanisms/aramco20.yaml": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc"
+  },
+  "jobs": [
+    [
+      1600,
+      0.65,
+      100
+    ],
+    [
+      1600,
+      0.65,
+      200
+    ],
+    [
+      1600,
+      0.8,
+      12.5
+    ],
+    [
+      1600,
+      0.8,
+      50
+    ],
+    [
+      1600,
+      0.8,
+      100
+    ],
+    [
+      1600,
+      0.8,
+      200
+    ],
+    [
+      1800,
+      0.1,
+      12.5
+    ],
+    [
+      1800,
+      0.1,
+      25
+    ],
+    [
+      1800,
+      0.3,
+      12.5
+    ],
+    [
+      1800,
+      0.3,
+      100
+    ],
+    [
+      1800,
+      0.3,
+      200
+    ],
+    [
+      1800,
+      0.65,
+      12.5
+    ],
+    [
+      1800,
+      0.65,
+      25
+    ],
+    [
+      1800,
+      0.65,
+      100
+    ],
+    [
+      1800,
+      0.65,
+      200
+    ],
+    [
+      1800,
+      0.8,
+      12.5
+    ],
+    [
+      1800,
+      0.8,
+      25
+    ],
+    [
+      1800,
+      0.8,
+      100
+    ]
+  ],
+  "cap_s": 540,
+  "reused": [
+    {
+      "peak": 1400.0,
+      "hold": 0.1,
+      "flow": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.1-n800.json",
+      "sha256": "0a94ec3c808e3b0c85f556973bf6b829c9056e12ea4d546fba1f8d588f005d7b"
+    },
+    {
+      "peak": 1400.0,
+      "hold": 0.3,
+      "flow": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.3-n800.json",
+      "sha256": "22ad2f86e926813c93074ee2dd3488456a9f2a934b875e4f35629e7e013187e9"
+    },
+    {
+      "peak": 1400.0,
+      "hold": 0.5,
+      "flow": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.5-n800.json",
+      "sha256": "0376c33c389533f5647763e0b2742897f6e7d4cc88bb4f305d7c5fa32cc734b1"
+    },
+    {
+      "peak": 1600.0,
+      "hold": 0.1,
+      "flow": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.1-n800.json",
+      "sha256": "5a3b00792a5c2f0169f77231e231c2dd0878fa58d474c6a088bb3ba159c6769a"
+    },
+    {
+      "peak": 1600.0,
+      "hold": 0.3,
+      "flow": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.3-n800.json",
+      "sha256": "7bb26e1f1cedc102ebcadf00e70d8cc35d64f29e38c4ed80f7973da679c37acc"
+    },
+    {
+      "peak": 1600.0,
+      "hold": 0.5,
+      "flow": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.5-n800.json",
+      "sha256": "b59e34b993c8f3f9b7cdab95ca6df4bf4a6c396fe19434771237c9a9b4b8687b"
+    },
+    {
+      "peak": 1800.0,
+      "hold": 0.1,
+      "flow": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.1-n800.json",
+      "sha256": "958c7c4d7e70b8d914a2e6179555320aff6df6a77603efb9fc8900984b0bac94"
+    },
+    {
+      "peak": 1800.0,
+      "hold": 0.3,
+      "flow": 50,
+      "source": "docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.3-n800.json",
+      "sha256": "a6b3b6628cf34b44a5d44568c568691ab1651858a606865b840973f5ebe27ebf"
+    },
+    {
+      "peak": 1800.0,
+      "hold": 0.5,
+      "flow": 50,
+      "source": "docs/research/rph-450-pilot-01-2026-09-07/data/T1800-hold0.5-n800.json",
+      "sha256": "9a848e2e363921f214c7f2a12c5f37cb1179cd7bbd40bac22f3de353b8af62bb"
+    },
+    {
+      "peak": 1800.0,
+      "hold": 0.1,
+      "flow": 100.0,
+      "source": "docs/research/rph-flow-01-2026-09-07/data/Q100-hold0.1-n800.json",
+      "sha256": "052657ca0f62fb905d67d45f28089a3763f0732d26e3afacef292c4dcd021c9b"
+    },
+    {
+      "peak": 1800.0,
+      "hold": 0.5,
+      "flow": 100.0,
+      "source": "docs/research/rph-flow-01-2026-09-07/data/Q100-hold0.5-n800.json",
+      "sha256": "96d48b91efde449d6ae8b37d7e14bb76b08f275554e56ede47ba8e383c426e92"
+    },
+    {
+      "peak": 1800.0,
+      "hold": 0.1,
+      "flow": 200.0,
+      "source": "docs/research/rph-flow-01-2026-09-07/data/Q200-hold0.1-n800.json",
+      "sha256": "b6e16ce2a4cea61828eecd75ed4d8af3785bc1c8335b635dd589f86e8e972909"
+    },
+    {
+      "peak": 1800.0,
+      "hold": 0.5,
+      "flow": 200.0,
+      "source": "docs/research/rph-flow-01-2026-09-07/data/Q200-hold0.5-n800.json",
+      "sha256": "432df062b6006a5464067b9c8153fc7655915b1a05ed03a6aafe2ee156d22b2b"
+    },
+    {
+      "peak": 1800,
+      "hold": 0.5,
+      "flow": 12.5,
+      "source": "docs/research/rph-xs-extension-01-2026-09-07/data/Q12.5-T1800-h0.5-n800.json",
+      "sha256": "c903d80161767c756a4cbbc3847e0171c3fa924277f434e2b605dfc0619ceb92"
+    },
+    {
+      "peak": 1800,
+      "hold": 0.5,
+      "flow": 25.0,
+      "source": "docs/research/rph-xs-extension-01-2026-09-07/data/Q25-T1800-h0.5-n800.json",
+      "sha256": "fde2438e117699647c8424b930ffca344f0ce0668aad7ac8a8c252724815736e"
+    },
+    {
+      "peak": 1800,
+      "hold": 0.65,
+      "flow": 50.0,
+      "source": "docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.65-n800.json",
+      "sha256": "24932eaad40086c5bb02b30104d63f59a8a8b8010a7add4bda21701d946a8f07"
+    },
+    {
+      "peak": 1800,
+      "hold": 0.8,
+      "flow": 50.0,
+      "source": "docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.8-n800.json",
+      "sha256": "d518ec5004bb193e77c97535515890268f96a0fc9dc8ba41b0fb39fd0c06d611"
+    }
+  ]
+}

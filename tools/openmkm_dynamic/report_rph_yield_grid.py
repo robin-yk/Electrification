@@ -43,6 +43,11 @@ def main():
     for r in covered:lines.append('| '+' | '.join(f'{r[k]:.7g}' for k in ['peak_C','hold_s','flow_sccm','X_CH4_pct','C2H2_Y_pct','CO_Y_pct','C6H6_Y_pct','C2H2_g_gCFP_h'])+' |')
     lines+=['',f'Best observed C2H2 carbon yield across the cumulative data: {best["C2H2_Y_pct"]:.7g}% at {best["peak_C"]:g} C, {best["hold_s"]:g} s hold, {best["flow_sccm"]:g} sccm. This is a sampled maximum, not a global optimum.',
         '', 'All species and cycle diagnostics remain in linked raw sources. Only points with completed refinement gates are admitted. Reproduce with `python tools/openmkm_dynamic/report_rph_yield_grid.py`.']
+    for folder in sorted(CAMPAIGN.glob('*/data')):
+        sf=folder/'status.json'
+        if sf.exists():
+            s=base.read(sf)
+            if s['status']=='stopped':lines+=['',f'Batch {folder.parent.name} STOPPED at {s["active"]}; completed paired outputs only are included. Read the status and diagnostic logs in {folder.relative_to(CAMPAIGN)}. No automatic retry or Bayesian run follows this failure.']
     (CAMPAIGN/'REPORT.md').write_text('\n'.join(lines)+'\n')
     print(dict(grid_completed=len(covered),validated_total=len(allrows),best_yield_pct=best['C2H2_Y_pct']))
 

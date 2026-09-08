@@ -1,0 +1,13 @@
+{
+  "status": "stopped",
+  "active": "T1600-h0.8-Q12.5-n800",
+  "completed": [
+    "T1600-h0.65-Q100-n400",
+    "T1600-h0.65-Q100-n800",
+    "T1600-h0.65-Q200-n400",
+    "T1600-h0.65-Q200-n800",
+    "T1600-h0.8-Q12.5-n400"
+  ],
+  "reason": "Command '['/opt/hostedtoolcache/Python/3.11.16/x64/bin/python', '/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_yield_grid.py', '--worker', '--output-dir', '/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-yield-grid-2026-09-07/3/data', '--peak', '1600', '--hold', '0.8', '--flow', '12.5', '--samples', '800']' returned non-zero exit status 1.",
+  "wall_s": 55.162603814
+}

@@ -1,17 +1,7 @@
 {
   "grid_total": 75,
-  "grid_completed": 57,
+  "grid_completed": 59,
   "missing": [
-    [
-      1600,
-      0.65,
-      100
-    ],
-    [
-      1600,
-      0.65,
-      200
-    ],
     [
       1600,
       0.8,
@@ -93,7 +83,7 @@
       100
     ]
   ],
-  "validated_total": 83,
+  "validated_total": 85,
   "points": [
     {
       "peak_C": 1200.0,
@@ -2936,6 +2926,104 @@
       "C6H6_Y_pct": 4.286422989774386,
       "C2H2_g_gCFP_h": 5.65137479231454,
       "CO_g_gCFP_h": 13.705260420427374
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.65,
+      "flow_sccm": 100,
+      "source": "docs/research/rph-yield-grid-2026-09-07/3/data/T1600-h0.65-Q100-n800.json",
+      "sha256": "0459b1a765991d3d3a30cad3a2379a2df8db1060e4fbf4c76fa334197883c852",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 100.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.65,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.22499999999999998,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 32.42157470977428,
+      "C2H2_Y_pct": 6.503175568093093,
+      "CO_Y_pct": 5.705454553271911,
+      "C6H6_Y_pct": 3.7364044306809783,
+      "C2H2_g_gCFP_h": 7.869415945484591,
+      "CO_g_gCFP_h": 14.853977242380715
+    },
+    {
+      "peak_C": 1600,
+      "hold_s": 0.65,
+      "flow_sccm": 200,
+      "source": "docs/research/rph-yield-grid-2026-09-07/3/data/T1600-h0.65-Q200-n800.json",
+      "sha256": "04ae7f2573bb3d30d5d23553df1ac0d3bdf9ac9e222dda36649677d6515b1594",
+      "inputs": {
+        "feed": {
+          "CH4": 0.5,
+          "CO2": 0.5
+        },
+        "flow_sccm": 200.0,
+        "standard_T_K": 273.15,
+        "standard_P_Pa": 101325,
+        "volume_m3": 9.228077898393764e-09,
+        "pressure_target_Pa": 101325,
+        "pressure_controller_K": 1e-07,
+        "period_s": 1.0,
+        "segments": [
+          [
+            0.025,
+            723.15,
+            1873.15
+          ],
+          [
+            0.65,
+            1873.15,
+            1873.15
+          ],
+          [
+            0.1,
+            1873.15,
+            723.15
+          ],
+          [
+            0.22499999999999998,
+            723.15,
+            723.15
+          ]
+        ],
+        "samples_per_segment": 800
+      },
+      "X_CH4_pct": 23.25689935277112,
+      "C2H2_Y_pct": 3.8932147833538746,
+      "CO_Y_pct": 2.630541412509855,
+      "C6H6_Y_pct": 2.3985317827960837,
+      "C2H2_g_gCFP_h": 9.422266452604786,
+      "CO_g_gCFP_h": 13.69706897556606
     },
     {
       "peak_C": 1600,

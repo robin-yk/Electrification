@@ -1,6 +1,6 @@
 # Acetylene carbon-yield screening
 
-Grid coverage: 57/75. Validated cumulative RPH conditions: 83. Off-grid observations are retained separately in observations.json.
+Grid coverage: 59/75. Validated cumulative RPH conditions: 85. Off-grid observations are retained separately in observations.json.
 
 Objective: cycle-integrated C2H2 carbon yield divided by total CH4+CO2 inlet carbon. Fixed floor450 C, period1 s, rise0.025 s, fall0.10 s, equimolar undiluted feed, fixed gas volume and pressure. No CJH calculation or Bayesian chemistry is part of this grid.
 
@@ -49,6 +49,8 @@ Objective: cycle-integrated C2H2 carbon yield divided by total CH4+CO2 inlet car
 | 1600 | 0.65 | 12.5 | 52.81353 | 13.39234 | 24.12469 | 2.896844 | 2.02574 |
 | 1600 | 0.65 | 25 | 47.71934 | 11.82961 | 16.90264 | 3.860603 | 3.578716 |
 | 1600 | 0.65 | 50 | 40.84262 | 9.340435 | 10.52846 | 4.286423 | 5.651375 |
+| 1600 | 0.65 | 100 | 32.42157 | 6.503176 | 5.705455 | 3.736404 | 7.869416 |
+| 1600 | 0.65 | 200 | 23.2569 | 3.893215 | 2.630541 | 2.398532 | 9.422266 |
 | 1600 | 0.8 | 25 | 58.44293 | 14.50825 | 20.74192 | 4.706127 | 4.389067 |
 | 1800 | 0.1 | 50 | 10.68298 | 2.624117 | 5.386152 | 0.1933326 | 1.587706 |
 | 1800 | 0.1 | 100 | 9.755894 | 2.508393 | 4.016217 | 0.1837162 | 3.035377 |
@@ -67,3 +69,5 @@ Objective: cycle-integrated C2H2 carbon yield divided by total CH4+CO2 inlet car
 Best observed C2H2 carbon yield across the cumulative data: 17.58553% at 1800 C, 0.8 s hold, 50 sccm. This is a sampled maximum, not a global optimum.
 
 All species and cycle diagnostics remain in linked raw sources. Only points with completed refinement gates are admitted. Reproduce with `python tools/openmkm_dynamic/report_rph_yield_grid.py`.
+
+Batch 3 STOPPED at T1600-h0.8-Q12.5-n800; completed paired outputs only are included. Read the status and diagnostic logs in 3/data. No automatic retry or Bayesian run follows this failure.
