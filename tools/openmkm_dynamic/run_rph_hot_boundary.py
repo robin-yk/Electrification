@@ -5,11 +5,11 @@ import time
 from pathlib import Path
 import run_rph_yield_grid as grid
 base=grid.base
-OUT=grid.CAMPAIGN/'hot-boundary/data'
+OUT=grid.CAMPAIGN/'hot-boundary-02/data'
 
 def main():
     ledger=base.read(grid.CAMPAIGN/'budget.json')
-    assert ledger['active_stage']=='hot-boundary' and ledger['reserved_s']==540
+    assert ledger['active_stage']=='hot-boundary-02' and ledger['reserved_s']==540
     assert ledger['spent_s']+540<=ledger['total_budget_s']
     OUT.mkdir(parents=True,exist_ok=True)
     assert not (OUT/'status.json').exists(), 'Do not overwrite or retry a prior batch'
@@ -40,7 +40,7 @@ def main():
     elapsed=time.monotonic()-started
     base.write(OUT/'status.json',dict(status=status,reason=reason,active=active,completed=done,wall_s=elapsed))
     ledger['spent_s']+=elapsed;ledger['reserved_s']=0;ledger['active_stage']=None
-    ledger['batches'].append(dict(stage='hot-boundary',status=status,wall_s=elapsed,reason=reason))
+    ledger['batches'].append(dict(stage='hot-boundary-02',status=status,wall_s=elapsed,reason=reason))
     base.write(grid.CAMPAIGN/'budget.json',ledger)
     if status!='completed':raise RuntimeError(reason)
 

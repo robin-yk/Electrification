@@ -22,7 +22,9 @@ def worker(out,name,n,period=1.,inert=False,waveform=None,flow_sccm=50.):
     assert all(d>0 and a>0 and b>0 for d,a,b in parts)
     assert abs(sum(d for d,_,_ in parts)-period)<1e-12
     assert all(abs(a[2]-b[1])<1e-10 for a,b in zip(parts,parts[1:]+parts[:1]))
+    print('stage: loading mechanism',flush=True)
     gas=ct.Solution("gri30.yaml" if inert else str(base.MECH))
+    print('stage: mechanism loaded',time.monotonic()-started,flush=True)
     feed={"N2":1} if inert else {"CH4":.5,"CO2":.5}
     gas.TPX=parts[0][1],101325,feed
     mw=gas.molecular_weights.copy(); yin=gas.Y.copy()
@@ -41,6 +43,7 @@ def worker(out,name,n,period=1.,inert=False,waveform=None,flow_sccm=50.):
     fin=mdot*yin/mw
     last=None;stable=0;history=[];last_end=None
     t=0.
+    print('stage: integrating',time.monotonic()-started,flush=True)
     for cycle in range(1,9):
         inventory0=r.mass*r.phase.Y/mw
         integral=np.zeros(gas.n_species);massout=0.;maxp=0.;maxt=0.;samples=[]
