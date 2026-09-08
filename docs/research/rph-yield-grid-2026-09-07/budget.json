@@ -2,9 +2,9 @@
   "authorization": "User approved another 60 minutes, maximum 10 minutes per batch, for broader RPH yield screening followed by Bayesian search.",
   "total_budget_s": 3600,
   "batch_limit_s": 600,
-  "spent_s": 818.0610890030288,
-  "reserved_s": 540,
-  "active_stage": "hot-boundary-02",
+  "spent_s": 862.4546181090287,
+  "reserved_s": 0,
+  "active_stage": null,
   "batches": [
     {
       "stage": "pilot",
@@ -36,6 +36,12 @@
       "status": "stopped",
       "wall_s": 118.21776858402882,
       "reason": "Command '['/private/tmp/aramco-repro-32-env/bin/python', '/private/tmp/aramco-feed-ratio-20260907/tools/openmkm_dynamic/run_rph_yield_grid.py', '--worker', '--output-dir', '/private/tmp/aramco-feed-ratio-20260907/docs/research/rph-yield-grid-2026-09-07/hot-boundary/data', '--peak', '1900', '--hold', '.8', '--flow', '50', '--samples', '400']' timed out after 99.99996004102286 seconds"
+    },
+    {
+      "stage": "hot-boundary-02",
+      "status": "stopped",
+      "wall_s": 44.393529106,
+      "reason": "Command '['/opt/hostedtoolcache/Python/3.11.16/x64/bin/python', '/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_yield_grid.py', '--worker', '--output-dir', '/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-yield-grid-2026-09-07/hot-boundary-02/data', '--peak', '2100', '--hold', '.8', '--flow', '50', '--samples', '400']' returned non-zero exit status 1."
     }
   ],
   "previous_ledger": "docs/research/c2co-campaign-2026-09-07/budget.json",

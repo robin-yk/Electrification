@@ -1,0 +1,29 @@
+{
+  "status": {
+    "status": "stopped",
+    "reason": "Command '['/private/tmp/aramco-repro-32-env/bin/python', '/private/tmp/aramco-feed-ratio-20260907/tools/openmkm_dynamic/run_rph_yield_grid.py', '--worker', '--output-dir', '/private/tmp/aramco-feed-ratio-20260907/docs/research/rph-yield-grid-2026-09-07/hot-boundary/data', '--peak', '1900', '--hold', '.8', '--flow', '50', '--samples', '400']' timed out after 99.99996004102286 seconds",
+    "active": "T1900-h0.8-Q50-n400",
+    "completed": [
+      "T2100-h0.8-Q50-inert"
+    ],
+    "wall_s": 118.21776858402882
+  },
+  "rows": [
+    {
+      "peak_C": 1800,
+      "source": "docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.8-n800.json",
+      "sha256": "d518ec5004bb193e77c97535515890268f96a0fc9dc8ba41b0fb39fd0c06d611",
+      "X_CH4_pct": 70.45204074314151,
+      "C2H2": 17.58552665564628,
+      "C2H4": 0.5420412626074375,
+      "CO": 38.190723828279,
+      "C6H6": 0.4647720262299719,
+      "C6_total": 0.6908937879447736,
+      "CH4": 14.773979628429245,
+      "CO2": 22.790335818630297,
+      "other_C": 5.427988366004299,
+      "carbon_sum": 100.00148934754145,
+      "C2H2_g_gCFP_h": 10.640019051051562
+    }
+  ]
+}

@@ -1,9 +1,18 @@
 """Report only accepted pairs and the archived 1800 C reference."""
-import cantera as ct
+import argparse
+import re
 import run_rph_yield_grid as grid
 base=grid.base
-out=grid.CAMPAIGN/'hot-boundary'
-gas=ct.Solution(str(base.MECH))
+ap=argparse.ArgumentParser()
+ap.add_argument('--stage',default='hot-boundary-02')
+out=grid.CAMPAIGN/ap.parse_args().stage
+# Read atom counts only, without constructing the expensive kinetics object.
+species_text=base.MECH.read_text().split('\nspecies:\n',1)[1].split('\nreactions:\n',1)[0]
+carbon={}
+for name,composition in re.findall(r'- name: ([^\n]+)\n  composition: \{([^}]+)\}',species_text):
+    entries=dict(part.strip().split(': ') for part in composition.split(','))
+    carbon[name.strip("'\"")]=int(entries.get('C',0))
+assert len(carbon)==493 and carbon['C2H2']==2 and carbon['C6H6']==6
 reference=base.read(grid.CAMPAIGN/'observations.json')['best_observed']
 source=base.ROOT/reference['source']
 assert grid.sha(source)==reference['sha256']
@@ -20,9 +29,9 @@ for p,f in sources:
     rows.append(dict(peak_C=p,source=str(f.relative_to(base.ROOT)),sha256=grid.sha(f),
         X_CH4_pct=100*(1-d['mol_per_feed_carbon']['CH4']/.5),
         C2H2=100*y.get('C2H2',0),C2H4=100*y.get('C2H4',0),CO=100*y.get('CO',0),
-        C6H6=100*y.get('C6H6',0),C6_total=100*sum(v for k,v in y.items() if gas.n_atoms(k,'C')==6),
+        C6H6=100*y.get('C6H6',0),C6_total=100*sum(v for k,v in y.items() if carbon[k]==6),
         CH4=100*y.get('CH4',0),CO2=100*y.get('CO2',0),
-        other_C=100*sum(v for k,v in y.items() if k not in ['CH4','CO2','CO','C2H2','C2H4'] and gas.n_atoms(k,'C')!=6),
+        other_C=100*sum(v for k,v in y.items() if k not in ['CH4','CO2','CO','C2H2','C2H4'] and carbon[k]!=6),
         carbon_sum=100*sum(y.values()),C2H2_g_gCFP_h=d['product_g_per_g_CFP_h'].get('C2H2',0)))
 status=base.read(out/'data/status.json')
 base.write(out/'report.json',dict(status=status,rows=rows))

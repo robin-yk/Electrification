@@ -1,0 +1,13 @@
+{
+  "status": "stopped",
+  "reason": "Command '['/opt/hostedtoolcache/Python/3.11.16/x64/bin/python', '/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_yield_grid.py', '--worker', '--output-dir', '/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-yield-grid-2026-09-07/hot-boundary-02/data', '--peak', '2100', '--hold', '.8', '--flow', '50', '--samples', '400']' returned non-zero exit status 1.",
+  "active": "T2100-h0.8-Q50-n400",
+  "completed": [
+    "T2100-h0.8-Q50-inert",
+    "T1900-h0.8-Q50-n400",
+    "T1900-h0.8-Q50-n800",
+    "T2000-h0.8-Q50-n400",
+    "T2000-h0.8-Q50-n800"
+  ],
+  "wall_s": 44.393529106
+}

@@ -1,0 +1,20 @@
+{
+  "commit": "7898503e6f78142b19b7c7261e8f55a1069581f0",
+  "hashes": {
+    "tools/openmkm_dynamic/run_rph_hot_boundary.py": "2abf0f751e8839835cf39ee4706de60602f9fcda2413296f8f881abd9d334ad2",
+    "tools/openmkm_dynamic/run_rph_yield_grid.py": "ed3068a453a1f540b9848c50feb9e3f191a18b20c7f7ea6744abc7a7267e0670",
+    "tools/openmkm_dynamic/run_rph_fixed_pulse.py": "28df9801963aa3617cdd7e062d5bd9aa0614be5142fbde609a145a16e655d4c5",
+    "tools/openmkm_dynamic/run_cjh_feed_ratio_01.py": "a7a006f53506160f7d8df07d71c29cf05a8ce573ce34b6da4bcc92252e1d4296",
+    "tools/openmkm_dynamic/run_rph_fixed_gate.py": "44f891890dafbecbd7c5667f6ca73ac401423bc9a479a42485a5baf961b2b958",
+    "tools/cantera/mechanisms/aramco20.yaml": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc"
+  },
+  "peaks_C": [
+    1900,
+    2000,
+    2100
+  ],
+  "hold_s": 0.8,
+  "flow_sccm": 50,
+  "cap_s": 540,
+  "claim": "Prescribed gas-temperature extrapolation, not experimental mechanism validation"
+}

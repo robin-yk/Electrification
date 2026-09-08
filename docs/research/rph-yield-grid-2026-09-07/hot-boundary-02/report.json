@@ -1,0 +1,65 @@
+{
+  "status": {
+    "status": "stopped",
+    "reason": "Command '['/opt/hostedtoolcache/Python/3.11.16/x64/bin/python', '/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_yield_grid.py', '--worker', '--output-dir', '/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-yield-grid-2026-09-07/hot-boundary-02/data', '--peak', '2100', '--hold', '.8', '--flow', '50', '--samples', '400']' returned non-zero exit status 1.",
+    "active": "T2100-h0.8-Q50-n400",
+    "completed": [
+      "T2100-h0.8-Q50-inert",
+      "T1900-h0.8-Q50-n400",
+      "T1900-h0.8-Q50-n800",
+      "T2000-h0.8-Q50-n400",
+      "T2000-h0.8-Q50-n800"
+    ],
+    "wall_s": 44.393529106
+  },
+  "rows": [
+    {
+      "peak_C": 1800,
+      "source": "docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.8-n800.json",
+      "sha256": "d518ec5004bb193e77c97535515890268f96a0fc9dc8ba41b0fb39fd0c06d611",
+      "X_CH4_pct": 70.45204074314151,
+      "C2H2": 17.58552665564628,
+      "C2H4": 0.5420412626074375,
+      "CO": 38.190723828279,
+      "C6H6": 0.4647720262299719,
+      "C6_total": 0.6908937879447736,
+      "CH4": 14.773979628429245,
+      "CO2": 22.790335818630297,
+      "other_C": 5.427988366004299,
+      "carbon_sum": 100.00148934754145,
+      "C2H2_g_gCFP_h": 10.640019051051562
+    },
+    {
+      "peak_C": 1900,
+      "source": "docs/research/rph-yield-grid-2026-09-07/hot-boundary-02/data/T1900-h0.8-Q50-n800.json",
+      "sha256": "77d96a017a39c4ff82e0ed5e51f22687e12f4a137ac0b1c9c8f999bdcbc430d7",
+      "X_CH4_pct": 75.17823608599048,
+      "C2H2": 16.136762233820885,
+      "C2H4": 0.3382734167432991,
+      "CO": 48.737959589518674,
+      "C6H6": 0.19227585191342786,
+      "C6_total": 0.32442246535463726,
+      "CH4": 12.410881957004761,
+      "CO2": 17.69609027871687,
+      "other_C": 4.35673611825974,
+      "carbon_sum": 100.0011260594188,
+      "C2H2_g_gCFP_h": 9.76345269335544
+    },
+    {
+      "peak_C": 2000,
+      "source": "docs/research/rph-yield-grid-2026-09-07/hot-boundary-02/data/T2000-h0.8-Q50-n800.json",
+      "sha256": "6a6a5b3ada1b10d9ce057c65e55901b20b7b60dbd73f7255ef5b749dd56b91e4",
+      "X_CH4_pct": 78.34017223573879,
+      "C2H2": 14.0025717569953,
+      "C2H4": 0.22041126652257126,
+      "CO": 56.91491771431111,
+      "C6H6": 0.1433726627261691,
+      "C6_total": 0.21851351436975447,
+      "CH4": 10.829913882130601,
+      "CO2": 14.416558250032146,
+      "other_C": 3.3979502962470085,
+      "carbon_sum": 100.00083668060849,
+      "C2H2_g_gCFP_h": 8.472173348889172
+    }
+  ]
+}

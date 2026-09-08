@@ -1,0 +1,6 @@
+stage: loading mechanism
+stage: mechanism loaded 0.06887255000000891
+stage: integrating 0.10517202800001257
+T2100-h0.8-Q50-inert 1 {'cycle': 1, 'max_species_cycle_change': None, 'state_change': None, 'elemental_residuals': {'N': -8.464260071560352e-06}, 'mass_residual': -8.46426001296812e-06, 'max_pressure_relative_error': 3.9022229954222e-05, 'max_temperature_error_K': 2.2468133465736173e-05}
+T2100-h0.8-Q50-inert 2 {'cycle': 2, 'max_species_cycle_change': 7.731604689809046e-09, 'state_change': 1.9374167825603195e-08, 'elemental_residuals': {'N': -8.471958525558734e-06}, 'mass_residual': -8.47195853759057e-06, 'max_pressure_relative_error': 3.9022232696694914e-05, 'max_temperature_error_K': 3.569441901163373e-05}
+T2100-h0.8-Q50-inert 3 {'cycle': 3, 'max_species_cycle_change': 1.4560343375435991e-08, 'state_change': 4.1608494427691767e-10, 'elemental_residuals': {'N': -8.45731888463095e-06}, 'mass_residual': -8.457318826621639e-06, 'max_pressure_relative_error': 3.902223404139704e-05, 'max_temperature_error_K': 4.110669851797866e-05}
