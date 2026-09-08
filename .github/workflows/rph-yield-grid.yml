@@ -1,0 +1,33 @@
+name: RPH acetylene yield grid
+on:
+  workflow_dispatch:
+    inputs:
+      stage:
+        type: string
+        default: pilot
+permissions:
+  contents: read
+concurrency:
+  group: c2co-budgeted-campaign
+  cancel-in-progress: false
+jobs:
+  calculate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r tools/cantera/requirements.txt
+      - name: Bounded grid
+        timeout-minutes: 10
+        run: python tools/openmkm_dynamic/run_rph_yield_grid.py --stage '${{ inputs.stage }}' --output-dir docs/research/rph-yield-grid-2026-09-07/${{ inputs.stage }}/data
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rph-yield-grid-${{ inputs.stage }}
+          path: docs/research/rph-yield-grid-2026-09-07/${{ inputs.stage }}/data/
