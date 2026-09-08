@@ -1,0 +1,31 @@
+{
+  "commit": "f03fa6e76c92cbd194670243459a75f5385abd05",
+  "hashes": {
+    "tools/openmkm_dynamic/run_rph_feed.py": "a5462208ccacfacd4d3410fb741c3b4671099b25706b1cff512c4ec50a9610ca",
+    "tools/openmkm_dynamic/run_rph_fixed_pulse.py": "4c30009b165a4d493c2fd2863d880ffac79e6d23378738ed1dc321589edfcbf8",
+    "tools/openmkm_dynamic/run_rph_yield_grid.py": "ed3068a453a1f540b9848c50feb9e3f191a18b20c7f7ea6744abc7a7267e0670",
+    "tools/cantera/mechanisms/aramco20.yaml": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+    "docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.8-n800.json": "d518ec5004bb193e77c97535515890268f96a0fc9dc8ba41b0fb39fd0c06d611"
+  },
+  "fractions": [
+    0.6
+  ],
+  "reused_anchor": {
+    "peak_C": 1800,
+    "source": "docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.8-n800.json",
+    "sha256": "d518ec5004bb193e77c97535515890268f96a0fc9dc8ba41b0fb39fd0c06d611",
+    "X_CH4_pct": 70.45204074314151,
+    "C2H2": 17.58552665564628,
+    "C2H4": 0.5420412626074375,
+    "CO": 38.190723828279,
+    "C6H6": 0.4647720262299719,
+    "C6_total": 0.6908937879447736,
+    "CH4": 14.773979628429245,
+    "CO2": 22.790335818630297,
+    "other_C": 5.427988366004299,
+    "carbon_sum": 100.00148934754145,
+    "C2H2_g_gCFP_h": 10.640019051051562
+  },
+  "cap_s": 180,
+  "rtol": 1e-11
+}
