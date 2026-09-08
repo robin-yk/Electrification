@@ -2,7 +2,7 @@
   "authorization": "User approved another 60 minutes, maximum 10 minutes per batch, for broader RPH yield screening followed by Bayesian search.",
   "total_budget_s": 3600,
   "batch_limit_s": 600,
-  "spent_s": 887.2760140010254,
+  "spent_s": 905.0473899900254,
   "reserved_s": 0,
   "active_stage": null,
   "batches": [
@@ -54,6 +54,12 @@
       "status": "stopped",
       "reason": "Command '['/opt/hostedtoolcache/Python/3.11.16/x64/bin/python', '/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_yield_grid.py', '--worker', '--output-dir', '/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-yield-grid-2026-09-07/bo-01/verification', '--peak', '1682.14294405234', '--hold', '0.7999999999999999', '--flow', '12.5', '--samples', '800']' returned non-zero exit status 1.",
       "wall_s": 16.168463058
+    },
+    {
+      "stage": "bo-tighter-01",
+      "status": "completed",
+      "reason": null,
+      "wall_s": 17.771375989
     }
   ],
   "previous_ledger": "docs/research/c2co-campaign-2026-09-07/budget.json",

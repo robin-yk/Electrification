@@ -1,0 +1,35 @@
+{
+  "commit": "9966749514fe1400dbfda8588f82f0d16dbdbed8",
+  "hashes": {
+    "tools/openmkm_dynamic/diagnose_rph_bo01.py": "c315d56a80400e8d3934e776984af77217eda01c4cc03a07cde15a51bd2eb822",
+    "tools/openmkm_dynamic/run_rph_fixed_pulse.py": "d9b9f32350f4be780c104f7b40b90e7681f653cfb4bb5a36084e99d6b6790241",
+    "tools/openmkm_dynamic/run_rph_yield_grid.py": "ed3068a453a1f540b9848c50feb9e3f191a18b20c7f7ea6744abc7a7267e0670",
+    "tools/cantera/mechanisms/aramco20.yaml": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc"
+  },
+  "proposal": {
+    "peak_C": 1682.14294405234,
+    "hold_s": 0.7999999999999999,
+    "flow_sccm": 12.5,
+    "normalized_x": [
+      0.47023824008723336,
+      1.0,
+      0.0
+    ],
+    "predicted_Y_pct": [
+      17.628517150878906
+    ],
+    "posterior_sd_pp": [
+      1.0497030019760132
+    ],
+    "training_n": 67,
+    "incumbent_Y_pct": 17.58552665564628,
+    "acquisition": "EI",
+    "reaction_verified": false,
+    "commit": "2d3fb477c8439752b7b4cada0f65761603f4288f",
+    "limitation": "Optimum search conditional on declared bounds and fixed waveform family; uncertainty is GP posterior, not chemical validation. Off-domain observations retained but not fitted."
+  },
+  "rtol": 1e-11,
+  "cap_s": 300,
+  "max_cycles": 8,
+  "admit_training": false
+}
