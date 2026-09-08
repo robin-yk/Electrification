@@ -1,0 +1,28 @@
+{
+  "jobs": [
+    [
+      1600,
+      0.7
+    ],
+    [
+      1900,
+      0.7
+    ],
+    [
+      1600,
+      0.8
+    ],
+    [
+      1900,
+      0.8
+    ]
+  ],
+  "cap_s": 300,
+  "selection": "manual initial design, not BO",
+  "commit": "87ecafe6256795548032f50574681a196898c3b2",
+  "sha256": {
+    "tools/openmkm_dynamic/support_composition_cjh.py": "19d6e27d16068861c91e89b4b9feb3171767b051f30e7e433917f46649c289e4",
+    "tools/openmkm_dynamic/run_cjh_feed_ratio_01.py": "a7a006f53506160f7d8df07d71c29cf05a8ce573ce34b6da4bcc92252e1d4296",
+    "tools/cantera/mechanisms/aramco20.yaml": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc"
+  }
+}
