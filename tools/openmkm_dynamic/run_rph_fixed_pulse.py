@@ -15,8 +15,9 @@ def segments(period):
     assert period>0
     return [(period*f,a,b) for f,a,b in [(0.025,873.15,2073.15),(.05,2073.15,2073.15),(.1,2073.15,873.15),(.825,873.15,873.15)]]
 
-def worker(out,name,n,period=1.,inert=False,waveform=None,flow_sccm=50.):
+def worker(out,name,n,period=1.,inert=False,waveform=None,flow_sccm=50.,rtol=1e-9):
     started=time.monotonic()
+    assert np.isfinite(rtol) and 0<rtol<=1e-9
     assert np.isfinite(flow_sccm) and flow_sccm>0
     parts=segments(period) if waveform is None else waveform
     assert all(d>0 and a>0 and b>0 for d,a,b in parts)
@@ -37,7 +38,7 @@ def worker(out,name,n,period=1.,inert=False,waveform=None,flow_sccm=50.):
     r=PrescribedTemperatureReactor(gas,energy="off",volume=vol,clone=True)
     mfc=ct.MassFlowController(inlet,r,mdot=mdot)
     pc=ct.PressureController(r,exhaust,primary=mfc,K=PRESSURE_K)
-    net=ct.ReactorNet([r]);net.rtol=1e-9;net.atol=1e-15*vol
+    net=ct.ReactorNet([r]);net.rtol=rtol;net.atol=1e-15*vol
     net.preconditioner=ct.AdaptivePreconditioner()
     net.derivative_settings={"skip-third-bodies":True,"skip-falloff":True}
     fin=mdot*yin/mw
@@ -96,7 +97,7 @@ def worker(out,name,n,period=1.,inert=False,waveform=None,flow_sccm=50.):
         basis="mol product per mol inlet total carbon for CH4/CO2; mol per mol inlet for inert control",
         mol_per_feed_carbon=ratiosdict,carbon_yields={k:float(gas.n_atoms(k,"C")*v) for k,v in ratiosdict.items()},
         product_g_h=rates,product_g_per_g_CFP_h={k:v/.0288 for k,v in rates.items()},
-        cycles=cycle,history=history,wall_s=time.monotonic()-started))
+        solver_rtol=rtol,cycles=cycle,history=history,wall_s=time.monotonic()-started))
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument("--output-dir",type=Path,required=True)
