@@ -1,0 +1,58 @@
+stage: loading mechanism
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:26: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  gas=ct.Solution("gri30.yaml" if inert else str(base.MECH))
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:26: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  gas=ct.Solution("gri30.yaml" if inert else str(base.MECH))
+stage: mechanism loaded 2.087422186000012
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:36: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  inlet=ct.Reservoir(gas,clone=True);exhaust=ct.Reservoir(gas,clone=True)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:36: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  inlet=ct.Reservoir(gas,clone=True);exhaust=ct.Reservoir(gas,clone=True)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:37: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  r=PrescribedTemperatureReactor(gas,energy="off",volume=vol,clone=True)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:37: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  r=PrescribedTemperatureReactor(gas,energy="off",volume=vol,clone=True)
+stage: integrating 2.416964729
+T1682.14-h0.8-Q12.5-n800 1 {'cycle': 1, 'max_species_cycle_change': None, 'state_change': None, 'elemental_residuals': {'C': -5.2042570465168106e-05, 'H': -5.201884514648861e-05, 'O': -5.2057727025012146e-05}, 'mass_residual': -5.204905349866627e-05, 'max_pressure_relative_error': 3.127715309680923e-05, 'max_temperature_error_K': 4.137518772040494e-09}
+T1682.14-h0.8-Q12.5-n800 2 {'cycle': 2, 'max_species_cycle_change': 9.618151716739298e-08, 'state_change': 1.0577094755603866e-12, 'elemental_residuals': {'C': -5.228902663639106e-05, 'H': -5.229004866214373e-05, 'O': -5.22889591475561e-05}, 'mass_residual': -5.228905929626159e-05, 'max_pressure_relative_error': 3.127705158378902e-05, 'max_temperature_error_K': 4.690832611231599e-09}
+T1682.14-h0.8-Q12.5-n800 3 {'cycle': 3, 'max_species_cycle_change': 1.9409610050591386e-06, 'state_change': 1.5052403767867872e-12, 'elemental_residuals': {'C': -4.840130522159352e-05, 'H': -4.8401182273429524e-05, 'O': -4.840112644356822e-05}, 'mass_residual': -4.840120170511114e-05, 'max_pressure_relative_error': 3.12770515762395e-05, 'max_temperature_error_K': 4.702314981841482e-09}
+T1682.14-h0.8-Q12.5-n800 4 {'cycle': 4, 'max_species_cycle_change': 1.6531288297150226e-06, 'state_change': 8.487099911747009e-13, 'elemental_residuals': {'C': -5.1707845137556914e-05, 'H': -5.170772318199495e-05, 'O': -5.170790895934787e-05}, 'mass_residual': -5.170787095670387e-05, 'max_pressure_relative_error': 3.127705158356697e-05, 'max_temperature_error_K': 4.517687557381578e-09}
+T1682.14-h0.8-Q12.5-n800 5 {'cycle': 5, 'max_species_cycle_change': 3.802294726573674e-07, 'state_change': 3.3490987760842472e-12, 'elemental_residuals': {'C': -5.2467812525926395e-05, 'H': -5.246767145498567e-05, 'O': -5.2467562734746114e-05}, 'mass_residual': -5.246766995354157e-05, 'max_pressure_relative_error': 3.127730063434697e-05, 'max_temperature_error_K': 3.955847205361351e-09}
+T1682.14-h0.8-Q12.5-n800 6 {'cycle': 6, 'max_species_cycle_change': 1.5576773912395758e-07, 'state_change': 2.6560975641132245e-12, 'elemental_residuals': {'C': -5.215669499855487e-05, 'H': -5.2156889295385724e-05, 'O': -5.215660858291122e-05}, 'mass_residual': -5.215666199487168e-05, 'max_pressure_relative_error': 3.127734616348299e-05, 'max_temperature_error_K': 1.2448708730516955e-09}
+T1682.14-h0.8-Q12.5-n800 7 {'cycle': 7, 'max_species_cycle_change': 1.8462099796168197e-07, 'state_change': 4.518607710224387e-13, 'elemental_residuals': {'C': -5.1786498739128015e-05, 'H': -5.1786930829763056e-05, 'O': -5.1787166606048514e-05}, 'mass_residual': -5.178688361489955e-05, 'max_pressure_relative_error': 3.1277050643874205e-05, 'max_temperature_error_K': 1.5800196706550196e-09}
+T1682.14-h0.8-Q12.5-n800 8 {'cycle': 8, 'max_species_cycle_change': 1.8514211067022224e-07, 'state_change': 4.099387496125928e-12, 'elemental_residuals': {'C': -5.2114621810272884e-05, 'H': -5.217290891639385e-05, 'O': -5.2078480915950074e-05}, 'mass_residual': -5.209927805589709e-05, 'max_pressure_relative_error': 3.127705158534333e-05, 'max_temperature_error_K': 5.203446562518366e-09}
+Traceback (most recent call last):
+  File "/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_yield_grid.py", line 90, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_yield_grid.py", line 48, in main
+    pulse.worker(out,name,a.samples,inert=a.inert,waveform=waveform(a.peak,a.hold),flow_sccm=a.flow);return
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py", line 89, in worker
+    assert stable>=2,"periodic convergence failed"
+           ^^^^^^^^^
+AssertionError: periodic convergence failed

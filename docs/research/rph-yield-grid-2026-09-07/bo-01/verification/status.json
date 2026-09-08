@@ -1,0 +1,9 @@
+{
+  "status": "stopped",
+  "reason": "Command '['/opt/hostedtoolcache/Python/3.11.16/x64/bin/python', '/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_yield_grid.py', '--worker', '--output-dir', '/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-yield-grid-2026-09-07/bo-01/verification', '--peak', '1682.14294405234', '--hold', '0.7999999999999999', '--flow', '12.5', '--samples', '800']' returned non-zero exit status 1.",
+  "active": "T1682.14-h0.8-Q12.5-n800",
+  "completed": [
+    "T1682.14-h0.8-Q12.5-n400"
+  ],
+  "wall_s": 16.168463058
+}

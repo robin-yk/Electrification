@@ -1,0 +1,43 @@
+stage: loading mechanism
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:26: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  gas=ct.Solution("gri30.yaml" if inert else str(base.MECH))
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:26: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  gas=ct.Solution("gri30.yaml" if inert else str(base.MECH))
+stage: mechanism loaded 2.263313046999997
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:36: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  inlet=ct.Reservoir(gas,clone=True);exhaust=ct.Reservoir(gas,clone=True)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:36: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  inlet=ct.Reservoir(gas,clone=True);exhaust=ct.Reservoir(gas,clone=True)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:37: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  r=PrescribedTemperatureReactor(gas,energy="off",volume=vol,clone=True)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:37: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  r=PrescribedTemperatureReactor(gas,energy="off",volume=vol,clone=True)
+stage: integrating 2.5906622509999977
+T1682.14-h0.8-Q12.5-n400 1 {'cycle': 1, 'max_species_cycle_change': None, 'state_change': None, 'elemental_residuals': {'C': -0.00013470899900691898, 'H': -0.00013471441759682135, 'O': -0.0001347074868748986}, 'mass_residual': -0.0001347085570988903, 'max_pressure_relative_error': 3.1144083495471264e-05, 'max_temperature_error_K': 1.2298642104724422e-09}
+T1682.14-h0.8-Q12.5-n400 2 {'cycle': 2, 'max_species_cycle_change': 1.2205212146509936e-07, 'state_change': 1.786792935831727e-12, 'elemental_residuals': {'C': -0.0001345567704800395, 'H': -0.00013455537491979184, 'O': -0.00013455713551135666}, 'mass_residual': -0.00013455687127980918, 'max_pressure_relative_error': 3.114398875370128e-05, 'max_temperature_error_K': 1.1830252333311364e-09}
+T1682.14-h0.8-Q12.5-n400 3 {'cycle': 3, 'max_species_cycle_change': 5.382802525932817e-08, 'state_change': 1.9698687125924152e-12, 'elemental_residuals': {'C': -0.00013445560836543438, 'H': -0.00013445131093523305, 'O': -0.0001344582992833759}, 'mass_residual': -0.000134456753653711, 'max_pressure_relative_error': 3.1143989003279415e-05, 'max_temperature_error_K': 1.3087628758512437e-09}
+T1682.14-h0.8-Q12.5-n400 4 {'cycle': 4, 'max_species_cycle_change': 8.732088246921066e-08, 'state_change': 1.3911094498553211e-12, 'elemental_residuals': {'C': -0.0001346218046287761, 'H': -0.00013462273851315426, 'O': -0.00013462204767301762}, 'mass_residual': -0.00013462199683722393, 'max_pressure_relative_error': 3.114402733572774e-05, 'max_temperature_error_K': 2.342858351767063e-09}

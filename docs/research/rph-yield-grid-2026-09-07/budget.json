@@ -2,11 +2,16 @@
   "authorization": "User approved another 60 minutes, maximum 10 minutes per batch, for broader RPH yield screening followed by Bayesian search.",
   "total_budget_s": 3600,
   "batch_limit_s": 600,
-  "spent_s": 871.1075509430253,
-  "reserved_s": 240,
-  "active_stage": "bo-verify",
+  "spent_s": 887.2760140010254,
+  "reserved_s": 0,
+  "active_stage": null,
   "batches": [
-    {"stage":"bo-propose","status":"completed","wall_s":8.652932833996601,"includes":"Both preserved preflight attempts and successful fit/search"},
+    {
+      "stage": "bo-propose",
+      "status": "completed",
+      "wall_s": 8.652932833996601,
+      "includes": "Both preserved preflight attempts and successful fit/search"
+    },
     {
       "stage": "pilot",
       "status": "completed",
@@ -43,6 +48,12 @@
       "status": "stopped",
       "wall_s": 44.393529106,
       "reason": "Command '['/opt/hostedtoolcache/Python/3.11.16/x64/bin/python', '/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_yield_grid.py', '--worker', '--output-dir', '/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-yield-grid-2026-09-07/hot-boundary-02/data', '--peak', '2100', '--hold', '.8', '--flow', '50', '--samples', '400']' returned non-zero exit status 1."
+    },
+    {
+      "stage": "bo-verify",
+      "status": "stopped",
+      "reason": "Command '['/opt/hostedtoolcache/Python/3.11.16/x64/bin/python', '/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_yield_grid.py', '--worker', '--output-dir', '/home/runner/work/Electrification-Suite/Electrification-Suite/docs/research/rph-yield-grid-2026-09-07/bo-01/verification', '--peak', '1682.14294405234', '--hold', '0.7999999999999999', '--flow', '12.5', '--samples', '800']' returned non-zero exit status 1.",
+      "wall_s": 16.168463058
     }
   ],
   "previous_ledger": "docs/research/c2co-campaign-2026-09-07/budget.json",

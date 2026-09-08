@@ -1,0 +1,33 @@
+{
+  "commit": "d4e984e94d818567b060ccea36f8da44e249339c",
+  "hashes": {
+    "tools/openmkm_dynamic/verify_rph_bo01.py": "ed9b095b1eafd93ae0e1fbcb54a81abe2f2eca0fb80b16496c8900d646f5e87a",
+    "tools/openmkm_dynamic/run_rph_yield_grid.py": "ed3068a453a1f540b9848c50feb9e3f191a18b20c7f7ea6744abc7a7267e0670",
+    "tools/openmkm_dynamic/run_rph_fixed_pulse.py": "28df9801963aa3617cdd7e062d5bd9aa0614be5142fbde609a145a16e655d4c5",
+    "tools/openmkm_dynamic/run_cjh_feed_ratio_01.py": "a7a006f53506160f7d8df07d71c29cf05a8ce573ce34b6da4bcc92252e1d4296",
+    "tools/cantera/mechanisms/aramco20.yaml": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+    "docs/research/rph-yield-grid-2026-09-07/bo-01/proposal.json": "637397efaaf2964f889ae55fb4f0c8498c2f286b8f2da9264e49fd1554046a3a"
+  },
+  "proposal": {
+    "peak_C": 1682.14294405234,
+    "hold_s": 0.7999999999999999,
+    "flow_sccm": 12.5,
+    "normalized_x": [
+      0.47023824008723336,
+      1.0,
+      0.0
+    ],
+    "predicted_Y_pct": [
+      17.628517150878906
+    ],
+    "posterior_sd_pp": [
+      1.0497030019760132
+    ],
+    "training_n": 67,
+    "incumbent_Y_pct": 17.58552665564628,
+    "acquisition": "EI",
+    "reaction_verified": false,
+    "commit": "2d3fb477c8439752b7b4cada0f65761603f4288f",
+    "limitation": "Optimum search conditional on declared bounds and fixed waveform family; uncertainty is GP posterior, not chemical validation. Off-domain observations retained but not fitted."
+  }
+}
