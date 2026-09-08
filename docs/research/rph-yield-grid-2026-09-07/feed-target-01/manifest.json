@@ -1,0 +1,40 @@
+{
+  "commit": "8f9572124b774cb6fcde11af4bc71e1b5bd19f57",
+  "hashes": {
+    "tools/openmkm_dynamic/run_rph_feed.py": "05555546a018ff91b03ea9eec1517db72b27794b8b3fdd2727b24377109862b7",
+    "tools/openmkm_dynamic/run_rph_fixed_pulse.py": "4c30009b165a4d493c2fd2863d880ffac79e6d23378738ed1dc321589edfcbf8",
+    "tools/openmkm_dynamic/run_rph_yield_grid.py": "ed3068a453a1f540b9848c50feb9e3f191a18b20c7f7ea6744abc7a7267e0670",
+    "tools/cantera/mechanisms/aramco20.yaml": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+    "docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.8-n800.json": "d518ec5004bb193e77c97535515890268f96a0fc9dc8ba41b0fb39fd0c06d611",
+    "docs/research/rph-yield-grid-2026-09-07/feed-bracket-01/report.json": "5fc0119c4c0dd1a702ba677a1822f918a64775a3f3be1d5e9d9e6019f9f8f9f4"
+  },
+  "fractions": [
+    0.69293803675879,
+    0.7240858439468567,
+    0.7925499083878141
+  ],
+  "targets": [
+    1.75,
+    1.5,
+    1.0
+  ],
+  "selection": "linear interpolation in verified composition brackets; not Bayesian",
+  "reused_anchor": {
+    "peak_C": 1800,
+    "source": "docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.8-n800.json",
+    "sha256": "d518ec5004bb193e77c97535515890268f96a0fc9dc8ba41b0fb39fd0c06d611",
+    "X_CH4_pct": 70.45204074314151,
+    "C2H2": 17.58552665564628,
+    "C2H4": 0.5420412626074375,
+    "CO": 38.190723828279,
+    "C6H6": 0.4647720262299719,
+    "C6_total": 0.6908937879447736,
+    "CH4": 14.773979628429245,
+    "CO2": 22.790335818630297,
+    "other_C": 5.427988366004299,
+    "carbon_sum": 100.00148934754145,
+    "C2H2_g_gCFP_h": 10.640019051051562
+  },
+  "cap_s": 450,
+  "rtol": 1e-11
+}

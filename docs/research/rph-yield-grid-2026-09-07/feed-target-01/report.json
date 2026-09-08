@@ -1,0 +1,96 @@
+{
+  "status": {
+    "status": "completed",
+    "reason": null,
+    "completed": [
+      0,
+      1,
+      2
+    ],
+    "wall_s": 59.745864379
+  },
+  "rows": [
+    {
+      "target": 1.75,
+      "feed_CH4_pct": 69.29380367587899,
+      "ratio": 1.7375548267142784,
+      "relative_error_pct": -0.711152759184086,
+      "within_2pct": true,
+      "within_5pct": true,
+      "within_10pct": true,
+      "C2H2_Y_pct": 29.57881117406165,
+      "CO_Y_pct": 25.697403061980523,
+      "C2H2_g_gCFP_h": 17.896485022154522,
+      "phase_error": 1.5591946607385054e-05,
+      "final_cycle": {
+        "cycle": 3,
+        "max_species_cycle_change": 8.734494516549063e-10,
+        "state_change": 1.3209433546990113e-12,
+        "elemental_residuals": {
+          "C": -1.4093106956152258e-05,
+          "H": -1.4093106012925677e-05,
+          "O": -1.409310601037049e-05
+        },
+        "mass_residual": -1.4093106472616407e-05,
+        "max_pressure_relative_error": 2.8099306832896076e-05,
+        "max_temperature_error_K": 9.288366982218577e-07
+      },
+      "source": "docs/research/rph-yield-grid-2026-09-07/feed-target-01/0/n800.json"
+    },
+    {
+      "target": 1.5,
+      "feed_CH4_pct": 72.40858439468568,
+      "ratio": 1.4769052469124677,
+      "relative_error_pct": -1.5396502058354855,
+      "within_2pct": true,
+      "within_5pct": true,
+      "within_10pct": true,
+      "C2H2_Y_pct": 31.59203777086524,
+      "CO_Y_pct": 23.329223172223866,
+      "C2H2_g_gCFP_h": 19.11457588536994,
+      "phase_error": 1.667865835786042e-05,
+      "final_cycle": {
+        "cycle": 3,
+        "max_species_cycle_change": 1.3637680984501799e-09,
+        "state_change": 2.7644553313166398e-12,
+        "elemental_residuals": {
+          "C": -1.3961477843980844e-05,
+          "H": -1.3961478401135781e-05,
+          "O": -1.3961475396959426e-05
+        },
+        "mass_residual": -1.3961477000553003e-05,
+        "max_pressure_relative_error": 2.7105461028131828e-05,
+        "max_temperature_error_K": 3.284562694716442e-06
+      },
+      "source": "docs/research/rph-yield-grid-2026-09-07/feed-target-01/1/n800.json"
+    },
+    {
+      "target": 1.0,
+      "feed_CH4_pct": 79.25499083878141,
+      "ratio": 0.9921968311464692,
+      "relative_error_pct": -0.7803168853530829,
+      "within_2pct": true,
+      "within_5pct": true,
+      "within_10pct": true,
+      "C2H2_Y_pct": 36.06507620406691,
+      "CO_Y_pct": 17.89182716236556,
+      "C2H2_g_gCFP_h": 21.82096137369255,
+      "phase_error": 1.9084152498183293e-05,
+      "final_cycle": {
+        "cycle": 3,
+        "max_species_cycle_change": 6.816458508751566e-11,
+        "state_change": 1.7918999617450027e-12,
+        "elemental_residuals": {
+          "C": -1.3659573975000516e-05,
+          "H": -1.3659576395121383e-05,
+          "O": -1.3659572538457627e-05
+        },
+        "mass_residual": -1.3659573898240851e-05,
+        "max_pressure_relative_error": 2.4920980980169816e-05,
+        "max_temperature_error_K": 2.261240524603636e-06
+      },
+      "source": "docs/research/rph-yield-grid-2026-09-07/feed-target-01/2/n800.json"
+    }
+  ],
+  "scope": "Fixed-waveform composition-only baseline; not yield optimization."
+}
