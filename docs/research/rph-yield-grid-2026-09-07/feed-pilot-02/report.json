@@ -1,0 +1,42 @@
+{
+  "rows": [
+    {
+      "CH4_feed_pct": 50.0,
+      "X_CH4_pct": 70.45204074314151,
+      "X_CO2_pct": 54.41932836273941,
+      "C2H2_Y_pct": 17.58552665564628,
+      "CO_Y_pct": 38.190723828279,
+      "C2H4_Y_pct": 0.5420412626074375,
+      "C6H6_Y_pct": 0.4647720262299719,
+      "CO_per_C2H2": 4.34342679364873,
+      "C2H2_g_gCFP_h": 10.640019051051562
+    },
+    {
+      "CH4_feed_pct": 60.0,
+      "X_CH4_pct": 69.89775612755236,
+      "X_CO2_pct": 57.13340589101779,
+      "C2H2_Y_pct": 23.679517855144187,
+      "CO_Y_pct": 32.26530140411757,
+      "C2H4_Y_pct": 0.6521414920085367,
+      "C6H6_Y_pct": 0.6864851537413464,
+      "CO_per_C2H2": 2.725165402563988,
+      "C2H2_g_gCFP_h": 14.327152438028042
+    }
+  ],
+  "phase_error": 1.2360570321945374e-05,
+  "wall_s": 17.689706677999993,
+  "final_cycle": {
+    "cycle": 3,
+    "max_species_cycle_change": 9.997946914808153e-11,
+    "state_change": 1.1960432644286811e-12,
+    "elemental_residuals": {
+      "C": -1.4479028186715333e-05,
+      "H": -1.4479107929048966e-05,
+      "O": -1.447906086893255e-05
+    },
+    "mass_residual": -1.447905063181696e-05,
+    "max_pressure_relative_error": 3.106477496994664e-05,
+    "max_temperature_error_K": 6.869595381431282e-08
+  },
+  "scope": "Composition-only pilot. Not a ratio-constrained or Bayesian optimum."
+}
