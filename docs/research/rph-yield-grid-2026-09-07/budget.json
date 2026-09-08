@@ -2,7 +2,7 @@
   "authorization": "User approved another 60 minutes, maximum 10 minutes per batch, for broader RPH yield screening followed by Bayesian search.",
   "total_budget_s": 3600,
   "batch_limit_s": 600,
-  "spent_s": 975.5082868510224,
+  "spent_s": 990.2385023929826,
   "reserved_s": 0,
   "active_stage": null,
   "batches": [
@@ -84,6 +84,12 @@
       "status": "completed",
       "reason": null,
       "wall_s": 40.81384237399999
+    },
+    {
+      "stage": "bo03-propose",
+      "status": "completed",
+      "reason": null,
+      "wall_s": 14.730215541960206
     }
   ],
   "previous_ledger": "docs/research/c2co-campaign-2026-09-07/budget.json",
