@@ -1,0 +1,30 @@
+name: Non-equimolar waveform support
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: c2co-budgeted-campaign
+  cancel-in-progress: false
+jobs:
+  calculate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r tools/cantera/requirements.txt
+      - run: python tools/openmkm_dynamic/test_rph_feed.py
+      - run: python tools/openmkm_dynamic/run_composition_support.py --cloud
+        timeout-minutes: 6
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: composition-support-cloud
+          path: docs/research/composition-support-cloud-2026-09-08/

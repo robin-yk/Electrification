@@ -13,7 +13,10 @@ JOBS=[(.7,1600,.8),(.7,1800,.5),(.8,1600,.8),(.8,1800,.5)]
 CAP=300
 def write(p,d):p.write_text(json.dumps(d,indent=2,allow_nan=False)+'\n')
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--worker',type=int);ap.add_argument('--samples',type=int,default=400);ap.add_argument('--inert',action='store_true');a=ap.parse_args()
+    global OUT
+    ap=argparse.ArgumentParser();ap.add_argument('--worker',type=int);ap.add_argument('--samples',type=int,default=400);ap.add_argument('--inert',action='store_true');ap.add_argument('--cloud',action='store_true');a=ap.parse_args()
+    if a.cloud:OUT=ROOT/'docs/research/composition-support-cloud-2026-09-08'
+    OUT.mkdir(exist_ok=True)
     if a.worker is not None:
         import run_rph_yield_grid as g
         x,t,h=JOBS[a.worker]
@@ -28,6 +31,7 @@ def main():
     def run(index,n,inert=False):
         out=OUT/str(index);out.mkdir(exist_ok=True)
         cmd=[sys.executable,__file__,'--worker',str(index),'--samples',str(n)]
+        if a.cloud:cmd+=['--cloud']
         if inert:cmd+=['--inert']
         left=CAP-(time.monotonic()-start)
         assert left>0,'Aggregate cap reached'

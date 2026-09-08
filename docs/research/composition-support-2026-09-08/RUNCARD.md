@@ -1,5 +1,9 @@
 # Non-equimolar composition support
 
+## Authorized cloud retry
+
+After the local mechanism-loading timeout, the user approved a GitHub Actions retry on 8 September 2026. The same four conditions and 300-second simulation cap apply. Use `--cloud` and the separate `composition-support-cloud-2026-09-08` output directory; preserve the original failure. The workflow has a 10-minute job limit including setup/upload and a 6-minute simulation-step guard around the internal 5-minute cap. No automatic retries. Download and commit accepted data after review.
+
 User authorization: 8 September 2026, "ㅇㅇ 보강해", following the identified missing non-equimolar waveform coverage. Four support conditions, not a bulk campaign or BO-selected points. One local sequential batch, at most 300 elapsed seconds, single-thread environment. No automatic retries; stop at first failed gate. The previous budget is not reset or charged by this separate bounded pilot.
 
 | CH4 mole fraction | Peak gas temperature, °C | Hot hold, s |
