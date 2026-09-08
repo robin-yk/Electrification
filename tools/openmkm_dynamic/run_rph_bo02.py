@@ -4,19 +4,22 @@ import subprocess
 import sys
 import time
 from pathlib import Path
-import run_rph_yield_grid as g
-D=g.CAMPAIGN/'bo-02'
+import run_cjh_feed_ratio_01 as base
+CAMP=base.ROOT/'docs/research/rph-yield-grid-2026-09-07'
+D=CAMP/'bo-02'
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--stage',choices=['propose','verify'],default='verify');ap.add_argument('--samples',type=int);a=ap.parse_args()
+    if a.stage=='verify' or a.samples:
+        import run_rph_yield_grid as g
     out=D/'verification'
     if a.samples:
         r=g.base.read(D/'proposal.json')
         g.pulse.worker(out,f'n{a.samples}',a.samples,waveform=g.waveform(r['peak_C'],r['hold_s']),flow_sccm=r['flow_sccm'],rtol=1e-11);return
     cap=120 if a.stage=='propose' else 300
-    ledger=g.base.read(g.CAMPAIGN/'budget.json');assert ledger['active_stage'] is None and ledger['reserved_s']==0
+    ledger=base.read(CAMP/'budget.json');assert ledger['active_stage'] is None and ledger['reserved_s']==0
     assert ledger['spent_s']+cap<=ledger['total_budget_s']
     ledger.update(active_stage='bo-propose' if a.stage=='propose' else 'bo02-verify',reserved_s=cap)
-    g.base.write(g.CAMPAIGN/'budget.json',ledger)
+    base.write(CAMP/'budget.json',ledger)
     start=time.monotonic();status='stopped';reason=None
     try:
         if a.stage=='propose':
@@ -37,9 +40,9 @@ def main():
     except Exception as e:reason=str(e)
     elapsed=time.monotonic()-start
     D.mkdir(exist_ok=True)
-    g.base.write(D/(a.stage+'-run.json'),dict(status=status,reason=reason,wall_s=elapsed))
+    base.write(D/(a.stage+'-run.json'),dict(status=status,reason=reason,wall_s=elapsed))
     ledger['spent_s']+=elapsed;ledger.update(active_stage=None,reserved_s=0)
     ledger['batches'].append(dict(stage='bo02-'+a.stage,status=status,reason=reason,wall_s=elapsed))
-    g.base.write(g.CAMPAIGN/'budget.json',ledger)
+    base.write(CAMP/'budget.json',ledger)
     if status!='completed':raise RuntimeError(reason)
 if __name__=='__main__':main()
