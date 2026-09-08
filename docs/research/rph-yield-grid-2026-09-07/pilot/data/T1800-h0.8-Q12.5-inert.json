@@ -1,0 +1,111 @@
+{
+  "name": "T1800-h0.8-Q12.5-inert",
+  "engine": "3.2.0",
+  "inputs": {
+    "feed": {
+      "N2": 1
+    },
+    "flow_sccm": 12.5,
+    "standard_T_K": 273.15,
+    "standard_P_Pa": 101325,
+    "volume_m3": 9.228077898393764e-09,
+    "pressure_target_Pa": 101325,
+    "pressure_controller_K": 1e-07,
+    "period_s": 1.0,
+    "segments": [
+      [
+        0.025,
+        723.15,
+        2073.15
+      ],
+      [
+        0.8,
+        2073.15,
+        2073.15
+      ],
+      [
+        0.1,
+        2073.15,
+        723.15
+      ],
+      [
+        0.07499999999999996,
+        723.15,
+        723.15
+      ]
+    ],
+    "samples_per_segment": 800
+  },
+  "basis": "mol product per mol inlet total carbon for CH4/CO2; mol per mol inlet for inert control",
+  "mol_per_feed_carbon": {
+    "N2": 1.0000464183333837
+  },
+  "carbon_yields": {
+    "N2": 0.0
+  },
+  "product_g_h": {
+    "N2": 0.9374263974477363
+  },
+  "product_g_per_g_CFP_h": {
+    "N2": 32.54952768915751
+  },
+  "cycles": 5,
+  "history": [
+    {
+      "cycle": 1,
+      "max_species_cycle_change": null,
+      "state_change": null,
+      "elemental_residuals": {
+        "N": -4.641840789057437e-05
+      },
+      "mass_residual": -4.6418407792464674e-05,
+      "max_pressure_relative_error": 3.19597648545944e-05,
+      "max_temperature_error_K": 7.961707979120547e-06
+    },
+    {
+      "cycle": 2,
+      "max_species_cycle_change": 1.1664628019047996e-07,
+      "state_change": 1.8704495952093225e-08,
+      "elemental_residuals": {
+        "N": -4.653470541162535e-05
+      },
+      "mass_residual": -4.653470540419297e-05,
+      "max_pressure_relative_error": 3.195976501180198e-05,
+      "max_temperature_error_K": 1.2950759128216305e-05
+    },
+    {
+      "cycle": 3,
+      "max_species_cycle_change": 1.8356609965408666e-07,
+      "state_change": 1.0128778038520636e-08,
+      "elemental_residuals": {
+        "N": -4.635162172595477e-05
+      },
+      "mass_residual": -4.635162171397901e-05,
+      "max_pressure_relative_error": 3.195976336711759e-05,
+      "max_temperature_error_K": 1.4045649777472136e-05
+    },
+    {
+      "cycle": 4,
+      "max_species_cycle_change": 6.740638602842353e-08,
+      "state_change": 4.210871207277478e-09,
+      "elemental_residuals": {
+        "N": -4.641878819303333e-05
+      },
+      "mass_residual": -4.641878813007146e-05,
+      "max_pressure_relative_error": 3.1959764748012987e-05,
+      "max_temperature_error_K": 1.004202044896374e-05
+    },
+    {
+      "cycle": 5,
+      "max_species_cycle_change": 5.252620560725063e-10,
+      "state_change": 1.548514672045087e-08,
+      "elemental_residuals": {
+        "N": -4.641859246804974e-05
+      },
+      "mass_residual": -4.641859246885283e-05,
+      "max_pressure_relative_error": 3.195976414538393e-05,
+      "max_temperature_error_K": 7.77954414843407e-06
+    }
+  ],
+  "wall_s": 0.3399480610000012
+}

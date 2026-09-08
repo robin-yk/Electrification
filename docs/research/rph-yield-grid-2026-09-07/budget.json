@@ -2,10 +2,10 @@
   "authorization": "User approved another 60 minutes, maximum 10 minutes per batch, for broader RPH yield screening followed by Bayesian search.",
   "total_budget_s": 3600,
   "batch_limit_s": 600,
-  "spent_s": 0,
-  "reserved_s": 240,
-  "active_stage": "pilot",
-  "batches": [],
+  "spent_s": 90.05688279200001,
+  "reserved_s": 540,
+  "active_stage": "1",
+  "batches": [{"stage":"pilot","status":"completed","wall_s":90.05688279200001,"run_id":34173331305}],
   "previous_ledger": "docs/research/c2co-campaign-2026-09-07/budget.json",
   "rule": "One batch at a time. Reconcile actual elapsed calculation time including failed work before another reservation. Stop on failed gate or cap. No automatic retries. Do not reset the previous ledger or borrow its residual allowance."
 }

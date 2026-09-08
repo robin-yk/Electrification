@@ -1,0 +1,43 @@
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:25: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  gas=ct.Solution("gri30.yaml" if inert else str(base.MECH))
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:25: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  gas=ct.Solution("gri30.yaml" if inert else str(base.MECH))
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:34: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  inlet=ct.Reservoir(gas,clone=True);exhaust=ct.Reservoir(gas,clone=True)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:34: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  inlet=ct.Reservoir(gas,clone=True);exhaust=ct.Reservoir(gas,clone=True)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:35: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  r=PrescribedTemperatureReactor(gas,energy="off",volume=vol,clone=True)
+/home/runner/work/Electrification-Suite/Electrification-Suite/tools/openmkm_dynamic/run_rph_fixed_pulse.py:35: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033332
+
+  r=PrescribedTemperatureReactor(gas,energy="off",volume=vol,clone=True)
+T1800-h0.3-Q25-n400 1 {'cycle': 1, 'max_species_cycle_change': None, 'state_change': None, 'elemental_residuals': {'C': 0.00010230647253848133, 'H': 0.00010230651282112106, 'O': 0.00010230647086539512}, 'mass_residual': 0.00010230647435245362, 'max_pressure_relative_error': 3.409614760285784e-05, 'max_temperature_error_K': 5.749029696744401e-09}
+T1800-h0.3-Q25-n400 2 {'cycle': 2, 'max_species_cycle_change': 1.3956779737478442e-07, 'state_change': 5.559996907322784e-13, 'elemental_residuals': {'C': 0.00010202743186679598, 'H': 0.00010202717887496003, 'O': 0.00010202749326463559}, 'mass_residual': 0.00010202744759972451, 'max_pressure_relative_error': 3.409614703353547e-05, 'max_temperature_error_K': 5.810647962789517e-09}
+T1800-h0.3-Q25-n400 3 {'cycle': 3, 'max_species_cycle_change': 1.513654602769421e-07, 'state_change': 3.912870027988902e-12, 'elemental_residuals': {'C': 0.00010233254435445043, 'H': 0.00010233338497002921, 'O': 0.00010233204623971454}, 'mass_residual': 0.00010233233538400293, 'max_pressure_relative_error': 3.409614078186962e-05, 'max_temperature_error_K': 8.660890671308152e-09}
+T1800-h0.3-Q25-n400 4 {'cycle': 4, 'max_species_cycle_change': 1.1086959156303422e-07, 'state_change': 1.7152945730458669e-12, 'elemental_residuals': {'C': 0.00010210814521002093, 'H': 0.00010210821763870745, 'O': 0.00010210799829224394}, 'mass_residual': 0.00010210807179082383, 'max_pressure_relative_error': 3.409614760574442e-05, 'max_temperature_error_K': 1.0159283192479052e-08}
+T1800-h0.3-Q25-n400 5 {'cycle': 5, 'max_species_cycle_change': 1.1016906065197674e-07, 'state_change': 7.036149440864392e-12, 'elemental_residuals': {'C': 0.00010232910627873047, 'H': 0.00010232910488891808, 'O': 0.00010232914662803207}, 'mass_residual': 0.00010232912768616563, 'max_pressure_relative_error': 3.40961481806179e-05, 'max_temperature_error_K': 1.0101757652591914e-08}
+T1800-h0.3-Q25-n400 6 {'cycle': 6, 'max_species_cycle_change': 6.056197149328924e-08, 'state_change': 4.770628336814298e-13, 'elemental_residuals': {'C': 0.00010220762641111436, 'H': 0.00010220759132866443, 'O': 0.00010220763637068463}, 'mass_residual': 0.00010220762936194124, 'max_pressure_relative_error': 3.409624081540663e-05, 'max_temperature_error_K': 5.0856669986387715e-09}
+T1800-h0.3-Q25-n400 7 {'cycle': 7, 'max_species_cycle_change': 6.53294334740373e-08, 'state_change': 1.2173595465014841e-12, 'elemental_residuals': {'C': 0.00010234071878903369, 'H': 0.00010233477174291862, 'O': 0.00010234247454981023}, 'mass_residual': 0.00010234125503080481, 'max_pressure_relative_error': 3.40961422478081e-05, 'max_temperature_error_K': 4.963567334925756e-09}
