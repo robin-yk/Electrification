@@ -25,7 +25,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: rph-feed-pilot01
+          name: rph-feed-pilot02
           path: |
-            docs/research/rph-yield-grid-2026-09-07/feed-pilot-01/
+            docs/research/rph-yield-grid-2026-09-07/feed-pilot-02/
             docs/research/rph-yield-grid-2026-09-07/budget.json
