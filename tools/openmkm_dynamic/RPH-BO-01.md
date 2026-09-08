@@ -5,7 +5,12 @@ grid and hot-boundary data. The previous complete-grid prerequisite is an
 execution choice, not a statistical requirement; it is superseded here.
 Keep failed grid and 2100 C points excluded and their stops preserved.
 
-Fit 59 in-domain grid points plus two accepted high-temperature pairs.
+Fit 59 grid points, six accepted .20/.40-second points also inside the
+continuous bounds, and two accepted high-temperature pairs: 67 in total.
+The first inventory check stopped before model fitting because it expected
+61 and omitted those six off-grid but in-domain points. This bookkeeping
+correction preserves the failed preflight in preflight-01.json; no numerical
+or model quality gate was changed.
 Bounds: peak 1400 to 2000 C, hold .10 to .80 s, log flow 12.5 to 200 sccm.
 All other closures are unchanged. Maximize total-feed-carbon C2H2 yield.
 Do not mix productivity into the objective. Retain all off-domain data.

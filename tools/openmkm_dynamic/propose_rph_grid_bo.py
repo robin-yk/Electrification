@@ -25,7 +25,7 @@ def main():
                 gate=ROOT/r['source'].replace('-n800.json','-gates.json')
                 assert json.loads(gate.read_text())['error']<1e-4
                 rows.append(dict(peak_C=r['peak_C'],hold_s=.8,flow_sccm=50,source=r['source'],sha256=r['sha256'],C2H2_Y_pct=r['C2H2']))
-        assert len(rows)==61 and len({(r['peak_C'],r['hold_s'],r['flow_sccm']) for r in rows})==61
+        assert len(rows)==67 and len({(r['peak_C'],r['hold_s'],r['flow_sccm']) for r in rows})==67
         for r in rows:assert hashlib.sha256((ROOT/r['source']).read_bytes()).hexdigest()==r['sha256']
         x=np.array([[(r['peak_C']-1400)/600,(r['hold_s']-.1)/.7,np.log(r['flow_sccm']/12.5)/np.log(16)] for r in rows])
         y=np.array([[r['C2H2_Y_pct']] for r in rows])
