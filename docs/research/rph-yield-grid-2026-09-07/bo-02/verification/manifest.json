@@ -1,0 +1,12 @@
+{
+  "commit": "c2869e45c5dca282872b43f52a032adb0c31d47e",
+  "hashes": {
+    "tools/openmkm_dynamic/run_rph_bo02.py": "ee0dd344683407bb9dd0b07b31ac27eb1e5c368cf05f5d800fceb1384ef24481",
+    "tools/openmkm_dynamic/run_rph_fixed_pulse.py": "d9b9f32350f4be780c104f7b40b90e7681f653cfb4bb5a36084e99d6b6790241",
+    "tools/openmkm_dynamic/run_rph_yield_grid.py": "ed3068a453a1f540b9848c50feb9e3f191a18b20c7f7ea6744abc7a7267e0670",
+    "tools/cantera/mechanisms/aramco20.yaml": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+    "docs/research/rph-yield-grid-2026-09-07/bo-02/proposal.json": "3a983ad47612e1093438cda7aff832b9f34eece7482fa230acd16bafd8c841eb"
+  },
+  "rtol": 1e-11,
+  "cap_s": 300
+}
