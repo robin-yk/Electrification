@@ -1,5 +1,6 @@
 """One audited EI recommendation from accepted partial-grid and boundary data."""
 import hashlib
+import argparse
 import itertools
 import json
 from pathlib import Path
@@ -12,6 +13,10 @@ CAMP=ROOT/'docs/research/rph-yield-grid-2026-09-07'
 DEST=CAMP/'bo-01'
 def write(p,d):p.write_text(json.dumps(d,indent=2,allow_nan=False)+'\n')
 def main():
+    global DEST
+    parser=argparse.ArgumentParser();parser.add_argument('--round',type=int,default=1);args=parser.parse_args()
+    assert args.round in [1,2]
+    DEST=CAMP/f'bo-{args.round:02d}'
     start=time.monotonic();DEST.mkdir(exist_ok=True);status='stopped';reason=None
     def alarm(*_):raise TimeoutError('120 second proposal cap')
     signal.signal(signal.SIGALRM,alarm);signal.alarm(120)
@@ -27,6 +32,13 @@ def main():
                 rows.append(dict(peak_C=r['peak_C'],hold_s=.8,flow_sccm=50,source=r['source'],sha256=r['sha256'],C2H2_Y_pct=r['C2H2']))
         assert len(rows)==67 and len({(r['peak_C'],r['hold_s'],r['flow_sccm']) for r in rows})==67
         for r in rows:assert hashlib.sha256((ROOT/r['source']).read_bytes()).hexdigest()==r['sha256']
+        if args.round==2:
+            source=CAMP/'bo-01/tighter-01/n800.json'
+            gates=json.loads(source.with_name('gates.json').read_text())
+            assert gates['phase_error']<gates['threshold'] and source.with_name('REVIEW.md').exists()
+            raw=json.loads(source.read_text());p=json.loads((CAMP/'bo-01/proposal.json').read_text())
+            rows.append(dict(peak_C=p['peak_C'],hold_s=p['hold_s'],flow_sccm=p['flow_sccm'],source=str(source.relative_to(ROOT)),sha256=hashlib.sha256(source.read_bytes()).hexdigest(),C2H2_Y_pct=100*raw['carbon_yields']['C2H2'],solver_rtol=raw['solver_rtol']))
+            assert len(rows)==68
         x=np.array([[(r['peak_C']-1400)/600,(r['hold_s']-.1)/.7,np.log(r['flow_sccm']/12.5)/np.log(16)] for r in rows])
         assert np.all(x>=-1e-12) and np.all(x<=1+1e-12)
         x=np.clip(x,0.,1.) # Remove roundoff at physical bounds, not out-of-domain data.
