@@ -1,0 +1,38 @@
+name: Verify composition constrained Bayesian proposals
+on:
+  workflow_dispatch:
+    inputs:
+      round:
+        description: Saved proposal round
+        required: true
+        default: '1'
+        type: choice
+        options: ['1', '2', '3', '4', '5']
+permissions:
+  contents: read
+concurrency:
+  group: c2co-budgeted-campaign
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r tools/cantera/requirements.txt
+      - run: python tools/openmkm_dynamic/verify_composition_bo.py --round '${{ inputs.round }}'
+        timeout-minutes: 6
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: composition-bo-${{ inputs.round }}
+          path: |
+            docs/research/composition-bo-2026-09-08/round-${{ inputs.round == '1' && '01' || inputs.round == '2' && '02' || inputs.round == '3' && '03' || inputs.round == '4' && '04' || '05' }}/verification/
+            docs/research/composition-bo-2026-09-08/budget.json

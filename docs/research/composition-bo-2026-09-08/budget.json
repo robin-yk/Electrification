@@ -1,1 +1,13 @@
-{"authorization":"User approved additional total 60 minutes, maximum 5 minutes per batch, on 2026-09-08.","total_s":3600,"spent_s":0,"active":null,"batches":[]}
+{
+  "authorization": "User approved additional total 60 minutes, maximum 5 minutes per batch, on 2026-09-08.",
+  "total_s": 3600,
+  "spent_s": 3.5856899580103345,
+  "active": null,
+  "batches": [
+    {
+      "stage": "propose-1",
+      "status": "completed",
+      "wall_s": 3.5856899580103345
+    }
+  ]
+}
