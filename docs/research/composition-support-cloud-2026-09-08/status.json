@@ -1,0 +1,52 @@
+{
+  "status": "completed",
+  "reason": null,
+  "completed": [
+    {
+      "index": 0,
+      "CH4_fraction": 0.7,
+      "peak_C": 1600,
+      "hold_s": 0.8,
+      "C2H2_Y_pct": 16.10722876238962,
+      "CO_Y_pct": 8.506955525152803,
+      "CO_per_C2H2": 1.056290396150149,
+      "phase_error": 2.365917598412537e-05,
+      "source": "docs/research/composition-support-cloud-2026-09-08/0/n800.json"
+    },
+    {
+      "index": 1,
+      "CH4_fraction": 0.7,
+      "peak_C": 1800,
+      "hold_s": 0.5,
+      "C2H2_Y_pct": 19.046973517399152,
+      "CO_Y_pct": 15.902180597659243,
+      "CO_per_C2H2": 1.6697855523485468,
+      "phase_error": 1.4021326044999505e-05,
+      "source": "docs/research/composition-support-cloud-2026-09-08/1/n800.json"
+    },
+    {
+      "index": 2,
+      "CH4_fraction": 0.8,
+      "peak_C": 1600,
+      "hold_s": 0.8,
+      "C2H2_Y_pct": 18.323667951058525,
+      "CO_Y_pct": 5.839314564922089,
+      "CO_per_C2H2": 0.6373521481090538,
+      "phase_error": 2.6988377735737146e-05,
+      "source": "docs/research/composition-support-cloud-2026-09-08/2/n800.json"
+    },
+    {
+      "index": 3,
+      "CH4_fraction": 0.8,
+      "peak_C": 1800,
+      "hold_s": 0.5,
+      "C2H2_Y_pct": 23.1693040121038,
+      "CO_Y_pct": 10.92064457604719,
+      "CO_per_C2H2": 0.9426821427473325,
+      "phase_error": 1.5858943334723374e-05,
+      "source": "docs/research/composition-support-cloud-2026-09-08/3/n800.json"
+    }
+  ],
+  "wall_s": 71.34468716800001,
+  "cap_s": 300
+}

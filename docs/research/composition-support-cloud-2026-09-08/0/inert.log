@@ -1,0 +1,6 @@
+stage: loading mechanism
+stage: mechanism loaded 0.07370309399999542
+stage: integrating 0.1085232700000347
+inert 1 {'cycle': 1, 'max_species_cycle_change': None, 'state_change': None, 'elemental_residuals': {'N': -2.648490330111492e-05}, 'mass_residual': -2.6484903281328135e-05, 'max_pressure_relative_error': 2.7135775349407254e-05, 'max_temperature_error_K': 1.4738907339051366e-07}
+inert 2 {'cycle': 2, 'max_species_cycle_change': 9.513989596143801e-11, 'state_change': 6.41979802651349e-11, 'elemental_residuals': {'N': -2.6484998034427965e-05}, 'mass_residual': -2.6484998055181465e-05, 'max_pressure_relative_error': 2.7135775374054205e-05, 'max_temperature_error_K': 1.8124933376384433e-07}
+inert 3 {'cycle': 3, 'max_species_cycle_change': 1.3444179103316856e-10, 'state_change': 1.684612449537326e-10, 'elemental_residuals': {'N': -2.6484864028658427e-05}, 'mass_residual': -2.648486401621249e-05, 'max_pressure_relative_error': 2.7135775360065395e-05, 'max_temperature_error_K': 3.4290383155166637e-07}
