@@ -1,0 +1,7 @@
+{
+  "status": "stopped",
+  "reason": "TimeoutExpired: Command '['/private/tmp/aramco-repro-32-env/bin/python', '/private/tmp/aramco-feed-ratio-20260907/tools/openmkm_dynamic/run_composition_support.py', '--worker', '0', '--samples', '400']' timed out after 89.9999685829971 seconds",
+  "completed": [],
+  "wall_s": 111.76483641704544,
+  "cap_s": 300
+}
