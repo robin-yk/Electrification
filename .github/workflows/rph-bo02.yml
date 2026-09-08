@@ -1,6 +1,11 @@
-name: Verify second acetylene yield recommendation
+name: Verify sequential acetylene yield recommendation
 on:
   workflow_dispatch:
+    inputs:
+      round:
+        type: choice
+        options: ['2', '3']
+        default: '3'
 permissions:
   contents: read
 concurrency:
@@ -19,12 +24,12 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -r tools/cantera/requirements.txt
-      - run: python tools/openmkm_dynamic/run_rph_bo02.py --stage verify
+      - run: python tools/openmkm_dynamic/run_rph_bo02.py --stage verify --round '${{ inputs.round }}'
         timeout-minutes: 6
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: rph-bo02
+          name: rph-bo-round-${{ inputs.round }}
           path: |
-            docs/research/rph-yield-grid-2026-09-07/bo-02/
+            docs/research/rph-yield-grid-2026-09-07/bo-0${{ inputs.round }}/
             docs/research/rph-yield-grid-2026-09-07/budget.json

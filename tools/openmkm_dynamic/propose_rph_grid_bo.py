@@ -15,7 +15,7 @@ def write(p,d):p.write_text(json.dumps(d,indent=2,allow_nan=False)+'\n')
 def main():
     global DEST
     parser=argparse.ArgumentParser();parser.add_argument('--round',type=int,default=1);args=parser.parse_args()
-    assert args.round in [1,2]
+    assert args.round in [1,2,3]
     DEST=CAMP/f'bo-{args.round:02d}'
     start=time.monotonic();DEST.mkdir(exist_ok=True);status='stopped';reason=None
     def alarm(*_):raise TimeoutError('120 second proposal cap')
@@ -39,6 +39,10 @@ def main():
             raw=json.loads(source.read_text());p=json.loads((CAMP/'bo-01/proposal.json').read_text())
             rows.append(dict(peak_C=p['peak_C'],hold_s=p['hold_s'],flow_sccm=p['flow_sccm'],source=str(source.relative_to(ROOT)),sha256=hashlib.sha256(source.read_bytes()).hexdigest(),C2H2_Y_pct=100*raw['carbon_yields']['C2H2'],solver_rtol=raw['solver_rtol']))
             assert len(rows)==68
+        if args.round==3:
+            rows=json.loads((CAMP/'explore-01/observations-for-next-fit.json').read_text())['rows']
+            assert len(rows)==71 and len({(r['peak_C'],r['hold_s'],r['flow_sccm']) for r in rows})==71
+            for r in rows:assert hashlib.sha256((ROOT/r['source']).read_bytes()).hexdigest()==r['sha256']
         x=np.array([[(r['peak_C']-1400)/600,(r['hold_s']-.1)/.7,np.log(r['flow_sccm']/12.5)/np.log(16)] for r in rows])
         assert np.all(x>=-1e-12) and np.all(x<=1+1e-12)
         x=np.clip(x,0.,1.) # Remove roundoff at physical bounds, not out-of-domain data.
