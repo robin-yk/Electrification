@@ -15,9 +15,10 @@ def segments(period):
     assert period>0
     return [(period*f,a,b) for f,a,b in [(0.025,873.15,2073.15),(.05,2073.15,2073.15),(.1,2073.15,873.15),(.825,873.15,873.15)]]
 
-def worker(out,name,n,period=1.,inert=False,waveform=None,flow_sccm=50.,rtol=1e-9):
+def worker(out,name,n,period=1.,inert=False,waveform=None,flow_sccm=50.,rtol=1e-9,feed_ch4=.5):
     started=time.monotonic()
     assert np.isfinite(rtol) and 0<rtol<=1e-9
+    assert np.isfinite(feed_ch4) and 0<feed_ch4<1
     assert np.isfinite(flow_sccm) and flow_sccm>0
     parts=segments(period) if waveform is None else waveform
     assert all(d>0 and a>0 and b>0 for d,a,b in parts)
@@ -26,7 +27,7 @@ def worker(out,name,n,period=1.,inert=False,waveform=None,flow_sccm=50.,rtol=1e-
     print('stage: loading mechanism',flush=True)
     gas=ct.Solution("gri30.yaml" if inert else str(base.MECH))
     print('stage: mechanism loaded',time.monotonic()-started,flush=True)
-    feed={"N2":1} if inert else {"CH4":.5,"CO2":.5}
+    feed={"N2":1} if inert else {"CH4":feed_ch4,"CO2":1-feed_ch4}
     gas.TPX=parts[0][1],101325,feed
     mw=gas.molecular_weights.copy(); yin=gas.Y.copy()
     elements=["N"] if inert else ["C","H","O"]
