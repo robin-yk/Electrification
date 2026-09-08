@@ -1,0 +1,22 @@
+{
+  "peak_C": 1824.20086635493,
+  "hold_s": 0.7999999999999999,
+  "flow_sccm": 66.09954569850409,
+  "normalized_x": [
+    0.7070014439248833,
+    1.0,
+    0.6006780653128854
+  ],
+  "predicted_Y_pct": [
+    17.516468048095703
+  ],
+  "posterior_sd_pp": [
+    0.21580620110034943
+  ],
+  "training_n": 68,
+  "incumbent_Y_pct": 17.58552665564628,
+  "acquisition": "EI",
+  "reaction_verified": false,
+  "commit": "83a7008e85d3a5c5941aeee3ef58f69f55f769f0",
+  "limitation": "Optimum search conditional on declared bounds and fixed waveform family; uncertainty is GP posterior, not chemical validation. Off-domain observations retained but not fitted."
+}
