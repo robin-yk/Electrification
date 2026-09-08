@@ -13,3 +13,7 @@ Data selection: raw paired n400/n800 results at common closure; both must pass r
 One recommendation per ratio is generated in the first round, then verified with paired direct runs in a separate batch. Stop on any gate failure. Preserve provenance, predictions, realized objective and feasibility separately. Three directly verified recommendations are only the first iteration, not proof of BO efficiency or convergence. CJH needs its own dataset, model and constrained search before heating-mode comparisons.
 
 Reproducibility: commit generator and this run card before proposal or reaction execution; save training data, state dictionaries, seed, bounds, proposals, checks and budget. No electrical-energy inference is authorized by prescribed gas temperature. No reactor-closure changes.
+
+## CJH initial support
+
+After the active RPH batch completes and the budget is reconciled, add four CJH conditions: methane fractions .7/.8 crossed with 1600/1900 C. Keep identical flow, volume, pressure and mechanism. Existing 1750 C composition data and paired equimolar matched-conversion controls remain separate provenance layers. Use the unchanged CJH worker at tight=2 and tight=3, stationarity for five blocks, element residual below 1e-5, mass flow mismatch below 1e-6, and paired species discrepancy below 1e-5. Four paired points, maximum 300 seconds, same cumulative ledger, sequential execution only. These are initial support points, not Bayesian recommendations.

@@ -1,0 +1,31 @@
+name: CJH composition support
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: c2co-budgeted-campaign
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r tools/cantera/requirements.txt
+      - run: python tools/openmkm_dynamic/support_composition_cjh.py
+        timeout-minutes: 6
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: composition-cjh
+          path: |
+            docs/research/composition-bo-2026-09-08/cjh-support/
+            docs/research/composition-bo-2026-09-08/budget.json
