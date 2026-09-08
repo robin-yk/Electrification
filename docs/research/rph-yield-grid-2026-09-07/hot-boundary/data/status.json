@@ -1,0 +1,9 @@
+{
+  "status": "stopped",
+  "reason": "Command '['/private/tmp/aramco-repro-32-env/bin/python', '/private/tmp/aramco-feed-ratio-20260907/tools/openmkm_dynamic/run_rph_yield_grid.py', '--worker', '--output-dir', '/private/tmp/aramco-feed-ratio-20260907/docs/research/rph-yield-grid-2026-09-07/hot-boundary/data', '--peak', '1900', '--hold', '.8', '--flow', '50', '--samples', '400']' timed out after 99.99996004102286 seconds",
+  "active": "T1900-h0.8-Q50-n400",
+  "completed": [
+    "T2100-h0.8-Q50-inert"
+  ],
+  "wall_s": 118.21776858402882
+}
