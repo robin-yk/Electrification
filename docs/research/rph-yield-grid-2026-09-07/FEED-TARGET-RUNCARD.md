@@ -1,0 +1,9 @@
+# Direct verification of three interpolated feed compositions
+
+Select one CH4 fraction for each outlet CO/C2H2 target 1.75, 1.5 and 1 by linear interpolation within the verified feed-bracket-01 intervals. Input fractions are computed from the stored report, whose hash is retained in the manifest. These are proposals, not measured roots or Bayesian selections. Report actual ratio error and relative 2%, 5%, 10% membership after verification; do not label a missed target as met.
+
+Physical inputs and validation gates are unchanged from FEED-BRACKET-RUNCARD.md: total 50 sccm, 1800 C peak, 450 C floor, 0.80 s hold, period 1 s, rise/fall 0.025/0.10 s, 1 atm, fixed 0.009228077898 cm3, AramcoMech 2.0. Only undiluted CH4/CO2 composition changes. Standard flow is 273.15 K, 101325 Pa, and mass flow changes with feed molecular weight. Productivities use 0.0288 g CFP; yields use total inlet carbon.
+
+Three physical points, six 400/800-sample integrations maximum; no automatic retry or fourth point. Estimated 60 seconds from the prior 41.494-second two-point batch. Hard child limits: 30 seconds for inlet check and 90 seconds per reacting child, within a shared 450-second calculation allowance. Charge actual time to the existing 3600-second ledger. Stop on the first failed closure, periodicity, pressure, temperature or phase-resolution gate. rtol=1e-11 and maximum paired species error <1e-4 remain unchanged. Require both prior pilot and bracket completion. This is root-refinement for a fixed-waveform baseline, not a global yield optimization.
+
+Commit code and this card before execution. Save raw files, diagnostics, manifest, status, budget and actual ratio report under feed-target-01. Keep all previous data unchanged. This batch follows the user's explicit request to continue the three-point interpolation calculation.

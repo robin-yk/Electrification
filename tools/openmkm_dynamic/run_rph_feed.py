@@ -5,7 +5,19 @@ import sys
 import time
 from pathlib import Path
 import run_rph_yield_grid as g
-b=g.base;C=g.CAMPAIGN;D=C/'feed-bracket-01';XS=[.7,.8]
+b=g.base;C=g.CAMPAIGN;D=C/'feed-target-01'
+TARGETS=[1.75,1.5,1.0]
+BRACKET=C/'feed-bracket-01/report.json'
+def propose():
+    rows=b.read(BRACKET)['rows'];points=[]
+    for target in TARGETS:
+        pair=next((l,r) for l,r in zip(rows,rows[1:]) if (l['CO_per_C2H2']-target)*(r['CO_per_C2H2']-target)<0)
+        l,r=pair
+        x=(l['CH4_feed_pct']+(target-l['CO_per_C2H2'])*(r['CH4_feed_pct']-l['CH4_feed_pct'])/(r['CO_per_C2H2']-l['CO_per_C2H2']))/100
+        assert l['CH4_feed_pct']/100<x<r['CH4_feed_pct']/100
+        points.append(x)
+    return points
+XS=propose()
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--index',type=int);ap.add_argument('--samples',type=int);ap.add_argument('--inlet-check',action='store_true');a=ap.parse_args()
     if a.inlet_check:
@@ -23,14 +35,15 @@ def main():
         g.pulse.worker(D/str(a.index),f'n{a.samples}',a.samples,waveform=g.waveform(1800,.8),flow_sccm=50,rtol=1e-11,feed_ch4=XS[a.index]);return
     assert b.read(C/'feed-pilot-02/status.json')['status']=='completed'
     assert b.read(C/'feed-pilot-02/0/gates.json')['phase_error']<1e-4
-    ledger=b.read(C/'budget.json');cap=300
+    assert b.read(C/'feed-bracket-01/status.json')['status']=='completed'
+    ledger=b.read(C/'budget.json');cap=450
     assert ledger['active_stage'] is None and ledger['reserved_s']==0 and ledger['spent_s']+cap<=ledger['total_budget_s']
     assert not D.exists();D.mkdir()
     anchor=b.read(C/'hot-boundary-02/report.json')['rows'][0];source=b.ROOT/anchor['source'];assert g.sha(source)==anchor['sha256']
     r=b.read(source);assert r['inputs']['feed']=={'CH4':.5,'CO2':.5} and r['inputs']['segments']==[list(s) for s in g.waveform(1800,.8)] and r['inputs']['flow_sccm']==50
-    files=[Path(__file__),Path(g.pulse.__file__),Path(g.__file__),b.MECH,source]
-    b.write(D/'manifest.json',dict(commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),hashes={str(f.relative_to(b.ROOT)):g.sha(f) for f in files},fractions=XS,reused_anchor=anchor,cap_s=cap,rtol=1e-11))
-    ledger.update(active_stage='rph-feed-bracket-01',reserved_s=cap);b.write(C/'budget.json',ledger)
+    files=[Path(__file__),Path(g.pulse.__file__),Path(g.__file__),b.MECH,source,BRACKET]
+    b.write(D/'manifest.json',dict(commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),hashes={str(f.relative_to(b.ROOT)):g.sha(f) for f in files},fractions=XS,targets=TARGETS,selection='linear interpolation in verified composition brackets; not Bayesian',reused_anchor=anchor,cap_s=cap,rtol=1e-11))
+    ledger.update(active_stage='rph-feed-target-01',reserved_s=cap);b.write(C/'budget.json',ledger)
     start=time.monotonic();done=[];status='stopped';reason=None
     try:
         # All mechanism loading is in killable child processes.
@@ -47,6 +60,6 @@ def main():
         status='completed'
     except Exception as e:reason=type(e).__name__+': '+str(e)
     elapsed=time.monotonic()-start;b.write(D/'status.json',dict(status=status,reason=reason,completed=done,wall_s=elapsed))
-    ledger['spent_s']+=elapsed;ledger.update(active_stage=None,reserved_s=0);ledger['batches'].append(dict(stage='rph-feed-bracket-01',status=status,reason=reason,wall_s=elapsed));b.write(C/'budget.json',ledger)
+    ledger['spent_s']+=elapsed;ledger.update(active_stage=None,reserved_s=0);ledger['batches'].append(dict(stage='rph-feed-target-01',status=status,reason=reason,wall_s=elapsed));b.write(C/'budget.json',ledger)
     if status!='completed':raise RuntimeError(reason)
 if __name__=='__main__':main()
