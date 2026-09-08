@@ -1,0 +1,41 @@
+{
+  "training_n": 69,
+  "candidate_n": 8219,
+  "proposals": [
+    {
+      "kind": "max_posterior_sd",
+      "peak_C": 2000.0,
+      "hold_s": 0.1,
+      "flow_sccm": 12.5,
+      "normalized_x": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "predicted_Y_pct": 4.36038875579834,
+      "posterior_sd_pp": 3.0066416263580322,
+      "nearest_training_distance": 0.5052165517600702,
+      "sequential_distance": 0.0
+    },
+    {
+      "kind": "maximin_distance",
+      "peak_C": 2000.0,
+      "hold_s": 0.7999999999999999,
+      "flow_sccm": 12.5,
+      "normalized_x": [
+        1.0,
+        1.0,
+        0.0
+      ],
+      "predicted_Y_pct": 12.338713645935059,
+      "posterior_sd_pp": 1.6298868656158447,
+      "nearest_training_distance": 0.5,
+      "sequential_distance": 0.5
+    }
+  ],
+  "seed": 71,
+  "min_normalized_distance": 0.1,
+  "incumbent_Y_pct": 17.58552665564628,
+  "selection": "Exploration, not expected-improvement maximization",
+  "commit": "6d79c8772d3e7458bf0d3329d7ff6b8a84a899c6"
+}
