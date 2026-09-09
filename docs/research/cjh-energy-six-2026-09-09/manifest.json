@@ -1,0 +1,23 @@
+{
+  "inputs": {
+    "T_C": 1800,
+    "CH4": [
+      0.65,
+      0.8
+    ],
+    "flow_sccm": [
+      100,
+      200,
+      400
+    ],
+    "radiation_remaining": 0.1
+  },
+  "files": {
+    "/Users/robin_yeonsu/Electrification-Suite/tools/openmkm_dynamic/cjh_energy_six.py": "f471ab627b86958a123b3d1804535086338d73334808af468e5d02575cd72661",
+    "/Users/robin_yeonsu/Electrification-Suite/tools/openmkm_dynamic/cjh_energy_pilot.py": "d5102788315a9b639906bdbe3b5bb939a688927a054de189f4f1ecdb5c28243b",
+    "/Users/robin_yeonsu/Electrification-Suite/tools/cantera/mechanisms/aramco20.yaml": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc"
+  },
+  "commit": "1b6ea7f9f3459e4c803ffae35410a211243e791f",
+  "budget_s": 300,
+  "role": "six-point pilot; no BO acquisition"
+}
