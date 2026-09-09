@@ -1,0 +1,7 @@
+# Six CJH feed-flow points
+
+User-approved pilot: 1800 °C; CH4 mole fractions 0.65 and 0.8; total flow 100, 200 and 400 sccm. No existing exact matches were found in the 295-condition archive. Fixed pressure-controlled volume, Aramco, CFP and energy boundary inherit the preceding CJH energy pilot. Treat net radiation as 10% of the exposed boundary while retaining constant gas temperature and gas chemistry. Objectives are acetylene carbon yield and reference-state net reaction heat / total input.
+
+Run the archived default anchor after parameterization, then the first new condition at paired tolerances before remaining conditions. Existing cold, stationarity, elemental, mass-flow and pressure gates remain enforced. Stop on a failed gate or 300-second total cap. Single thread. Up to eight integrations (one anchor, six new points and one refinement), expected about 160–250 seconds from the previous warm runtime; first-load delay can cause a timeout. No automatic continuation beyond this cap.
+
+Commit scripts and this run card before executing. Preserve full species outputs, environment inherited from the preceding requirements.txt, source hashes, wall time, and failures in this permanent directory. Only successful gated points may enter the updated empirical Pareto. NEXTorch acquisition is a later step; these six conditions are a user-approved fixed pilot, not Bayesian recommendations.
