@@ -1,0 +1,13 @@
+{
+  "python": "3.9.6",
+  "cantera": "3.1.0",
+  "numpy": "2.0.2",
+  "script_sha256": "17ec1089bf866a7780ab0a7f08f8b20ee13b3dc55c30d6b1ebc80512d0c140ac",
+  "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+  "role": "verification pilot; no broad campaign",
+  "cases": [
+    "cold",
+    "standard",
+    "tight"
+  ]
+}
