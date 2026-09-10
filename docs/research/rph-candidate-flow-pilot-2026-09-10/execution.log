@@ -1,0 +1,38 @@
+/Users/robin_yeonsu/Electrification-Suite/tools/openmkm_dynamic/rph_candidate_flow_pilot.py:23: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  gas=ct.Solution(str(MECH),transport_model=None)
+/Users/robin_yeonsu/Electrification-Suite/tools/openmkm_dynamic/rph_candidate_flow_pilot.py:23: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033334
+
+  gas=ct.Solution(str(MECH),transport_model=None)
+[ERROR][rank 0][/Users/runner/work/_temp/sundials-7.1.1/src/cvodes/cvodes.c:8028][cvHandleFailure] At t = 1.44409 and h = 3.51481e-11, the error test failed repeatedly or with |h| = hmin.
+Traceback (most recent call last):
+  File "/Users/robin_yeonsu/Electrification-Suite/tools/openmkm_dynamic/rph_candidate_flow_pilot.py", line 100, in <module>
+    if '--worker' in sys.argv:calculate()
+  File "/Users/robin_yeonsu/Electrification-Suite/tools/openmkm_dynamic/rph_candidate_flow_pilot.py", line 61, in calculate
+    target=start+duration*j/n;net.advance(target);dt=target-t;t=target
+  File "reactor.pyx", line 1587, in cantera.reactor.ReactorNet.advance
+cantera._utils.CanteraError: 
+*******************************************************************************
+CanteraError thrown by CVodesIntegrator::integrate:
+CVodes error encountered. Error code: -3
+cvHandleFailure: At t = 1.44409 and h = 3.51481e-11, the error test failed repeatedly or with |h| = hmin.
+
+Components with largest weighted error estimates:
+288: -45.376386871322886
+475: 39.38466867867803
+473: -39.377271708181055
+130: 34.919533760239645
+18: 23.876904513694644
+329: 14.156527381047006
+438: -14.15281816477519
+26: -14.073221811662297
+133: -14.062453170902698
+155: 13.43282290651019
+*******************************************************************************
+
