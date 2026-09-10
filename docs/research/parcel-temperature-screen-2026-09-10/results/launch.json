@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/Users/robin_yeonsu/cantera-env/bin/python",
+    "-u",
+    "/Users/robin_yeonsu/Electrification-Suite/tools/openmkm_dynamic/porsin_scoping.py",
+    "--output",
+    "/Users/robin_yeonsu/Electrification-Suite/docs/research/parcel-temperature-screen-2026-09-10/results",
+    "--temperatures-c",
+    "1800",
+    "1200",
+    "1300",
+    "1400",
+    "1500",
+    "1600",
+    "1700",
+    "--times-s",
+    ".001",
+    ".005",
+    ".02",
+    ".04",
+    "--refine-temperatures-c",
+    "1800"
+  ],
+  "worker_sha256": "427ccf02a178e1f80bbe8b6b654b821221d2571a31997b0967dd3e13d5442ecc",
+  "launcher_sha256": "417eb4822f25ea12544f2a57693cabec42b55c1e7dec8b6a2b26ef2243283f51",
+  "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+  "timeout_s": 300
+}
