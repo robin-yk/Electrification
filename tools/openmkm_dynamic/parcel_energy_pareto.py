@@ -7,9 +7,6 @@ from pathlib import Path
 import time
 import numpy as np
 import cantera as ct
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 
 ROOT=Path(__file__).resolve().parents[2]
 SRC=ROOT/'docs/research/parcel-temperature-screen-2026-09-10/results'
@@ -58,24 +55,6 @@ for r in rows:
     r['pareto']=not any(s['Y_C2H2_pct']>=r['Y_C2H2_pct'] and s['eta_rxn_pct']>=r['eta_rxn_pct'] and
         (s['Y_C2H2_pct']>r['Y_C2H2_pct'] or s['eta_rxn_pct']>r['eta_rxn_pct']) for s in rows)
 front=sorted([r for r in rows if r['pareto']],key=lambda r:r['Y_C2H2_pct'])
-plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'axes.spines.top':False,'axes.spines.right':False,'svg.fonttype':'none'})
-fig,ax=plt.subplots(figsize=(7,5.1))
-markers={1:'o',5:'s',20:'^',40:'D'}
-for t,m in markers.items():
-    data=[r for r in rows if r['time_ms']==t]
-    sc=ax.scatter([r['Y_C2H2_pct'] for r in data],[r['eta_rxn_pct'] for r in data],c=[r['T_C'] for r in data],
-        cmap='viridis',vmin=1200,vmax=1800,s=66,marker=m,edgecolor='white',linewidth=.7,label=f'{t} ms',zorder=3)
-ax.plot([r['Y_C2H2_pct'] for r in front],[r['eta_rxn_pct'] for r in front],color='#333333',lw=1,zorder=2)
-for i,r in enumerate(front):
-    ax.annotate(f"{r['T_C']} °C, {r['time_ms']:g} ms",(r['Y_C2H2_pct'],r['eta_rxn_pct']),
-        xytext=(-105,15+18*i),textcoords='offset points',fontsize=9,arrowprops={'arrowstyle':'-','color':'.45','lw':.6})
-ax.set(xlabel='Acetylene carbon yield (%)',ylabel='Reaction heat / total gas heat (%)',xlim=(-2,100),ylim=(-1,50))
-ax.legend(title='Reaction time',frameon=False,loc='upper left')
-fig.colorbar(sc,ax=ax,label='Gas temperature (°C)',pad=.03)
-ax.set_title('CH₄ 10% / He | 1 atm | inlet reference 25 °C',fontsize=11,pad=12)
-fig.tight_layout()
-fig.savefig(OUT/'pareto.png',dpi=200)
-fig.savefig(OUT/'pareto.svg')
 (OUT/'data.json').write_text(json.dumps(dict(rows=rows,pareto=front,source_sha256=sources,
     mechanism_sha256=hashlib.sha256(mech.read_bytes()).hexdigest(),script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
     cantera=ct.__version__,wall_s=time.monotonic()-started),indent=2)+'\n')
