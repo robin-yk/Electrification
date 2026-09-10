@@ -1,0 +1,9 @@
+{
+  "status": "stopped",
+  "stage": "loading_mechanism",
+  "reason": "Mechanism initialization exceeded the intended 300 s total wall cap. The Python signal handler did not interrupt the native initialization call promptly. The exact process was stopped externally with SIGTERM.",
+  "exit_code": 143,
+  "completed_reacting_trajectories": 0,
+  "numerical_comparison_available": false,
+  "next_requirement": "Use an external process timeout and resolve initialization cost before repeating any reacting run"
+}

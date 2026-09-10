@@ -1,0 +1,28 @@
+{
+  "script_sha256": "d88b007acc867f97b280ea7600caa1fba75fa3cec304726ae0d82a5f396912ec",
+  "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+  "cantera": "3.1.0",
+  "python": "3.9.6",
+  "T_C": 1900,
+  "pressure_Pa": 101325,
+  "feed": {
+    "CH4": 0.1,
+    "HE": 0.9
+  },
+  "times_s": [
+    0.02,
+    0.04
+  ],
+  "closure": "Isothermal constant-pressure closed gas parcel, ideal PFR material-history approximation. Not CSTR.",
+  "assumptions": [
+    "Coil temperature substituted for uniform gas temperature",
+    "1 atm assumed pending precise experimental pressure",
+    "20 and 40 ms chosen to bracket the abstract contact-time scale",
+    "No gas heating, cooling, surface reactions, or condensed carbon"
+  ],
+  "target": {
+    "X_CH4_pct": 80,
+    "S_C2H2_carbon_pct": 80
+  },
+  "target_role": "approximate abstract benchmark, not a digitized matched experimental point"
+}
