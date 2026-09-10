@@ -1,0 +1,47 @@
+{
+  "status": "completed",
+  "reason": null,
+  "completed": [
+    {
+      "T_C": 1600,
+      "CH4_fraction": 0.7,
+      "y": [
+        19.88511826049879,
+        10.52137587416107
+      ],
+      "ratio": 1.058216072575387,
+      "source": "docs/research/composition-bo-2026-09-08/cjh-support/0/a3.json"
+    },
+    {
+      "T_C": 1900,
+      "CH4_fraction": 0.7,
+      "y": [
+        37.428342653967455,
+        39.38582222929616
+      ],
+      "ratio": 2.1045987845855745,
+      "source": "docs/research/composition-bo-2026-09-08/cjh-support/1/a3.json"
+    },
+    {
+      "T_C": 1600,
+      "CH4_fraction": 0.8,
+      "y": [
+        22.622545932624007,
+        7.2214821883389515
+      ],
+      "ratio": 0.6384323152527975,
+      "source": "docs/research/composition-bo-2026-09-08/cjh-support/2/a3.json"
+    },
+    {
+      "T_C": 1900,
+      "CH4_fraction": 0.8,
+      "y": [
+        47.217268777188956,
+        27.080344791854532
+      ],
+      "ratio": 1.1470525717886193,
+      "source": "docs/research/composition-bo-2026-09-08/cjh-support/3/a3.json"
+    }
+  ],
+  "wall_s": 37.585292478
+}

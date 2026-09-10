@@ -1,4 +1,5 @@
 """Fixed-volume, fixed-feed, pressure-regulated isothermal CSTR pilot."""
+from cantera_runtime import prepare_runtime
 import argparse, hashlib, json, subprocess, sys, time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
@@ -21,6 +22,7 @@ def compare(ref,actual):
     assert err<1e-5, f"reference mismatch {err}"
     return err
 def worker(out,name,x,tight=False,cold=False):
+    prepare_runtime()
     print("stage: importing cantera",flush=True)
     import cantera as ct
     import numpy as np

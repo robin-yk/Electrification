@@ -1,0 +1,91 @@
+{
+  "proposals": [
+    {
+      "target": 1.0,
+      "x": [
+        1819.1553354263306,
+        0.8,
+        0.7989377379417419
+      ],
+      "normalized_x": [
+        0.5478883385658264,
+        1.0,
+        0.9964591264724731
+      ],
+      "predicted_y": [
+        37.083946228027344,
+        18.44976234436035
+      ],
+      "posterior_sd_pp": [
+        0.14242714643478394,
+        0.1659771054983139
+      ],
+      "feasibility_probability": 0.9338297106330126,
+      "score": 0.9456693039225893,
+      "incumbent": 36.06507620406691,
+      "acquisition": "Gauss-Hermite integrated feasible EI",
+      "reaction_verified": false
+    },
+    {
+      "target": 1.5,
+      "x": [
+        1849.2460489273071,
+        0.8,
+        0.7432734429836274
+      ],
+      "normalized_x": [
+        0.6231151223182678,
+        1.0,
+        0.8109114766120911
+      ],
+      "predicted_y": [
+        33.652496337890625,
+        25.117156982421875
+      ],
+      "posterior_sd_pp": [
+        0.2125471532344818,
+        0.2278003692626953
+      ],
+      "feasibility_probability": 0.9044402126776954,
+      "score": 1.849189219443619,
+      "incumbent": 31.59203777086524,
+      "acquisition": "Gauss-Hermite integrated feasible EI",
+      "reaction_verified": false
+    },
+    {
+      "target": 1.75,
+      "x": [
+        1852.0656108856201,
+        0.8,
+        0.7157478094100953
+      ],
+      "normalized_x": [
+        0.6301640272140503,
+        1.0,
+        0.7191593647003174
+      ],
+      "predicted_y": [
+        31.660633087158203,
+        27.77064323425293
+      ],
+      "posterior_sd_pp": [
+        0.2590307891368866,
+        0.27637866139411926
+      ],
+      "feasibility_probability": 0.8717280853065524,
+      "score": 1.8275131023080886,
+      "incumbent": 29.57881117406165,
+      "acquisition": "Gauss-Hermite integrated feasible EI",
+      "reaction_verified": false
+    }
+  ],
+  "training_n": 28,
+  "candidate_pool_n": 24573,
+  "seed": 20260908,
+  "relative_tolerance": 0.02,
+  "claim": "candidate-pool Bayesian recommendations, not verified optima",
+  "development_rmse_pp": [
+    7.205265868506499,
+    1.8606725801543775
+  ]
+}

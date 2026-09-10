@@ -30,6 +30,8 @@ def supervise(command, env, log, timeout):
     return dict(outcome=outcome, exit_code=code, wall_s=time.monotonic()-started)
 
 def main():
+    from cantera_runtime import prepare_runtime
+    prepare_runtime()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check-env', action='store_true')
     parser.add_argument('--temperatures-c', type=int, nargs='+', default=[1900, 1800])
