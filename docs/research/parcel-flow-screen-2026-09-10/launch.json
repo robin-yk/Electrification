@@ -1,0 +1,12 @@
+{
+  "script_sha256": "146f0c4660abe635aa761c3a51084aaef25e4e7daefd91e402d0f2747bda94c6",
+  "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+  "timeout_s": 300,
+  "environment": {
+    "TZ": "UTC0",
+    "LC_ALL": "C",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}
