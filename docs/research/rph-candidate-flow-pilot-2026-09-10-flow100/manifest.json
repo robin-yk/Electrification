@@ -1,0 +1,12 @@
+{
+  "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/supply-bo-pilot-2026-09-08/0-fine.json",
+  "source_sha256": "aa78d7cdf9740314df10435971805fdd2be8ed857155cb4e475ba807e16de1fe",
+  "script_sha256": "a99a59cffb9bbab4f3013598ee97d2ead0c70741527a5a68d8ebbceb4e89d5de",
+  "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+  "commit": "99a6c76624cec1333227308412fe2319d558b508",
+  "engine": "3.1.0",
+  "jobs": [
+    "A100-n4",
+    "A100-n8"
+  ]
+}

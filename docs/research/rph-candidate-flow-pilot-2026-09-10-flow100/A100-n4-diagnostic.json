@@ -1,0 +1,37 @@
+{
+  "history": [
+    {
+      "cycle": 1,
+      "element_residual": 9.730889748943424e-06,
+      "mass_residual": -9.730889644999913e-06,
+      "change": 1,
+      "max_pressure_error": 8.696964751697678e-06,
+      "max_temperature_error_K": 5.547917680814862e-11
+    },
+    {
+      "cycle": 2,
+      "element_residual": 9.71580289047061e-06,
+      "mass_residual": -9.715802753644886e-06,
+      "change": 9.43806250347512e-07,
+      "max_pressure_error": 8.696688083897897e-06,
+      "max_temperature_error_K": 6.552909326273948e-10
+    },
+    {
+      "cycle": 3,
+      "element_residual": 9.715753052655757e-06,
+      "mass_residual": -9.71575295792773e-06,
+      "change": 8.923561889417897e-11,
+      "max_pressure_error": 8.696689290266235e-06,
+      "max_temperature_error_K": 7.989910955075175e-10
+    },
+    {
+      "cycle": 4,
+      "element_residual": 9.715806280325599e-06,
+      "mass_residual": -9.71580624766171e-06,
+      "change": 8.781719795791787e-11,
+      "max_pressure_error": 8.696687977094442e-06,
+      "max_temperature_error_K": 1.6746071196394041e-09
+    }
+  ],
+  "wall_s": 63.594577916999995
+}
