@@ -8,6 +8,8 @@ ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'docs/research/rph-candidate-flow-pilot-2026-09-10'
 if '--attempt02' in sys.argv:
     OUT=ROOT/'docs/research/rph-candidate-flow-pilot-2026-09-10-attempt02'
+if '--flow100' in sys.argv:
+    OUT=ROOT/'docs/research/rph-candidate-flow-pilot-2026-09-10-flow100'
 MECH=ROOT/'tools/cantera/mechanisms/aramco20.yaml'
 def update_slope(reactor, network, slope):
     """Retain the integrator history while the prescribed slope is unchanged."""
@@ -36,9 +38,13 @@ def calculate():
     atlas=json.loads((ROOT/'docs/research/all-energy-atlas-2026-09-10/case-table.json').read_text())
     case=next(c for c in atlas if c['id']=='RPH-d9641af44c')
     source=Path(case['source']);ref=json.loads(source.read_text());settings=ref['inputs']
-    save('manifest.json',dict(source=str(source),source_sha256=digest(source),script_sha256=digest(Path(__file__)),mechanism_sha256=digest(MECH),commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),engine=ct.__version__,jobs=['A50-n4','A50-n8','A100-n4','A100-n8']))
+    flows=[100] if '--flow100' in sys.argv else ([50] if '--attempt02' in sys.argv else [50,100])
+    if '--flow100' in sys.argv:
+        prior=ROOT/'docs/research/rph-candidate-flow-pilot-2026-09-10-attempt02/A50-gate.json'
+        assert json.loads(prior.read_text())['passed']
+    save('manifest.json',dict(source=str(source),source_sha256=digest(source),script_sha256=digest(Path(__file__)),mechanism_sha256=digest(MECH),commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),engine=ct.__version__,jobs=[f'A{flow}-n{n}' for flow in flows for n in [4,8]]))
     results={}
-    for flow in ([50] if '--attempt02' in sys.argv else [50,100]):
+    for flow in flows:
         for n in [4,8]:
             name=f'A{flow}-n{n}';started=time.monotonic()
             save('progress.json',dict(active=name,completed=list(results)))
@@ -110,7 +116,7 @@ if __name__=='__main__':
         start=time.monotonic()
         with (OUT/'execution.log').open('w') as f:
             try:
-                p=subprocess.run([sys.executable,'-u',__file__,'--worker']+(['--attempt02'] if '--attempt02' in sys.argv else []),stdout=f,stderr=subprocess.STDOUT,timeout=300)
+                p=subprocess.run([sys.executable,'-u',__file__,'--worker']+[x for x in ['--attempt02','--flow100'] if x in sys.argv],stdout=f,stderr=subprocess.STDOUT,timeout=300)
                 status='completed' if p.returncode==0 else 'failed'
             except subprocess.TimeoutExpired:status='timeout'
         save('status.json',dict(status=status,wall_s=time.monotonic()-start,cap_s=300))
