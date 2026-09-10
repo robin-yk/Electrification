@@ -1,0 +1,18 @@
+/Users/robin_yeonsu/Electrification-Suite/tools/openmkm_dynamic/porsin_scoping.py:37: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  gas=ct.Solution(str(MECH))
+/Users/robin_yeonsu/Electrification-Suite/tools/openmkm_dynamic/porsin_scoping.py:37: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033334
+
+  gas=ct.Solution(str(MECH))
+Mechanism loaded in 15.897605542 s
+cold [(0.001, np.float64(4.440892098500626e-14), None)]
+T1900-standard [(0.02, np.float64(99.92971872906573), np.float64(82.18382015303554)), (0.04, np.float64(99.93728669615206), np.float64(82.19317149009447))]
+T1900-tight [(0.02, np.float64(99.92971873487207), np.float64(82.1838201657156)), (0.04, np.float64(99.93728669812153), np.float64(82.19317149819607))]
+T1800-standard [(0.02, np.float64(99.8358085456357), np.float64(82.78099303198614)), (0.04, np.float64(99.8876209247441), np.float64(82.8189450187474))]
+T1800-tight [(0.02, np.float64(99.8358085677138), np.float64(82.78099306240529)), (0.04, np.float64(99.88762094178321), np.float64(82.81894504528093))]
