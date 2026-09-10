@@ -5,8 +5,10 @@ ROOT=Path(__file__).resolve().parents[2]
 D=ROOT/'docs/research'
 rows=[]
 sources=[('rph-candidate-flow-pilot-2026-09-10-attempt02',50),('rph-candidate-flow-pilot-2026-09-10-flow100',100)]
-if '--flow200' in sys.argv:
+if '--flow200' in sys.argv or '--flow400' in sys.argv:
     sources.append(('rph-candidate-flow-pilot-2026-09-10-flow200',200))
+if '--flow400' in sys.argv:
+    sources.append(('rph-candidate-flow-pilot-2026-09-10-flow400',400))
 for folder,flow in sources:
     assert json.loads((D/folder/f'A{flow}-gate.json').read_text())['passed']
     r=json.loads((D/folder/f'A{flow}-n8.json').read_text())
@@ -28,6 +30,6 @@ for r in rows:
 lines+=['','Read the yield, product ratio and reaction-heat fraction together when selecting a flow. The CJH row provides the existing design comparator.','',
 'The radiation-reduction rows retain the imposed waveform. Additional cooling is listed separately and is not converted into cooling-system electricity. These rows are conditional thermal postprocessing, not a passive-insulation simulation.','',
 'The redundant CVODES resets were removed before these runs. Paired resolutions completed with unchanged tolerances and sparse preconditioning. The atlas and manuscript remain unchanged.','',
-'Regenerate with `python tools/openmkm_dynamic/report_rph_flow_pilot.py'+(' --flow200' if '--flow200' in sys.argv else '')+'`.']
+'Regenerate with `python tools/openmkm_dynamic/report_rph_flow_pilot.py'+(' --flow400' if '--flow400' in sys.argv else (' --flow200' if '--flow200' in sys.argv else ''))+'`.']
 (out/'REPORT.md').write_text('\n'.join(lines)+'\n')
 print('\n'.join(lines))
