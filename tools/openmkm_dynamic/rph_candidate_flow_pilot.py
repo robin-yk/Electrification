@@ -12,6 +12,8 @@ if '--flow100' in sys.argv:
     OUT=ROOT/'docs/research/rph-candidate-flow-pilot-2026-09-10-flow100'
 if '--flow200' in sys.argv:
     OUT=ROOT/'docs/research/rph-candidate-flow-pilot-2026-09-10-flow200'
+if '--flow400' in sys.argv:
+    OUT=ROOT/'docs/research/rph-candidate-flow-pilot-2026-09-10-flow400'
 MECH=ROOT/'tools/cantera/mechanisms/aramco20.yaml'
 def update_slope(reactor, network, slope):
     """Retain the integrator history while the prescribed slope is unchanged."""
@@ -41,6 +43,10 @@ def calculate():
     case=next(c for c in atlas if c['id']=='RPH-d9641af44c')
     source=Path(case['source']);ref=json.loads(source.read_text());settings=ref['inputs']
     flows=[200] if '--flow200' in sys.argv else ([100] if '--flow100' in sys.argv else ([50] if '--attempt02' in sys.argv else [50,100]))
+    if '--flow400' in sys.argv:
+        flows=[400]
+        prior=ROOT/'docs/research/rph-candidate-flow-pilot-2026-09-10-flow200/A200-gate.json'
+        assert json.loads(prior.read_text())['passed']
     if '--flow200' in sys.argv:
         prior=ROOT/'docs/research/rph-candidate-flow-pilot-2026-09-10-flow100/A100-gate.json'
         assert json.loads(prior.read_text())['passed']
@@ -121,7 +127,7 @@ if __name__=='__main__':
         start=time.monotonic()
         with (OUT/'execution.log').open('w') as f:
             try:
-                p=subprocess.run([sys.executable,'-u',__file__,'--worker']+[x for x in ['--attempt02','--flow100','--flow200'] if x in sys.argv],stdout=f,stderr=subprocess.STDOUT,timeout=300)
+                p=subprocess.run([sys.executable,'-u',__file__,'--worker']+[x for x in ['--attempt02','--flow100','--flow200','--flow400'] if x in sys.argv],stdout=f,stderr=subprocess.STDOUT,timeout=300)
                 status='completed' if p.returncode==0 else 'failed'
             except subprocess.TimeoutExpired:status='timeout'
         save('status.json',dict(status=status,wall_s=time.monotonic()-start,cap_s=300))
