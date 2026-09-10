@@ -2,21 +2,17 @@
 import os
 for key in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS'):
     os.environ[key]='1'
-import json, time, hashlib, signal, platform
+import json, time, hashlib, platform
 from pathlib import Path
 import numpy as np
 import cantera as ct
 
 ROOT=Path(__file__).resolve().parents[2]
-OUT=ROOT/'docs/research/porsin-scoping-2026-09-10'
+OUT=ROOT/'docs/research/porsin-scoping-2026-09-10/retry-600s'
 MECH=ROOT/'tools/cantera/mechanisms/aramco20.yaml'
 OUT.mkdir(parents=True,exist_ok=True)
 def save(name,data):
     (OUT/(name+'.json')).write_text(json.dumps(data,indent=2,allow_nan=False)+'\n')
-def timeout_handler(*_):
-    raise TimeoutError('300-second total wall-time cap reached')
-signal.signal(signal.SIGALRM,timeout_handler)
-signal.alarm(300)
 start=time.monotonic()
 save('manifest',dict(script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
     mechanism_sha256=hashlib.sha256(MECH.read_bytes()).hexdigest(),cantera=ct.__version__,
@@ -31,10 +27,13 @@ save('manifest',dict(script_sha256=hashlib.sha256(Path(__file__).read_bytes()).h
 try:
     save('status',dict(status='loading_mechanism'))
     gas=ct.Solution(str(MECH))
+    save('timing',dict(mechanism_load_s=time.monotonic()-start))
+    print('Mechanism loaded in',time.monotonic()-start,'s',flush=True)
     atoms=np.array([[gas.n_atoms(k,e) for k in range(gas.n_species)] for e in gas.element_names])
     mw=gas.molecular_weights
     ci=gas.element_index('C'); ch4=gas.species_index('CH4'); ac=gas.species_index('C2H2')
     def run(label,T,times,tight=False):
+        run_start=time.monotonic()
         gas.TPX=T,101325,{'CH4':.1,'HE':.9}
         r=ct.IdealGasConstPressureMoleReactor(gas,energy='off',volume=1e-6)
         initial_mass=r.mass
@@ -66,7 +65,7 @@ try:
                 rtol=net.rtol,atol=net.atol,max_time_step=net.max_time_step)
             assert abs(sum(row['carbon_yields_pct'].values())-100)<1e-5
             outputs.append(row)
-        save(label,dict(rows=outputs,solver_stats=net.solver_stats))
+        save(label,dict(rows=outputs,solver_stats=net.solver_stats,wall_s=time.monotonic()-run_start))
         print(label,[(x['time_s'],x['X_CH4_pct'],x['S_C2H2_carbon_pct']) for x in outputs],flush=True)
         return outputs
     save('status',dict(status='nonreacting_gate',wall_s=time.monotonic()-start))
@@ -83,7 +82,6 @@ try:
             selectivity_pp=r['S_C2H2_carbon_pct']-80) for r in b],
         numerical_gate='passed',experimental_reproduction='not established: assumed uniform temperature and contact-time brackets'))
     save('status',dict(status='completed',wall_s=time.monotonic()-start))
-    signal.alarm(0)
 except Exception as e:
     save('status',dict(status='failed',reason=str(e),wall_s=time.monotonic()-start))
     raise
