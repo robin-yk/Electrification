@@ -1,0 +1,48 @@
+{
+  "GHSV": [
+    {
+      "flow_sccm": 50,
+      "GHSV_h_inverse": 12825.43851941851
+    },
+    {
+      "flow_sccm": 100,
+      "GHSV_h_inverse": 25650.87703883702
+    },
+    {
+      "flow_sccm": 200,
+      "GHSV_h_inverse": 51301.75407767404
+    },
+    {
+      "flow_sccm": 400,
+      "GHSV_h_inverse": 102603.50815534808
+    },
+    {
+      "flow_sccm": 800,
+      "GHSV_h_inverse": 205207.01631069617
+    },
+    {
+      "flow_sccm": 1600,
+      "GHSV_h_inverse": 410414.03262139234
+    }
+  ],
+  "definition": "standard inlet volumetric flow / fixed gas reaction volume",
+  "panel_inches": [
+    5,
+    5
+  ],
+  "note_strip_inches": 0.9,
+  "canvas_inches": [
+    5,
+    5.9
+  ],
+  "axes_inches": [
+    3.8499999999999996,
+    3.8499999999999996
+  ],
+  "figcheck": [],
+  "png_pixels": [
+    3000,
+    3540
+  ],
+  "dpi": 600
+}
