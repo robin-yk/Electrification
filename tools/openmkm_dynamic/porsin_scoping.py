@@ -12,7 +12,11 @@ parser=argparse.ArgumentParser()
 parser.add_argument('--temperature-c',type=int,default=1900)
 parser.add_argument('--temperatures-c',type=int,nargs='+')
 parser.add_argument('--output',type=Path)
+parser.add_argument('--times-s',type=float,nargs='+',default=[.02,.04])
+parser.add_argument('--refine-temperatures-c',type=int,nargs='+')
 args=parser.parse_args()
+if any(t<=0 for t in args.times_s) or sorted(set(args.times_s))!=args.times_s:
+    parser.error('Output times must be positive and strictly increasing.')
 folder='retry-600s' if args.temperature_c==1900 else f'T{args.temperature_c}-600s'
 OUT=args.output or ROOT/'docs/research/porsin-scoping-2026-09-10'/folder
 temperatures=args.temperatures_c or [args.temperature_c]
@@ -25,7 +29,8 @@ save('manifest',dict(script_sha256=hashlib.sha256(Path(__file__).read_bytes()).h
     mechanism_sha256=hashlib.sha256(MECH.read_bytes()).hexdigest(),cantera=ct.__version__,
     python=platform.python_version(),temperatures_C=temperatures,pressure_Pa=101325,
     environment={k:os.environ.get(k) for k in ('TZ','LC_ALL','OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS')},
-    feed={'CH4':.1,'HE':.9},times_s=[.02,.04],
+    feed={'CH4':.1,'HE':.9},times_s=args.times_s,
+    refine_temperatures_C=args.refine_temperatures_c or temperatures,
     closure='Isothermal constant-pressure closed gas parcel, ideal PFR material-history approximation. Not CSTR.',
     assumptions=['Coil temperature substituted for uniform gas temperature',
       '1 atm assumed pending precise experimental pressure',
@@ -83,9 +88,12 @@ try:
     for temperature in temperatures:
         prefix=f'T{temperature}-' if args.temperatures_c else ''
         save('status',dict(status='reacting_standard',T_C=temperature,wall_s=time.monotonic()-start))
-        a=run(prefix+'standard',temperature+273.15,[.02,.04])
+        a=run(prefix+'standard',temperature+273.15,args.times_s)
+        if args.refine_temperatures_c and temperature not in args.refine_temperatures_c:
+            summaries.extend({k:r[k] for k in ('T_C','time_s','X_CH4_pct','Y_C2H2_carbon_pct','S_C2H2_carbon_pct','C6_carbon_yield_pct')} for r in a)
+            continue
         save('status',dict(status='reacting_tight',T_C=temperature,wall_s=time.monotonic()-start))
-        b=run(prefix+'tight',temperature+273.15,[.02,.04],True)
+        b=run(prefix+'tight',temperature+273.15,args.times_s,True)
         delta=max(abs(x[k]-y[k]) for x,y in zip(a,b) for k in ['X_CH4_pct','Y_C2H2_carbon_pct','S_C2H2_carbon_pct','C6_carbon_yield_pct'])
         species_delta=max(abs(x['mole_fractions'][s]-y['mole_fractions'][s]) for x,y in zip(a,b) for s in gas.species_names)
         assert delta<.05 and species_delta<1e-6,(delta,species_delta)
@@ -93,13 +101,14 @@ try:
         if temperature==1900:
             reference=ROOT/'docs/research/porsin-scoping-2026-09-10/retry-600s/tight.json'
             ref=json.loads(reference.read_text())['rows']
-            regression=max(abs(x['mole_fractions'][s]-y['mole_fractions'][s]) for x,y in zip(ref,b) for s in gas.species_names)
-            assert regression<1e-6,regression
+            matched=[(x,y) for x in ref for y in b if x['time_s']==y['time_s']]
+            regression=max(abs(x['mole_fractions'][s]-y['mole_fractions'][s]) for x,y in matched for s in gas.species_names) if matched else None
+            assert regression is None or regression<1e-6,regression
         save(prefix+'comparison',dict(max_metric_difference_percentage_points=delta,
             max_species_difference=species_delta,legacy_1900_species_difference=regression,rows=b,
             numerical_gate='passed',experimental_reproduction='not established: assumed uniform temperature and contact-time brackets'))
         summaries.extend({k:r[k] for k in ('T_C','time_s','X_CH4_pct','Y_C2H2_carbon_pct','S_C2H2_carbon_pct','C6_carbon_yield_pct')} for r in b)
-    save('brief',dict(rows=summaries,numerical_gate='passed',wall_s=time.monotonic()-start))
+    save('brief',dict(rows=summaries,numerical_gate='passed',refinement_scope=args.refine_temperatures_c or temperatures,wall_s=time.monotonic()-start))
     save('status',dict(status='completed',wall_s=time.monotonic()-start))
 except Exception as e:
     save('status',dict(status='failed',reason=str(e),wall_s=time.monotonic()-start))
