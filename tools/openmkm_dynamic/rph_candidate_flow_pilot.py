@@ -6,7 +6,14 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'docs/research/rph-candidate-flow-pilot-2026-09-10'
+if '--attempt02' in sys.argv:
+    OUT=ROOT/'docs/research/rph-candidate-flow-pilot-2026-09-10-attempt02'
 MECH=ROOT/'tools/cantera/mechanisms/aramco20.yaml'
+def update_slope(reactor, network, slope):
+    """Retain the integrator history while the prescribed slope is unchanged."""
+    if reactor.slope != slope:
+        reactor.slope=slope
+        network.reinitialize()
 def save(name,data):
     (OUT/name).write_text(json.dumps(data,indent=2,allow_nan=False)+'\n')
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -31,7 +38,7 @@ def calculate():
     source=Path(case['source']);ref=json.loads(source.read_text());settings=ref['inputs']
     save('manifest.json',dict(source=str(source),source_sha256=digest(source),script_sha256=digest(Path(__file__)),mechanism_sha256=digest(MECH),commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),engine=ct.__version__,jobs=['A50-n4','A50-n8','A100-n4','A100-n8']))
     results={}
-    for flow in [50,100]:
+    for flow in ([50] if '--attempt02' in sys.argv else [50,100]):
         for n in [4,8]:
             name=f'A{flow}-n{n}';started=time.monotonic()
             save('progress.json',dict(active=name,completed=list(results)))
@@ -54,7 +61,7 @@ def calculate():
             for cycle in range(1,9):
                 inv0=r.mass*r.thermo.Y/mw;mass0=r.mass;integ=np.zeros(gas.n_species);mout=0.;steps=[];maxp=0.;maxt=0.
                 for duration,ta,tb in parts:
-                    r.slope=(tb-ta)/duration;net.reinitialize();start=t
+                    update_slope(r,net,(tb-ta)/duration);start=t
                     for j in range(1,n+1):
                         before=r.mass*r.thermo.int_energy_mass;T0=r.T
                         f0=pc.mass_flow_rate*r.thermo.Y/mw;md0=pc.mass_flow_rate;hf0=md0*r.thermo.enthalpy_mass
@@ -103,7 +110,7 @@ if __name__=='__main__':
         start=time.monotonic()
         with (OUT/'execution.log').open('w') as f:
             try:
-                p=subprocess.run([sys.executable,'-u',__file__,'--worker'],stdout=f,stderr=subprocess.STDOUT,timeout=300)
+                p=subprocess.run([sys.executable,'-u',__file__,'--worker']+(['--attempt02'] if '--attempt02' in sys.argv else []),stdout=f,stderr=subprocess.STDOUT,timeout=300)
                 status='completed' if p.returncode==0 else 'failed'
             except subprocess.TimeoutExpired:status='timeout'
         save('status.json',dict(status=status,wall_s=time.monotonic()-start,cap_s=300))
