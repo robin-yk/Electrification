@@ -1,7 +1,7 @@
 {
   "authorization": "User approved additional total 60 minutes, maximum 5 minutes per batch, on 2026-09-08.",
   "total_s": 3600,
-  "spent_s": 382.5344829850451,
+  "spent_s": 435.1263415260414,
   "active": null,
   "batches": [
     {
@@ -48,6 +48,16 @@
       "stage": "verify-3",
       "status": "completed",
       "wall_s": 64.21304787499685
+    },
+    {
+      "stage": "propose-4",
+      "status": "completed",
+      "wall_s": 3.0489368330017896
+    },
+    {
+      "stage": "verify-4",
+      "status": "completed",
+      "wall_s": 49.54292170799454
     }
   ]
 }
