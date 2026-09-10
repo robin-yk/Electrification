@@ -1,0 +1,6 @@
+{
+  "status": "stopped",
+  "reason": "TimeoutExpired: Command '['/Users/robin_yeonsu/.venvs/cantera32-bo/bin/python', '/Users/robin_yeonsu/Electrification-BO-continuation/tools/openmkm_dynamic/verify_composition_bo.py', '--round', '3', '--worker', '0', '--samples', '400']' timed out after 89.99994524999784 seconds",
+  "completed": [],
+  "wall_s": 90.05282137500035
+}

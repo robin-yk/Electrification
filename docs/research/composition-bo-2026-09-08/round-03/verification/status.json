@@ -1,0 +1,76 @@
+{
+  "status": "completed",
+  "reason": null,
+  "completed": [
+    {
+      "target": 1.0,
+      "x": [
+        1825.3610849380493,
+        0.8,
+        0.7991325020790101
+      ],
+      "actual_y": [
+        37.34467116090918,
+        18.708167958379
+      ],
+      "ratio": 1.0019190088872394,
+      "feasible": true,
+      "relative_ratio_error": 0.0019190088872393929,
+      "predicted_y": [
+        37.29261779785156,
+        18.743772506713867
+      ],
+      "incumbent": 37.1429715144538,
+      "phase_error": 1.8583109056224956e-05,
+      "source": "docs/research/composition-bo-2026-09-08/round-03/verification/0/n800.json",
+      "sha256": "773eee899a8cecbe65af587d44a5d6747dc16f3afd90e3bb218abb830ee6f000"
+    },
+    {
+      "target": 1.5,
+      "x": [
+        1886.4550352096558,
+        0.8,
+        0.7571059346199036
+      ],
+      "actual_y": [
+        35.36900396800476,
+        25.884808735985303
+      ],
+      "ratio": 1.4637001799316158,
+      "feasible": false,
+      "relative_ratio_error": -0.024199880045589484,
+      "predicted_y": [
+        34.74827194213867,
+        26.10737419128418
+      ],
+      "incumbent": 33.859865011383164,
+      "phase_error": 1.636521060199847e-05,
+      "source": "docs/research/composition-bo-2026-09-08/round-03/verification/1/n800.json",
+      "sha256": "a9a2e1bf36ea1a35a6c13fe2eea9246151a305647c8b0b80a585b29038e9c5c9"
+    },
+    {
+      "target": 1.75,
+      "x": [
+        1886.0190391540527,
+        0.8,
+        0.7298171937465668
+      ],
+      "actual_y": [
+        33.22964937437152,
+        28.522918799492487
+      ],
+      "ratio": 1.7167150022046809,
+      "feasible": true,
+      "relative_ratio_error": -0.019019998740182342,
+      "predicted_y": [
+        32.791900634765625,
+        28.694377899169922
+      ],
+      "incumbent": 31.888051673006757,
+      "phase_error": 1.5538459776309743e-05,
+      "source": "docs/research/composition-bo-2026-09-08/round-03/verification/2/n800.json",
+      "sha256": "e222fa95de0284662f2f1ced5851f5db2deec4e87c972a619d6cc040053e52a5"
+    }
+  ],
+  "wall_s": 64.21304787499685
+}

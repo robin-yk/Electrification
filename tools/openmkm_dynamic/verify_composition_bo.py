@@ -1,4 +1,6 @@
 """Verify saved Bayesian recommendations without changing candidate inputs."""
+from cantera_runtime import prepare_runtime
+RUNTIME = prepare_runtime()
 import argparse
 import hashlib
 import json
@@ -22,7 +24,8 @@ def main():
     ledger=read(C/'budget.json');assert ledger['active'] is None and ledger['spent_s']+300<=ledger['total_s']
     ledger['active']=f'verify-{a.round}';write(C/'budget.json',ledger)
     start=time.monotonic();done=[];state='stopped';reason=None
-    files=[Path(__file__),d/'proposals.json',ROOT/'tools/openmkm_dynamic/run_rph_fixed_pulse.py',ROOT/'tools/openmkm_dynamic/run_rph_fixed_gate.py',ROOT/'tools/cantera/mechanisms/aramco20.yaml']
+    files=[Path(__file__),ROOT/'tools/openmkm_dynamic/cantera_runtime.py',d/'proposals.json',ROOT/'tools/openmkm_dynamic/run_rph_fixed_pulse.py',ROOT/'tools/openmkm_dynamic/run_rph_fixed_gate.py',ROOT/'tools/cantera/mechanisms/aramco20.yaml']
+    write(out/'runtime.json',RUNTIME)
     write(out/'manifest.json',dict(commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),sha256={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in files},cap_s=300))
     try:
         for i,q in enumerate(proposals):

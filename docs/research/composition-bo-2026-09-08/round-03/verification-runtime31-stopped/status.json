@@ -1,0 +1,6 @@
+{
+  "status": "stopped",
+  "reason": "CalledProcessError: Command '['/Users/robin_yeonsu/cantera-env/bin/python', '/Users/robin_yeonsu/Electrification-BO-continuation/tools/openmkm_dynamic/verify_composition_bo.py', '--round', '3', '--worker', '0', '--samples', '400']' died with <Signals.SIGTERM: 15>.",
+  "completed": [],
+  "wall_s": 80.397842334
+}

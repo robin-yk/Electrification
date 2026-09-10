@@ -1,7 +1,7 @@
 {
   "authorization": "User approved additional total 60 minutes, maximum 5 minutes per batch, on 2026-09-08.",
   "total_s": 3600,
-  "spent_s": 144.67430206805415,
+  "spent_s": 382.5344829850451,
   "active": null,
   "batches": [
     {
@@ -28,6 +28,26 @@
       "stage": "cjh-support",
       "status": "completed",
       "wall_s": 37.585292478
+    },
+    {
+      "stage": "propose-3",
+      "status": "completed",
+      "wall_s": 3.196469332993729
+    },
+    {
+      "stage": "verify-3",
+      "status": "stopped",
+      "wall_s": 80.397842334
+    },
+    {
+      "stage": "verify-3",
+      "status": "stopped",
+      "wall_s": 90.05282137500035
+    },
+    {
+      "stage": "verify-3",
+      "status": "completed",
+      "wall_s": 64.21304787499685
     }
   ]
 }

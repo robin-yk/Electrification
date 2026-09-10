@@ -1,0 +1,7 @@
+# Figure 4 continuation
+
+The user authorized continuing the same ratio-constrained NEXTorch search with economical execution. Retain the original three targets, 2% relative tolerance, search bounds, mechanism, waveform, flow, volume, and numerical gates. Start with one three-candidate round and paired 400/800 evaluations. Limit each proposal or verification batch to 300 s; reassess after direct results. All source code comes from committed checkpoint 20f1db1.
+
+Round 3 was proposed from 31 eligible observations. The initial local verification was mistakenly launched with Cantera 3.1.0 in `cantera-env`. The worker was terminated during mechanism loading after approximately 80 s; no reacting result was produced. Preserve that attempt separately and retain its time in the budget ledger. The replacement environment is `.venvs/cantera32-bo`, with Cantera 3.2.0. Check the version and analytic temperature ramp before retrying the identical saved proposals. No candidate inputs or acceptance criteria change.
+
+The replacement environment passed the analytic ramp. Its first mechanism load exceeded the unchanged 90 s worker limit. The current repository quickstart already prescribes `TZ=UTC0 LC_ALL=C` in addition to single-thread numerical libraries; these settings had been omitted. A separate mechanism-only test with the complete environment loaded all 493 species in 3.9397 s. Preserve the second attempt as `verification-locale-timeout`. Retry the same saved proposals with the verified complete environment, retaining all failed-attempt time in the ledger.

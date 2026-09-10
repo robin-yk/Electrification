@@ -1,4 +1,6 @@
 """Bounded periodic fixed-volume, fixed-feed gas-temperature verification."""
+from cantera_runtime import prepare_runtime
+prepare_runtime()
 import argparse
 import hashlib
 import subprocess
