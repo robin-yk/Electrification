@@ -1,0 +1,89 @@
+"""Bounded isothermal gas-parcel check against a Porsin abstract target."""
+import os
+for key in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS'):
+    os.environ[key]='1'
+import json, time, hashlib, signal, platform
+from pathlib import Path
+import numpy as np
+import cantera as ct
+
+ROOT=Path(__file__).resolve().parents[2]
+OUT=ROOT/'docs/research/porsin-scoping-2026-09-10'
+MECH=ROOT/'tools/cantera/mechanisms/aramco20.yaml'
+OUT.mkdir(parents=True,exist_ok=True)
+def save(name,data):
+    (OUT/(name+'.json')).write_text(json.dumps(data,indent=2,allow_nan=False)+'\n')
+def timeout_handler(*_):
+    raise TimeoutError('300-second total wall-time cap reached')
+signal.signal(signal.SIGALRM,timeout_handler)
+signal.alarm(300)
+start=time.monotonic()
+save('manifest',dict(script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+    mechanism_sha256=hashlib.sha256(MECH.read_bytes()).hexdigest(),cantera=ct.__version__,
+    python=platform.python_version(),T_C=1900,pressure_Pa=101325,
+    feed={'CH4':.1,'HE':.9},times_s=[.02,.04],
+    closure='Isothermal constant-pressure closed gas parcel, ideal PFR material-history approximation. Not CSTR.',
+    assumptions=['Coil temperature substituted for uniform gas temperature',
+      '1 atm assumed pending precise experimental pressure',
+      '20 and 40 ms chosen to bracket the abstract contact-time scale',
+      'No gas heating, cooling, surface reactions, or condensed carbon'],
+    target={'X_CH4_pct':80,'S_C2H2_carbon_pct':80},target_role='approximate abstract benchmark, not a digitized matched experimental point'))
+try:
+    save('status',dict(status='loading_mechanism'))
+    gas=ct.Solution(str(MECH))
+    atoms=np.array([[gas.n_atoms(k,e) for k in range(gas.n_species)] for e in gas.element_names])
+    mw=gas.molecular_weights
+    ci=gas.element_index('C'); ch4=gas.species_index('CH4'); ac=gas.species_index('C2H2')
+    def run(label,T,times,tight=False):
+        gas.TPX=T,101325,{'CH4':.1,'HE':.9}
+        r=ct.IdealGasConstPressureMoleReactor(gas,energy='off',volume=1e-6)
+        initial_mass=r.mass
+        n0=r.mass*r.thermo.Y/mw
+        e0=atoms@n0
+        active=e0>1e-25
+        net=ct.ReactorNet([r])
+        net.rtol=1e-11 if tight else 1e-9
+        net.atol=1e-24 if tight else 1e-22
+        net.max_time_step=1e-4 if tight else 1e-3
+        net.preconditioner=ct.AdaptivePreconditioner()
+        outputs=[]
+        for t in times:
+            net.advance(t)
+            n=r.mass*r.thermo.Y/mw; e=atoms@n
+            error=float(np.max(abs((e[active]-e0[active])/e0[active])))
+            mass_error=abs(r.mass/initial_mass-1)
+            assert error<1e-7 and mass_error<1e-7,(error,mass_error)
+            assert abs(r.T-T)<1e-7 and abs(r.thermo.P/101325-1)<1e-7
+            conversion=1-n[ch4]/n0[ch4]
+            cy=atoms[ci]*n/e0[ci]
+            row=dict(time_s=t,T_C=T-273.15,X_CH4_pct=100*conversion,
+                Y_C2H2_carbon_pct=100*cy[ac],
+                S_C2H2_carbon_pct=100*cy[ac]/conversion if conversion>1e-10 else None,
+                element_error=error,mass_error=mass_error,
+                carbon_yields_pct={s:100*float(cy[k]) for k,s in enumerate(gas.species_names) if atoms[ci,k]>0},
+                C6_carbon_yield_pct=100*float(sum(cy[k] for k in range(len(cy)) if atoms[ci,k]==6)),
+                mole_fractions={s:float(v) for s,v in zip(gas.species_names,r.thermo.X)},
+                rtol=net.rtol,atol=net.atol,max_time_step=net.max_time_step)
+            assert abs(sum(row['carbon_yields_pct'].values())-100)<1e-5
+            outputs.append(row)
+        save(label,dict(rows=outputs,solver_stats=net.solver_stats))
+        print(label,[(x['time_s'],x['X_CH4_pct'],x['S_C2H2_carbon_pct']) for x in outputs],flush=True)
+        return outputs
+    save('status',dict(status='nonreacting_gate',wall_s=time.monotonic()-start))
+    cold=run('cold',300,[.001])
+    assert abs(cold[0]['X_CH4_pct'])<1e-6
+    save('status',dict(status='reacting_standard',wall_s=time.monotonic()-start))
+    a=run('standard',2173.15,[.02,.04])
+    save('status',dict(status='reacting_tight',wall_s=time.monotonic()-start))
+    b=run('tight',2173.15,[.02,.04],True)
+    delta=max(abs(x[k]-y[k]) for x,y in zip(a,b) for k in ['X_CH4_pct','Y_C2H2_carbon_pct','S_C2H2_carbon_pct','C6_carbon_yield_pct'])
+    assert delta<.05,delta
+    save('comparison',dict(max_metric_difference_percentage_points=delta,rows=b,
+        differences_from_abstract=[dict(time_s=r['time_s'],conversion_pp=r['X_CH4_pct']-80,
+            selectivity_pp=r['S_C2H2_carbon_pct']-80) for r in b],
+        numerical_gate='passed',experimental_reproduction='not established: assumed uniform temperature and contact-time brackets'))
+    save('status',dict(status='completed',wall_s=time.monotonic()-start))
+    signal.alarm(0)
+except Exception as e:
+    save('status',dict(status='failed',reason=str(e),wall_s=time.monotonic()-start))
+    raise
