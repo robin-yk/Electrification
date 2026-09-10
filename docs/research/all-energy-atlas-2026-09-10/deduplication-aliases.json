@@ -1,0 +1,2070 @@
+[
+  {
+    "signature": "adb1a5302d0b532a2bbacb497f02e90aa63c9af5bf9130858fe1f32ffcdf94eb",
+    "sha256": "0306857570ddc6b1da0cd5b57855b72523d3fcb25672ec39cc7ffc87a6807be2",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-fixed-period-01-2026-09-07/data/half-refined.json"
+    ]
+  },
+  {
+    "signature": "adb1a5302d0b532a2bbacb497f02e90aa63c9af5bf9130858fe1f32ffcdf94eb",
+    "sha256": "2069924f0892fa69adfc1635afa09f2e68770df22f2cc848d82bc8567ab08462",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-fixed-period-01-2026-09-07/data/half.json"
+    ]
+  },
+  {
+    "signature": "c04b9334e2d8bad3252509254bfb213d7621cb90b275de0c5968cb0c0d6c73b1",
+    "sha256": "0fa3c19d3396156067b0282a77a98a3dd98af2e013f84f6ab9c68c1bfbe473a8",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-fixed-period-01-2026-09-07/data/double.json"
+    ]
+  },
+  {
+    "signature": "c04b9334e2d8bad3252509254bfb213d7621cb90b275de0c5968cb0c0d6c73b1",
+    "sha256": "0327a3fb6adfdb49d12dcc62889e69abdbc072746ab183b4a5401da686fc132b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-fixed-period-01-2026-09-07/data/double-refined.json"
+    ]
+  },
+  {
+    "signature": "95e7c2a35104ed83b6242d95ae7d87b7939960b18492135fdd5ae0992a9d1a93",
+    "sha256": "46f372bda6c7f88a5561f06970cf9d87fc0fedad5941f0ed11b8e43d3c94b029",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-pilot-01-2026-09-07/data/T1800-hold0.025-n800.json"
+    ]
+  },
+  {
+    "signature": "95e7c2a35104ed83b6242d95ae7d87b7939960b18492135fdd5ae0992a9d1a93",
+    "sha256": "bbf3ac46ddf293b3c21ce44bc3c4d3b91274819154cd348cbd08303492dcabf4",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-pilot-01-2026-09-07/data/T1800-hold0.025-n400.json"
+    ]
+  },
+  {
+    "signature": "7aa7d7bad5abb3633a68f1efad81b5cd06c2b63a87315da325253a988e6ab1b4",
+    "sha256": "6be7e1c68d2fe45a2faf6d7c4383798f8d2de20be7a69257195a49ba1307d92b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-pilot-01-2026-09-07/data/inert.json"
+    ]
+  },
+  {
+    "signature": "8da0d53c3c242f3fde59f8708e0b2b93604a3e944beb60b0df7d6949dd8b941f",
+    "sha256": "657d157c3072c44250f46a4832cf5f951a989e00e8a2ee70a66309432eaaf4b4",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-pilot-01-2026-09-07/data/T1200-hold0.025-n400.json"
+    ]
+  },
+  {
+    "signature": "8da0d53c3c242f3fde59f8708e0b2b93604a3e944beb60b0df7d6949dd8b941f",
+    "sha256": "ec8d149e65da1ec1849f010b844a835a79e478c96df5215845214468ecf51fc8",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-pilot-01-2026-09-07/data/T1200-hold0.025-n800.json"
+    ]
+  },
+  {
+    "signature": "fefaa240a0ebcdf3b188bf4f59f7d0a045c667fe5c6325b2a0e1ee905f31d9c7",
+    "sha256": "9a848e2e363921f214c7f2a12c5f37cb1179cd7bbd40bac22f3de353b8af62bb",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-pilot-01-2026-09-07/data/T1800-hold0.5-n800.json"
+    ]
+  },
+  {
+    "signature": "fefaa240a0ebcdf3b188bf4f59f7d0a045c667fe5c6325b2a0e1ee905f31d9c7",
+    "sha256": "9f4ff8aab008728af17dd796e01bec961dd565cfdbb30d8fce1a2f47f59b1c5d",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-pilot-01-2026-09-07/data/T1800-hold0.5-n400.json"
+    ]
+  },
+  {
+    "signature": "44bbd5af95689fb101ffb28498d9578639f66604d2281455318658b53365c66d",
+    "sha256": "9dde7803f27da88c4c342c56158c174af7c87b31acb05db0ab5ea7bf454e140b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/bo-01/tighter-01/n800.json"
+    ]
+  },
+  {
+    "signature": "44bbd5af95689fb101ffb28498d9578639f66604d2281455318658b53365c66d",
+    "sha256": "cbd27b90b3c602248a914e582b5de55397e1d97b27f5f43d85ec1068f64483b3",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/bo-01/tighter-01/n400.json"
+    ]
+  },
+  {
+    "signature": "44bbd5af95689fb101ffb28498d9578639f66604d2281455318658b53365c66d",
+    "sha256": "46e9e9ebf27bcdd06486bcb5972fc441546309562794a8a018b4df01bc5b9bc6",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/bo-01/verification/T1682.14-h0.8-Q12.5-n400.json"
+    ]
+  },
+  {
+    "signature": "9c7380a796bb8a9f23e5fbcb4edc144cf71e3bf76554eb1936e95a06fa60f968",
+    "sha256": "0f069308d6ada7a9da280019228af3e358b7f4b43bdddd2cc164b1bde0a80126",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q25-n400.json"
+    ]
+  },
+  {
+    "signature": "9c7380a796bb8a9f23e5fbcb4edc144cf71e3bf76554eb1936e95a06fa60f968",
+    "sha256": "3069c30bfbd58629544c69030d53fe476b0cb064f53a91c57352d81dd1bf09b1",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q25-n800.json"
+    ]
+  },
+  {
+    "signature": "c3450fb5d61fcac3e9e75ead31794d0c09bfeeb6441d7d0aaa66230dad9610a6",
+    "sha256": "3d99e50e2dced74c7e2f7566c3939e6bf3a9b0a5b66a8c1f17de3ce119598abe",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.5-Q200-n800.json"
+    ]
+  },
+  {
+    "signature": "c3450fb5d61fcac3e9e75ead31794d0c09bfeeb6441d7d0aaa66230dad9610a6",
+    "sha256": "59dac57b5affad1cba8e2045deb393dd6702c466f8cc0b69345ff41162e7e343",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.5-Q200-n400.json"
+    ]
+  },
+  {
+    "signature": "b4970e72ad35b5f933651a568fa85c49aa5cbb2f914b46b8729a228647d4cfe9",
+    "sha256": "ee7b7f8dbee7b51105f06d175c3a496d49d27cbe5cd1698f7ab208241b3ef971",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q12.5-n400.json"
+    ]
+  },
+  {
+    "signature": "b4970e72ad35b5f933651a568fa85c49aa5cbb2f914b46b8729a228647d4cfe9",
+    "sha256": "b5be59ce88e48c7039af008f19635bc1ae8e889286858d67e202bc341269936b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q12.5-n800.json"
+    ]
+  },
+  {
+    "signature": "aa693d7ab452e6086821f10882d73ff3ee3c58ad64478d95ff912b8a6c6de873",
+    "sha256": "0c577e64e56b94cf1f1eecf132cd052d786ff586d7b502365a70f3dbdfff581f",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.3-Q25-n800.json"
+    ]
+  },
+  {
+    "signature": "aa693d7ab452e6086821f10882d73ff3ee3c58ad64478d95ff912b8a6c6de873",
+    "sha256": "06a561f48f0ba1c8fae0cf009a04890457774fcf17d544fafe92e6881e873f26",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.3-Q25-n400.json"
+    ]
+  },
+  {
+    "signature": "f88e318e884026101934e469091613717fbe1c94f75e563e584829fd44cd5f53",
+    "sha256": "fe3c3721c669745cfbf74b6aeafa30b94cccfcd820b62c171a2cad17b26492d7",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.3-Q200-n800.json"
+    ]
+  },
+  {
+    "signature": "e1093138881cace36d5ef93fb8880dc249d299ed4e3b717681e5f0adee398123",
+    "sha256": "0e6096c8a71f27356bbb21264da8f856174c2b4577c60c6863d86ca0e15512a4",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.5-Q12.5-n400.json"
+    ]
+  },
+  {
+    "signature": "3a363dcfaa70532300c68ec95d586c6156a5be7baec5b9ebb95993c0064aaa3f",
+    "sha256": "88b6b1b924bdd86efed1e1e23083e20711efa61dc79ecfae8ed3412a8d35941c",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q200-n800.json"
+    ]
+  },
+  {
+    "signature": "3a363dcfaa70532300c68ec95d586c6156a5be7baec5b9ebb95993c0064aaa3f",
+    "sha256": "67da49cb3321e99c85677db957acfed561a0f88c659d0c1c7f6282db5f250bc5",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q200-n400.json"
+    ]
+  },
+  {
+    "signature": "f88e318e884026101934e469091613717fbe1c94f75e563e584829fd44cd5f53",
+    "sha256": "6d8e1fb0bd10f033680057c614c55e3390d7b30d6c8f33b61501dfa1ad0597eb",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.3-Q200-n400.json"
+    ]
+  },
+  {
+    "signature": "e1093138881cace36d5ef93fb8880dc249d299ed4e3b717681e5f0adee398123",
+    "sha256": "8d5f221a34ea7a3311ca3e116b3a247f653d7a33bb6c2bf0ec430a4a63e87d21",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.5-Q12.5-n800.json"
+    ]
+  },
+  {
+    "signature": "93dde241cee4b19849e8531296980b705a005dfd7fcb29fdc7cdb4a740de4623",
+    "sha256": "53e23f2b9c6656aee86ca987fe166aac314edd1dfafa297b566353f0829f382a",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.1-Q100-n800.json"
+    ]
+  },
+  {
+    "signature": "93dde241cee4b19849e8531296980b705a005dfd7fcb29fdc7cdb4a740de4623",
+    "sha256": "13f70c991136d983f87fda64d1ee033bb4fff56b1ee1eeb188775896de34f0ce",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.1-Q100-n400.json"
+    ]
+  },
+  {
+    "signature": "85b7a6a5baf7596b8ee7b0e8dff1559fdebc2aee8f9a19c3cf3fbadd9edbd8b3",
+    "sha256": "5e210931027f338d95b1a49c500cd9b71ece257a39c0ecf4ea621fc1c80524c4",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.1-Q200-n400.json"
+    ]
+  },
+  {
+    "signature": "85b7a6a5baf7596b8ee7b0e8dff1559fdebc2aee8f9a19c3cf3fbadd9edbd8b3",
+    "sha256": "d0fa5c9c3782e17bc4b675f0e5e9843600bef79ac47869ba112cbb5b0f008e45",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.1-Q200-n800.json"
+    ]
+  },
+  {
+    "signature": "e923fe00c505e9bb2e306fd07e8e5567854336250326ec48ee504d4ecc67382a",
+    "sha256": "3ac210e30df8bd1b81acb399ed7b598bfe4f72a03371473b28ba680e319468bc",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q100-n400.json"
+    ]
+  },
+  {
+    "signature": "1b44b0007eca87dcac567232223b5870f5bf5df31d46f00286601e13f2159e92",
+    "sha256": "4c9264157178fc7fdb44ec5e725267c1c3c038d225cbc318c293884a11392c1c",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.3-Q100-n400.json"
+    ]
+  },
+  {
+    "signature": "1b44b0007eca87dcac567232223b5870f5bf5df31d46f00286601e13f2159e92",
+    "sha256": "d6799a609e29d14e311e79acb6c5624480bb3bcf8d7699d6ee2b5e8bd79e98cf",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.3-Q100-n800.json"
+    ]
+  },
+  {
+    "signature": "e923fe00c505e9bb2e306fd07e8e5567854336250326ec48ee504d4ecc67382a",
+    "sha256": "5466cee50e92edf0e39da0df50d055bfad7b376da5cc1faf0a1f33229a2d6e1b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q100-n800.json"
+    ]
+  },
+  {
+    "signature": "d1ad0836e1855d360852174ad0560774c5cefaf8bf97e3044c18a8d75ae993fe",
+    "sha256": "d30d74f5d15589ca1edf4b3581679f2f310b96e4fc1f1c69060382bca4608c83",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.5-Q100-n400.json"
+    ]
+  },
+  {
+    "signature": "d1ad0836e1855d360852174ad0560774c5cefaf8bf97e3044c18a8d75ae993fe",
+    "sha256": "67308272cd23427dca4b3f32bdf4913edca691652808af6089cd44331ee18e5b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.5-Q100-n800.json"
+    ]
+  },
+  {
+    "signature": "1201d4aae5ca3d485b7fddaf7d47f3ba437e29279381fbc299e4b70c0d62cb84",
+    "sha256": "21258d8274835c64a506a1e8aade8ae0cf1b5d7b2600bf679142455061d57fa0",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.3-Q12.5-n400.json"
+    ]
+  },
+  {
+    "signature": "1201d4aae5ca3d485b7fddaf7d47f3ba437e29279381fbc299e4b70c0d62cb84",
+    "sha256": "58c534a2638ced0a88277177d5f35b5db3c7569dde3c2137acf4b5c2b00c4ad0",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.3-Q12.5-n800.json"
+    ]
+  },
+  {
+    "signature": "39a2ba43e4d6134cd67c33228f5122075f3bdbaad462ea6981a16fae7a1caab9",
+    "sha256": "167115fb4001c29076eabb1b25dd5498cc12b67a41885cd91a55ec35fdb2325d",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q50-n400.json"
+    ]
+  },
+  {
+    "signature": "39a2ba43e4d6134cd67c33228f5122075f3bdbaad462ea6981a16fae7a1caab9",
+    "sha256": "c19a5605ee9df4bc399e863ba3cb569a20c961dd3ee3835e7e1bc64ffc71b706",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q50-n800.json"
+    ]
+  },
+  {
+    "signature": "9206b958bba61a74d31681755f365a165d06ff3ac83f45107ba23139920492c1",
+    "sha256": "1aa99046b0801c879618c218b5aeb8e53d93492ab1cfc05d8de4b64ca7155fed",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.1-Q12.5-n400.json"
+    ]
+  },
+  {
+    "signature": "9206b958bba61a74d31681755f365a165d06ff3ac83f45107ba23139920492c1",
+    "sha256": "a8dba8c15856f8937d846d3338b1124447634c92308b2d89bd6905432402751e",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.1-Q12.5-n800.json"
+    ]
+  },
+  {
+    "signature": "99cbf314f4dc243e4200747f74949723165303564b0b8bd9bb3cf4c0716db541",
+    "sha256": "3f4742caacb73c81a8eca3d565c7cd39ad567c75dce98ed162aa22642c5305ad",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.8-Q25-n400.json"
+    ]
+  },
+  {
+    "signature": "99cbf314f4dc243e4200747f74949723165303564b0b8bd9bb3cf4c0716db541",
+    "sha256": "d5ab4eaac27a18bff55ebf39b454d50118e767369fcb3624f7330249683272f6",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.8-Q25-n800.json"
+    ]
+  },
+  {
+    "signature": "98046fa1c7152bb853103b59f4f7ab054b29eb3070c24c855d37149e0723f0e0",
+    "sha256": "f0beeb98243dd021061f0a3daf2caaef3b4ca55fb561def607b4ac23cac39ad6",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.1-Q25-n400.json"
+    ]
+  },
+  {
+    "signature": "98046fa1c7152bb853103b59f4f7ab054b29eb3070c24c855d37149e0723f0e0",
+    "sha256": "980f184d38ccd7a5375981d2dd084619bb809ae49b57df844bc8caa3913d6d0c",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.1-Q25-n800.json"
+    ]
+  },
+  {
+    "signature": "56c34115c6eeda3b882069a958fcf3101c26a6e8ce0d628ff87dd20d7c13f0a7",
+    "sha256": "e738c3d4cc6933685c67afaa002e94c9f601fd5583e09496f172910e69170101",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.5-Q25-n400.json"
+    ]
+  },
+  {
+    "signature": "56c34115c6eeda3b882069a958fcf3101c26a6e8ce0d628ff87dd20d7c13f0a7",
+    "sha256": "f7f145647366b24f7e22328dce98043e57a15e57386bc40cf4ba80e866e4f44a",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.5-Q25-n800.json"
+    ]
+  },
+  {
+    "signature": "c0be3387a780e01269a0ddd04a81d621130d17802f9bb8b6c3c4b027603fd65e",
+    "sha256": "49dcdb463c6bf55130602e368c1a3457be7a0450bb1e8223bbd06e94c45a4fa5",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-target-01/0/n800.json"
+    ]
+  },
+  {
+    "signature": "c0be3387a780e01269a0ddd04a81d621130d17802f9bb8b6c3c4b027603fd65e",
+    "sha256": "4430241f8807057866d15ebede3f197cf1707575d2e85ca11a5f55e849700433",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-target-01/0/n400.json"
+    ]
+  },
+  {
+    "signature": "68e23fe271a421e5576806fbc4f591f5eaff2ad16c999f50dc6f41833a4cfbfe",
+    "sha256": "5ac784b831736550d2f84289116edf30678d8dd4a411e480fc3fb4e844432f1a",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-target-01/1/n800.json"
+    ]
+  },
+  {
+    "signature": "68e23fe271a421e5576806fbc4f591f5eaff2ad16c999f50dc6f41833a4cfbfe",
+    "sha256": "86c2fdedae2245c52877d84fe9119cc528cb89d5af9a0beed760c5151f73c95c",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-target-01/1/n400.json"
+    ]
+  },
+  {
+    "signature": "32bf7fd1b28273c73ebfcdf52bb2028392bd209d55d2f1d56c4ca7681733bac5",
+    "sha256": "3452683ccef1cb6637b0c6b931c766a1a02a57f771b2d520adeb5084f3e3d338",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-target-01/2/n800.json"
+    ]
+  },
+  {
+    "signature": "32bf7fd1b28273c73ebfcdf52bb2028392bd209d55d2f1d56c4ca7681733bac5",
+    "sha256": "23ee16d4a64b5fd2c49162d511ff6e3f6fa669964c929bd6a4b1eaef803527da",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-target-01/2/n400.json"
+    ]
+  },
+  {
+    "signature": "570896f46b465b47a1c1ee1435a451982d801aa28a087e7bdda58fa8a3608594",
+    "sha256": "fceeb59dc8c06ce4e6d2ccfeff1d4ee89accefe89a7fff27217cc642a01fa338",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/explore-01/verification/0/n800.json"
+    ]
+  },
+  {
+    "signature": "570896f46b465b47a1c1ee1435a451982d801aa28a087e7bdda58fa8a3608594",
+    "sha256": "dfa1c361e43f9d3daeb59b1f1fa4cdbe2f6da6e5971bda6e5cb87160ebf14b42",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/explore-01/verification/0/n400.json"
+    ]
+  },
+  {
+    "signature": "ad9aeb7b50f5e2cae427ef7c2553d89c80e8ae5d9f9312c9b8af5a478ad49f35",
+    "sha256": "f7be02f3a43b7a12de426ca5f281d525263b30c3c2d24ab7660c95d19857d751",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/explore-01/verification/1/n800.json"
+    ]
+  },
+  {
+    "signature": "ad9aeb7b50f5e2cae427ef7c2553d89c80e8ae5d9f9312c9b8af5a478ad49f35",
+    "sha256": "df1c94f0ded973cf2b33597d5b383784761d7c8b13504f73fa58d316b19049f7",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/explore-01/verification/1/n400.json"
+    ]
+  },
+  {
+    "signature": "ddf9e32277aec3b5fc40ea9c226367dd41940bfe9115ccd965eed34164319765",
+    "sha256": "d2b285d7853445397b648bc7fb934e5f8bf8786f5a2198dee373bce74f4171d6",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1600-h0.8-Q25-n800.json"
+    ]
+  },
+  {
+    "signature": "ddf9e32277aec3b5fc40ea9c226367dd41940bfe9115ccd965eed34164319765",
+    "sha256": "02aee83b1963c75d3e01f4a0c4e9912b1d568d0103dab073871ee67b87d7c7e5",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1600-h0.8-Q25-n400.json"
+    ]
+  },
+  {
+    "signature": "56925062cdd4cc75a84369e22d0d8dc6d40f3e6f2d5b4bb906319e938801343e",
+    "sha256": "c600a2094b3a1d6114f7d30958eb20a362ec369f4d4b6c57bf6e91543ca63292",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1800-h0.8-Q200-n400.json"
+    ]
+  },
+  {
+    "signature": "56925062cdd4cc75a84369e22d0d8dc6d40f3e6f2d5b4bb906319e938801343e",
+    "sha256": "b8621d34b3b678a6e649f193a5fbd33a77e0a1e9335d5beb136006ce19fd8cfa",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1800-h0.8-Q200-n800.json"
+    ]
+  },
+  {
+    "signature": "75152630db8fb5a7c478afbf3361d65d1fedb2a5e281e61c12ed56b97cb9deb1",
+    "sha256": "059f339e098207eb02cc936199dc2dcf3bbd23943fa62d435f8b08f7a34e2e27",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1800-h0.5-Q50-n800.json"
+    ]
+  },
+  {
+    "signature": "24004ac47901e38c4370f97cff37640dfe1edd9b1abe79ef425041ced21283cf",
+    "sha256": "8f0660286d9c25b8e6365bfbcd03fce08d0d656863d1e3e6fd508e920dec1d59",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1800-h0.8-Q200-inert.json"
+    ]
+  },
+  {
+    "signature": "67f5f8d3ed1601926599d665f819986f3ad12d36e3e353c4875db79e44326ea1",
+    "sha256": "59678526ea1c60ca877bbac93688eb0abf33201bf04120036c43d5c409dce1d0",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1800-h0.3-Q25-n400.json"
+    ]
+  },
+  {
+    "signature": "67f5f8d3ed1601926599d665f819986f3ad12d36e3e353c4875db79e44326ea1",
+    "sha256": "f15a422ffa702dbfb2d7f9380182488f62a8c75824e7d258d24b497447204884",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1800-h0.3-Q25-n800.json"
+    ]
+  },
+  {
+    "signature": "e7a69003949501239594a6a232e326279f997b078519df4628d114ee7da7c81b",
+    "sha256": "3360e9e22637b05269288a6873f39d2a10c811426e8fc8731acc1663cb8ed778",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1800-h0.8-Q12.5-inert.json"
+    ]
+  },
+  {
+    "signature": "658d2e57f0bd3ca20744909b7bae3580994432be287c19633ad7f6dd5193aca6",
+    "sha256": "e0f140aaa1c309d60cdcd13a7833631182fb524f9d0051e9033d54258adc8555",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1400-h0.8-Q12.5-n400.json"
+    ]
+  },
+  {
+    "signature": "658d2e57f0bd3ca20744909b7bae3580994432be287c19633ad7f6dd5193aca6",
+    "sha256": "d213c4c53c00e5bfd78b6f358743b3b36a947ebc95f92d07cb667c60cde3c052",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1400-h0.8-Q12.5-n800.json"
+    ]
+  },
+  {
+    "signature": "ef2d7e3609ab402fb4833421083c1c586eee71d2dd1ee41830b49a68ca0ed766",
+    "sha256": "25f7c15ed16b8776b1c07efcf3e43fd80c7a96b13ee0f999cbdc6f6d93c802b5",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-bracket-01/0/n800.json"
+    ]
+  },
+  {
+    "signature": "ef2d7e3609ab402fb4833421083c1c586eee71d2dd1ee41830b49a68ca0ed766",
+    "sha256": "8fe956026c0c27a2c3ca03dc56f3f3156a58499672fdffa8e4f66c7b1766e15f",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-bracket-01/0/n400.json"
+    ]
+  },
+  {
+    "signature": "b38f2bdf170c1d7010e485e34df5d743ee46af048765fb4588973adf3c56931d",
+    "sha256": "a4bb440ae04e31f59a50524598f91939e0fd29aa51cc8e855b6be7212bf12084",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-bracket-01/1/n800.json"
+    ]
+  },
+  {
+    "signature": "b38f2bdf170c1d7010e485e34df5d743ee46af048765fb4588973adf3c56931d",
+    "sha256": "5f496e2ea1b9351e669be690a7dd88572d313a4e144011041ebbbff242e82272",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-bracket-01/1/n400.json"
+    ]
+  },
+  {
+    "signature": "f8f179c26f16a4ee3cea2f372979eebf9f7ebda9825ea0b739d04640653754b7",
+    "sha256": "7bf75862f2614029c681cfa0ebbb88ddc227c5dbfb6e12f060bfbed5a3574b33",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/hot-boundary/data/T2100-h0.8-Q50-inert.json"
+    ]
+  },
+  {
+    "signature": "4e3d3e548888454ca1685f4896957433ee02bb49bd37533814e86a87ab90ad76",
+    "sha256": "c8e7bcf7c1ca425049084d138671132b19a3c0d296cc48312ed5810f592064cd",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/bo-02/verification/n800.json"
+    ]
+  },
+  {
+    "signature": "4e3d3e548888454ca1685f4896957433ee02bb49bd37533814e86a87ab90ad76",
+    "sha256": "fabdc45f4816ece1eb242c514e38890374ae5cb88e849342d84eb58866031fec",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/bo-02/verification/n400.json"
+    ]
+  },
+  {
+    "signature": "f6fba4c5bb588e7027b566cdc75103ba589f526740a9e1d7f76deb7941d8f862",
+    "sha256": "7bd8fafeb5fc6f628c93b77e79f363107105017850ffe4bb2019d348cb2a6f72",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/hot-boundary-02/data/T1900-h0.8-Q50-n400.json"
+    ]
+  },
+  {
+    "signature": "f6fba4c5bb588e7027b566cdc75103ba589f526740a9e1d7f76deb7941d8f862",
+    "sha256": "77d96a017a39c4ff82e0ed5e51f22687e12f4a137ac0b1c9c8f999bdcbc430d7",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/hot-boundary-02/data/T1900-h0.8-Q50-n800.json"
+    ]
+  },
+  {
+    "signature": "f8f179c26f16a4ee3cea2f372979eebf9f7ebda9825ea0b739d04640653754b7",
+    "sha256": "a0de2a63e0b7e6702cb305fb454eabc35b781e584b158d892fbb55ad778c87fd",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/hot-boundary-02/data/T2100-h0.8-Q50-inert.json"
+    ]
+  },
+  {
+    "signature": "19fd394196c0d1d6c6e76865758999c08d1abf88f252ba6f4089bae87c72871f",
+    "sha256": "e891f83a3021557e431ff5defc66f6e9b93ea28334d8adbe60f596a33265c040",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/hot-boundary-02/data/T2000-h0.8-Q50-n400.json"
+    ]
+  },
+  {
+    "signature": "19fd394196c0d1d6c6e76865758999c08d1abf88f252ba6f4089bae87c72871f",
+    "sha256": "6a6a5b3ada1b10d9ce057c65e55901b20b7b60dbd73f7255ef5b749dd56b91e4",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/hot-boundary-02/data/T2000-h0.8-Q50-n800.json"
+    ]
+  },
+  {
+    "signature": "818ce29ed6aa5770ea19fd2e388f314f806252b14c99d92b2705b161740dc179",
+    "sha256": "68e3bf1b436680bc21e61ee0b783b33e639faef66c6e7691d8d9650dad25bc97",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/bo-03/verification/n800.json"
+    ]
+  },
+  {
+    "signature": "818ce29ed6aa5770ea19fd2e388f314f806252b14c99d92b2705b161740dc179",
+    "sha256": "c644ad7fa60ede6599638412ad22d34db4c536c14fc89a4d2caa33e20f909b0b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/bo-03/verification/n400.json"
+    ]
+  },
+  {
+    "signature": "8f37be639c1a76021a46e4b5fb4b31d1c14d00db0034c8f8ef1e315d7bcbf403",
+    "sha256": "c3e43d0fbeeadae33ca226770f38e40b140c70b79dd9645749bfa3eec9890baa",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/3/data/T1600-h0.65-Q100-n400.json"
+    ]
+  },
+  {
+    "signature": "8f37be639c1a76021a46e4b5fb4b31d1c14d00db0034c8f8ef1e315d7bcbf403",
+    "sha256": "0459b1a765991d3d3a30cad3a2379a2df8db1060e4fbf4c76fa334197883c852",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/3/data/T1600-h0.65-Q100-n800.json"
+    ]
+  },
+  {
+    "signature": "b487299f2efaf4f602bee478b6743e6a8d5c369b218fa992a86ec777893d8c75",
+    "sha256": "04ae7f2573bb3d30d5d23553df1ac0d3bdf9ac9e222dda36649677d6515b1594",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/3/data/T1600-h0.65-Q200-n800.json"
+    ]
+  },
+  {
+    "signature": "b487299f2efaf4f602bee478b6743e6a8d5c369b218fa992a86ec777893d8c75",
+    "sha256": "4e9cb82ac7609af1edf0cad0b2a4d376c99130dc90dd4ae8930c00ca55e5e302",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/3/data/T1600-h0.65-Q200-n400.json"
+    ]
+  },
+  {
+    "signature": "5c9ec105bc75e639eb4d8119406035f4b1342dac41fd75f8c5a0179a43e0105e",
+    "sha256": "d3e2d27a562a1b02f1cbdb31ee4c96303163b9bd8ebc94deda22608ca4b4dc59",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/3/data/T1600-h0.8-Q12.5-n400.json"
+    ]
+  },
+  {
+    "signature": "a41a648d21bd77fe2fca45f29abbbb2cbcf864a66d0cf5ee81a905153d137c16",
+    "sha256": "9d3d170107caceb9292e2c1a850d7781fd1c58c799e7bbbb9ed12d08b567fb73",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-pilot-02/0/n800.json"
+    ]
+  },
+  {
+    "signature": "a41a648d21bd77fe2fca45f29abbbb2cbcf864a66d0cf5ee81a905153d137c16",
+    "sha256": "08e8a023a14ef3b804fd84688a72ca291a6ab5bdb894d8ffd4272bdf0d18f1ab",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-pilot-02/0/n400.json"
+    ]
+  },
+  {
+    "signature": "75734c40b271d595753150dd3d8ac66e925c2114611b05fcecda6295aa752968",
+    "sha256": "238718704743cda8bfaca4c6d2276d98c93689eb25fe62b3bbac4d5cb0d68cdd",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1400-h0.8-Q100-n400.json"
+    ]
+  },
+  {
+    "signature": "75734c40b271d595753150dd3d8ac66e925c2114611b05fcecda6295aa752968",
+    "sha256": "f0aed7c0d9c7413d7a3056efe094037a4cb43b7362c9b51d21c3c45eb5e75f48",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1400-h0.8-Q100-n800.json"
+    ]
+  },
+  {
+    "signature": "824b7974ea46424bfda65ba965eb8bc6e1e3df33d337efaeab5b13cb8a711576",
+    "sha256": "777f36c0c8647f03c05ab920fa00514b57433c94e9087b697287f627eb520743",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.1-Q100-n800.json"
+    ]
+  },
+  {
+    "signature": "824b7974ea46424bfda65ba965eb8bc6e1e3df33d337efaeab5b13cb8a711576",
+    "sha256": "4b57963014ceab75fa7e504b87d60258b686a63ac581b2c20f9d97e98dfbc3d8",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.1-Q100-n400.json"
+    ]
+  },
+  {
+    "signature": "e88b0850a03f4f5782b16c1a5fa8b54a48fb5621a5e37645eeef4f19e6cfab89",
+    "sha256": "813e655172906ee01cad043140673c0a76a93ec9aa82cea96e6a72aab345282b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.3-Q200-n800.json"
+    ]
+  },
+  {
+    "signature": "e88b0850a03f4f5782b16c1a5fa8b54a48fb5621a5e37645eeef4f19e6cfab89",
+    "sha256": "9984eb6d676ad65e0457ba0b980b88c62d8ac066afcde87453bed3d770864a4a",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.3-Q200-n400.json"
+    ]
+  },
+  {
+    "signature": "ac3d41890946bd0b0b1875d16bd4ae70abeb72fa069b5209e65f8b6fa2ba939b",
+    "sha256": "8cd5f04abae86333f6486051be254d1a5060acba900b6cb5c2f00dd9ad1c0a0f",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1400-h0.8-Q50-n400.json"
+    ]
+  },
+  {
+    "signature": "441503817565d134f9da99758b7820206b61ffe274efac41222ac19fef3b05d6",
+    "sha256": "fdc40dd75ed523e4ac14e8ceab7e202ceb750eb2fa1844155c8f9733d5e9ce45",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.3-Q12.5-n400.json"
+    ]
+  },
+  {
+    "signature": "441503817565d134f9da99758b7820206b61ffe274efac41222ac19fef3b05d6",
+    "sha256": "b6c4fe8951fcbdd15a869adebb364df585e9198d7339725392a23bc2e95eb5bb",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.3-Q12.5-n800.json"
+    ]
+  },
+  {
+    "signature": "ac3d41890946bd0b0b1875d16bd4ae70abeb72fa069b5209e65f8b6fa2ba939b",
+    "sha256": "d9dc31cabdda5a24f1de75eaaed30647c7b61f8c6c8fadffc43b680a571ddfe1",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1400-h0.8-Q50-n800.json"
+    ]
+  },
+  {
+    "signature": "9bd5be68332b28ecae2a8fd6c841399fa2dafa59c542ed59cc4a6da0a9889d6c",
+    "sha256": "234fff30055c969663a39854b780c8dd0eddda71f7cddf98e877284ec65a98c0",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.65-Q25-n400.json"
+    ]
+  },
+  {
+    "signature": "9bd5be68332b28ecae2a8fd6c841399fa2dafa59c542ed59cc4a6da0a9889d6c",
+    "sha256": "266d3103754eb8325c9d88bed76d297db9029241423b9dbca65b097a138e0b4a",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.65-Q25-n800.json"
+    ]
+  },
+  {
+    "signature": "be3b226bdfebe711ade9385fa83f5eb109993986ad2f8d682740d883aa37a14e",
+    "sha256": "5e257c088238e01b5b359ef62d8bb2a6d2f37bdd885eaa1b81844d31eac407c2",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.5-Q200-n800.json"
+    ]
+  },
+  {
+    "signature": "be3b226bdfebe711ade9385fa83f5eb109993986ad2f8d682740d883aa37a14e",
+    "sha256": "25ba6938adbb10065658b784ad8289a9943b781b082cd1f055bf083025461b0b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.5-Q200-n400.json"
+    ]
+  },
+  {
+    "signature": "4d26410828fac39c3778c19ff181e2c75b5b8f34e9c51ee00f35195b271a87b8",
+    "sha256": "2162ad1b0434a86dbb6578beb4b7096ebf53519ecb98cffebcc7f0fe596c397f",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.5-Q100-n400.json"
+    ]
+  },
+  {
+    "signature": "4d26410828fac39c3778c19ff181e2c75b5b8f34e9c51ee00f35195b271a87b8",
+    "sha256": "53549722ec8ef3cfa547d6a04ed8569d4e6bcd98d5dd9d2294cd7ef708152fd6",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.5-Q100-n800.json"
+    ]
+  },
+  {
+    "signature": "173205290d054d8f8760431101f65eef0eda2f67c19254bf51c152294c5506ae",
+    "sha256": "1721650de7de9baaaa12cc53bb6849192781d085cfc889d5a223fa615f5cf099",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.5-Q25-n800.json"
+    ]
+  },
+  {
+    "signature": "173205290d054d8f8760431101f65eef0eda2f67c19254bf51c152294c5506ae",
+    "sha256": "c1cdc0e911c60f706f9195b4eabdf09bfd3502bda05b240c9951bf600efae9ab",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.5-Q25-n400.json"
+    ]
+  },
+  {
+    "signature": "ced45f4b1f391ef42946c8382a6ac2cd898b8169fc10d805fac9d74f20854f27",
+    "sha256": "dad360975dbf9b67ecd29f9e58bb29fff9d123aebed61ec247d51583546827d5",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.1-Q25-n800.json"
+    ]
+  },
+  {
+    "signature": "ced45f4b1f391ef42946c8382a6ac2cd898b8169fc10d805fac9d74f20854f27",
+    "sha256": "356491cbf2540775b855e8ba6f203726c097e011e66ae01e32c080f6c78f244f",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.1-Q25-n400.json"
+    ]
+  },
+  {
+    "signature": "41c262bbe7fb03c1d01d575890d5284642d6c923c075bdda0f4cebb4fff1b224",
+    "sha256": "7b9f51d72ac055eb2a6b9de9b1d8b568d98d29a7ba2918ebf2dd4ccaa7da722e",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.3-Q100-n400.json"
+    ]
+  },
+  {
+    "signature": "41c262bbe7fb03c1d01d575890d5284642d6c923c075bdda0f4cebb4fff1b224",
+    "sha256": "014361a437ede95ce35e2af49e99f510780664646f1d7f6db6445fc96947da4d",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.3-Q100-n800.json"
+    ]
+  },
+  {
+    "signature": "f68042993ae67fa4928f8cde3e2a1e10831e25e6b1a3d520d3e7adb785b0d07f",
+    "sha256": "d3f136dc0e4a4e44cebb36c3f81f10f5b4efa97d542928ab50a7d91ee6919ba9",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.1-Q200-n400.json"
+    ]
+  },
+  {
+    "signature": "f68042993ae67fa4928f8cde3e2a1e10831e25e6b1a3d520d3e7adb785b0d07f",
+    "sha256": "51c45e01a01285a1ea2fff937848ee6bc15d520905835564f29bd804351066ed",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.1-Q200-n800.json"
+    ]
+  },
+  {
+    "signature": "1bf04b5128ed9211c62c53961f89f73b5918a87c823841d3e435a3610206660a",
+    "sha256": "7129a5ac294d6aa528165314ccaca4f21e67404ac5e3b2c2582f9272eb9bc24b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1400-h0.8-Q200-n800.json"
+    ]
+  },
+  {
+    "signature": "1bf04b5128ed9211c62c53961f89f73b5918a87c823841d3e435a3610206660a",
+    "sha256": "0cf4da657661f129daa836cee801fd91de86523e52b84dee1d323bea2fdc202f",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1400-h0.8-Q200-n400.json"
+    ]
+  },
+  {
+    "signature": "59ce22298bec55ba59437ed119f825db6ddf4e4ec2242cc7e64d1bba38fd024f",
+    "sha256": "3bc12c61d8a136d772aabd9690bed5c67c19b9006b08a58e3e435d95a55b5f01",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.5-Q12.5-n400.json"
+    ]
+  },
+  {
+    "signature": "59ce22298bec55ba59437ed119f825db6ddf4e4ec2242cc7e64d1bba38fd024f",
+    "sha256": "258c1c84dc0c95c7187b95597792083d8dade62773c85179f751961f20a16d46",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.5-Q12.5-n800.json"
+    ]
+  },
+  {
+    "signature": "933104b4d54bff83a2ae286d8eecc6a8d0e5d3ba34367fac991d7692517fad67",
+    "sha256": "3342c7356649302c022730e1ba8cfb14836cbc8c3777c88acf2794705baa6979",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.3-Q25-n400.json"
+    ]
+  },
+  {
+    "signature": "933104b4d54bff83a2ae286d8eecc6a8d0e5d3ba34367fac991d7692517fad67",
+    "sha256": "3f0bfaa7f2b8ba1f0f2a760315658e08a71cc2fdcf572a25be4c8aa7d7417f7f",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.3-Q25-n800.json"
+    ]
+  },
+  {
+    "signature": "c3a5fe023d0a7aa0011560f6faa0a7b5d8735a971cc1f466742c7b1652fa9dc7",
+    "sha256": "53b3b73c18e399579a7fe4975782d489550ba57fcde4cc39f9fdf4dc481d8540",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.65-Q50-n400.json"
+    ]
+  },
+  {
+    "signature": "c3a5fe023d0a7aa0011560f6faa0a7b5d8735a971cc1f466742c7b1652fa9dc7",
+    "sha256": "83eec6ef63683b720234d6d3ff10927d13fc1ae7e200f7b9cc0c68c8240b88fb",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.65-Q50-n800.json"
+    ]
+  },
+  {
+    "signature": "a3a8c16d73fbb76d15ebcdc8c11caa7fb5ea660279213e38f27426a61460dab3",
+    "sha256": "863560965bfd6390386ca31b74bf1fb6e37bf720f14bd6c51dbb765e2887d20f",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.1-Q12.5-n400.json"
+    ]
+  },
+  {
+    "signature": "e4fdfc984039274306a792afd238ee6c250eb9cb41c44c4dcf9f35fc4da49ab8",
+    "sha256": "481c0e59636b31bd4897e7724124a33a5c154a4b1502e7661b09bbc39713f79d",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.65-Q12.5-n800.json"
+    ]
+  },
+  {
+    "signature": "e4fdfc984039274306a792afd238ee6c250eb9cb41c44c4dcf9f35fc4da49ab8",
+    "sha256": "bd5088d2dbc5b96c694555803176f8c48a5033c234cbe424a629160bbf983846",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.65-Q12.5-n400.json"
+    ]
+  },
+  {
+    "signature": "a3a8c16d73fbb76d15ebcdc8c11caa7fb5ea660279213e38f27426a61460dab3",
+    "sha256": "f2fa0ac3c601daeed2223a07aee19aa575aa37a6abda366727f6c0bcc6ea0b09",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.1-Q12.5-n800.json"
+    ]
+  },
+  {
+    "signature": "844dc4d8471d2919fbd1640aca32103a9af2096eea9c991d1f59723cc80fe1a9",
+    "sha256": "be5cd8cca6cd47d547939afa5bbcf1d2a724d72fe7f4cfd88a65ec85d09923b8",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/cold-hold-06-2026-09-08/fine.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/cold-hold-06/fine.json"
+    ]
+  },
+  {
+    "signature": "a4389205e6c3756658f1d7ddf1abe298ad426695681e25bfcc35807397b76545",
+    "sha256": "0e970b515f2fced17fda6e65de73021ab785f32881b54ce1adcf9acbf8e183c8",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/cold-hold-06-2026-09-08/coarse.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/cold-hold-06/coarse.json"
+    ]
+  },
+  {
+    "signature": "0cab4d42c1566ca266cf3a1bd24659b0717fb46c6a95be6b70e45d147a4efb9c",
+    "sha256": "44814f1db3cb7cc41926412f66dcb1f64c99878d72020fe870dd0674e5cd42e8",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/energy-audit-2026-09-08/pilot/hold-0.8.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/pilot/hold-0.8.json"
+    ]
+  },
+  {
+    "signature": "b6bc83f97c6b2bdae3390a8fd435a1a2d400a736e44fbd5388197499ab13ecd3",
+    "sha256": "e4afd9b4b9142649554b1507efd8784ea354878b99d61f74e563a25f0fbed148",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/energy-audit-2026-09-08/pilot/flow-400.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/high-flow-cold-comparison/flow-400.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/pilot/flow-400.json"
+    ]
+  },
+  {
+    "signature": "b9dc03ac89af7d74b9ccb6743cef4871b104a0b3f094baf4df18a83c1a59bd14",
+    "sha256": "b9d12133b707d9ee7acce92d9be540e1c3e59d0978b1a7cc91b026854e554fd1",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/energy-audit-2026-09-08/pilot/flow-800.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/high-flow-cold-comparison/flow-800.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/pilot/flow-800.json"
+    ]
+  },
+  {
+    "signature": "fc7e086223ba2dd965d0150f8ea464eed28c7dcd259129ba41fdc22d0cf6ccbe",
+    "sha256": "f706823452868b76ae6de7b4d3847033dfb02e36a74d48db2a201d3e398ffd5d",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/energy-audit-2026-09-08/pilot/hold-0.05.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/pilot/hold-0.05.json"
+    ]
+  },
+  {
+    "signature": "7431daef0448e4cfd2e97cc8811990454130646fa4cb11d3882284008e24d0be",
+    "sha256": "bb8c016a853de28a0de753fdd7a1f1d495c3ccd557c8335461bd6a9b0914ad0c",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/energy-audit-2026-09-08/pilot/hold-0.2.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/pilot/hold-0.2.json"
+    ]
+  },
+  {
+    "signature": "31105050add5d3096e13db73f6882f16a852d222ef676a41fdf5e759743af195",
+    "sha256": "1feff5e11e717629722dca1c4c9be83a3f247c4f43f73dfdbda3627ddb739788",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/energy-audit-2026-09-08/pilot/reacting-200.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/pilot/reacting-200.json"
+    ]
+  },
+  {
+    "signature": "c5af1b8c5339e9acf2bd2d29323f669c269f9f6d3b0e6c28292f716230700474",
+    "sha256": "1b13888aa81198d41c34a26251868ed121c94df8b82bb1a3de76178e6c237154",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/energy-audit-2026-09-08/pilot/flow-1600.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/high-flow-cold-comparison/flow-1600.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/pilot/flow-1600.json"
+    ]
+  },
+  {
+    "signature": "9678d2915f9c5ba191b1003261aef5bdfe045227b001a7bea1bdbbb7b9f27304",
+    "sha256": "f611716cc2debff23416fcc1991f3508e00b03314991299e9328a657db511ab8",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/energy-audit-2026-09-08/pilot/hold-0.6.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/pilot/hold-0.6.json"
+    ]
+  },
+  {
+    "signature": "20debc86de823206f6004691d858a5a4e1bc0c344a695fbcf0d8cef3cf879c82",
+    "sha256": "03d58c7319cc8ee3d5505d00c7620c5abf041b8a24580fc7ec65ce27328aaef2",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/energy-audit-2026-09-08/pilot/inert-100.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/pilot/inert-100.json"
+    ]
+  },
+  {
+    "signature": "fefaa240a0ebcdf3b188bf4f59f7d0a045c667fe5c6325b2a0e1ee905f31d9c7",
+    "sha256": "2b6b9d7743c9a1d682f1d52492ac112604d3f5a0505cc7aa526bb3440fb15dd1",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/energy-audit-2026-09-08/pilot/flow-50.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/high-flow-cold-comparison/flow-50.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/pilot/flow-50.json"
+    ]
+  },
+  {
+    "signature": "31105050add5d3096e13db73f6882f16a852d222ef676a41fdf5e759743af195",
+    "sha256": "3083745558891b9dabbbf1f175f9115c001d145711c196506848c4a912e1b4e2",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/energy-audit-2026-09-08/pilot/reacting-100.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/pilot/reacting-100.json"
+    ]
+  },
+  {
+    "signature": "5f2845871fb59fbe106f6bc64ddfabf7b6a4a92bc2d07a555b4ec3d7cf79a3c2",
+    "sha256": "8c8a78057da4fd6ca6c3c5ef4c4c350aa71c09f1af8bc1a3df33ce6982a3c513",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-support-2026-09-08/0/inert.json"
+    ]
+  },
+  {
+    "signature": "7f92b7db4dde1060758bdcae0bf50aaca5e5ad03806b4c3d1b7e4b2b1f6798de",
+    "sha256": "028a36dabf56e6b2a1e5f69eabd2c559222923c76eb81b124ed2b0507b749a60",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/millisecond-hold-100-iter02-2026-09-08/fine.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/millisecond-hold-100-iter02/fine.json"
+    ]
+  },
+  {
+    "signature": "29671f8cacbe86c3a6731489dfdee8b325bd5704594893ae6f92344cfa2ba502",
+    "sha256": "003388b47d1581a0e0b9b15147d88cf3e2be7586fea9c92e23f73850bc3a57dd",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/millisecond-hold-100-iter02-2026-09-08/coarse.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/millisecond-hold-100-iter02/coarse.json"
+    ]
+  },
+  {
+    "signature": "67af3f8abf4b69b30405dbbe30431dea7ddc9ab9416ea36e71b2a8dae84dc43b",
+    "sha256": "fc1c6ccd116f428c1a651fd1b67da7dcee2888c92fabf629653729e9f536eff6",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/cold-passive-01-2026-09-08/fine.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/cold-passive-01/fine.json"
+    ]
+  },
+  {
+    "signature": "5fc7128e8f352df2b7131994a144d962ad188fbf6955cb9bc24f7559fbe9f33c",
+    "sha256": "69fc6fbd2c7ffba16c3ba01d9a3012798969fb02aedc46b68d31800ed17fb82e",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/cold-passive-01-2026-09-08/coarse.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/cold-passive-01/coarse.json"
+    ]
+  },
+  {
+    "signature": "9910df2cdc0646305ce0a6af347c15e4b266193afe0e473adb335f3b55cc7462",
+    "sha256": "e25de4827be7aef0606a1fb51211444438293db55260e9628814512da1e0e219",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/cold-hold-04-2026-09-08/fine.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/cold-hold-04/fine.json"
+    ]
+  },
+  {
+    "signature": "06b5137af860f0dd1b26ec9ae2f23847484701b9b1cb464fdbf0443a36bb065c",
+    "sha256": "d7c4755c24bd797120f46912ec2dd7780b41e5dcdc2e46456f8684352f7654fb",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/cold-hold-04-2026-09-08/coarse.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/cold-hold-04/coarse.json"
+    ]
+  },
+  {
+    "signature": "cb005d6bc9795887740240baf4c989b68c0b64f0beada4844de8ce3f1bfbe7fc",
+    "sha256": "a521db7317355f2f997648b39475c0db755593678007c5ad1b3ccad051145a70",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-02-2026-09-07/data/Q800-hold0.5-n800.json"
+    ]
+  },
+  {
+    "signature": "cb005d6bc9795887740240baf4c989b68c0b64f0beada4844de8ce3f1bfbe7fc",
+    "sha256": "79f17862181d898f21e2e09ae262a364b53fee140ddc61a9b55798ba9902164d",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-02-2026-09-07/data/Q800-hold0.5-n400.json"
+    ]
+  },
+  {
+    "signature": "4a31871a4cd4648913d6f586bf7472c64b7d9d2d1f22ace0726e71f337d853a5",
+    "sha256": "c89336aed9051597e210ff8ccb949686caa7c22cee4cd28bf675ec2fe6564070",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-02-2026-09-07/data/Q1600-hold0.5-n400.json"
+    ]
+  },
+  {
+    "signature": "4a31871a4cd4648913d6f586bf7472c64b7d9d2d1f22ace0726e71f337d853a5",
+    "sha256": "367ad022f40276e395d2e3013c4bea4e92954ec1b5e931c698418128535110f8",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-02-2026-09-07/data/Q1600-hold0.5-n800.json"
+    ]
+  },
+  {
+    "signature": "3ce317130584a5e19463dce9d9b448e7e53092a9f345129f70ef2d0112c487d7",
+    "sha256": "f950a5346608cd2692f1bef13455c3acc1cde1e9423102791d6eb5076f5e9e51",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-02-2026-09-07/data/Q800-hold0.1-n800.json"
+    ]
+  },
+  {
+    "signature": "3ce317130584a5e19463dce9d9b448e7e53092a9f345129f70ef2d0112c487d7",
+    "sha256": "6a2983881b1349b950272423284a89b9b8ede171f48a06b5cfd0f1486777a258",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-02-2026-09-07/data/Q800-hold0.1-n400.json"
+    ]
+  },
+  {
+    "signature": "ce7bf33078115edeff1f7c30817d49d6880a81f30f7bd372f116f5753bf6300c",
+    "sha256": "c983a5af2dc58f6a0bf3533255b0e9e303f5f6581a63650c759bc708ee3621c7",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-02-2026-09-07/data/inert.json"
+    ]
+  },
+  {
+    "signature": "e89a82b6423e9d95600f96979b93b798d672c463bcc05bd7504f72fd07e64686",
+    "sha256": "8fa8a377e4d375376cb114769748ac5727a5addd7e2a4fd43881277ee906b8d7",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-02-2026-09-07/data/Q1600-hold0.1-n400.json"
+    ]
+  },
+  {
+    "signature": "e89a82b6423e9d95600f96979b93b798d672c463bcc05bd7504f72fd07e64686",
+    "sha256": "8e8567b6428cc6a126bb1bed825cd1609ea1f36c367379fdaa34b9bfbb718cb9",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-02-2026-09-07/data/Q1600-hold0.1-n800.json"
+    ]
+  },
+  {
+    "signature": "032169886f9124ee93d395620b4c91a974a4c8845ace7fdebcdab2f6d64ffd57",
+    "sha256": "4d9c2762a657894950898ca3eb1d5e01b96023cec01918de621aaae133431182",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-02-2026-09-07/data/Q400-hold0.1-n800.json"
+    ]
+  },
+  {
+    "signature": "e76e1ae9a8d5445c655304888e7cc3ca51419d89d151470c7045674c026d8c2c",
+    "sha256": "0bec20acdbda1cccd6748b02cbe3a8c63a9026b5646d328ae68e824b6150c367",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q50-hold0.1-n800.json"
+    ]
+  },
+  {
+    "signature": "d966348de5310e93c0f0cfaa7759a54e250e4b5cee24c0d928e5f8af77fbdcc4",
+    "sha256": "e73652816af5f21336725a9c30da5d66baa8bd8befe649f12c19984be38acc4b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q400-hold0.5-n400.json"
+    ]
+  },
+  {
+    "signature": "d966348de5310e93c0f0cfaa7759a54e250e4b5cee24c0d928e5f8af77fbdcc4",
+    "sha256": "aa3e385848b0e26d48b5b12ace3fe14b6ac85daca13b1704c3b005ba17ac6a01",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q400-hold0.5-n800.json"
+    ]
+  },
+  {
+    "signature": "86a30ae62f4ac43426930897d79b59eb269c1d49c904084988b685b30925d451",
+    "sha256": "96d48b91efde449d6ae8b37d7e14bb76b08f275554e56ede47ba8e383c426e92",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q100-hold0.5-n800.json"
+    ]
+  },
+  {
+    "signature": "86a30ae62f4ac43426930897d79b59eb269c1d49c904084988b685b30925d451",
+    "sha256": "11662a0ca8f41c0521a14507d6ab5f81185195ef9ef97cc831080b4235ee69c2",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q100-hold0.5-n400.json"
+    ]
+  },
+  {
+    "signature": "81a3b667ad5c01ac5cf76c9372ea37d5258fa5a46b9b81d9b28bf2b295c115e9",
+    "sha256": "db91bf0f5b0de57dc41d69bc386ff6ec015d2ec61dec48cb21b5d905f08a3ae3",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q200-hold0.5-n400.json"
+    ]
+  },
+  {
+    "signature": "81a3b667ad5c01ac5cf76c9372ea37d5258fa5a46b9b81d9b28bf2b295c115e9",
+    "sha256": "432df062b6006a5464067b9c8153fc7655915b1a05ed03a6aafe2ee156d22b2b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q200-hold0.5-n800.json"
+    ]
+  },
+  {
+    "signature": "b7908e78d38eb5de47e55cfd7e40861aac856fab2fe8b1c0d694a94ed64136fa",
+    "sha256": "d3c1d2221a9a05707547dea07fb50cf8c2553382ce72852dc8cd79433a3b875d",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/inert.json"
+    ]
+  },
+  {
+    "signature": "907fa41430f05f1efb6c683e072a214ba0a412c0c25f70fd8baf0dd953ca1e27",
+    "sha256": "052657ca0f62fb905d67d45f28089a3763f0732d26e3afacef292c4dcd021c9b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q100-hold0.1-n800.json"
+    ]
+  },
+  {
+    "signature": "907fa41430f05f1efb6c683e072a214ba0a412c0c25f70fd8baf0dd953ca1e27",
+    "sha256": "3dfe3f766a0d35e4b75ae5c57381caaf4748477e2b44317b084833b42f043d32",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q100-hold0.1-n400.json"
+    ]
+  },
+  {
+    "signature": "a604dada5e9dd726749b624ffdcf66f8fb79c56a4edb5c2644252ca1b1cedcc9",
+    "sha256": "7be59fefaa72009755d0da233f98a536c5853530e765539769c289d5b31a9a27",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q200-hold0.1-n400.json"
+    ]
+  },
+  {
+    "signature": "a604dada5e9dd726749b624ffdcf66f8fb79c56a4edb5c2644252ca1b1cedcc9",
+    "sha256": "b6e16ce2a4cea61828eecd75ed4d8af3785bc1c8335b635dd589f86e8e972909",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q200-hold0.1-n800.json"
+    ]
+  },
+  {
+    "signature": "032169886f9124ee93d395620b4c91a974a4c8845ace7fdebcdab2f6d64ffd57",
+    "sha256": "ec96ccc0c80ed82f198f0f36f975f2cdfb20c575f2bea9e0d90e865d1a883c3e",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q400-hold0.1-n400.json"
+    ]
+  },
+  {
+    "signature": "032169886f9124ee93d395620b4c91a974a4c8845ace7fdebcdab2f6d64ffd57",
+    "sha256": "442dfc8a98d53735932dea4bb0ea07918fddd188e0167d7e6010cb0a3cab385a",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q400-hold0.1-n800.json"
+    ]
+  },
+  {
+    "signature": "781ae0ce66926a4834b85468f8b8786b7acbb0b3367e2f539cf29f06ba5b0e76",
+    "sha256": "f3c331c5b90dd4d94cd663550e02325d7feb3857ec58db16c0b6d6619d7e46c9",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.1-n400.json"
+    ]
+  },
+  {
+    "signature": "781ae0ce66926a4834b85468f8b8786b7acbb0b3367e2f539cf29f06ba5b0e76",
+    "sha256": "0a94ec3c808e3b0c85f556973bf6b829c9056e12ea4d546fba1f8d588f005d7b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.1-n800.json"
+    ]
+  },
+  {
+    "signature": "9c881d1005223e721ddcc6b0ac052e002524e8f34864d029417ae6c85fc46fd0",
+    "sha256": "5a3b00792a5c2f0169f77231e231c2dd0878fa58d474c6a088bb3ba159c6769a",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.1-n800.json"
+    ]
+  },
+  {
+    "signature": "9c881d1005223e721ddcc6b0ac052e002524e8f34864d029417ae6c85fc46fd0",
+    "sha256": "6995f07cca4997344770875081feacefa1dda279064ea3da3c3bb42c45d3bcf0",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.1-n400.json"
+    ]
+  },
+  {
+    "signature": "17597f171ec8c7450b8cc1a00adda2de918fd4e58a836928b2ebb18b90cee054",
+    "sha256": "1b9f7b79b3f2d2a77a90b41e1acc484e59d7738a49b75d4a38dd3955a864fd9e",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.1-n400.json"
+    ]
+  },
+  {
+    "signature": "17597f171ec8c7450b8cc1a00adda2de918fd4e58a836928b2ebb18b90cee054",
+    "sha256": "f258e5e054d4eec5a3082c03710f2c40642a8cd73e4fbf9ff8754d49c7ac3182",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.1-n800.json"
+    ]
+  },
+  {
+    "signature": "75226719c7fe3c113215b5b70da669e825d750d5c0fea61d4b931cc64f615719",
+    "sha256": "17b7794c81a7f865ae6ce03c152ae5d50dd9352c25f5bcadeebc92c64370a7a8",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.05-n800.json"
+    ]
+  },
+  {
+    "signature": "75226719c7fe3c113215b5b70da669e825d750d5c0fea61d4b931cc64f615719",
+    "sha256": "f8fc25c661166436885d41b9f60a8c725e8fe0733599104ef79ac29a9a194b72",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.05-n400.json"
+    ]
+  },
+  {
+    "signature": "21232f241cd1a21564dc8a4cc86cefd5aa70cd217ced04ddbeac58306186d900",
+    "sha256": "958c7c4d7e70b8d914a2e6179555320aff6df6a77603efb9fc8900984b0bac94",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.1-n800.json"
+    ]
+  },
+  {
+    "signature": "21232f241cd1a21564dc8a4cc86cefd5aa70cd217ced04ddbeac58306186d900",
+    "sha256": "f8cfcbf606bc99784c6d13a56a876f0face40296aa449de583c04bd58c8fd308",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.1-n400.json"
+    ]
+  },
+  {
+    "signature": "ab8e12947ee3786d8e139d81592bde0817d4300fb5735116fe04e0fc458f515f",
+    "sha256": "cf718c6f28d6ff4bbd7a6f2637f5afb789d25c21068258d92a1b8a076a01f8ea",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.3-n400.json"
+    ]
+  },
+  {
+    "signature": "ab8e12947ee3786d8e139d81592bde0817d4300fb5735116fe04e0fc458f515f",
+    "sha256": "22ad2f86e926813c93074ee2dd3488456a9f2a934b875e4f35629e7e013187e9",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.3-n800.json"
+    ]
+  },
+  {
+    "signature": "2a25e024eb7450d16741b628cd79e198128a1a47e63796cd377e123a06e55afa",
+    "sha256": "8adee9dd5814248b0cd5773d7f1c2db99749c89faa157f95f8dd29f0d11043be",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.4-n400.json"
+    ]
+  },
+  {
+    "signature": "2a25e024eb7450d16741b628cd79e198128a1a47e63796cd377e123a06e55afa",
+    "sha256": "ed5043f5164ea28a97ad76c811e66c5b8c51eb170e652ea88120036fb75a77f7",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.4-n800.json"
+    ]
+  },
+  {
+    "signature": "d60295f843c59237a2cd43ce61ad320a397227707664678b4c0a2a2ebfe3eab9",
+    "sha256": "5bae02cd988cf32a04eb9a924a4b89409dbd08e67fa0f6f544f4414c5cf2183d",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.5-n400.json"
+    ]
+  },
+  {
+    "signature": "219373662057627ee3a1a390db1cc9fea3b283c20f86d2a10f8bf707ddd6277d",
+    "sha256": "7bb26e1f1cedc102ebcadf00e70d8cc35d64f29e38c4ed80f7973da679c37acc",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.3-n800.json"
+    ]
+  },
+  {
+    "signature": "d60295f843c59237a2cd43ce61ad320a397227707664678b4c0a2a2ebfe3eab9",
+    "sha256": "41482d640ef1678b56f1bf6ce62085b85c7ebf098f25a992c31147346391f046",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.5-n800.json"
+    ]
+  },
+  {
+    "signature": "219373662057627ee3a1a390db1cc9fea3b283c20f86d2a10f8bf707ddd6277d",
+    "sha256": "7c30057ca6ab3bbfaad4c9947975e00a148decf11678b4be83d5ecd410510f66",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.3-n400.json"
+    ]
+  },
+  {
+    "signature": "78c43b108c1146bcc556f8ee511053c22aa0cd2cf91cbeca9ee3e2475bbca71f",
+    "sha256": "4c0da529c1cabaf3d8e4edac655be074304ce49941a036f5971ee40b36f9c6cc",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.05-n400.json"
+    ]
+  },
+  {
+    "signature": "51ba6fa5d013c204dc897004a5a8b3fd9103efb7118ba522ae027505c1cfb2ab",
+    "sha256": "749e6bb3e545cfbfb319aa4f80d4440ea0ddedf1f88678d274eca7af465ce7f0",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.5-n400.json"
+    ]
+  },
+  {
+    "signature": "78c43b108c1146bcc556f8ee511053c22aa0cd2cf91cbeca9ee3e2475bbca71f",
+    "sha256": "7b67d002de2d452bfad23801388f06e2eeb4292f858465352ed22d51d7db4230",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.05-n800.json"
+    ]
+  },
+  {
+    "signature": "51ba6fa5d013c204dc897004a5a8b3fd9103efb7118ba522ae027505c1cfb2ab",
+    "sha256": "0376c33c389533f5647763e0b2742897f6e7d4cc88bb4f305d7c5fa32cc734b1",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.5-n800.json"
+    ]
+  },
+  {
+    "signature": "29327f7582f8ac692a40fff10bb1c247831071e81a9347da7390a8e0fe50d8f4",
+    "sha256": "4350e1467604c01d7bf1a15bcd9413094eafaae3c1774af49a496784877d786e",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.3-n400.json"
+    ]
+  },
+  {
+    "signature": "64c4541e72c969a3e551ff54cac0ed62c24b26e0e93ce6f62e079c393389910f",
+    "sha256": "c72b64ee6f194659a81e00fe79dcc1e96481460f8047f4db2a23453185614360",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.05-n800.json"
+    ]
+  },
+  {
+    "signature": "2ec23c095c1394d42d21e6a89ae235a11c7ce722032e27eb9538a39a586184a2",
+    "sha256": "b59e34b993c8f3f9b7cdab95ca6df4bf4a6c396fe19434771237c9a9b4b8687b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.5-n800.json"
+    ]
+  },
+  {
+    "signature": "64c4541e72c969a3e551ff54cac0ed62c24b26e0e93ce6f62e079c393389910f",
+    "sha256": "52a7befcaa6cedc0ec547ca5076e61c66881182796ad8ce3bb272fabe1046522",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.05-n400.json"
+    ]
+  },
+  {
+    "signature": "29327f7582f8ac692a40fff10bb1c247831071e81a9347da7390a8e0fe50d8f4",
+    "sha256": "27e4d92de2809ecaa7d0e44922fd8cfee8c833e07be6c706f218e7662ba6affd",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.3-n800.json"
+    ]
+  },
+  {
+    "signature": "2ec23c095c1394d42d21e6a89ae235a11c7ce722032e27eb9538a39a586184a2",
+    "sha256": "d0d6ba5b176a29c63ea1c20f2c1098e81476d859faca397e1ff4ff2b9f472ac8",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.5-n400.json"
+    ]
+  },
+  {
+    "signature": "ac7c2c5c06af2a66ddb30b2d4fc60be3b66c804c6e76f049ed2d1a30729c2ba2",
+    "sha256": "d7c48bf1f5fabf2f099c6af5f27faee573362f3451e5c525682b2019e5736def",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.2-n400.json"
+    ]
+  },
+  {
+    "signature": "ac7c2c5c06af2a66ddb30b2d4fc60be3b66c804c6e76f049ed2d1a30729c2ba2",
+    "sha256": "6895649a31722751530517c0f0aa033202fba7c26823632f9dc8dc035396c61d",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.2-n800.json"
+    ]
+  },
+  {
+    "signature": "9309d8ce67a9fb0ff2fc7665b8e973eef4ff686735a2fba4b0ba420ab636229b",
+    "sha256": "1712f7f34142fe218a9148821aba41b4c3cf480e704c844005140fa1c12a9fa6",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.025-n400.json"
+    ]
+  },
+  {
+    "signature": "9309d8ce67a9fb0ff2fc7665b8e973eef4ff686735a2fba4b0ba420ab636229b",
+    "sha256": "061e29a36fb7d9a6e034af300dbc845bd101d236b7594f6454ace726379e0259",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.025-n800.json"
+    ]
+  },
+  {
+    "signature": "42cc64554abf17a63cc1fe3a704268722bbf1c00b437e337b85fae25a400ac32",
+    "sha256": "58a9a5c55529b568d6de94b28656dc1ca4b8b0bb65cef3afbc75a51e7f90fe1b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.2-n800.json"
+    ]
+  },
+  {
+    "signature": "42cc64554abf17a63cc1fe3a704268722bbf1c00b437e337b85fae25a400ac32",
+    "sha256": "134caa9a33ac74d708a252e09d7d203e75c81ae8213eca1860909353373ab6f8",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.2-n400.json"
+    ]
+  },
+  {
+    "signature": "7302418bac68e8c5c937922955d2399544f8c25fc9ffc7e053ed07573579d0f4",
+    "sha256": "c2cb239c1f3789d8c3c3a06bec3024d8020f96af3d076ce724c508aed735b08b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.4-n800.json"
+    ]
+  },
+  {
+    "signature": "06a62cc85d6a1884f83c7916eb6bd5342b467b8433df6f40c026ae657589c809",
+    "sha256": "45c1acb150d6d8b7a4848e12671cc6400c2c5e77211f675b9c128e9dfaa93a9a",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.2-n400.json"
+    ]
+  },
+  {
+    "signature": "7302418bac68e8c5c937922955d2399544f8c25fc9ffc7e053ed07573579d0f4",
+    "sha256": "28e9baceb1a0c5d7ba1badfc5e6ca8ac874a28dd19d174f41fb79707bf3c7062",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.4-n400.json"
+    ]
+  },
+  {
+    "signature": "06a62cc85d6a1884f83c7916eb6bd5342b467b8433df6f40c026ae657589c809",
+    "sha256": "af20ba3805bfdac1674bc3d59f4e8fa3b2220b88f1affeb86c9007a22b0b6cc0",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.2-n800.json"
+    ]
+  },
+  {
+    "signature": "260901c596823666f4d58b83c9783cd5e3ad82761a853fabaf9d241fbf437aa4",
+    "sha256": "438c427eba550a8d3aa495a81a3c081d6774c4e2d814be520c16c0870153fd6a",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.4-n800.json"
+    ]
+  },
+  {
+    "signature": "260901c596823666f4d58b83c9783cd5e3ad82761a853fabaf9d241fbf437aa4",
+    "sha256": "606a652c9b657475ab7c57510a28968b3e7cd2ccdb7f3cdc7d770c2452da3fe5",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.4-n400.json"
+    ]
+  },
+  {
+    "signature": "c017e8b326dfeb5df8a4f83dce0b309d8519c1d95d31b57d9549efe2c7143116",
+    "sha256": "4fd972a9c045de3d9cba685047847c21c90f94700fd2f831647fe105d08d3513",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.025-n400.json"
+    ]
+  },
+  {
+    "signature": "771ebef1a92a570f96066fff8f52c686ac1c35effc74fb91638d16a4391f99ee",
+    "sha256": "6eee4ffac150a50f7e928d1dc1f69c8eb092e3315be5cd19b0075385331346a2",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.05-n400.json"
+    ]
+  },
+  {
+    "signature": "771ebef1a92a570f96066fff8f52c686ac1c35effc74fb91638d16a4391f99ee",
+    "sha256": "97e60568c7bb60d975ae9485e058a3a3945ae6b611b5e2bc96954a24e119f50e",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.05-n800.json"
+    ]
+  },
+  {
+    "signature": "c017e8b326dfeb5df8a4f83dce0b309d8519c1d95d31b57d9549efe2c7143116",
+    "sha256": "cce0bd1353b1dd34c8a2645a4355a1666970b372bd88194449f41e0334a065fc",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.025-n800.json"
+    ]
+  },
+  {
+    "signature": "871e459cee9d2a43c869106b394b57261e6ad6334af4583f806859451a56ba11",
+    "sha256": "1cc53349f9108fc172f759e5d5f055da4007d10a44bb7c007076a66a2805889e",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.2-n800.json"
+    ]
+  },
+  {
+    "signature": "98a0d3dcd67f184c85774f6375a0606696d97f69dda25eb1b20357116e772721",
+    "sha256": "85c356541b9d10543dbf51187bc969c9f360066912a4e816551f29de004980bf",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.4-n400.json"
+    ]
+  },
+  {
+    "signature": "871e459cee9d2a43c869106b394b57261e6ad6334af4583f806859451a56ba11",
+    "sha256": "4132a9372ea670f61e8ed6287ce68f547ae3735c46ea47feaf1da498f8e2915c",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.2-n400.json"
+    ]
+  },
+  {
+    "signature": "98a0d3dcd67f184c85774f6375a0606696d97f69dda25eb1b20357116e772721",
+    "sha256": "884545ed9d72d9acac48847ad514001faf67f7f79207b15d7e5711ae7e8d21bb",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.4-n800.json"
+    ]
+  },
+  {
+    "signature": "36e1191df63c6548465ddc18603647e042630a91425bc818393c1cd11b94e3c9",
+    "sha256": "a6b3b6628cf34b44a5d44568c568691ab1651858a606865b840973f5ebe27ebf",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.3-n800.json"
+    ]
+  },
+  {
+    "signature": "36e1191df63c6548465ddc18603647e042630a91425bc818393c1cd11b94e3c9",
+    "sha256": "48fc19508ab205470e60a856fcb136cb97f982267a529ef18075b0975bdd769e",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.3-n400.json"
+    ]
+  },
+  {
+    "signature": "c2e8cbac452bd1ca9891e62c9304e2fe465beff5ac9e9a275cfaa653bbfe3372",
+    "sha256": "5080fed6689df7739b3abc251530437a29e2c919b7b24b8a96d2103c84f39092",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-support-cloud-2026-09-08/0/n800.json"
+    ]
+  },
+  {
+    "signature": "c2e8cbac452bd1ca9891e62c9304e2fe465beff5ac9e9a275cfaa653bbfe3372",
+    "sha256": "2d52df658a435fdda95b84b39cf1b4ea20b350fb79dcd25c94cc821459f056c9",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-support-cloud-2026-09-08/0/n400.json"
+    ]
+  },
+  {
+    "signature": "5f2845871fb59fbe106f6bc64ddfabf7b6a4a92bc2d07a555b4ec3d7cf79a3c2",
+    "sha256": "9b65ab6fa26e31a5bd5f2b500a5ae2845202ceeae902d96434a20af2b2c4e7ce",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-support-cloud-2026-09-08/0/inert.json"
+    ]
+  },
+  {
+    "signature": "e16f4fa694903121777ffd1ec707b5350b3755c08faa80a064c378e043c61964",
+    "sha256": "4f5d477f4aa8f03ba9cf63d55357c47e71327c8e7c3e8c30a4c4c574bdbd0757",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-support-cloud-2026-09-08/1/n800.json"
+    ]
+  },
+  {
+    "signature": "e16f4fa694903121777ffd1ec707b5350b3755c08faa80a064c378e043c61964",
+    "sha256": "81d08286509a12cafda6e40230c6917afb8194b6023216c2a855866c568bd810",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-support-cloud-2026-09-08/1/n400.json"
+    ]
+  },
+  {
+    "signature": "089285e423c76f53cf73b24838a30c29b482c7c4c7c95a09f2f259dbb9fa0b1e",
+    "sha256": "5bd23af6d4c1c6403345ac7fd92d3a883a2ba003d3686671b94e6ed23aa8ae6b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-support-cloud-2026-09-08/3/n800.json"
+    ]
+  },
+  {
+    "signature": "089285e423c76f53cf73b24838a30c29b482c7c4c7c95a09f2f259dbb9fa0b1e",
+    "sha256": "0a90a47dc3efb1850e19d01fa1de33f7b87ca6695b59f2c87f0b5d41655fe454",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-support-cloud-2026-09-08/3/n400.json"
+    ]
+  },
+  {
+    "signature": "c01c1fcc4f7c01a064502d4d8d081248e97b5eeafb08ea318154796daa189b90",
+    "sha256": "c1fc30859610ee8608a79ee2e1b8128ad2dd6341829c549e94dc4ee6bc91d98f",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-support-cloud-2026-09-08/2/n800.json"
+    ]
+  },
+  {
+    "signature": "c01c1fcc4f7c01a064502d4d8d081248e97b5eeafb08ea318154796daa189b90",
+    "sha256": "8dce5a8a508f486f0d38664c35dec68f749bd9151defb0432772f5671202f02e",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-support-cloud-2026-09-08/2/n400.json"
+    ]
+  },
+  {
+    "signature": "2740b5cd46c32972be3e0021ce1fbb51c97e2a795aca1802927682b82e5d5b5b",
+    "sha256": "a8452ddacb1b8916434dc642052cc51eba4b78e575e5c87c4cb287f5457d569f",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-01/verification/0/n800.json"
+    ]
+  },
+  {
+    "signature": "2740b5cd46c32972be3e0021ce1fbb51c97e2a795aca1802927682b82e5d5b5b",
+    "sha256": "7be151c50c6cc4d5c601550fd99412028ba434f87a1d5126236cec39085dc356",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-01/verification/0/n400.json"
+    ]
+  },
+  {
+    "signature": "c87bf9a3b68711604e974aa1cecb0c80ffc44c16de90ed780062e525b6487b7b",
+    "sha256": "c56e01f0688b24a941d83019186bf5c718e1023c71c04bb3ac813c996ef90134",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-01/verification/1/n800.json"
+    ]
+  },
+  {
+    "signature": "c87bf9a3b68711604e974aa1cecb0c80ffc44c16de90ed780062e525b6487b7b",
+    "sha256": "44f3a7fd63c71b956892b0e235f1e8cf3d21ed42b39b66dd417e7727b8a43962",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-01/verification/1/n400.json"
+    ]
+  },
+  {
+    "signature": "83d936b26d6909a184b5a0d5f96031f7df83b01f159c01fa6b555606f2e215e1",
+    "sha256": "c5c98b3d7423f9c61a98707f4eb4ac1394bf6480264b39b1935d407eac625d30",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-01/verification/2/n800.json"
+    ]
+  },
+  {
+    "signature": "83d936b26d6909a184b5a0d5f96031f7df83b01f159c01fa6b555606f2e215e1",
+    "sha256": "500ef3d5f69cdf5826e5ffe81cb70e6eeefcbc00fd03f10c9ed1503a680165c2",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-01/verification/2/n400.json"
+    ]
+  },
+  {
+    "signature": "96e5519892972c4edd3c1f123d2243cce160d7ddbaef19f5783b3bf9df58259c",
+    "sha256": "07492e74b9a67440086730c86026acc79670b1a187d7db251c3838679dd686d8",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-02/verification/0/n800.json"
+    ]
+  },
+  {
+    "signature": "96e5519892972c4edd3c1f123d2243cce160d7ddbaef19f5783b3bf9df58259c",
+    "sha256": "41167de2858d73ea785263b587c9349e02944f6960f18c36d6409d6af9edb68b",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-02/verification/0/n400.json"
+    ]
+  },
+  {
+    "signature": "7355fe782d72d6d9adb363ec2647d5a783c083b6c902805e433b938e0b83e29b",
+    "sha256": "1ef1bc140445883ab408d21037c2f60e0a5d1129483e51473c5c1519b64d73e0",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-02/verification/1/n800.json"
+    ]
+  },
+  {
+    "signature": "7355fe782d72d6d9adb363ec2647d5a783c083b6c902805e433b938e0b83e29b",
+    "sha256": "92ef5f889fda6c04738eaba61bae3d2061e9491e928336110f03c8ecc728bddc",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-02/verification/1/n400.json"
+    ]
+  },
+  {
+    "signature": "629dcd22ae73caf5d802eca82071d1a68bf1820d97fc6c56f6c6120ebd1b70a4",
+    "sha256": "59b165c6400febd3ff2bd22421c750aacb2321afd1aa77ac49dc6d81c3a053c6",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-02/verification/2/n800.json"
+    ]
+  },
+  {
+    "signature": "629dcd22ae73caf5d802eca82071d1a68bf1820d97fc6c56f6c6120ebd1b70a4",
+    "sha256": "fd7b478d37b0578e606b82bc2d64c43bb02e116490e9d49935cb811a1b080585",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-02/verification/2/n400.json"
+    ]
+  },
+  {
+    "signature": "94a1d1269c02c2c32734024df956cc17426a04a5a2145135f0569c86f77d942b",
+    "sha256": "b35b2e44ea3296fd6abc8d2d2e4fcb82e7307c87830c8449c2eef3f5841a1e7f",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q12.5-T1800-h0.5-n400.json"
+    ]
+  },
+  {
+    "signature": "94a1d1269c02c2c32734024df956cc17426a04a5a2145135f0569c86f77d942b",
+    "sha256": "c903d80161767c756a4cbbc3847e0171c3fa924277f434e2b605dfc0619ceb92",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q12.5-T1800-h0.5-n800.json"
+    ]
+  },
+  {
+    "signature": "4b8e4fd8dd8d8e2d102f74720f6b23f5ec782de51e8948252765f96857d7fe9e",
+    "sha256": "69f9b7a6c1a10ca08af24ec9e481a4d44c42427b8cf3b6c6af9e7eef6c5e7b15",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q12.5-T1800-h0.5-inert.json"
+    ]
+  },
+  {
+    "signature": "0cab4d42c1566ca266cf3a1bd24659b0717fb46c6a95be6b70e45d147a4efb9c",
+    "sha256": "d518ec5004bb193e77c97535515890268f96a0fc9dc8ba41b0fb39fd0c06d611",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.8-n800.json"
+    ]
+  },
+  {
+    "signature": "0cab4d42c1566ca266cf3a1bd24659b0717fb46c6a95be6b70e45d147a4efb9c",
+    "sha256": "32e3b4e8dfbf338aec15381c164a76b0591dd32555d0e6c0159198720196d84a",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.8-n400.json"
+    ]
+  },
+  {
+    "signature": "75152630db8fb5a7c478afbf3361d65d1fedb2a5e281e61c12ed56b97cb9deb1",
+    "sha256": "b4cb8f30dee0e98a5c5d6261e6c1520d7e7c02cb269584cd813eee9289d9583a",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.5-n800.json"
+    ]
+  },
+  {
+    "signature": "f77a41ebbf3cca6c82d7132fa80624a1259265b8102ab9743beaeae729901dd6",
+    "sha256": "c1b69b6c7eb47003eaf87001c3ddfed55fd1f02319c1f864608448475110dfbb",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.65-n400.json"
+    ]
+  },
+  {
+    "signature": "f77a41ebbf3cca6c82d7132fa80624a1259265b8102ab9743beaeae729901dd6",
+    "sha256": "24932eaad40086c5bb02b30104d63f59a8a8b8010a7add4bda21701d946a8f07",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.65-n800.json"
+    ]
+  },
+  {
+    "signature": "9b2fac0c7fbfa2ece924b10f4a272306372e261603c5b917384e2ae658bef427",
+    "sha256": "00a5cfa739ca7ffff773e23ae15d2fe3307ea2c0a561d05cc1fa31f59e9a481e",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.8-inert.json"
+    ]
+  },
+  {
+    "signature": "032256d6495a419a4f6109b289d500e5aff85e63a877c72dae81194ce75f0f00",
+    "sha256": "b38fbbaaac97b90e793f4c2a34cecd9a2c12509d4503cc5feacf7a7d59ed6472",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q25-T1800-h0.5-n400.json"
+    ]
+  },
+  {
+    "signature": "032256d6495a419a4f6109b289d500e5aff85e63a877c72dae81194ce75f0f00",
+    "sha256": "fde2438e117699647c8424b930ffca344f0ce0668aad7ac8a8c252724815736e",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q25-T1800-h0.5-n800.json"
+    ]
+  },
+  {
+    "signature": "34a1fd9f5e89e161ecac0c50c815348bf940c54143c810d48ce1f51ff53f745b",
+    "sha256": "8c0063b134bd8621a5cc88db7b454122672972b76725bc31cb238985454603da",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/cooling-representatives-2026-09-08/f1v2-fine.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/cooling-representatives/f1v2-fine.json"
+    ]
+  },
+  {
+    "signature": "f802a1995c12002317f4749e6354fead6c8067a7194a17ebcc3a2d754329054e",
+    "sha256": "e6d89f0bba668e255860c3cda3da5e037cca91d6e8a01fc5052a8a8686bab4ee",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/cooling-representatives-2026-09-08/f025v2-fine.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/cooling-representatives/f025v2-fine.json"
+    ]
+  },
+  {
+    "signature": "7dc576b8ef0e9cada88ac07f0762e082bb1e35a172541fd8c57313692e717fdf",
+    "sha256": "3f5d75ecd309a2d5f502c90a9ee660450f2b349c036e3d8c67cbe9bed0e5ff57",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/cooling-representatives-2026-09-08/f1-coarse.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/cooling-representatives/f1-coarse.json"
+    ]
+  },
+  {
+    "signature": "3dcfea9317e122a87f0fbb915a1620e1bbef17c2ec22e9b3ccdb9cbfad4a17d1",
+    "sha256": "ce8e66fb735d1b1f8e1727e64be33b4a268178c67b4aecc323443237840ba74a",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/cooling-representatives-2026-09-08/f025v2-coarse.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/cooling-representatives/f025v2-coarse.json"
+    ]
+  },
+  {
+    "signature": "5f564d127b44ed3aa77f43e7a3c6275989fdef9a2929fc1ff012265578a5dce5",
+    "sha256": "33e5794445206c4afc8a19a17babf0cb49598e2e530adb557f6dcdc67a85ab25",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/cooling-representatives-2026-09-08/cjh-fine.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/cooling-representatives/cjh-fine.json"
+    ]
+  },
+  {
+    "signature": "5f564d127b44ed3aa77f43e7a3c6275989fdef9a2929fc1ff012265578a5dce5",
+    "sha256": "f25f30f5ab6724d4a605a3124be5013504db193d52ac51a8d8cb676739aba526",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/cooling-representatives-2026-09-08/cjh-coarse.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/cooling-representatives/cjh-coarse.json"
+    ]
+  },
+  {
+    "signature": "c730692a4532568bece69a049694ad1114770620ccfa85f57248ac25a5393a58",
+    "sha256": "5f5b557e3259fca3a3570c02f73fbf2c01eaa2a65c94b4368dc4e0d77664b5e7",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/cooling-representatives-2026-09-08/f1v2-coarse.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/cooling-representatives/f1v2-coarse.json"
+    ]
+  },
+  {
+    "signature": "cfbba23e0c39006a3885361c1bfd186593c2adb6b28eaf558da5130f4cd37ed9",
+    "sha256": "9a8793f811da6dec1e6ec9b1d072885d08a8d587f98fbef77c18327e90e5d156",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-fixed-pulse-02-2026-09-07/data/refined.json"
+    ]
+  },
+  {
+    "signature": "cfbba23e0c39006a3885361c1bfd186593c2adb6b28eaf558da5130f4cd37ed9",
+    "sha256": "47bf3b44ca92cc1ac5740a168f7592a45a8b177f15182198cd99bb7856870c40",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-fixed-pulse-02-2026-09-07/data/baseline.json"
+    ]
+  },
+  {
+    "signature": "3ae496f91ede4117fd34fa3e6f1d6ea20938eee936941434d2628e4429d07f90",
+    "sha256": "ad77a663dd3cfe62a7a22ad3f902e824dba761189ee7f108f720da4ec6985963",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-fixed-pulse-02-2026-09-07/data/inert.json"
+    ]
+  },
+  {
+    "signature": "320f64837c1d33d10b378986babd1b09ddf2e3c51ecdb62a70b37702215648ff",
+    "sha256": "49058b98005f25a77da0b947edb83295527c1d21f0721403a2b0362f4f8b8d46",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/replay-correction-01-2026-09-08/fine.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/replay-correction-01/fine.json"
+    ]
+  },
+  {
+    "signature": "7f904ce1c72f261fb16e248449ec786f2faca4848556263d6b58213ab0bf5b26",
+    "sha256": "a43461156862fcb545f4d791c07bdd11ba84a8c2a2ba6740e995e8bf2d513bb0",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/replay-correction-01-2026-09-08/coarse.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/replay-correction-01/coarse.json"
+    ]
+  },
+  {
+    "signature": "ab25e650cea223066bf0502a289b3a1b61a749426dbb69eb44f77ec19e0c1e90",
+    "sha256": "3323662f56c6cf9610a3df348f81a983a3f5ff8286d65cbc0584da147cd558fa",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/cold-hold-04-iter02-2026-09-08/fine.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/cold-hold-04-iter02/fine.json"
+    ]
+  },
+  {
+    "signature": "30ef65cc38d2215882048c5c986860beaf0fdcd91027e68bccbbb279015bc95d",
+    "sha256": "00a03b8d1419355379709f226ea478158da0ab7425ecc260f4b73b53c4b94cd9",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/cold-hold-04-iter02-2026-09-08/coarse.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/cold-hold-04-iter02/coarse.json"
+    ]
+  },
+  {
+    "signature": "7a021c02970cbdc2f165a3ba1858bebf92e13cb2d2f9e737192141a5e13cc528",
+    "sha256": "d843dcd84935f13f1daf02b807fbbf0137e2fe0b1d3f2f1b425a88b1e6b55440",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/short-hold-feed-bracket-2026-09-08/ch4-0790/fine.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/short-hold-feed-bracket/ch4-0790/fine.json"
+    ]
+  },
+  {
+    "signature": "7ed226179f3a1a7ac67c77332caf2d4d3fb903059ff77daae7310619ad2f8f30",
+    "sha256": "22e5701ea593fa3b702b33f7f33fba79daeadf1d9d3582c78117ee8af23895e4",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/short-hold-feed-bracket-2026-09-08/ch4-0795/fine.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/short-hold-feed-bracket/ch4-0795/fine.json"
+    ]
+  },
+  {
+    "signature": "c0cf41fd52bddbe5f6cab2d2ebde4b988c459b6a0bf355206327ce4851b711d6",
+    "sha256": "f00e1583db6d26cfea5b3e8d7e9f3600d15cac79e14f63a77001a70065290e65",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/short-hold-feed-bracket-2026-09-08/ch4-0795/coarse.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/short-hold-feed-bracket/ch4-0795/coarse.json"
+    ]
+  },
+  {
+    "signature": "64c4bb0d87a6d8815d16eb62146bb922f1a136041cb6b96336a51452747982ee",
+    "sha256": "1aa6ece13e157b727ce0fd4e2d31186227deb45262a9f5f668910e56266169f9",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/millisecond-hold-100-iter01-2026-09-08/fine.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/millisecond-hold-100-iter01/fine.json"
+    ]
+  },
+  {
+    "signature": "a14fc27f06ed5b8e72aa7e997f2091958507ad8369efc1d5aa48ad23d55ec1f4",
+    "sha256": "eee62116fdbcb40dae84e6f729d709f80c06e16d3a1fc65a2349b496a8c5d0f2",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/millisecond-hold-100-iter01-2026-09-08/coarse.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/millisecond-hold-100-iter01/coarse.json"
+    ]
+  },
+  {
+    "signature": "cfbba23e0c39006a3885361c1bfd186593c2adb6b28eaf558da5130f4cd37ed9",
+    "sha256": "1609b3d66a498bf341e11455bc5a48434c6596c9e814625a041d4804de19eb9e",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-fixed-pulse-02-duplicate-2026-09-07/data/refined.json"
+    ]
+  },
+  {
+    "signature": "cfbba23e0c39006a3885361c1bfd186593c2adb6b28eaf558da5130f4cd37ed9",
+    "sha256": "faed6634fb6cbf4117a05e9eb16827f4fdf6e3cc2fb90eb4c54937a0bb19bd13",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-fixed-pulse-02-duplicate-2026-09-07/data/baseline.json"
+    ]
+  },
+  {
+    "signature": "3ae496f91ede4117fd34fa3e6f1d6ea20938eee936941434d2628e4429d07f90",
+    "sha256": "8f64276cb711f81265b90710c03c68ffc424e7451c3b25627d9c396301407fa1",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-fixed-pulse-02-duplicate-2026-09-07/data/inert.json"
+    ]
+  },
+  {
+    "signature": "df534c4594b9e0cc2c787bd30622d59cadc115c7fb01d97bdb1f6e63a32e0645",
+    "sha256": "ca3996579b1c4cd2ddf235fa73d5feef02b954e3b03458dd1aadbf7768ad6b2a",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-nextorch-01-2026-09-07/data/anchor.json"
+    ]
+  },
+  {
+    "signature": "2aa28c00377069e2d1818151c5ccb46fab40dd9cd465b23e0ce52c8a2082928a",
+    "sha256": "661bb316215aef43d801ac46891f239da392f50b0e515a8c4d01c1c84d9695f6",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-nextorch-01-2026-09-07/data/candidate.json"
+    ]
+  },
+  {
+    "signature": "2aa28c00377069e2d1818151c5ccb46fab40dd9cd465b23e0ce52c8a2082928a",
+    "sha256": "7f10815dd2e65ea7965492d2a6b2583c9ead093e32bca7d4ecab1bba7632f5e9",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-nextorch-01-2026-09-07/data/refined.json"
+    ]
+  },
+  {
+    "signature": "5de4e878cbfedd45808fb6d96e683f1ed8d1265ea64dd304c0a3eb58fac114c5",
+    "sha256": "ad2dfcab2a4435ae7809c649e5e547d3e22680a862a8e344be6ba781799462b4",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-nextorch-01-2026-09-07/data/inert.json"
+    ]
+  },
+  {
+    "signature": "7c290cabfe344f663b7e09f6b4ba20c0996e219efd7ae8513924720b06712630",
+    "sha256": "55a17d202543f2c2b6a11ded57ad0b74aa1b0665ada653ab28dad912500c1246",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/supply-bo-pilot-2026-09-08/2-coarse.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/supply-bo-pilot/2-coarse.json"
+    ]
+  },
+  {
+    "signature": "467a6cdda57452d1f84e27a3c7fd76fd7a42304f3ae1319ae6a617d67efbd4a6",
+    "sha256": "3fab0c05a96a8a8ed52448728ff09fa17ce26b1f1dc50b501fd38f4dbc7ed06d",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/supply-bo-pilot-2026-09-08/1-fine.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/supply-bo-pilot/1-fine.json"
+    ]
+  },
+  {
+    "signature": "abd1d8b8b01e362f8492ad861d08584fab33f68b30a63edd55788533087596a7",
+    "sha256": "853317df7e3536acabd98bbd8eebd6eacad44cc3505ed6d4e66823334d4adfd9",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/supply-bo-pilot-2026-09-08/1-coarse.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/supply-bo-pilot/1-coarse.json"
+    ]
+  },
+  {
+    "signature": "d9641af44c6ef17071b7834d43a6dcec9008088b67170923ce8dfd754a400b4b",
+    "sha256": "aa78d7cdf9740314df10435971805fdd2be8ed857155cb4e475ba807e16de1fe",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/supply-bo-pilot-2026-09-08/0-fine.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/supply-bo-pilot/0-fine.json"
+    ]
+  },
+  {
+    "signature": "14dafb480d1c166d4d27ebef7d2664b923b750b4c3e8a49ca183a39c3f6269bc",
+    "sha256": "95e489664c9a7733f6fc7d0fc6e4d3c0c57ec75f4b0e090a6cf291e249e5fbce",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/supply-bo-pilot-2026-09-08/0-coarse.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/supply-bo-pilot/0-coarse.json"
+    ]
+  },
+  {
+    "signature": "7d97add74ce46db4820133b55b0e7a0a92d390cefa6e04f2a035137c69f89244",
+    "sha256": "987d1a8e136ff260b86dffe696b1d2fff1375caf5638831be16ddb955d96e411",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/supply-bo-pilot-2026-09-08/2-fine.json",
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/supply-bo-pilot/2-fine.json"
+    ]
+  },
+  {
+    "signature": "4979a61147164f3c6a0bcb5c81b9b5896e7277183110ab9f68181a71391b7c53",
+    "sha256": "886a5a1a4afc27d9b24cf412df105c48515a622456c2209487b5f4c75850c6de",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/high-flow-passive-pilot/fine.json"
+    ]
+  },
+  {
+    "signature": "fae170303fa24b85b0e35e259e65d82c67a570deec41b085ed7be31624164cd3",
+    "sha256": "142249604267e71dcf1a95bb293bf784563d9a26d1bb9af133b233ae8a153081",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/high-flow-passive-pilot/coarse.json"
+    ]
+  },
+  {
+    "signature": "bfc42ec75352b5a89db515c6ee34bbb0bf1520ce74cf0e728c2b459328cd9517",
+    "sha256": "2869f7002b1964af3e81bb6b066b37309b66d5d44a2e79bb831ed5f7bdb33962",
+    "paths": [
+      "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/high-flow-passive-pilot/inert.json"
+    ]
+  }
+]

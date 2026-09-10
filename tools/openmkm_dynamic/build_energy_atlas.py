@@ -74,7 +74,7 @@ for k,r in unique.items():
     base=dict(id='CJH-'+hashlib.sha256(k.encode()).hexdigest()[:10],mode='CJH',family='CH4/CO2',closure='Fixed-volume CSTR',source=r['source'],source_sha256=r['source_sha256'],feed=r['feed'],flow_sccm=r['flow_sccm'],volume_cm3=r['volume_cm3'],GHSV_h_inverse=r['flow_sccm']*60/r['volume_cm3'],Tmax_C=r['T_C'],pressure_Pa=r['pressure_Pa'],CO_C2H2=r['CO_to_C2H2'],period_s=None,status='archived elemental screening; device feasibility not inferred',electrical_screen_pass=r['screen_pass'])
     add(base,y,a['net_reaction_reference_W'],r['gas_duty_W'],r['radiation_W'])
 # New six-point CJH pilot and current native CJH records, excluding repeats.
-for p in sorted((R/'docs/research').glob('cjh-energy*/*tight.json')):
+for p in sorted((R/'docs/research').glob('cjh-energy*/*.json'),key=lambda p:('tight' not in p.stem,str(p))):
     d=read(p)
     if 'net_reaction_heat_298_W' not in d:continue
     T=d['T_K']-273.15;feed={'CH4':d['feed_CH4'],'CO2':1-d['feed_CH4']}
