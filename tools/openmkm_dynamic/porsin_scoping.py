@@ -10,9 +10,12 @@ import cantera as ct
 ROOT=Path(__file__).resolve().parents[2]
 parser=argparse.ArgumentParser()
 parser.add_argument('--temperature-c',type=int,default=1900)
+parser.add_argument('--temperatures-c',type=int,nargs='+')
+parser.add_argument('--output',type=Path)
 args=parser.parse_args()
 folder='retry-600s' if args.temperature_c==1900 else f'T{args.temperature_c}-600s'
-OUT=ROOT/'docs/research/porsin-scoping-2026-09-10'/folder
+OUT=args.output or ROOT/'docs/research/porsin-scoping-2026-09-10'/folder
+temperatures=args.temperatures_c or [args.temperature_c]
 MECH=ROOT/'tools/cantera/mechanisms/aramco20.yaml'
 OUT.mkdir(parents=True,exist_ok=True)
 def save(name,data):
@@ -20,7 +23,8 @@ def save(name,data):
 start=time.monotonic()
 save('manifest',dict(script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
     mechanism_sha256=hashlib.sha256(MECH.read_bytes()).hexdigest(),cantera=ct.__version__,
-    python=platform.python_version(),T_C=args.temperature_c,pressure_Pa=101325,
+    python=platform.python_version(),temperatures_C=temperatures,pressure_Pa=101325,
+    environment={k:os.environ.get(k) for k in ('TZ','LC_ALL','OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS')},
     feed={'CH4':.1,'HE':.9},times_s=[.02,.04],
     closure='Isothermal constant-pressure closed gas parcel, ideal PFR material-history approximation. Not CSTR.',
     assumptions=['Coil temperature substituted for uniform gas temperature',
@@ -75,16 +79,27 @@ try:
     save('status',dict(status='nonreacting_gate',wall_s=time.monotonic()-start))
     cold=run('cold',300,[.001])
     assert abs(cold[0]['X_CH4_pct'])<1e-6
-    save('status',dict(status='reacting_standard',wall_s=time.monotonic()-start))
-    a=run('standard',args.temperature_c+273.15,[.02,.04])
-    save('status',dict(status='reacting_tight',wall_s=time.monotonic()-start))
-    b=run('tight',args.temperature_c+273.15,[.02,.04],True)
-    delta=max(abs(x[k]-y[k]) for x,y in zip(a,b) for k in ['X_CH4_pct','Y_C2H2_carbon_pct','S_C2H2_carbon_pct','C6_carbon_yield_pct'])
-    assert delta<.05,delta
-    save('comparison',dict(max_metric_difference_percentage_points=delta,rows=b,
-        differences_from_abstract=[dict(time_s=r['time_s'],conversion_pp=r['X_CH4_pct']-80,
-            selectivity_pp=r['S_C2H2_carbon_pct']-80) for r in b],
-        numerical_gate='passed',experimental_reproduction='not established: assumed uniform temperature and contact-time brackets'))
+    summaries=[]
+    for temperature in temperatures:
+        prefix=f'T{temperature}-' if args.temperatures_c else ''
+        save('status',dict(status='reacting_standard',T_C=temperature,wall_s=time.monotonic()-start))
+        a=run(prefix+'standard',temperature+273.15,[.02,.04])
+        save('status',dict(status='reacting_tight',T_C=temperature,wall_s=time.monotonic()-start))
+        b=run(prefix+'tight',temperature+273.15,[.02,.04],True)
+        delta=max(abs(x[k]-y[k]) for x,y in zip(a,b) for k in ['X_CH4_pct','Y_C2H2_carbon_pct','S_C2H2_carbon_pct','C6_carbon_yield_pct'])
+        species_delta=max(abs(x['mole_fractions'][s]-y['mole_fractions'][s]) for x,y in zip(a,b) for s in gas.species_names)
+        assert delta<.05 and species_delta<1e-6,(delta,species_delta)
+        regression=None
+        if temperature==1900:
+            reference=ROOT/'docs/research/porsin-scoping-2026-09-10/retry-600s/tight.json'
+            ref=json.loads(reference.read_text())['rows']
+            regression=max(abs(x['mole_fractions'][s]-y['mole_fractions'][s]) for x,y in zip(ref,b) for s in gas.species_names)
+            assert regression<1e-6,regression
+        save(prefix+'comparison',dict(max_metric_difference_percentage_points=delta,
+            max_species_difference=species_delta,legacy_1900_species_difference=regression,rows=b,
+            numerical_gate='passed',experimental_reproduction='not established: assumed uniform temperature and contact-time brackets'))
+        summaries.extend({k:r[k] for k in ('T_C','time_s','X_CH4_pct','Y_C2H2_carbon_pct','S_C2H2_carbon_pct','C6_carbon_yield_pct')} for r in b)
+    save('brief',dict(rows=summaries,numerical_gate='passed',wall_s=time.monotonic()-start))
     save('status',dict(status='completed',wall_s=time.monotonic()-start))
 except Exception as e:
     save('status',dict(status='failed',reason=str(e),wall_s=time.monotonic()-start))
