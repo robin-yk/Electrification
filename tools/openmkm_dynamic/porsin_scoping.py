@@ -2,13 +2,17 @@
 import os
 for key in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS'):
     os.environ[key]='1'
-import json, time, hashlib, platform
+import json, time, hashlib, platform, argparse
 from pathlib import Path
 import numpy as np
 import cantera as ct
 
 ROOT=Path(__file__).resolve().parents[2]
-OUT=ROOT/'docs/research/porsin-scoping-2026-09-10/retry-600s'
+parser=argparse.ArgumentParser()
+parser.add_argument('--temperature-c',type=int,default=1900)
+args=parser.parse_args()
+folder='retry-600s' if args.temperature_c==1900 else f'T{args.temperature_c}-600s'
+OUT=ROOT/'docs/research/porsin-scoping-2026-09-10'/folder
 MECH=ROOT/'tools/cantera/mechanisms/aramco20.yaml'
 OUT.mkdir(parents=True,exist_ok=True)
 def save(name,data):
@@ -16,7 +20,7 @@ def save(name,data):
 start=time.monotonic()
 save('manifest',dict(script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
     mechanism_sha256=hashlib.sha256(MECH.read_bytes()).hexdigest(),cantera=ct.__version__,
-    python=platform.python_version(),T_C=1900,pressure_Pa=101325,
+    python=platform.python_version(),T_C=args.temperature_c,pressure_Pa=101325,
     feed={'CH4':.1,'HE':.9},times_s=[.02,.04],
     closure='Isothermal constant-pressure closed gas parcel, ideal PFR material-history approximation. Not CSTR.',
     assumptions=['Coil temperature substituted for uniform gas temperature',
@@ -72,9 +76,9 @@ try:
     cold=run('cold',300,[.001])
     assert abs(cold[0]['X_CH4_pct'])<1e-6
     save('status',dict(status='reacting_standard',wall_s=time.monotonic()-start))
-    a=run('standard',2173.15,[.02,.04])
+    a=run('standard',args.temperature_c+273.15,[.02,.04])
     save('status',dict(status='reacting_tight',wall_s=time.monotonic()-start))
-    b=run('tight',2173.15,[.02,.04],True)
+    b=run('tight',args.temperature_c+273.15,[.02,.04],True)
     delta=max(abs(x[k]-y[k]) for x,y in zip(a,b) for k in ['X_CH4_pct','Y_C2H2_carbon_pct','S_C2H2_carbon_pct','C6_carbon_yield_pct'])
     assert delta<.05,delta
     save('comparison',dict(max_metric_difference_percentage_points=delta,rows=b,

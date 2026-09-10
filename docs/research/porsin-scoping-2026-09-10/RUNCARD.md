@@ -13,3 +13,7 @@ Run order: load mechanism once, nonreacting 300 K composition/element check, sta
 Cost: single thread. The original 300-second attempt stopped during loading. The user approved a retry with a total 600-second wall cap including loading and checks. An external supervisor enforces this cap even during native calls. The retry writes to `retry-600s/`, preserving the original failure record, and records loading and trajectory durations separately. Stop on any failed gate. No queued follow-on sweep. Generator and run card committed before execution. Outputs are permanent JSON with complete species fractions, carbon yields, hashes, solver settings and explicit failures.
 
 Command: `/Users/robin_yeonsu/cantera-env/bin/python tools/openmkm_dynamic/run_porsin_bounded.py`. No existing manuscript, figures or optimization data are invalidated or modified.
+
+## Approved 1800 C comparison
+
+Repeat the same nonreacting, standard, and refined checks at a prescribed gas temperature of 1800 C. Feed, pressure, time outputs, closure, mechanism, and acceptance thresholds are unchanged. Use `--temperature-c 1800` with the supervisor command above. Save to `T1800-600s/`, retaining all 1900 C results. The total cap remains 600 seconds including initialization. No other temperature is queued.
