@@ -1,0 +1,89 @@
+[
+  {
+    "name": "pareto-target-1",
+    "canvas_in": [
+      10.8,
+      6
+    ],
+    "panel_allocation_in": [
+      5,
+      5
+    ],
+    "axes": [
+      {
+        "width_in": 3.942,
+        "height_in": 3.9420000000000006,
+        "aspect": 0.9999999999999999
+      },
+      {
+        "width_in": 3.942000000000001,
+        "height_in": 3.9420000000000006,
+        "aspect": 1.0000000000000002
+      }
+    ],
+    "figcheck": [],
+    "pixels": [
+      6480,
+      3600
+    ],
+    "nondominated": 16
+  },
+  {
+    "name": "pareto-target-1.5",
+    "canvas_in": [
+      10.8,
+      6
+    ],
+    "panel_allocation_in": [
+      5,
+      5
+    ],
+    "axes": [
+      {
+        "width_in": 3.942,
+        "height_in": 3.9420000000000006,
+        "aspect": 0.9999999999999999
+      },
+      {
+        "width_in": 3.942000000000001,
+        "height_in": 3.9420000000000006,
+        "aspect": 1.0000000000000002
+      }
+    ],
+    "figcheck": [],
+    "pixels": [
+      6480,
+      3600
+    ],
+    "nondominated": 16
+  },
+  {
+    "name": "pareto-target-1.75",
+    "canvas_in": [
+      10.8,
+      6
+    ],
+    "panel_allocation_in": [
+      5,
+      5
+    ],
+    "axes": [
+      {
+        "width_in": 3.942,
+        "height_in": 3.9420000000000006,
+        "aspect": 0.9999999999999999
+      },
+      {
+        "width_in": 3.942000000000001,
+        "height_in": 3.9420000000000006,
+        "aspect": 1.0000000000000002
+      }
+    ],
+    "figcheck": [],
+    "pixels": [
+      6480,
+      3600
+    ],
+    "nondominated": 13
+  }
+]
