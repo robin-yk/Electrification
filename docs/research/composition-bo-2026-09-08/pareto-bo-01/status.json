@@ -1,0 +1,5 @@
+{
+  "status": "stopped",
+  "reason": "AssertionError: Energy support prediction error exceeds 25%; expand energy training first",
+  "wall_s": 2.5844031250016997
+}

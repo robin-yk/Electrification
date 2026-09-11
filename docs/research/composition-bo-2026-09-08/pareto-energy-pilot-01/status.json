@@ -1,0 +1,6 @@
+{
+  "status": "stopped",
+  "reason": "CalledProcessError: Command '['/Users/robin_yeonsu/.venvs/cantera32-bo/bin/python', '/Users/robin_yeonsu/Electrification-BO-continuation/tools/openmkm_dynamic/pareto_energy_pilot.py', '--worker', '0', '--n', '400']' returned non-zero exit status 1.",
+  "completed": [],
+  "wall_s": 0.5055757499940228
+}

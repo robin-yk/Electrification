@@ -1,7 +1,7 @@
 {
   "authorization": "User approved additional total 60 minutes, maximum 5 minutes per batch, on 2026-09-08.",
   "total_s": 3600,
-  "spent_s": 845.0253460670297,
+  "spent_s": 1023.341345692033,
   "active": null,
   "batches": [
     {
@@ -73,6 +73,21 @@
       "stage": "energy-incumbents-01",
       "status": "completed",
       "wall_s": 216.88313554099295
+    },
+    {
+      "stage": "pareto-energy-pilot-01",
+      "status": "stopped",
+      "wall_s": 0.5055757499940228
+    },
+    {
+      "stage": "pareto-energy-pilot-02",
+      "status": "completed",
+      "wall_s": 175.2260207500076
+    },
+    {
+      "stage": "pareto-propose-01",
+      "status": "stopped",
+      "wall_s": 2.5844031250016997
     }
   ]
 }

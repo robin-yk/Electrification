@@ -1,0 +1,10 @@
+{
+  "relative_errors": [
+    0.2970750277196459,
+    0.1399455427403086,
+    0.14773487272307373
+  ],
+  "threshold": 0.25,
+  "training_n": 5,
+  "scope": "Energy-support predictive check; reused for subsequent training"
+}

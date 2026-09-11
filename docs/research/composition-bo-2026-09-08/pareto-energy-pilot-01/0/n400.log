@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/robin_yeonsu/Electrification-BO-continuation/tools/openmkm_dynamic/pareto_energy_pilot.py", line 69, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/robin_yeonsu/Electrification-BO-continuation/tools/openmkm_dynamic/pareto_energy_pilot.py", line 30, in main
+    worker(folder,f'n{a.n}',a.n,period=i['period_s'],waveform=i['segments'],flow_sccm=i['flow_sccm'],feed_ch4=i['feed']['CH4'],rtol=old['solver_rtol'],capture_energy=True)
+                                                                                                                                    ~~~^^^^^^^^^^^^^^^
+KeyError: 'solver_rtol'

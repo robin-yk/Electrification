@@ -1,0 +1,27 @@
+{
+  "runtime": {
+    "cantera": "3.2.0",
+    "python": "/Users/robin_yeonsu/.venvs/cantera32-bo/bin/python",
+    "environment": {
+      "TZ": "UTC0",
+      "LC_ALL": "C",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "commit": "f1e38ecacd7ef265803c8bbcc804e343c3b9f280",
+  "hashes": {
+    "/Users/robin_yeonsu/Electrification-BO-continuation/tools/openmkm_dynamic/pareto_energy_pilot.py": "42a20ebd7930191665beadce6c82102d109e5443b75be88d905d7dd728b599d0",
+    "/Users/robin_yeonsu/Electrification-BO-continuation/tools/openmkm_dynamic/replay_bo_energy.py": "2f0bd7dd68102aba29ebfc1174e89ae5f093237f24e0b744c6fcea5a84b4f040",
+    "/Users/robin_yeonsu/Electrification-BO-continuation/tools/openmkm_dynamic/run_rph_fixed_pulse.py": "e729698a54ff390f1e6497f288d69745835ad0f750c73e3a00d62a0848ee6f8d",
+    "/Users/robin_yeonsu/Electrification-BO-continuation/tools/openmkm_dynamic/cantera_runtime.py": "126c8e673d15cafe6e604a28bb96d453a3dc1b01befe4374f0b6bde020cc4770",
+    "/Users/robin_yeonsu/Electrification-BO-continuation/tools/openmkm_dynamic/element_drive.py": "ec88003c618ca6dc58a642b916bde3dce26c10c8a427a33714039ecabb8ce6b8",
+    "/Users/robin_yeonsu/Electrification-BO-continuation/tools/cantera/mechanisms/aramco20.yaml": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+    "/Users/robin_yeonsu/Electrification-BO-continuation/docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.1-n800.json": "958c7c4d7e70b8d914a2e6179555320aff6df6a77603efb9fc8900984b0bac94",
+    "/Users/robin_yeonsu/Electrification-BO-continuation/docs/research/composition-support-cloud-2026-09-08/1/n800.json": "4f5d477f4aa8f03ba9cf63d55357c47e71327c8e7c3e8c30a4c4c574bdbd0757",
+    "/Users/robin_yeonsu/Electrification-BO-continuation/docs/research/composition-support-cloud-2026-09-08/3/n800.json": "5bd23af6d4c1c6403345ac7fd92d3a883a2ba003d3686671b94e6ed23aa8ae6b"
+  },
+  "cap_s": 300,
+  "selection": "Energy training support, not Bayesian recommendations"
+}
