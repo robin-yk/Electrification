@@ -36,3 +36,8 @@ also imported SciPy, absent in the dedicated Cantera environment. No mechanism
 loaded and no integration started. The replay now carries the identical pure
 Python checks without importing the optimization environment. No installation
 was needed. The failed invocation took 0.15 seconds before ledger activation.
+
+Attempt 01 stopped before integration because an older chemistry record omits
+solver_rtol. Preserve that status and log. Attempt 02 uses the recorded rtol
+where available and 1e-11 otherwise, with the same direct species-agreement
+gate against the original. Its paired-grid checks remain mandatory.

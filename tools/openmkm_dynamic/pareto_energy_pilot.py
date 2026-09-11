@@ -13,7 +13,7 @@ def physical_gate(d):
     return all(h['state_change']<1e-7 and h['max_species_cycle_change']<1e-7 for h in d['history'][-2:])
 ROOT = Path(__file__).resolve().parents[2]
 C = ROOT/'docs/research/composition-bo-2026-09-08'
-OUT = C/'pareto-energy-pilot-01'
+OUT = C/'pareto-energy-pilot-02'
 SOURCES = [
     'docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.1-n800.json',
     'docs/research/composition-support-cloud-2026-09-08/1/n800.json',
@@ -27,7 +27,7 @@ def main():
     if a.worker is not None:
         from run_rph_fixed_pulse import worker
         old=read(ROOT/SOURCES[a.worker]);i=old['inputs'];folder=OUT/str(a.worker);folder.mkdir(exist_ok=True)
-        worker(folder,f'n{a.n}',a.n,period=i['period_s'],waveform=i['segments'],flow_sccm=i['flow_sccm'],feed_ch4=i['feed']['CH4'],rtol=old['solver_rtol'],capture_energy=True)
+        worker(folder,f'n{a.n}',a.n,period=i['period_s'],waveform=i['segments'],flow_sccm=i['flow_sccm'],feed_ch4=i['feed']['CH4'],rtol=old.get('solver_rtol',1e-11),capture_energy=True)
         return
     assert not (OUT/'status.json').exists(), 'Do not overwrite a completed or failed pilot'
     ledger=read(C/'budget.json');assert ledger['active'] is None and ledger['spent_s']+300<=ledger['total_s']
