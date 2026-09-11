@@ -1,0 +1,11 @@
+{
+  "cantera": "3.2.0",
+  "python": "/Users/robin_yeonsu/.venvs/cantera32-bo/bin/python",
+  "environment": {
+    "TZ": "UTC0",
+    "LC_ALL": "C",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}
