@@ -1,0 +1,22 @@
+{
+  "panel_allocation_inches": [
+    5,
+    5
+  ],
+  "colorbar_extra_width_inches": 1.3,
+  "canvas_inches": [
+    6.3,
+    5
+  ],
+  "axes_inches": [
+    3.8499999999999996,
+    3.8499999999999996
+  ],
+  "axes_aspect": 1.0,
+  "png_pixels": [
+    3780,
+    3000
+  ],
+  "dpi": 600,
+  "figcheck": []
+}

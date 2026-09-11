@@ -1,0 +1,29 @@
+{
+  "history": [
+    {
+      "cycle": 1,
+      "element_residual": 3.5948217845883924e-06,
+      "mass_residual": -3.5948217432313345e-06,
+      "change": 1,
+      "max_pressure_error": 6.539192868082466e-06,
+      "max_temperature_error_K": 1.0300027497578412e-10
+    },
+    {
+      "cycle": 2,
+      "element_residual": 3.5908648890582274e-06,
+      "mass_residual": -3.590864843246192e-06,
+      "change": 5.471199704398799e-08,
+      "max_pressure_error": 6.539192862753396e-06,
+      "max_temperature_error_K": 3.5174707591068e-10
+    },
+    {
+      "cycle": 3,
+      "element_residual": 3.590867796836678e-06,
+      "mass_residual": -3.5908677879111406e-06,
+      "change": 7.072120666862247e-12,
+      "max_pressure_error": 6.539192866750199e-06,
+      "max_temperature_error_K": 1.817625161493197e-09
+    }
+  ],
+  "wall_s": 150.975610416
+}

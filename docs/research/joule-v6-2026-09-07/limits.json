@@ -1,0 +1,73 @@
+{
+  "commit": "146a66ed1ace5c1f0965e430fdb86665e4ca5211",
+  "rows": [
+    {
+      "ar": 50,
+      "radial": {
+        "worstRelative": 0.00015086060566306216,
+        "centerToSurfaceK": 3.7499970000024,
+        "qVol": 744933321.8262583
+      },
+      "annulus": [
+        {
+          "label": "element center → element edge",
+          "got": 0.007635371728326845,
+          "theory": 0.008030314764521308,
+          "relative": 0.04918151377320328
+        },
+        {
+          "label": "element edge → wall inner",
+          "got": 0.06929861235795443,
+          "theory": 0.07114148000464618,
+          "relative": 0.02590426354036208
+        },
+        {
+          "label": "wall inner → wall outer",
+          "got": 1.0512602560795017,
+          "theory": 1.1070887297299188,
+          "relative": 0.05042818353325375
+        },
+        {
+          "label": "wall outer → air (2 cells out)",
+          "got": 1.2884798622629887,
+          "theory": 1.3571692579398844,
+          "relative": 0.05061225434855693
+        }
+      ]
+    },
+    {
+      "ar": 100,
+      "radial": {
+        "worstRelative": 0.000012620374493364444,
+        "centerToSurfaceK": 0.9374992500006001,
+        "qVol": 295626984.678292
+      },
+      "annulus": [
+        {
+          "label": "element center → element edge",
+          "got": 0.004994576528076777,
+          "theory": 0.0050390204400800895,
+          "relative": 0.008819950728877339
+        },
+        {
+          "label": "element edge → wall inner",
+          "got": 0.053207792008322485,
+          "theory": 0.05218888767624774,
+          "relative": 0.01952339621406548
+        },
+        {
+          "label": "wall inner → wall outer",
+          "got": 0.8076793452619313,
+          "theory": 0.8154185255493824,
+          "relative": 0.009491052809030691
+        },
+        {
+          "label": "wall outer → air (2 cells out)",
+          "got": 0.8481549962104964,
+          "theory": 0.8553841400392763,
+          "relative": 0.008451341906395399
+        }
+      ]
+    }
+  ]
+}

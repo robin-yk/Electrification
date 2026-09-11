@@ -1,0 +1,22 @@
+/Users/robin_yeonsu/Electrification-Suite/tools/openmkm_dynamic/porsin_scoping.py:42: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  gas=ct.Solution(str(MECH))
+/Users/robin_yeonsu/Electrification-Suite/tools/openmkm_dynamic/porsin_scoping.py:42: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033334
+
+  gas=ct.Solution(str(MECH))
+Mechanism loaded in 15.456821333999999 s
+cold [(0.001, np.float64(4.440892098500626e-14), None)]
+T1800-standard [(0.001, np.float64(96.24550979919027), np.float64(80.07353639360521)), (0.005, np.float64(99.38526789719502), np.float64(82.43788202076722)), (0.02, np.float64(99.83580854380787), np.float64(82.780993033377)), (0.04, np.float64(99.88762092294643), np.float64(82.81894502021532))]
+T1800-tight [(0.001, np.float64(96.24550988553176), np.float64(80.07353646188471)), (0.005, np.float64(99.38526795498895), np.float64(82.4378820715546)), (0.02, np.float64(99.8358085677363), np.float64(82.78099306243837)), (0.04, np.float64(99.88762094178554), np.float64(82.81894504529929))]
+T1200-standard [(0.001, np.float64(0.0229947635096428), np.float64(0.0019436501542082548)), (0.005, np.float64(0.1242142382267275), np.float64(0.11553558130578295)), (0.02, np.float64(0.6013906408367187), np.float64(2.5448852912932107)), (0.04, np.float64(1.4709688745748295), np.float64(7.973849909376943))]
+T1300-standard [(0.001, np.float64(0.1781489660955038), np.float64(0.07921980376326665)), (0.005, np.float64(1.2659319871682562), np.float64(3.5924798052546114)), (0.02, np.float64(10.654562304530158), np.float64(20.84329794218462)), (0.04, np.float64(28.997954743199095), np.float64(29.399979603219236))]
+T1400-standard [(0.001, np.float64(1.3416952566381202), np.float64(1.8588671683736802)), (0.005, np.float64(16.97626544758144), np.float64(23.6014822081487)), (0.02, np.float64(63.52085073710483), np.float64(43.433213184525314)), (0.04, np.float64(79.96472354774144), np.float64(54.37425408471758))]
+T1500-standard [(0.001, np.float64(12.289870627923028), np.float64(15.099758264744755)), (0.005, np.float64(68.28354406329669), np.float64(55.03996051691321)), (0.02, np.float64(92.15039836250635), np.float64(79.58098540084046)), (0.04, np.float64(96.44966517229253), np.float64(83.31908396920865))]
+T1600-standard [(0.001, np.float64(59.35505144589597), np.float64(51.65430160046958)), (0.005, np.float64(92.04517194408083), np.float64(80.125039502301)), (0.02, np.float64(98.30661869185076), np.float64(83.60758740413029)), (0.04, np.float64(99.17162128811721), np.float64(83.9062845123305))]
+T1700-standard [(0.001, np.float64(87.30519370572732), np.float64(75.25222305349001)), (0.005, np.float64(97.93195551725785), np.float64(82.54158348862245)), (0.02, np.float64(99.515865401449), np.float64(83.3151574474737)), (0.04, np.float64(99.73373276818111), np.float64(83.41306663818344))]

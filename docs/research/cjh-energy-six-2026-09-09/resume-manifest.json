@@ -1,0 +1,25 @@
+{
+  "jobs": [
+    [
+      0.65,
+      400
+    ],
+    [
+      0.8,
+      100
+    ],
+    [
+      0.8,
+      200
+    ],
+    [
+      0.8,
+      400
+    ]
+  ],
+  "budget_s": 300,
+  "source_sha256": "c4eced7c68803c80851297e79ff16ac263df9d04817d9e33b9f254a6c5fa3d6d",
+  "prior_manifest_sha256": "b9c767ee3ca6e7726982062fae52bea2768c2c2bd59121da7900375c1052831d",
+  "commit": "96fcf75d12e74142c165204f22252606f64c5542",
+  "role": "user-authorized completion of four missing fixed-pilot conditions; no BO acquisition"
+}

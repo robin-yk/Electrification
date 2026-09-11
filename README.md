@@ -1,5 +1,11 @@
 # Electrification Suite
 
+## Research navigation
+
+Start with the [research guide](research/README.md) for GRI surrogate work, Aramco product design, feed/mechanism comparisons and energy Pareto analysis. The [complete batch inventory](research/BATCHES.md) links original records without relocating data.
+
+Heater-design development continues in [ScreenJoule](https://github.com/robin-yk/ScreenJoule). Legacy Joule applications remain here while their verification and build dependencies are migrated; see the [migration record](archive/README.md).
+
 Interactive, browser-based models of chemical process electrification (Joule heating and rapid pulsed heating) by Yeonsu Kwak (Vlachos Lab, University of Delaware).
 
 **Live site: https://robin-yk.github.io/Electrification-Suite/**. No install, no account, everything runs in your browser.

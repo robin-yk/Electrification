@@ -1,5 +1,7 @@
 # Research archives
 
+For the current cross-project inventory, start with [Research entry points](../../research/README.md) and [Batch inventory](../../research/BATCHES.md). The family descriptions below document the earlier chemistry campaigns. Later BO and energy archives extend this collection; statements below about absent energy accounting apply to those original campaigns, not to all subsequent postprocessing.
+
 Every directory here is one executed batch, preserved as it ran. This file says
 what each one is, which generator produced it, and which of them combine into a
 result you can cite. Read it before opening any single archive: several of them

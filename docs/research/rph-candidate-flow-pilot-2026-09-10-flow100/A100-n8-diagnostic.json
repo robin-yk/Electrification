@@ -1,0 +1,37 @@
+{
+  "history": [
+    {
+      "cycle": 1,
+      "element_residual": 4.496194967464823e-06,
+      "mass_residual": -4.496194873558107e-06,
+      "change": 1,
+      "max_pressure_error": 8.69711187934108e-06,
+      "max_temperature_error_K": 4.8203219193965197e-11
+    },
+    {
+      "cycle": 2,
+      "element_residual": 4.4887298541238066e-06,
+      "mass_residual": -4.488729746394501e-06,
+      "change": 9.378181013985909e-07,
+      "max_pressure_error": 8.696841011124334e-06,
+      "max_temperature_error_K": 6.930349627509713e-10
+    },
+    {
+      "cycle": 3,
+      "element_residual": 4.488739967400048e-06,
+      "mass_residual": -4.488739799182147e-06,
+      "change": 6.2604088579831796e-12,
+      "max_pressure_error": 8.696841016897494e-06,
+      "max_temperature_error_K": 1.3671979104401544e-09
+    },
+    {
+      "cycle": 4,
+      "element_residual": 4.4887172465295286e-06,
+      "mass_residual": -4.488717082877571e-06,
+      "change": 2.7314012163159873e-11,
+      "max_pressure_error": 8.696841053534854e-06,
+      "max_temperature_error_K": 1.6227659216383472e-09
+    }
+  ],
+  "wall_s": 63.35951508400001
+}

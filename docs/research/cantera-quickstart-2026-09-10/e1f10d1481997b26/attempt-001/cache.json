@@ -1,0 +1,38 @@
+{
+  "identity": {
+    "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+    "executable": "/Users/robin_yeonsu/cantera-env/bin/python",
+    "cantera": "3.1.0",
+    "temperatures_C": [
+      1900,
+      1800
+    ],
+    "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+    "worker_sha256": "bcece69e91d7544a375243ca25b281085813b33470fadd1c956240c7bd0ece17",
+    "launcher_sha256": "01bdd5cbb9a90a82e44f34765dbcd11f972a17567e11c649a1df891681a74428",
+    "reference_sha256": "5e3ae72586de12464a34902b569b4796571f26d0521365e518e226fad4a6b196",
+    "env": {
+      "TZ": "UTC0",
+      "LC_ALL": "C",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "outputs": {
+    "timing.json": "eda328b9cecead6a8c311696b913f3f1fa5b13f5d26f9ceb8ee3f281056df9c2",
+    "supervisor.json": "308a72924dc12de4d554f3459f9ab69a1f1583364c23773bef62b46d9409090b",
+    "brief.json": "5c359cc68d5621f282288d7884a2b5ffea0aedf1bc49f13ca609a80255a73f86",
+    "T1800-comparison.json": "8ac9b7303aad46e80e4bbb421ebae5a8a93b355e6efe077e8573505eafe2bdbd",
+    "T1900-comparison.json": "d634668d428c200555c1e3f4a31f7a3f6fafe903b20dec343445d733bcb40d9c",
+    "T1800-standard.json": "75b23657ab38d9f2bdf8fffce73c8ec686a02d7ba025af474713814f4e0f3c0d",
+    "execution.log": "4fb40b2f7b256c3af8dbe0ec9cc5aff9aafe7d3a83145baff766586955a0b7e2",
+    "manifest.json": "c6413bdbc60bf82890539cfd39b1d09794e8e54bda57aa3ae6bb586aec85e9d3",
+    "T1900-tight.json": "fcfd3121d46a0ae047f68a4738b05db941d2c664850060317864b7ae161d9900",
+    "cold.json": "8356e2f5573a3d32087ada47f9f9aab9d9f03722e8b940464555d949586e9e18",
+    "launch.json": "997d5c1b0c01e9bd07a80867ad0a3818663cf785c6da47fd6c549d8d3f9a6650",
+    "T1900-standard.json": "0be13a6f1b296b405d4fecc2cc4cc5766f9c92f92ee5ccc3dba53bb9dc3a18ec",
+    "status.json": "cd896f65e37425721a3cc1ff0214e6e5b7161eb0252afa75bff61a7e70dbbe19",
+    "T1800-tight.json": "d1b23f61e8ecbd2d687cc6a2ba0657b7000726b3a403f911f5140bcdd24a1460"
+  }
+}

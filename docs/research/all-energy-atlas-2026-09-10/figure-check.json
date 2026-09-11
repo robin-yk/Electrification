@@ -1,0 +1,91 @@
+{
+  "panel_allocation_inches": [
+    5,
+    5
+  ],
+  "canvas_inches": [
+    16.6,
+    10.8
+  ],
+  "panels": [
+    {
+      "family": "CH4/CO2",
+      "scenario": "Gas only",
+      "counts": {
+        "CJH": 302,
+        "RPH": 32
+      },
+      "axes_inches": [
+        3.8000000000000003,
+        3.8000000000000007
+      ]
+    },
+    {
+      "family": "CH4/CO2",
+      "scenario": "Full radiation",
+      "counts": {
+        "CJH": 302,
+        "RPH": 32
+      },
+      "axes_inches": [
+        3.8000000000000007,
+        3.8000000000000007
+      ]
+    },
+    {
+      "family": "CH4/CO2",
+      "scenario": "90% lower radiation",
+      "counts": {
+        "CJH": 302,
+        "RPH": 32
+      },
+      "axes_inches": [
+        3.8000000000000007,
+        3.8000000000000007
+      ]
+    },
+    {
+      "family": "CH4/He",
+      "scenario": "Gas only",
+      "counts": {
+        "CJH": 34,
+        "RPH": 0
+      },
+      "axes_inches": [
+        3.8,
+        3.8
+      ]
+    },
+    {
+      "family": "CH4/He",
+      "scenario": "Full radiation",
+      "counts": {
+        "CJH": 6,
+        "RPH": 0
+      },
+      "axes_inches": [
+        3.8000000000000007,
+        3.8
+      ]
+    },
+    {
+      "family": "CH4/He",
+      "scenario": "90% lower radiation",
+      "counts": {
+        "CJH": 6,
+        "RPH": 0
+      },
+      "axes_inches": [
+        3.8000000000000007,
+        3.8
+      ]
+    }
+  ],
+  "png_pixels": [
+    9960,
+    6480
+  ],
+  "dpi": 600,
+  "figcheck": [],
+  "color_scale": "linear 0 to 5; ratios above 5 share the extended upper color; exact values retained"
+}

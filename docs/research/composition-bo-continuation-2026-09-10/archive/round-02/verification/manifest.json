@@ -1,0 +1,11 @@
+{
+  "commit": "786b52d68c572e1a27c6150932699299c4ed89ce",
+  "sha256": {
+    "tools/openmkm_dynamic/verify_composition_bo.py": "ff88b1938c0531f5ecb48066e2de355871fdd709574f2b1e4e98af52051e426e",
+    "docs/research/composition-bo-2026-09-08/round-02/proposals.json": "863f2c809714f7e4898f10d3434613723b16e4198e6316ab8047f60a0e8bd4a8",
+    "tools/openmkm_dynamic/run_rph_fixed_pulse.py": "4c30009b165a4d493c2fd2863d880ffac79e6d23378738ed1dc321589edfcbf8",
+    "tools/openmkm_dynamic/run_rph_fixed_gate.py": "44f891890dafbecbd7c5667f6ca73ac401423bc9a479a42485a5baf961b2b958",
+    "tools/cantera/mechanisms/aramco20.yaml": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc"
+  },
+  "cap_s": 300
+}

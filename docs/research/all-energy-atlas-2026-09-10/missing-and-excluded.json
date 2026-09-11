@@ -1,0 +1,1014 @@
+[
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-fixed-period-01-2026-09-07/data/half-refined.json",
+    "source_sha256": "0306857570ddc6b1da0cd5b57855b72523d3fcb25672ec39cc7ffc87a6807be2",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 1.6200794957736278,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-fixed-period-01-2026-09-07/data/double-refined.json",
+    "source_sha256": "0327a3fb6adfdb49d12dcc62889e69abdbc072746ab183b4a5401da686fc132b",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 1.6148239265044744,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-pilot-01-2026-09-07/data/T1800-hold0.025-n800.json",
+    "source_sha256": "46f372bda6c7f88a5561f06970cf9d87fc0fedad5941f0ed11b8e43d3c94b029",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 1.0211417088033097,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-pilot-01-2026-09-07/data/inert.json",
+    "reason": "nonreacting or zero carbon control"
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-pilot-01-2026-09-07/data/T1200-hold0.025-n800.json",
+    "source_sha256": "ec8d149e65da1ec1849f010b844a835a79e478c96df5215845214468ecf51fc8",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 6.234936371848852e-06,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-pilot-01-2026-09-07/data/T1800-hold0.5-n800.json",
+    "source_sha256": "9a848e2e363921f214c7f2a12c5f37cb1179cd7bbd40bac22f3de353b8af62bb",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 11.173434652866495,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/bo-01/tighter-01/n800.json",
+    "source_sha256": "9dde7803f27da88c4c342c56158c174af7c87b31acb05db0ab5ea7bf454e140b",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 17.326936678592897,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q25-n800.json",
+    "source_sha256": "3069c30bfbd58629544c69030d53fe476b0cb064f53a91c57352d81dd1bf09b1",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 1.686432455708769,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.5-Q200-n800.json",
+    "source_sha256": "3d99e50e2dced74c7e2f7566c3939e6bf3a9b0a5b66a8c1f17de3ce119598abe",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.02432686647505535,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q12.5-n800.json",
+    "source_sha256": "b5be59ce88e48c7039af008f19635bc1ae8e889286858d67e202bc341269936b",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 2.8652738907900304,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.3-Q25-n800.json",
+    "source_sha256": "0c577e64e56b94cf1f1eecf132cd052d786ff586d7b502365a70f3dbdfff581f",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.7867188563682253,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.3-Q200-n800.json",
+    "source_sha256": "fe3c3721c669745cfbf74b6aeafa30b94cccfcd820b62c171a2cad17b26492d7",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.014655183711267505,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.5-Q12.5-n800.json",
+    "source_sha256": "8d5f221a34ea7a3311ca3e116b3a247f653d7a33bb6c2bf0ec430a4a63e87d21",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 2.213084599077951,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q200-n800.json",
+    "source_sha256": "88b6b1b924bdd86efed1e1e23083e20711efa61dc79ecfae8ed3412a8d35941c",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.031580412325226424,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.1-Q100-n800.json",
+    "source_sha256": "53e23f2b9c6656aee86ca987fe166aac314edd1dfafa297b566353f0829f382a",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.03128994358684791,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.1-Q200-n800.json",
+    "source_sha256": "d0fa5c9c3782e17bc4b675f0e5e9843600bef79ac47869ba112cbb5b0f008e45",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.004983203610764228,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q100-n800.json",
+    "source_sha256": "5466cee50e92edf0e39da0df50d055bfad7b376da5cc1faf0a1f33229a2d6e1b",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.19820666131106493,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.3-Q100-n800.json",
+    "source_sha256": "d6799a609e29d14e311e79acb6c5624480bb3bcf8d7699d6ee2b5e8bd79e98cf",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.09198778072416057,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.5-Q100-n800.json",
+    "source_sha256": "67308272cd23427dca4b3f32bdf4913edca691652808af6089cd44331ee18e5b",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.15268466034967826,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.3-Q12.5-n800.json",
+    "source_sha256": "58c534a2638ced0a88277177d5f35b5db3c7569dde3c2137acf4b5c2b00c4ad0",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 1.3434941203724402,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.65-Q50-n800.json",
+    "source_sha256": "c19a5605ee9df4bc399e863ba3cb569a20c961dd3ee3835e7e1bc64ffc71b706",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.7496245302881402,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.1-Q12.5-n800.json",
+    "source_sha256": "a8dba8c15856f8937d846d3338b1124447634c92308b2d89bd6905432402751e",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.4738982044312353,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.8-Q25-n800.json",
+    "source_sha256": "d5ab4eaac27a18bff55ebf39b454d50118e767369fcb3624f7330249683272f6",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 2.0720204221295955,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.1-Q25-n800.json",
+    "source_sha256": "980f184d38ccd7a5375981d2dd084619bb809ae49b57df844bc8caa3913d6d0c",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.27259162135840886,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/1/data/T1400-h0.5-Q25-n800.json",
+    "source_sha256": "f7f145647366b24f7e22328dce98043e57a15e57386bc40cf4ba80e866e4f44a",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 1.3008423325652392,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-target-01/0/n800.json",
+    "source_sha256": "49dcdb463c6bf55130602e368c1a3457be7a0450bb1e8223bbd06e94c45a4fa5",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 29.57881117406165,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-target-01/1/n800.json",
+    "source_sha256": "5ac784b831736550d2f84289116edf30678d8dd4a411e480fc3fb4e844432f1a",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 31.59203777086524,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-target-01/2/n800.json",
+    "source_sha256": "3452683ccef1cb6637b0c6b931c766a1a02a57f771b2d520adeb5084f3e3d338",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 36.06507620406691,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/explore-01/verification/0/n800.json",
+    "source_sha256": "fceeb59dc8c06ce4e6d2ccfeff1d4ee89accefe89a7fff27217cc642a01fa338",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 1.9397777316370113,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/explore-01/verification/1/n800.json",
+    "source_sha256": "f7be02f3a43b7a12de426ca5f281d525263b30c3c2d24ab7660c95d19857d751",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 9.895144603421208,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1600-h0.8-Q25-n800.json",
+    "source_sha256": "d2b285d7853445397b648bc7fb934e5f8bf8786f5a2198dee373bce74f4171d6",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 14.50825458394992,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1800-h0.8-Q200-n800.json",
+    "source_sha256": "b8621d34b3b678a6e649f193a5fbd33a77e0a1e9335d5beb136006ce19fd8cfa",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 15.669066387442365,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1800-h0.5-Q50-n800.json",
+    "source_sha256": "059f339e098207eb02cc936199dc2dcf3bbd23943fa62d435f8b08f7a34e2e27",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 11.173434652866495,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1800-h0.8-Q200-inert.json",
+    "reason": "nonreacting or zero carbon control"
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1800-h0.3-Q25-n800.json",
+    "source_sha256": "f15a422ffa702dbfb2d7f9380182488f62a8c75824e7d258d24b497447204884",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 6.6096156828301025,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1800-h0.8-Q12.5-inert.json",
+    "reason": "nonreacting or zero carbon control"
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/pilot/data/T1400-h0.8-Q12.5-n800.json",
+    "source_sha256": "d213c4c53c00e5bfd78b6f358743b3b36a947ebc95f92d07cb667c60cde3c052",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 3.5174601255372897,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-bracket-01/0/n800.json",
+    "source_sha256": "25f7c15ed16b8776b1c07efcf3e43fd80c7a96b13ee0f999cbdc6f6d93c802b5",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 30.033894821866674,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-bracket-01/1/n800.json",
+    "source_sha256": "a4bb440ae04e31f59a50524598f91939e0fd29aa51cc8e855b6be7212bf12084",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 36.55520333023122,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/hot-boundary/data/T2100-h0.8-Q50-inert.json",
+    "reason": "nonreacting or zero carbon control"
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/bo-02/verification/n800.json",
+    "source_sha256": "c8e7bcf7c1ca425049084d138671132b19a3c0d296cc48312ed5810f592064cd",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 17.561701406115336,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/hot-boundary-02/data/T1900-h0.8-Q50-n800.json",
+    "source_sha256": "77d96a017a39c4ff82e0ed5e51f22687e12f4a137ac0b1c9c8f999bdcbc430d7",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 16.136762233820885,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/hot-boundary-02/data/T2000-h0.8-Q50-n800.json",
+    "source_sha256": "6a6a5b3ada1b10d9ce057c65e55901b20b7b60dbd73f7255ef5b749dd56b91e4",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 14.0025717569953,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/bo-03/verification/n800.json",
+    "source_sha256": "68e3bf1b436680bc21e61ee0b783b33e639faef66c6e7691d8d9650dad25bc97",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 17.152173654498124,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/3/data/T1600-h0.65-Q100-n800.json",
+    "source_sha256": "0459b1a765991d3d3a30cad3a2379a2df8db1060e4fbf4c76fa334197883c852",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 6.503175568093093,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/3/data/T1600-h0.65-Q200-n800.json",
+    "source_sha256": "04ae7f2573bb3d30d5d23553df1ac0d3bdf9ac9e222dda36649677d6515b1594",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 3.8932147833538746,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/3/data/T1600-h0.8-Q12.5-n400.json",
+    "source_sha256": "d3e2d27a562a1b02f1cbdb31ee4c96303163b9bd8ebc94deda22608ca4b4dc59",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 16.410430752854253,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/feed-pilot-02/0/n800.json",
+    "source_sha256": "9d3d170107caceb9292e2c1a850d7781fd1c58c799e7bbbb9ed12d08b567fb73",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 23.679517855144187,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1400-h0.8-Q100-n800.json",
+    "source_sha256": "f0aed7c0d9c7413d7a3056efe094037a4cb43b7362c9b51d21c3c45eb5e75f48",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.2437280552450089,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.1-Q100-n800.json",
+    "source_sha256": "777f36c0c8647f03c05ab920fa00514b57433c94e9087b697287f627eb520743",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 1.070808052336217,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.3-Q200-n800.json",
+    "source_sha256": "813e655172906ee01cad043140673c0a76a93ec9aa82cea96e6a72aab345282b",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 1.8183809758732277,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1400-h0.8-Q50-n800.json",
+    "source_sha256": "d9dc31cabdda5a24f1de75eaaed30647c7b61f8c6c8fadffc43b680a571ddfe1",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.9215466868396752,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.3-Q12.5-n800.json",
+    "source_sha256": "b6c4fe8951fcbdd15a869adebb364df585e9198d7339725392a23bc2e95eb5bb",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 6.352922040240838,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.65-Q25-n800.json",
+    "source_sha256": "266d3103754eb8325c9d88bed76d297db9029241423b9dbca65b097a138e0b4a",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 11.829605534137908,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.5-Q200-n800.json",
+    "source_sha256": "5e257c088238e01b5b359ef62d8bb2a6d2f37bdd885eaa1b81844d31eac407c2",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 3.004004664341817,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.5-Q100-n800.json",
+    "source_sha256": "53549722ec8ef3cfa547d6a04ed8569d4e6bcd98d5dd9d2294cd7ef708152fd6",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 5.021639988106886,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.5-Q25-n800.json",
+    "source_sha256": "1721650de7de9baaaa12cc53bb6849192781d085cfc889d5a223fa615f5cf099",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 9.150946663694862,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.1-Q25-n800.json",
+    "source_sha256": "dad360975dbf9b67ecd29f9e58bb29fff9d123aebed61ec247d51583546827d5",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 2.007789444833797,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.3-Q100-n800.json",
+    "source_sha256": "014361a437ede95ce35e2af49e99f510780664646f1d7f6db6445fc96947da4d",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 3.046239992999431,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.1-Q200-n800.json",
+    "source_sha256": "51c45e01a01285a1ea2fff937848ee6bc15d520905835564f29bd804351066ed",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.6327329131663924,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1400-h0.8-Q200-n800.json",
+    "source_sha256": "7129a5ac294d6aa528165314ccaca4f21e67404ac5e3b2c2582f9272eb9bc24b",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.038833746306901853,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.5-Q12.5-n800.json",
+    "source_sha256": "258c1c84dc0c95c7187b95597792083d8dade62773c85179f751961f20a16d46",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 10.375448780828474,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.3-Q25-n800.json",
+    "source_sha256": "3f0bfaa7f2b8ba1f0f2a760315658e08a71cc2fdcf572a25be4c8aa7d7417f7f",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 5.579381784479597,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.65-Q50-n800.json",
+    "source_sha256": "83eec6ef63683b720234d6d3ff10927d13fc1ae7e200f7b9cc0c68c8240b88fb",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 9.340434596446777,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.1-Q12.5-n800.json",
+    "source_sha256": "f2fa0ac3c601daeed2223a07aee19aa575aa37a6abda366727f6c0bcc6ea0b09",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 2.330389964667109,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-yield-grid-2026-09-07/2/data/T1600-h0.65-Q12.5-n800.json",
+    "source_sha256": "481c0e59636b31bd4897e7724124a33a5c154a4b1502e7661b09bbc39713f79d",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 13.392343331455839,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.8-n800.json",
+    "source_sha256": "d518ec5004bb193e77c97535515890268f96a0fc9dc8ba41b0fb39fd0c06d611",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 17.58552665564628,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/energy-audit-2026-09-08/pilot/hold-0.05.json",
+    "source_sha256": "f706823452868b76ae6de7b4d3847033dfb02e36a74d48db2a201d3e398ffd5d",
+    "reason": "cycle or elemental gate failed",
+    "Y_C2H2_pct": 1.5555870933215616,
+    "mode": "RPH",
+    "energy_available": true
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/energy-audit-2026-09-08/pilot/hold-0.2.json",
+    "source_sha256": "bb8c016a853de28a0de753fdd7a1f1d495c3ccd557c8335461bd6a9b0914ad0c",
+    "reason": "cycle or elemental gate failed",
+    "Y_C2H2_pct": 4.76203702962933,
+    "mode": "RPH",
+    "energy_available": true
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/energy-audit-2026-09-08/pilot/inert-100.json",
+    "reason": "nonreacting or zero carbon control"
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-support-2026-09-08/0/inert.json",
+    "reason": "nonreacting or zero carbon control"
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-02-2026-09-07/data/Q800-hold0.5-n800.json",
+    "source_sha256": "a521db7317355f2f997648b39475c0db755593678007c5ad1b3ccad051145a70",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 5.296380124958911,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-02-2026-09-07/data/Q1600-hold0.5-n800.json",
+    "source_sha256": "367ad022f40276e395d2e3013c4bea4e92954ec1b5e931c698418128535110f8",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 2.7505602152589734,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-02-2026-09-07/data/Q800-hold0.1-n800.json",
+    "source_sha256": "f950a5346608cd2692f1bef13455c3acc1cde1e9423102791d6eb5076f5e9e51",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 1.1330086528147556,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-02-2026-09-07/data/inert.json",
+    "reason": "nonreacting or zero carbon control"
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-02-2026-09-07/data/Q1600-hold0.1-n800.json",
+    "source_sha256": "8e8567b6428cc6a126bb1bed825cd1609ea1f36c367379fdaa34b9bfbb718cb9",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.5782709703506718,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-02-2026-09-07/data/Q400-hold0.1-n800.json",
+    "source_sha256": "4d9c2762a657894950898ca3eb1d5e01b96023cec01918de621aaae133431182",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 1.717260065269794,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q50-hold0.1-n800.json",
+    "source_sha256": "0bec20acdbda1cccd6748b02cbe3a8c63a9026b5646d328ae68e824b6150c367",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 2.624116743684804,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q400-hold0.5-n800.json",
+    "source_sha256": "aa3e385848b0e26d48b5b12ace3fe14b6ac85daca13b1704c3b005ba17ac6a01",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 7.88052415325708,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q100-hold0.5-n800.json",
+    "source_sha256": "96d48b91efde449d6ae8b37d7e14bb76b08f275554e56ede47ba8e383c426e92",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 10.996320639884129,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q200-hold0.5-n800.json",
+    "source_sha256": "432df062b6006a5464067b9c8153fc7655915b1a05ed03a6aafe2ee156d22b2b",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 9.897721623942173,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/inert.json",
+    "reason": "nonreacting or zero carbon control"
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q100-hold0.1-n800.json",
+    "source_sha256": "052657ca0f62fb905d67d45f28089a3763f0732d26e3afacef292c4dcd021c9b",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 2.508392932628109,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-flow-01-2026-09-07/data/Q200-hold0.1-n800.json",
+    "source_sha256": "b6e16ce2a4cea61828eecd75ed4d8af3785bc1c8335b635dd589f86e8e972909",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 2.2026360461005137,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.1-n800.json",
+    "source_sha256": "0a94ec3c808e3b0c85f556973bf6b829c9056e12ea4d546fba1f8d588f005d7b",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.11923247168565555,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.1-n800.json",
+    "source_sha256": "5a3b00792a5c2f0169f77231e231c2dd0878fa58d474c6a088bb3ba159c6769a",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 1.5588127826071205,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.1-n800.json",
+    "source_sha256": "f258e5e054d4eec5a3082c03710f2c40642a8cd73e4fbf9ff8754d49c7ac3182",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 2.420909044862255e-05,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.05-n800.json",
+    "source_sha256": "17b7794c81a7f865ae6ce03c152ae5d50dd9352c25f5bcadeebc92c64370a7a8",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.06192328391885752,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.1-n800.json",
+    "source_sha256": "958c7c4d7e70b8d914a2e6179555320aff6df6a77603efb9fc8900984b0bac94",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 2.624116743684804,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.3-n800.json",
+    "source_sha256": "22ad2f86e926813c93074ee2dd3488456a9f2a934b875e4f35629e7e013187e9",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.34846786768821497,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.4-n800.json",
+    "source_sha256": "ed5043f5164ea28a97ad76c811e66c5b8c51eb170e652ea88120036fb75a77f7",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 9.036088843852042,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.5-n800.json",
+    "source_sha256": "41482d640ef1678b56f1bf6ce62085b85c7ebf098f25a992c31147346391f046",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.00012007101685729966,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.3-n800.json",
+    "source_sha256": "7bb26e1f1cedc102ebcadf00e70d8cc35d64f29e38c4ed80f7973da679c37acc",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 4.388521778999759,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.05-n800.json",
+    "source_sha256": "7b67d002de2d452bfad23801388f06e2eeb4292f858465352ed22d51d7db4230",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 1.555465831870806,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.5-n800.json",
+    "source_sha256": "0376c33c389533f5647763e0b2742897f6e7d4cc88bb4f305d7c5fa32cc734b1",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.5777010804774133,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.3-n800.json",
+    "source_sha256": "27e4d92de2809ecaa7d0e44922fd8cfee8c833e07be6c706f218e7662ba6affd",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 7.214010442406262e-05,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.05-n800.json",
+    "source_sha256": "c72b64ee6f194659a81e00fe79dcc1e96481460f8047f4db2a23453185614360",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 1.2226321767524507e-05,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.5-n800.json",
+    "source_sha256": "b59e34b993c8f3f9b7cdab95ca6df4bf4a6c396fe19434771237c9a9b4b8687b",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 7.218197034950323,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.2-n800.json",
+    "source_sha256": "6895649a31722751530517c0f0aa033202fba7c26823632f9dc8dc035396c61d",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 4.7614288737917,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.025-n800.json",
+    "source_sha256": "061e29a36fb7d9a6e034af300dbc845bd101d236b7594f6454ace726379e0259",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.033268639314347745,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.2-n800.json",
+    "source_sha256": "58a9a5c55529b568d6de94b28656dc1ca4b8b0bb65cef3afbc75a51e7f90fe1b",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.23385044089890497,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.4-n800.json",
+    "source_sha256": "c2cb239c1f3789d8c3c3a06bec3024d8020f96af3d076ce724c508aed735b08b",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 9.610557412513537e-05,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.2-n800.json",
+    "source_sha256": "af20ba3805bfdac1674bc3d59f4e8fa3b2220b88f1affeb86c9007a22b0b6cc0",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 2.9736718396895676,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1400-hold0.4-n800.json",
+    "source_sha256": "438c427eba550a8d3aa495a81a3c081d6774c4e2d814be520c16c0870153fd6a",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.4630847491677558,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.025-n800.json",
+    "source_sha256": "cce0bd1353b1dd34c8a2645a4355a1666970b372bd88194449f41e0334a065fc",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.4976622992443763,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.05-n800.json",
+    "source_sha256": "97e60568c7bb60d975ae9485e058a3a3945ae6b611b5e2bc96954a24e119f50e",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 0.8513797175084747,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1200-hold0.2-n800.json",
+    "source_sha256": "1cc53349f9108fc172f759e5d5f055da4007d10a44bb7c007076a66a2805889e",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 4.817461092899856e-05,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1600-hold0.4-n800.json",
+    "source_sha256": "884545ed9d72d9acac48847ad514001faf67f7f79207b15d7e5711ae7e8d21bb",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 5.803363014419018,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-450-screen-01-2026-09-07/data/T1800-hold0.3-n800.json",
+    "source_sha256": "a6b3b6628cf34b44a5d44568c568691ab1651858a606865b840973f5ebe27ebf",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 6.89875317016506,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-support-cloud-2026-09-08/0/n800.json",
+    "source_sha256": "5080fed6689df7739b3abc251530437a29e2c919b7b24b8a96d2103c84f39092",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 16.10722876238962,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-support-cloud-2026-09-08/1/n800.json",
+    "source_sha256": "4f5d477f4aa8f03ba9cf63d55357c47e71327c8e7c3e8c30a4c4c574bdbd0757",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 19.046973517399152,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-support-cloud-2026-09-08/3/n800.json",
+    "source_sha256": "5bd23af6d4c1c6403345ac7fd92d3a883a2ba003d3686671b94e6ed23aa8ae6b",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 23.1693040121038,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-support-cloud-2026-09-08/2/n800.json",
+    "source_sha256": "c1fc30859610ee8608a79ee2e1b8128ad2dd6341829c549e94dc4ee6bc91d98f",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 18.323667951058525,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-01/verification/0/n800.json",
+    "source_sha256": "a8452ddacb1b8916434dc642052cc51eba4b78e575e5c87c4cb287f5457d569f",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 36.9160988629911,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-01/verification/1/n800.json",
+    "source_sha256": "c56e01f0688b24a941d83019186bf5c718e1023c71c04bb3ac813c996ef90134",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 33.958321873184325,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-01/verification/2/n800.json",
+    "source_sha256": "c5c98b3d7423f9c61a98707f4eb4ac1394bf6480264b39b1935d407eac625d30",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 31.692197664010568,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-02/verification/0/n800.json",
+    "source_sha256": "07492e74b9a67440086730c86026acc79670b1a187d7db251c3838679dd686d8",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 37.1429715144538,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-02/verification/1/n800.json",
+    "source_sha256": "1ef1bc140445883ab408d21037c2f60e0a5d1129483e51473c5c1519b64d73e0",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 33.859865011383164,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/composition-bo-2026-09-08/round-02/verification/2/n800.json",
+    "source_sha256": "59b165c6400febd3ff2bd22421c750aacb2321afd1aa77ac49dc6d81c3a053c6",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 31.888051673006757,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q12.5-T1800-h0.5-n800.json",
+    "source_sha256": "c903d80161767c756a4cbbc3847e0171c3fa924277f434e2b605dfc0619ceb92",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 9.635066572221149,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q12.5-T1800-h0.5-inert.json",
+    "reason": "nonreacting or zero carbon control"
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.65-n800.json",
+    "source_sha256": "24932eaad40086c5bb02b30104d63f59a8a8b8010a7add4bda21701d946a8f07",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 14.379471302871478,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q50-T1800-h0.8-inert.json",
+    "reason": "nonreacting or zero carbon control"
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-xs-extension-01-2026-09-07/data/Q25-T1800-h0.5-n800.json",
+    "source_sha256": "fde2438e117699647c8424b930ffca344f0ce0668aad7ac8a8c252724815736e",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 10.634164909379045,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/cooling-representatives-2026-09-08/f1-coarse.json",
+    "source_sha256": "3f5d75ecd309a2d5f502c90a9ee660450f2b349c036e3d8c67cbe9bed0e5ff57",
+    "reason": "cycle or elemental gate failed",
+    "Y_C2H2_pct": 12.035765616526817,
+    "mode": "RPH",
+    "energy_available": true
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-fixed-pulse-02-2026-09-07/data/refined.json",
+    "source_sha256": "9a8793f811da6dec1e6ec9b1d072885d08a8d587f98fbef77c18327e90e5d156",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 1.6159339668872543,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-fixed-pulse-02-2026-09-07/data/inert.json",
+    "reason": "nonreacting or zero carbon control"
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-nextorch-01-2026-09-07/data/anchor.json",
+    "source_sha256": "ca3996579b1c4cd2ddf235fa73d5feef02b954e3b03458dd1aadbf7768ad6b2a",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 1.717260065269794,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-nextorch-01-2026-09-07/data/refined.json",
+    "source_sha256": "7f10815dd2e65ea7965492d2a6b2583c9ead093e32bca7d4ecab1bba7632f5e9",
+    "reason": "missing phase-resolved energy",
+    "Y_C2H2_pct": 3.71366602462143,
+    "mode": "RPH",
+    "energy_available": false
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/calculation-register/sources/docs/research/rph-nextorch-01-2026-09-07/data/inert.json",
+    "reason": "nonreacting or zero carbon control"
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/high-flow-passive-pilot/fine.json",
+    "source_sha256": "886a5a1a4afc27d9b24cf412df105c48515a622456c2209487b5f4c75850c6de",
+    "reason": "thermal iteration gate failed",
+    "Y_C2H2_pct": 5.396231189854653,
+    "mode": "RPH",
+    "energy_available": true
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/high-flow-passive-pilot/coarse.json",
+    "source_sha256": "142249604267e71dcf1a95bb293bf784563d9a26d1bb9af133b233ae8a153081",
+    "reason": "thermal iteration gate failed",
+    "Y_C2H2_pct": 5.396706929962477,
+    "mode": "RPH",
+    "energy_available": true
+  },
+  {
+    "source": "/Users/robin_yeonsu/\ub0b4 \ub4dc\ub77c\uc774\ube0c(fiske@udel.edu)(1)/Yeonsu - Career Overall/LLM-Wiki/B2 working-paper/manuscripts-B2/dynamic-temperature-pulsing/energy-audit-data/high-flow-passive-pilot/inert.json",
+    "reason": "nonreacting or zero carbon control"
+  }
+]

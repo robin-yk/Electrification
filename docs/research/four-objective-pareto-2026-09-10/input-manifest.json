@@ -1,0 +1,38 @@
+[
+  {
+    "path": "/Users/robin_yeonsu/Electrification-Suite/docs/research/all-energy-atlas-2026-09-10/plot-data.json",
+    "sha256": "ea69415d2c004e17df80da95f4defdfa38b8fd61313991adebdfd62d7d1ca0ff"
+  },
+  {
+    "path": "/Users/robin_yeonsu/Electrification-Suite/docs/research/rph-candidate-flow-pilot-2026-09-10-flow100/A100-gate.json",
+    "sha256": "63f3c5cca090b1249f625255df21a0e857d5808d7a1938142212d29ec301c0a4"
+  },
+  {
+    "path": "/Users/robin_yeonsu/Electrification-Suite/docs/research/rph-candidate-flow-pilot-2026-09-10-flow100/A100-n8.json",
+    "sha256": "c01b558cfba01d46019072a9dfd926e94ec6be76f21eccbbc98cdb31ad1abcdc"
+  },
+  {
+    "path": "/Users/robin_yeonsu/Electrification-Suite/docs/research/rph-candidate-flow-pilot-2026-09-10-flow200/A200-gate.json",
+    "sha256": "1031b7d13497253bab06f2b83f9d5f4824205c28d06deb7cd19db6b131802190"
+  },
+  {
+    "path": "/Users/robin_yeonsu/Electrification-Suite/docs/research/rph-candidate-flow-pilot-2026-09-10-flow200/A200-n8.json",
+    "sha256": "790b6a6d9bf8a1ee1adc22fed6bcb53304c2ca1974c4af597b760def5eb10b93"
+  },
+  {
+    "path": "/Users/robin_yeonsu/Electrification-Suite/docs/research/rph-candidate-flow-pilot-2026-09-10-flow400/A400-gate.json",
+    "sha256": "709ab354349220134deb2091fcedf9f8aa0c05950c99f3c502baf196df016774"
+  },
+  {
+    "path": "/Users/robin_yeonsu/Electrification-Suite/docs/research/rph-candidate-flow-pilot-2026-09-10-flow400/A400-n8.json",
+    "sha256": "6f3d4664dde7f59a9d6e8144c88fc7d36fcbcc9e231a15d54813aedd64e48d64"
+  },
+  {
+    "path": "/Users/robin_yeonsu/Electrification-Suite/docs/research/all-energy-atlas-2026-09-10/summary.json",
+    "sha256": "a1a699f9fc4b00a0d9281e06b15bec95cde5780f0a4c40da5cfe19f36f469980"
+  },
+  {
+    "path": "/Users/robin_yeonsu/Electrification-Suite/tools/openmkm_dynamic/four_objective_pareto.py",
+    "sha256": "1aada051e139afd3ee0e38fc85c9a53bff6fa2f8771550a56eb70f78b70b05f2"
+  }
+]

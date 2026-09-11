@@ -1,0 +1,7 @@
+# Methods
+
+Positive heating input, net heat, reaction enthalpy and cooling demand are distinct quantities. Radiation scenarios are part of the case identity.
+
+Record mechanism identity, reactor closure, feed and standard-flow convention, physical or assumed volume, temperature history, integration settings and output basis with every comparison. Reproduction code remains in [tools/openmkm_dynamic](../../tools/openmkm_dynamic).
+
+For execution, use the committed runtime guard and the campaign's recorded environment. No reaction runs were performed for this reorganization.

@@ -1,0 +1,16 @@
+/Users/robin_yeonsu/Electrification-Suite/tools/openmkm_dynamic/cjh_energy_pilot.py:17: UserWarning: NasaPoly2::validate: 
+For species OHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  53.62056162666667
+	Value computed using high-temperature polynomial: 53.5841554314
+
+  gas=ct.Solution('gri30.yaml' if cold else str(MECH))
+/Users/robin_yeonsu/Electrification-Suite/tools/openmkm_dynamic/cjh_energy_pilot.py:17: UserWarning: NasaPoly2::validate: 
+For species CHV, discontinuity in h/RT detected at Tmid = 1000
+	Value computed using low-temperature polynomial:  107.5046684
+	Value computed using high-temperature polynomial: 107.34847808033334
+
+  gas=ct.Solution('gri30.yaml' if cold else str(MECH))
+anchor 224.29
+ch4-0.65-Q100 20.42
+ch4-0.65-Q100-tight 19.95
+ch4-0.65-Q200 20.39

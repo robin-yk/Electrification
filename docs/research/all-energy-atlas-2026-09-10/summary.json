@@ -1,0 +1,16 @@
+{
+  "local_files": 1817,
+  "cached_branch_entries": 5311,
+  "raw_unique_flow_results": 313,
+  "physical_flow_groups": 166,
+  "plotted_cases": 368,
+  "scenario_points": 1048,
+  "cases_by_mode": {
+    "CJH": 336,
+    "RPH": 32
+  },
+  "missing_or_excluded": 133,
+  "legacy_pending": 3144,
+  "new_reaction_integrations": 0,
+  "wall_s": 27.588707583999998
+}

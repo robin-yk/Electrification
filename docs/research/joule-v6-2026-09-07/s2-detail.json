@@ -1,0 +1,139 @@
+{
+  "status": "complete",
+  "solverHash": "222a406e0d57436b4b39afaf4f076a1e7b979d15b05316c5b013b5da57253c07",
+  "limits": [
+    {
+      "ar": 25,
+      "radial": {
+        "worstRelative": 0.0026634277798915965,
+        "centerToSurfaceK": 12.22940790010332,
+        "qVol": 1530401025.0417833
+      },
+      "annulus": [
+        {
+          "label": "element center → element edge",
+          "got": 0.011137772567792581,
+          "theory": 0.012791591667700898,
+          "relative": 0.12928954760839131
+        },
+        {
+          "label": "element edge → wall inner",
+          "got": 0.08667700661885647,
+          "theory": 0.09749168677851182,
+          "relative": 0.11092925476020198
+        },
+        {
+          "label": "wall inner → wall outer",
+          "got": 1.2923029527811423,
+          "theory": 1.4877009277074713,
+          "relative": 0.13134224176860257
+        },
+        {
+          "label": "wall outer → air (2 cells out)",
+          "got": 1.8667017855751737,
+          "theory": 2.1529732906630925,
+          "relative": 0.13296565560260631
+        }
+      ]
+    },
+    {
+      "ar": 75,
+      "radial": {
+        "worstRelative": 0.000033709704487108845,
+        "centerToSurfaceK": 1.6666653333344001,
+        "qVol": 433839464.98569185
+      },
+      "annulus": [
+        {
+          "label": "element center → element edge",
+          "got": 0.005977769168964642,
+          "theory": 0.006104338539581068,
+          "relative": 0.02073433014826086
+        },
+        {
+          "label": "element edge → wall inner",
+          "got": 0.057895298126823036,
+          "theory": 0.05762257021778224,
+          "relative": 0.004733004932095704
+        },
+        {
+          "label": "wall inner → wall outer",
+          "got": 0.9093161584489167,
+          "theory": 0.929359900873409,
+          "relative": 0.021567255490209256
+        },
+        {
+          "label": "wall outer → air (2 cells out)",
+          "got": 1.0135807406397817,
+          "theory": 1.035292178672757,
+          "relative": 0.02097131464936719
+        }
+      ]
+    },
+    {
+      "ar": 150,
+      "radial": {
+        "worstRelative": 0.0000034375764011416935,
+        "centerToSurfaceK": 0.41666633333359987,
+        "qVol": 172169305.77590197
+      },
+      "annulus": [
+        {
+          "label": "element center → element edge",
+          "got": 0.0038222709697492974,
+          "theory": 0.0038284012339142408,
+          "relative": 0.0016012595834098875
+        },
+        {
+          "label": "element edge → wall inner",
+          "got": 0.04369801677438545,
+          "theory": 0.04247137826860404,
+          "relative": 0.028881532829561487
+        },
+        {
+          "label": "wall inner → wall outer",
+          "got": 0.678779465807736,
+          "theory": 0.6802377466434159,
+          "relative": 0.00214378111605196
+        },
+        {
+          "label": "wall outer → air (2 cells out)",
+          "got": 0.6519766392058841,
+          "theory": 0.6524727144484769,
+          "relative": 0.0007603003644559868
+        }
+      ]
+    }
+  ],
+  "transients": [
+    {
+      "dt": 2,
+      "phase": "heat",
+      "avg": 1096.5654427907998,
+      "max": 1109.94134401989,
+      "closure": 1.9097406853352262e-8
+    },
+    {
+      "dt": 2,
+      "phase": "cool",
+      "avg": 238.6664885470379,
+      "max": 241.81624912334212,
+      "closure": 2.6199302655613403e-8
+    },
+    {
+      "dt": 1,
+      "phase": "heat",
+      "avg": 1096.5678490420573,
+      "max": 1109.9438178483897,
+      "closure": 1.89378432917664e-8
+    },
+    {
+      "dt": 1,
+      "phase": "cool",
+      "avg": 237.60234524617596,
+      "max": 240.73496313140038,
+      "closure": 2.4843301376509926e-8
+    }
+  ],
+  "seconds": 11.771577584
+}

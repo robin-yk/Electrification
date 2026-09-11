@@ -1,0 +1,73 @@
+{
+  "authorization": "User approved additional total 60 minutes, maximum 5 minutes per batch, on 2026-09-08.",
+  "total_s": 3600,
+  "spent_s": 628.1422105260367,
+  "active": null,
+  "batches": [
+    {
+      "stage": "propose-1",
+      "status": "completed",
+      "wall_s": 3.5856899580103345
+    },
+    {
+      "stage": "verify-1",
+      "status": "completed",
+      "wall_s": 56.278761452000026
+    },
+    {
+      "stage": "propose-2",
+      "status": "completed",
+      "wall_s": 2.9686725840438157
+    },
+    {
+      "stage": "verify-2",
+      "status": "completed",
+      "wall_s": 44.255885595999985
+    },
+    {
+      "stage": "cjh-support",
+      "status": "completed",
+      "wall_s": 37.585292478
+    },
+    {
+      "stage": "propose-3",
+      "status": "completed",
+      "wall_s": 3.196469332993729
+    },
+    {
+      "stage": "verify-3",
+      "status": "stopped",
+      "wall_s": 80.397842334
+    },
+    {
+      "stage": "verify-3",
+      "status": "stopped",
+      "wall_s": 90.05282137500035
+    },
+    {
+      "stage": "verify-3",
+      "status": "completed",
+      "wall_s": 64.21304787499685
+    },
+    {
+      "stage": "propose-4",
+      "status": "completed",
+      "wall_s": 3.0489368330017896
+    },
+    {
+      "stage": "verify-4",
+      "status": "completed",
+      "wall_s": 49.54292170799454
+    },
+    {
+      "stage": "propose-5",
+      "status": "completed",
+      "wall_s": 6.557976249998319
+    },
+    {
+      "stage": "verify-5",
+      "status": "completed",
+      "wall_s": 186.45789274999697
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+  "executable": "/Users/robin_yeonsu/cantera-env/bin/python",
+  "cantera": "3.1.0",
+  "temperatures_C": [
+    1900,
+    1800
+  ],
+  "mechanism_sha256": "5976a02034f07fe3aa3d6cce035504fb7b498a73ac907b4760ab22b3b2419dcc",
+  "worker_sha256": "bcece69e91d7544a375243ca25b281085813b33470fadd1c956240c7bd0ece17",
+  "launcher_sha256": "01bdd5cbb9a90a82e44f34765dbcd11f972a17567e11c649a1df891681a74428",
+  "reference_sha256": "5e3ae72586de12464a34902b569b4796571f26d0521365e518e226fad4a6b196",
+  "env": {
+    "TZ": "UTC0",
+    "LC_ALL": "C",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}

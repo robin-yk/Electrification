@@ -1,0 +1,11 @@
+{
+  "capture_context": "Local installed proposal environment inspected after two completed fits on 2026-09-08",
+  "nextorch": "0.4.0",
+  "torch": "2.2.2",
+  "botorch": "0.4.0",
+  "gpytorch": "1.4.0",
+  "numpy": "1.26.4",
+  "scipy": "1.13.1",
+  "direct_verification_cantera": "3.2.0",
+  "reaction_environment": "GitHub Actions Ubuntu, Python 3.11; requirements pinned in tools/cantera/requirements.txt"
+}

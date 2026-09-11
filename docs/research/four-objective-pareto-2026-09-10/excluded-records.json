@@ -1,0 +1,337 @@
+[
+  {
+    "id": "RPH-a4389205e6",
+    "scenario": "Gas only",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-a4389205e6",
+    "scenario": "Full radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-a4389205e6",
+    "scenario": "90% lower radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-29671f8cac",
+    "scenario": "Gas only",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-29671f8cac",
+    "scenario": "Full radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-29671f8cac",
+    "scenario": "90% lower radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-5fc7128e8f",
+    "scenario": "Gas only",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-5fc7128e8f",
+    "scenario": "Full radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-5fc7128e8f",
+    "scenario": "90% lower radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-06b5137af8",
+    "scenario": "Gas only",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-06b5137af8",
+    "scenario": "Full radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-06b5137af8",
+    "scenario": "90% lower radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-3dcfea9317",
+    "scenario": "Gas only",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-3dcfea9317",
+    "scenario": "Full radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-3dcfea9317",
+    "scenario": "90% lower radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-c730692a45",
+    "scenario": "Gas only",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-c730692a45",
+    "scenario": "Full radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-c730692a45",
+    "scenario": "90% lower radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-7f904ce1c7",
+    "scenario": "Gas only",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-7f904ce1c7",
+    "scenario": "Full radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-7f904ce1c7",
+    "scenario": "90% lower radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-30ef65cc38",
+    "scenario": "Gas only",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-30ef65cc38",
+    "scenario": "Full radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-30ef65cc38",
+    "scenario": "90% lower radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-c0cf41fd52",
+    "scenario": "Gas only",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-c0cf41fd52",
+    "scenario": "Full radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-c0cf41fd52",
+    "scenario": "90% lower radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-a14fc27f06",
+    "scenario": "Gas only",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-a14fc27f06",
+    "scenario": "Full radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-a14fc27f06",
+    "scenario": "90% lower radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-7c290cabfe",
+    "scenario": "Gas only",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-7c290cabfe",
+    "scenario": "Full radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-7c290cabfe",
+    "scenario": "90% lower radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-abd1d8b8b0",
+    "scenario": "Gas only",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-abd1d8b8b0",
+    "scenario": "Full radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-abd1d8b8b0",
+    "scenario": "90% lower radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-14dafb480d",
+    "scenario": "Gas only",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-14dafb480d",
+    "scenario": "Full radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "RPH-14dafb480d",
+    "scenario": "90% lower radiation",
+    "reason": "paired fine source retained"
+  },
+  {
+    "id": "He-1200-1.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1200-5.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1200-20.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1200-40.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1300-1.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1300-5.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1300-20.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1300-40.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1400-1.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1400-5.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1400-20.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1400-40.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1500-1.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1500-5.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1500-20.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1500-40.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1600-1.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1600-5.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1600-20.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1600-40.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1700-1.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1700-5.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1700-20.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1700-40.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1800-1.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1800-5.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1800-20.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  },
+  {
+    "id": "He-1800-40.0",
+    "scenario": "Gas only",
+    "reason": "missing flow, positive heat, cooling or product ratio"
+  }
+]
