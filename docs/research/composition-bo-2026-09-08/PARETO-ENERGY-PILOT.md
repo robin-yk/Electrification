@@ -41,3 +41,27 @@ Attempt 01 stopped before integration because an older chemistry record omits
 solver_rtol. Preserve that status and log. Attempt 02 uses the recorded rtol
 where available and 1e-11 otherwise, with the same direct species-agreement
 gate against the original. Its paired-grid checks remain mandatory.
+
+## First Bayesian multiobjective batch
+
+After the support pilot passes, fit NEXTorch GPs for acetylene carbon yield,
+CO carbon yield, and log positive thermal input. Check the original five-point
+energy model against the three new support points before retraining; stop
+if any relative energy prediction error exceeds 25%. This is a development
+check, not an independent validation claim.
+
+Recommend one point for each product ratio 1, 1.5 and 1.75 using 512 Sobol
+posterior draws of constrained hypervolume improvement. Both objectives are
+maximized: carbon yield and mmol C2H2/kJ. Reference is zero for both; normalize
+by 40 percentage points and 0.25 mmol/kJ. Independent output GPs share the
+same sampled acetylene in the ratio and productivity calculations. Reject
+sampled carbon yields outside the carbon budget. Evaluate improvement against
+the current full CJH/RPH archive within each ratio band. Candidate search
+uses 4096 Sobol points plus both hold-time faces. Keep the established bounds
+1600-2000 C, 0.1-0.8 s hot hold, and methane fraction 0.5-0.8.
+
+Proposal stage and direct verification stage each have a 300-second cap on
+the existing ledger. At most three new reacting conditions, each evaluated
+at 400 and 800 samples, with the support pilot's gates. Save infeasible
+recommendations as well as successful ones. Promote only verified results;
+do not expand the bounds or launch another batch automatically in this turn.
