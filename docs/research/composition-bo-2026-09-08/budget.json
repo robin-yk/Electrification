@@ -1,7 +1,7 @@
 {
   "authorization": "User approved additional total 60 minutes, maximum 5 minutes per batch, on 2026-09-08.",
   "total_s": 3600,
-  "spent_s": 628.1422105260367,
+  "spent_s": 845.0253460670297,
   "active": null,
   "batches": [
     {
@@ -68,6 +68,11 @@
       "stage": "verify-5",
       "status": "completed",
       "wall_s": 186.45789274999697
+    },
+    {
+      "stage": "energy-incumbents-01",
+      "status": "completed",
+      "wall_s": 216.88313554099295
     }
   ]
 }

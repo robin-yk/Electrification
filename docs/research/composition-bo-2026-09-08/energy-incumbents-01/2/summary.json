@@ -1,0 +1,28 @@
+{
+  "round": 5,
+  "index": 2,
+  "source": "/Users/robin_yeonsu/Electrification-BO-continuation/docs/research/composition-bo-2026-09-08/round-05/verification/2/n800.json",
+  "source_sha256": "8526dec2b94b9c79c414e5a63a007773eddf5c16a765ce6274c2cfc014ba0b78",
+  "replay_species_error": 0.0,
+  "Y_C2H2_pct": 35.32364240547055,
+  "ratio": 1.7258490374864044,
+  "Q_rxn_W": 4.4705451503149405,
+  "gas_net_W": 9.150894737897769,
+  "delta_U_J": -2.7450264283856995e-14,
+  "scenarios": {
+    "1": {
+      "input_W": 491.0337620849072,
+      "cooling_W": 66.12881894104412,
+      "radiation_W": 415.75404840393145,
+      "C2H2_mmol_kJ": 0.013372835928590728,
+      "eta_rxn_pct": 0.9104353907016917
+    },
+    "0.1": {
+      "input_W": 129.98853084916172,
+      "cooling_W": 79.26223126884632,
+      "radiation_W": 41.575404840396295,
+      "C2H2_mmol_kJ": 0.05051610240429504,
+      "eta_rxn_pct": 3.439184304269541
+    }
+  }
+}
