@@ -30,3 +30,9 @@ Outputs: pareto-energy-pilot-01/{0,1,2}/n{400,800}.json, energy histories,
 summaries, manifest and status. The next decision is whether these energy
 data support ratio-constrained expected hypervolume improvement. Figure 3
 will gain directly verified feasible points only; other figures remain intact.
+
+Preflight failure: importing composition_bo solely for its physical gate
+also imported SciPy, absent in the dedicated Cantera environment. No mechanism
+loaded and no integration started. The replay now carries the identical pure
+Python checks without importing the optimization environment. No installation
+was needed. The failed invocation took 0.15 seconds before ledger activation.

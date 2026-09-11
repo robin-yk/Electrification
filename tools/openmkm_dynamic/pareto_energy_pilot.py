@@ -4,7 +4,13 @@ RUNTIME = prepare_runtime()
 import argparse, hashlib, json, subprocess, sys, time
 from pathlib import Path
 from replay_bo_energy import summarize
-from composition_bo import physical_gate
+def physical_gate(d):
+    """Same physical checks as composition_bo, without the SciPy dependency."""
+    if d.get('engine')!='3.2.0' or len(d.get('history',[]))<3:return False
+    for h in d['history']:
+        if abs(h['mass_residual'])>=1e-3 or max(abs(v) for v in h['elemental_residuals'].values())>=1e-3:return False
+        if h['max_pressure_relative_error']>=1e-4 or h['max_temperature_error_K']>=1e-4:return False
+    return all(h['state_change']<1e-7 and h['max_species_cycle_change']<1e-7 for h in d['history'][-2:])
 ROOT = Path(__file__).resolve().parents[2]
 C = ROOT/'docs/research/composition-bo-2026-09-08'
 OUT = C/'pareto-energy-pilot-01'
