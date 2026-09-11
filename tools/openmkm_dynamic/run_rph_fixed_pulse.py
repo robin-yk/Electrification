@@ -17,7 +17,7 @@ def segments(period):
     assert period>0
     return [(period*f,a,b) for f,a,b in [(0.025,873.15,2073.15),(.05,2073.15,2073.15),(.1,2073.15,873.15),(.825,873.15,873.15)]]
 
-def worker(out,name,n,period=1.,inert=False,waveform=None,flow_sccm=50.,rtol=1e-9,feed_ch4=.5):
+def worker(out,name,n,period=1.,inert=False,waveform=None,flow_sccm=50.,rtol=1e-9,feed_ch4=.5,capture_energy=False):
     started=time.monotonic()
     assert np.isfinite(rtol) and 0<rtol<=1e-9
     assert np.isfinite(feed_ch4) and 0<feed_ch4<1
@@ -45,11 +45,17 @@ def worker(out,name,n,period=1.,inert=False,waveform=None,flow_sccm=50.,rtol=1e-
     net.preconditioner=ct.AdaptivePreconditioner()
     net.derivative_settings={"skip-third-bodies":True,"skip-falloff":True}
     fin=mdot*yin/mw
+    if capture_energy:
+        gas.TPX=298.15,101325,feed
+        hin298=mdot*gas.enthalpy_mass
+        h298=gas.partial_molar_enthalpies.copy()
     last=None;stable=0;history=[];last_end=None
     t=0.
     print('stage: integrating',time.monotonic()-started,flush=True)
     for cycle in range(1,9):
         inventory0=r.mass*r.phase.Y/mw
+        energy_steps=[]
+        u0=r.mass*r.phase.int_energy_mass if capture_energy else 0.
         integral=np.zeros(gas.n_species);massout=0.;maxp=0.;maxt=0.;samples=[]
         for duration,ta,tb in parts:
             r.temperature_slope=(tb-ta)/duration
@@ -58,11 +64,20 @@ def worker(out,name,n,period=1.,inert=False,waveform=None,flow_sccm=50.,rtol=1e-
             # Sample each linear segment separately so corners are explicit.
             prevflow=pc.mass_flow_rate*r.phase.Y/mw
             prevmass=pc.mass_flow_rate
+            if capture_energy:
+                prev_u=r.mass*r.phase.int_energy_mass
+                prev_hout=pc.mass_flow_rate*r.phase.enthalpy_mass
             for j in range(1,n+1):
                 target=start+duration*j/n
                 net.advance(target)
                 dt=target-t;t=target
                 flow=pc.mass_flow_rate*r.phase.Y/mw
+                if capture_energy:
+                    u=r.mass*r.phase.int_energy_mass
+                    hout=pc.mass_flow_rate*r.phase.enthalpy_mass
+                    q=u-prev_u+(.5*(prev_hout+hout)-hin298)*dt
+                    energy_steps.append(dict(dt_s=dt,T_K=r.T,Q_J=q,outlet_enthalpy_J=.5*(prev_hout+hout)*dt))
+                    prev_u=u;prev_hout=hout
                 integral+=(prevflow+flow)*(.5*dt)
                 massout+=(prevmass+pc.mass_flow_rate)*(.5*dt)
                 prevflow=flow;prevmass=pc.mass_flow_rate
@@ -93,6 +108,15 @@ def worker(out,name,n,period=1.,inert=False,waveform=None,flow_sccm=50.,rtol=1e-
     assert stable>=2,"periodic convergence failed"
     if inert:assert np.max(abs(r.phase.Y-yin))<1e-10
     ratiosdict={k:float(v) for k,v in zip(gas.species_names,ratios) if v>0}
+    if capture_energy:
+        delta_u=r.mass*r.phase.int_energy_mass-u0
+        netheat=sum(s['Q_J'] for s in energy_steps)
+        residual=netheat-delta_u-sum(s['outlet_enthalpy_J'] for s in energy_steps)+hin298*period
+        assert abs(residual)<1e-8
+        base.write(out/(name+'-energy.json'),dict(phase_steps=energy_steps,net_heat_J=netheat,
+            inlet_enthalpy_flow_W=hin298,reference_T_K=298.15,delta_U_J=delta_u,
+            energy_balance_residual_J=residual,Q_rxn_W=float(np.dot(integral-fin*period,h298)/period),
+            basis='Fixed-volume gas first law; 298.15 K inlet enthalpy; boundary work zero'))
     rates={k:float(v*flow_mol_s*3600*m) for k,v,m in zip(gas.species_names,ratios,mw) if v>0}
     base.write(out/(name+".json"),dict(name=name,engine=ct.__version__,
         inputs=dict(feed=feed,flow_sccm=flow_sccm,standard_T_K=273.15,standard_P_Pa=101325,volume_m3=vol,
